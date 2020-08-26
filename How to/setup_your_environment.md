@@ -43,13 +43,13 @@ $ cd ~/catkin_ws
 $ catkin_make
 ```
 
-Edit your ``~/.bashrc`` file so that the following line appears last in that file:
+Edit your ``~/.bashrc`` file so that the file ``catkin_ws/devel/setup.bash`` is sourced.
 
 ```bash
-$ source ~/catkin_ws/devel/setup.bash
+$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-You must perform the rest of the setup in a new terminal window.  To make sure you have done the previous steps correct, type roscd.  You should be in the directory ``~/catkin_ws/devel`` if you did the previous steps correctly. 
+**You must perform the rest of the setup in a new terminal window.**  To make sure you have done the previous steps correct, type roscd.  You should be in the directory ``~/catkin_ws/devel`` if you did the previous steps correctly. 
 
 ## Setup Your CompRobo GitHub Repository
 
