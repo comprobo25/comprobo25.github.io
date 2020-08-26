@@ -7,9 +7,21 @@ toc_sticky: true
 
 This document will help you run the Neato simulator.  Before going through these instructions, make sure that you have already [setup your computing environment](setup_your_environment).
 
-## What is a Simualtor?
+## What is a Robot Simulator?
 
-TODO
+Without getting into too much detail, a robot simulator that simulates a robot interacting with some sort of environment.  As such, a simulator will typically provide the following major functionality.
+
+* It will provide a means to specify the physical layout of the robot's environment (e.g., the location of obstacles, the physical properties of various surfaces).
+* It will provide a means to specify a robot model (e.g., the robot's sensors, actuators, mass, inertia, etc.).
+* It will provide simulated sensor data (i.e., what *would* the robot's sensors have reported if the robot were in a particular environment in a particular location).
+* It will provide a means to execute simulated motor commands (i.e., it will let you tell the robot to move).
+* It will provide a way to visualize the simulation state (e.g., as a graphical rendering).
+
+One nice thing about ROS is that the usage of a publish and subscribe structure provides a very clean separation between the robot itself and code that you will write to program the robot.  For instance, you can write a motor control node that sends commands to the topic ``cmd_vel``.  This program can work with any real or simulated robot so long as it subscribes to the ``cmd_vel`` topic and executes the appropriate motor command in response to the messages it receives (e.g., the motor command might involve moving a real motor or it might involve moving a simulated robot).
+
+### Differences with RViz
+
+Oftentimes students will be confused as to what the difference is between RViz and a robot simulator.  RViz allows you to visualize a robot's sensor data.  As such, RViz has a graphical interface that can look a lot like the graphical interface of the robot simulator.  In contrast, RViz does not have any means to execute a simulated motor command or generate simulated sensor data: it can only display the data that it receives.
 
 ## The Neato Simulator
 
@@ -76,6 +88,12 @@ $ roslaunch neato_gazebo neato_gauntlet.launch
 $ roslaunch neato_gazebo neato_dh.launch
 {% endhighlight %}
 
+<p>If you want to create your own world, you can put the Neato in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">popuating your own world</a>.</p>
+
+{% highlight console %}
+$ roslaunch neato_gazebo neato_empty_world.launch
+{% endhighlight %}
+
 <p><i>Optional:</i> Loading the camera module. If you want to load a simulated video camera on your Neato, you can modify the instructions in the previous step.</p>
 
 {% highlight console %}
@@ -86,6 +104,10 @@ $ roslaunch neato_gazebo neato_dh.launch load_camera:=true
 
 </li>
 </ol>
+
+## Using the Gazebo Graphical Interface
+
+The Gazebo website has a [guide on using Gazebo's graphical interface](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2).
 
 ## Available Topics
 
@@ -228,11 +250,50 @@ $ rosrun rviz rviz
 
 Once you get to rviz, the warmup project has some good instructionns for how to see the robot and its LIDAR.
 
-1. Set the base_frame to "odom"
-2. Add a visualization of the Neato's stabilized laser scan (topic /scan).  This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them easily).
+1. Set the base_frame to ``odom``
+2. Add a visualization of the Neato's stabilized laser scan (topic ``scan``).  This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them easily).
 3. Add a visualization of the Neato itself (this can be done by selecting "Robot Model" from the insert menu")
-4. Add a visualization of the Neato's camera feed (topic camera/image_raw) (this only applies if you launched the simulation with ``load_camera:=true``)
+4. Add a visualization of the Neato's camera feed (topic ``camera/image_raw``) (this only applies if you launched the simulation with ``load_camera:=true``)
 
+## Populating the Simulated World
+
+In order to populate the simulated world, you can use the "insert" menu in Gazebo.  This will bring up a list of 3D models that can be inserted into Gazebo.
+
+<p align="center">
+<img alt="the insert menu of the Gazebo simulator" src="../website_graphics/gazebo_insert.png"/>
+</p>
+
+Click on one of these models and you should be able to drag it onto the Gazebo world.
+
+### Saving the World
+
+After you've built the world, you can save it using "file -> save world" from within Gazebo.  You should save the world into the directory ``catkin_ws/src/comprobo20/neato_gazebo/worlds`` as shown below.
+
+> Note: you must save your world to the directory specified above.  Also, be sure that your world ends with the ``.world`` extension.
+
+<p align="center">
+<img alt="saving the Gazebo world" src="../website_graphics/saving_world.png"/>
+</p>
+
+### Loading the World
+
+Assuming you performed the steps above to save the world, if you want to reload your world (e.g., you've shutdown Gazebo), you can load your world by running the following command (you should replace "a_whole_new_world" with whatever you named your world when you saved it.  Also note that we omit the file extension ``.world`` in the command below).
+
+```bash
+$ roslaunch neato_gazebo neato_world_no_spawn.launch neato_world:=a_whole_new_world
+```
+
+## Some Cool Stuff About Simulators
+
+While real robots are undoubtedly cool, there are some really awesome things you can do with as simulator.
+
+### Move Your Robot Around
+
+Using the "move" tool in Gazebo, you can select your robot and move it around (so much easier than getting up and having to move your robot with your hands, right???).  You can also set the location of your robot by using the rosservice ``gazebo/set_model_state`` (e.g., if you want to set the robot's position in code).  More detail on how to use the "move" tool is available on the [Gazebo user guide](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2).
+
+### Reading the Robot State
+
+Oftentimes you may be trying to get your robot to execute a certain behavior.  With a physical robot, you will usually assess success by observing it's behavior visually.  In a simulator, you can actually "cheat" and read the robot's true state right from ROS.  For example, if you were trying to get your robot to drive a square, you could compare the intended square to the actual square by reading the robot's state.  The robot's state is available on the ROS topic ``gazebo/model_states``.
 
 ## Shuting Down the Simulator
 
