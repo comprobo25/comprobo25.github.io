@@ -106,6 +106,8 @@ The robot has the ability to remember a very small amount of information.   The 
 
 ## Implement a New Behavior
 
+TODO: make more use of the simulator and give students some prompts for vehicles to generate (maybe have them avoid looking at the ones built into the simulator).
+
 Choose a new behavior for your robot.  Feel free to reposition the light sensor and the bump sensors.  Make sure to draw a diagram of your robot.  Sketch out some key frames of your robot's behavior and specify the sensory-motor mappings (and state diagram if applicable).  If you'd like, you may add additional light sensors before doing this (see next section).
 
 We'll do a quick report out on the behavior your team implemented to the rest of the class.
