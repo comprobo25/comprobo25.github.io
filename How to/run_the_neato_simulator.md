@@ -75,7 +75,7 @@ started core service [/rosout]
 <p>You can launch your robot in many different simulated worlds.  For instance, to launch your robot in a simulated obstacle course, you can run.</p>
 
 {% highlight console %}
-$ roslaunch neato_gazebo neato_gauntlet.launch
+$ roslaunch neato_gazebo neato_gauntlet_world.launch
 {% endhighlight %}
 
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
@@ -267,7 +267,7 @@ Click on one of these models and you should be able to drag it onto the Gazebo w
 
 ### Saving the World
 
-After you've built the world, you can save it using "file -> save world" from within Gazebo.  You should save the world into the directory ``catkin_ws/src/comprobo20/neato_gazebo/worlds`` as shown below.
+After you've built the world, you can save it using "file -> save world" from within Gazebo.  You should save the world into the directory ``~/catkin_ws/src/comprobo20/neato_gazebo/worlds`` as shown below.
 
 > Note: you must save your world to the directory specified above.  Also, be sure that your world ends with the ``.world`` extension.
 
