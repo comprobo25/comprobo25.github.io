@@ -5,7 +5,7 @@ header:
   overlay_image: "website_graphics/robo_splash.jpg"
   overlay_color: "#000"
   overlay_filter: "0.4"
-feature_row:
+feature_row_TODO:
   - image_path: https://img.youtube.com/vi/MFL4gd2IMm8/0.jpg
     alt: "A thumbnail image for a video.  The text QEA Olin College of Engineering appears on a textured blue background"
     title: "Key Features of QEA"
