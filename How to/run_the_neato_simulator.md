@@ -72,7 +72,7 @@ started core service [/rosout]
 {% endhighlight %}
 </li>
 <li>Launch Gazebo
-<p>You can launch your robot in many different simulated worlds.  For instance, to launch your robot in a simulated obstacle course, you can run.</p>
+<p>You can launch your robot in many different simulated worlds.  For instance, to launch your robot in a simulated obstacle course, <b><i>in a new terminal</i></b>, run the following command.</p>
 
 {% highlight console %}
 $ roslaunch neato_gazebo neato_gauntlet_world.launch
