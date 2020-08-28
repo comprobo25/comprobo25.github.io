@@ -237,7 +237,7 @@ This is a simulator of a submarine-like vehicle.
 
 ### Getting the Simulator
 
-***Note 1:*** if you are using Melodic, you can install this from a binary package using the instructions on the UUV website)
+***Note 1:*** if you are using Melodic, you can install this from a binary package using the [instructions on the UUV website](https://uuvsimulator.github.io/installation/).
 
 ***Note 2:*** We are currently having you build this from our own fork of the UUV repository.  The reason for this is that the main repository does not properly support ROS Noetic and Gazebo 11.
 
