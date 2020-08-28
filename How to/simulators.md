@@ -231,3 +231,32 @@ $ roslaunch turtlebot3_navigation turtlebot3_navigation.launch
 This will bring up Rviz and show you the robot's sensor data.  To get the robot to navigate, follow the instructions on the [TurtleBot3 Navigation Documentation page](https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/).  Here is a screenshot of the Turtlbot executing a navigation plan.
 
 ![A simulated Turtlebot navigating to a goal](../website_graphics/tb3_navigation.png) 
+
+## Underwater Vehicle Simulator (UUV)
+This is a simulator of a submarine-like vehicle.
+
+### Getting the Simulator
+
+***Note 1:*** if you are using Melodic, you can install this from a binary package using the instructions on the UUV website)
+
+***Note 2:*** We are currently having you build this from our own fork of the UUV repository.  The reason for this is that the main repository does not properly support ROS Noetic and Gazebo 11.
+
+```bash
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/comprobo20/uuv_simulator
+$ cd ~/catkin_ws && catkin_make
+```
+
+### Running the Simulator
+
+Instructions on running the simulator can be found on the [quickstart page](https://uuvsimulator.github.io/quick_start/) of the documentation.  Unfortunately, the instructions to drive the vehicle around involve using a joystick (which most people, including us, don't have).  Let us know if you figure out how to do it with the keyboard (we didn't investigate this yet).
+
+For example, you can run these commands.
+```bash
+$ roslaunch uuv_gazebo_worlds ocean_waves.launch
+$ roslaunch uuv_descriptions upload_rexrov.launch mode:=default x:=0 y:=0 z:=-20 namespace:=rexrov
+```
+
+If all goes well you should see the underwater vehicle (it might takea w hile to find it, but the Gazebo GUI, ``follow`` mode can help).
+
+![An underwater simualation](../website_graphics/uuv_sim_example.png)
