@@ -2,7 +2,7 @@
 title: "Simulators"
 toc_sticky: true
 ---
-In the beginning of the class you'll be mainly working wth [the Neato simulator](../How to/run_the_neato_simulator).  However, there will be lots of opportunities to use other simulators for other projects.
+In the beginning of the class you'll be mainly working wth [the Neato simulator](../How to/run_the_neato_simulator).  However, there will be lots of opportunities to use other simulators for other projects.  The simulators on this page, at least currently, are provided as starting points for your own investigation.  They are not fully built out tutorials (in the way that the Neato simulator is).  By working together (with you all), we hope that we can improve the level of detail on this page and add additional simulators. 
 
 ## Prius Simulator
 The Open Source Robotics Foundation (OSRF) put together a demo of a Prius that can be controlled through ROS.  Notably,
@@ -139,4 +139,95 @@ If you find out more cool stuff through your own explorations of this simualator
 
 ## PX4 Simulator
 
+If you want to do simulation of aerial vehicles (and some land-based vehicles as well), you can make use of the very powerful PX4 simulator.  Here is a video of one of the simulations in action.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qfFF9-0k4KA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Running the Simulator
+
+The full documentation of how to work with the simulator can be found on [the PX4 page](https://dev.px4.io/v1.9.0/en/simulation/gazebo.html).  YOu can think of these instructions as a quickstart.
+
+```bash
+$ cd ~
+$ git clone https://github.com/PX4/Firmware
+$ cd ~/Firmware
+$ make px4_sitl gazebo
+```
+
+If you run into any issue with running ``make``, please e-mail us.  There may be some issues with missing dependencies that we haven't documented here.
+
+If all went well, you should see a Gazebo window pop up that looks like this.
+
+![A visualization of the PX4 simulation](../website_graphics/px4_gazebo.png)
+
+### Taking Off
+
+In the same window in which you launched the simulator, hit ``[enter]`` a couple of times.  This should bring up a command prmopt that looks like this.
+
+```bash
+pxh> 
+```
+
+At that command prompt you can run the following command to have the vehicle takeoff.
+
+```bash
+pxh> commander takeoff
+```
+
+If all goes well, you should see the vehicle taking off in the Gazebo window.
+
+### Controlling the Vehicle
+
+We haven't looked into this in too much detail, so we will leave it to the class (at least at the moment) to figure out how this might work.  [The documentation for PX4](https://dev.px4.io/v1.9.0/en/) should get you going, but please keep us in the loop if you run into issues.
+Also, please share what you learn with the class (or with us and we'll add it to this page).
+
+## TurtleBot3 Simulator
+
+TurtleBot is a nice platform for learning ROS.  [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/) is the latest incarnation.  As of writing this document, there are currently no binary packages for TurtleBot3 for ROS Noetic.  As such, you'll have to build it from source using the following procedure.
+
+### Setting up the Simulator
+
+```bash
+$ sudo apt-get install ros-noetic-turtlebot3-msgs
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3
+$ cd ~/catkin_ws && catkin_make
+```
+
+### Running the Simulator
+
+To run the simulator, you'll first need to pick which variant of the Turtlebot3 you want to simulate.  The choices are burger, waffle, and waffle_pi .  These are what they look like.
+
+![Turtlebot3 model pictures](https://emanual.robotis.com/assets/images/platform/turtlebot3/overview/turtlebot3_with_logo.png)
+
+Let's suppose we decide to simulate the ``waffle`` model (this one is the fanciest!).  We can run the simulator with the following command.
+
+```bash
+$ TURTLEBOT3_MODEL=waffle roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
+
+You should see the Gazebo window pop up, and it should look something like this.
+
+![A simulated TurtlebBot3 in the turtlebot world](../website_graphics/tb3_world_sim.png)
+
+### Controlling the TurtleBot
+
+To control the bot using tele-operation, use the following command (detailed instructions are shown when the node pops up).
+
+```bash
+$ TURTLEBOT3_MODEL=waffle roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
+
+### Navigating the TurtleBot3 in Rviz
+
+TurtleBot3 provides some launch files as a part of its navigation stack that simplify getting rviz running with the robot.  To access these and try commanding the robot to go to a particular location, run the following commands.
+
+```bash
+$ sudo apt-get install ros-noetic-move-base ros-noetic-map-server ros-noetic-amcl ros-noetic-dwa-local-planner
+$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch
+```
+
+This will bring up Rviz and show you the robot's sensor data.  To get the robot to navigate, follow the instructions on the [TurtleBot3 Navigation Documentation page](https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/).  Here is a screenshot of the Turtlbot executing a navigation plan.
+
+![A simulated Turtlebot navigating to a goal](../website_graphics/tb3_navigation.png) 
