@@ -114,7 +114,7 @@ Notice how the only difference when we click on one sensor or the other is which
 2. Suppose you wanted the love vehicle to stop farther away from the light source, how would you modify the vehicle to achieve this?  Are there multiple approaches?  Try one of your solutions out in the simulator.
 3. Once you've implemented your solution on the simulator, try placing your robot in various locations.  Are you surprised by any of the behaviors?  Try to make sense of what you see by referring back what you know about the sensory-motor mapping.
 
-TODO continue to build this out more.
+TODO continue to build this out more (probably use animated GIFs and ask them to reproduce the behavior they see).
 
 ## Additional resources
 
