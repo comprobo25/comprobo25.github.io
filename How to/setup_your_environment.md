@@ -96,7 +96,7 @@ $ pip3 install scikit-build
 $ pip3 install opencv-python==4.2.0.34
 ```
 
-## Getting Zoom Setup on Linux
+## Setup on Zoom
 
 In order to get Zoom working, perform the following steps.
 
