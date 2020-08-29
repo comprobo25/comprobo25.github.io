@@ -48,10 +48,7 @@ warmup_project/scripts/obstacle_avoider.py
 warmup_project/scripts/finite_state_controller.py
 warmup_project/scripts/person_follower.py
 warmup_project/scripts/wall_follower.py
-warmup_project/writeup.pdf
-```
-
-### Documentation and Writeup
+warmup_project/README.md
 
 In your github repository, create a markdown file to serve as documentation for your project.  Your writeup should answer the following questions.  We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
@@ -201,9 +198,12 @@ Whatever method you choose, you must visualize the detected wall using rviz.  T
 
 Using the rosbag instructions from earlier, record a demo of your wall follower in action.  Make sure that when you record your bag file you are also recording the wall visualization from the previous step.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-### Person Following (TODO: how to test this in simulation)
+### Person Following
 
-Pretend your Neato is your robot pet and get it to follow you around! The intended behavior is that you can walk in front of the Neato and it will follow your movements while maintaining a specified following distance. 
+Pretend your Neato is your robot pet and get it to follow you around! The intended behavior is that you can walk in front of the Neato and it will follow your movements while maintaining a specified following distance.
+
+***Since we don't have physical Neatos you can walk in front of, you can use the basic shape models in Gazebo to test out your code.  For instance, here is a sample implementation being tested in Gazebo.
+![A test run of a person follower in Gazebo](../website_graphics/barrel_follow.gif)
 
 #### Hints
 
