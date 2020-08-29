@@ -202,7 +202,8 @@ Using the rosbag instructions from earlier, record a demo of your wall follower 
 
 Pretend your Neato is your robot pet and get it to follow you around! The intended behavior is that you can walk in front of the Neato and it will follow your movements while maintaining a specified following distance.
 
-***Since we don't have physical Neatos you can walk in front of, you can use the basic shape models in Gazebo to test out your code.  For instance, here is a sample implementation being tested in Gazebo.
+***Since we don't have physical Neatos you can walk in front of, you can use the basic shape models in Gazebo to test out your code.  For instance, here is a sample implementation being tested in Gazebo.***
+
 ![A test run of a person follower in Gazebo](../website_graphics/barrel_follow.gif)
 
 #### Hints
