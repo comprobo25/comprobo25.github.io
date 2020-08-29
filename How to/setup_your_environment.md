@@ -34,7 +34,7 @@ Follow [this tutorial](http://wiki.ros.org/noetic/Installation) (make sure to co
 
 ## Setup your Catkin Workspace
 
-For more context on what is going on here, see this ROS tutorial.
+For more context on what is going on here, see [this ROS tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 
 ```bash
 $ source /opt/ros/noetic/setup.bash
