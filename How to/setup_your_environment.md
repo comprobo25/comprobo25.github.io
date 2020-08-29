@@ -95,3 +95,13 @@ Install ``Sckit-Build`` and ``OpenCV`` (we specify 4.2.0.34 to try to match the 
 $ pip3 install scikit-build
 $ pip3 install opencv-python==4.2.0.34
 ```
+
+## Getting Zoom Setup on Linux
+
+In order to get Zoom working, perform the following steps.
+
+```bash
+$ sudo apt-get install wget
+$ wget https://zoom.us/client/latest/zoom_amd64.deb
+$ sudo apt install ./zoom_amd64.deb
+``` 
