@@ -88,7 +88,7 @@ $ roslaunch neato_gazebo neato_gauntlet_world.launch
 $ roslaunch neato_gazebo neato_dh.launch
 {% endhighlight %}
 
-<p>If you want to create your own world, you can put the Neato in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">popuating your own world</a>.</p>
+<p>If you want to create your own world, you can put the Neato in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">populating your own world</a>.</p>
 
 {% highlight console %}
 $ roslaunch neato_gazebo neato_empty_world.launch
