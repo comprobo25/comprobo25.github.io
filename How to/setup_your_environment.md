@@ -20,7 +20,7 @@ A few quick notes:
 * When installing Ubuntu you will likely need to **shrink your Windows patition** to make room for Ubuntu.  The Itzgeek instructions show how you can use the Disk Management utility in Windows to accomplish this.  Unfortunately, sometimes you will not be able to shrink your volume in this way.  If this happens to you, we recommend using the Ubuntu installer to shrink your Windows partition.  If you continue to have issues, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html).  If that still doesn't work, send us an e-mail (see below).
 * You should probably reserve about 50 GB of space for Ubuntu.
 * When installing Ubuntu, you should select the options to **Download updates** and **Install third-party software**.
-* If you run into any issues with this, send an e-mail to <a href="mailto:mmalley@olin.edu>">Melinda Malley</a> and <a href="mailto:paul.ruvolo@olin.edu">Paul Ruvolo</a>.
+* If you run into any issues with this, send an e-mail to <a href="mailto:comprobofaculty@olin.edu">comprobofaculty@olin.edu</a>. 
 
 
 *Once you have a freshly installed copy of Ubuntu 20.04, perform the following steps.*
