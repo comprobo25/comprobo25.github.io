@@ -9,7 +9,7 @@ toc_sticky: true
 * Robot Tortoises and Braitenberg Vehicles
 
 ## For Next Time
-* Fill out [the course entrance survey](https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform) (TODO: needs updating)
+* Fill out [the course entrance survey](https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform)
 * [Get your environment setup](../How to/setup_your_environment)
 * Read Ch. 1 and 2 of ["A Gentle Introduction to ROS" (AGIR)](https://www.cse.sc.edu/~jokane/agitr/).  The first chapter has some good background on the motivation behind ROS and what it is and is not.  The beginning of Chapter 2 through 2.2 you can skip (it has outdated installation instructions).  The rest of chapter 2 is a really nice intro to the basics of topics and nodes.
 * Once you have read chapter 2 of AGIR, [startup the Neato simulator](../How to/run_the_neato_simulator).  What topics are published?  Which nodes are running?  Which nodes subscribe to which topics?  Come to class with questions about the Neato simulator's architecture (e.g. do you want to know more about any of the topics?, what are all the nodes for?, etc.).
@@ -123,7 +123,8 @@ At this point, you can feel free to come up with your desired behavior and see i
 2. Build a vehicle that, like the love vehicle, approaches light sources.  The key difference is that this vehicle should stop with its front at a 45 degree angle from the light source.
 3. Build a vehicle that orbits around light sources. 
 4. Build a vehicle that drives back and forth over a light source.
-5. Come up with an interesting behavior and see if you can replicate it in the simulator. 
+5. Can you think of a behavior that *could not* be realized in the simulator (i.e., there is no possible way to configure the vehicle to achieve the behavior)?
+6. Come up with an interesting behavior and see if you can replicate it in the simulator. 
 
 ## Additional resources
 
