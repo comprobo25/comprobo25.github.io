@@ -185,7 +185,7 @@ Building upon this simple picture, fill out what you can measure from your robot
 
 #### Going beyond (some suggestions, but feel free to be creative)
 
-* Properly incorporate the offset between the laser scanner and the center of rotation of the robot by using the tf module (the [TF tutorials](http://wiki.ros.org/rosbag/Tutorials/Recording%20and%20playing%20back%20data) are a great place to start).
+* Properly incorporate the offset between the laser scanner and the center of rotation of the robot by using the tf module (the [TF tutorials](http://wiki.ros.org/tf2/Tutorials) are a great place to start).
 * Incorporate the bump sensor in some way
 * Allow the user to specify a target distance between the robot center and the wall. Your code should follow the wall at the specified distance. You may find a finite state controller to be a useful way to attack this problem (where one state is wall following and the other is adjust distance to wall).
 * Handle 90 degree turns gracefully (either by continuing across the gap or following the turn and continuing to do wall following). 
@@ -234,7 +234,7 @@ Using the rosbag instructions from earlier, record a demo of your person followe
 
 For this part you should program the Neato to move forward while reactively avoiding obstacles that block its path. A simple approach to the problem is to have the robot turn 90 degrees when it encounters an obstacle, and then turn back toward its preferred direction of motion once the obstacle is gone.
 
-A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or [the original paper](http://ijr.sagepub.com/content/5/1/90.short)). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
+A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or <a onclick="window.open('http://ijr.sagepub.com/content/5/1/90.short', '_blank', 'location=yes,scrollbars=yes,status=yes');">the original paper</a>). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
 
 <p align="center">
 <img alt="A Neato in a potential field for robot motion planing." src="../website_graphics/obstacleavoidance.png"/>
@@ -244,7 +244,7 @@ By summing the forces you can obtain a direction of motion for the robot (note: 
 
 #### Going beyond
 
-* Instead of always trying to move forward, allow a goal to be specified in the robot's odometry coordinate frame (called odom). In order to best handle this, you will either want to listen to the ``/odom`` topic directly or else make use of coordinate transformations via the TF module (again, the [TF tutorials](http://ijr.sagepub.com/content/5/1/90.short) are a great place to start).
+* Instead of always trying to move forward, allow a goal to be specified in the robot's odometry coordinate frame (called odom). In order to best handle this, you will either want to listen to the ``/odom`` topic directly or else make use of coordinate transformations via the TF module (again, the [TF tutorials](http://wiki.ros.org/tf2/Tutorials) are a great place to start).
 
 #### Visualization
 
