@@ -53,7 +53,7 @@ $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 ## Setup Your CompRobo GitHub Repository
 
-First create a fork of the base CompRobo repository.  If you don't know how to create a fork of a repository, check out the relevant GitHub documentation here.  Next, clone your forked repository inside your catkin workspace.  You will also be performing the step of adding the CompRobo repository as a remote.
+First create a fork of [the base CompRobo repository](https://github.com/comprobo20/comprobo20).  If you don't know how to create a fork of a repository, check out [the GitHub documentation for forking a repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).  Next, clone your forked repository inside your catkin workspace.  You will also be performing the step of adding the CompRobo repository as a remote.
 
 ```bash
 $ cd ~/catkin_ws/src

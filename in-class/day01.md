@@ -102,7 +102,7 @@ In this next part of the assignment, we'll be using a [simulator for Braitenberg
 <img alt="a Braitenberg vehicle called Love being simulated" src="../website_graphics/braitenberg_love.gif"/>
 </p>
 
-As you can see in this video, this robot uses its light sensors in order to approach and then stop at light sources.  To explore what the "love" vehicle is doing we can click on the various light sensors of the robot to see how they are wired to the robots motors.
+As you can see in this video, this robot uses its light sensors in order to approach and then stop at light sources.  To explore what the "love" vehicle is doing we can click on the various light sensors of the robot to see how they are wired to the robot's motors.
 
 <p align="center">
 <img alt="exploring the light sensors on the love vehicle" src="../website_graphics/braitenberg_love_sensors.gif"/>
@@ -114,7 +114,16 @@ Notice how the only difference when we click on one sensor or the other is which
 2. Suppose you wanted the love vehicle to stop farther away from the light source, how would you modify the vehicle to achieve this?  Are there multiple approaches?  Try one of your solutions out in the simulator.
 3. Once you've implemented your solution on the simulator, try placing your robot in various locations.  Are you surprised by any of the behaviors?  Try to make sense of what you see by referring back what you know about the sensory-motor mapping.
 
-TODO continue to build this out more (probably use animated GIFs and ask them to reproduce the behavior they see).
+
+### Additional Exercises
+
+At this point, you can feel free to come up with your desired behavior and see if you can create a Braitenberg vehicle to realize this behavior.  Instead, you can also work on creating vehicle for each of the following behaviors.  We are intentionally giving more than you can probably do in during class, so don't feel like you should be able to finish all of these.
+
+1. Build a vehicle that will turn towards a light source if it passes it on its left side and turn away from it if it passes a light source on its right side.
+2. Build a vehicle that, like the love vehicle, approaches light sources.  The key difference is that this vehicle should stop with its front at a 45 degree angle from the light source.
+3. Build a vehicle that orbits around light sources. 
+4. Build a vehicle that drives back and forth over a light source.
+5. Come up with an interesting behavior and see if you can replicate it in the simulator. 
 
 ## Additional resources
 
