@@ -24,7 +24,7 @@ If you want to show off something you did, add it to <a onclick="window.open('ht
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork [this repo as a starting point](https://github.com/comprobo20/warmup_project) for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using [this Google sheet](https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing).
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork [this repo as a starting point](https://github.com/comprobo20/warmup_project) for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a onclick="window.open('https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">this Google sheet</a>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
@@ -66,10 +66,10 @@ In your github repository, create a markdown file called ``README.md`` to serve 
 #### Sample Writeups
 
 Here are some writeups that are particularly solid.  We hope that these might get you excited about putting in the effort to document your work.
-* [Matthew Beaudouin-Lafon and Katya Soltan](https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf)
-* [Mary Keenan](https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf)
-* [Cedric Kim](https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf)
-* [Jamie Cho's writeup](https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project) does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
+* <a onclick="window.open('https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Matthew Beaudouin-Lafon and Katya Soltan</a>
+* <a onclick="window.open('https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Mary Keenan</a>
+* <a onclick="window.open('https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Cedric Kim</a>
+* <a onclick="window.open('https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project', '_blank', 'location=yes,scrollbars=yes,status=yes');">Jamie Cho</a> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
 
 ## Robot Simulation
 
@@ -288,6 +288,6 @@ Halfway through the project you should have the following parts of the project d
 
 ## Tips, Tricks, and Words of (Pseudo?) Wisdom
 
-* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created [a Google doc that we can use for collecting useful tips for this assignment](https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing).  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
+* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a onclick="window.open('https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">a Google doc that we can use for collecting useful tips for this assignment</a>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
 * When programming robots you have to get used to the idea that your code is never "bug free" in the same way that an implementation of a sorting algorithm can be bug free (there is always more work to do to make your robot code more robust to various scenarios).
 * When your robot is not doing what you expect it to, you are often faced with the decision of spending time tweaking your code to get it to work or spending time writing code to visualize / understand what your code is doing.  Students often are comfortable with the former (tweaking) and hesitant to pursue the latter (visualizing).  We advise you to push yourself to work on visualization and other means to understand what your code is doing.  You will find that for robotics programming, these visualizations will prove invaluable for rooting out bugs and finding ways to improve your code. 
