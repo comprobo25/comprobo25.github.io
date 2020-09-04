@@ -293,7 +293,7 @@ Using the "move" tool in Gazebo, you can select your robot and move it around (s
 
 ### Reading the Robot State
 
-Oftentimes you may be trying to get your robot to execute a certain behavior.  With a physical robot, you will usually assess success by observing it's behavior visually.  In a simulator, you can actually "cheat" and read the robot's true state right from ROS.  For example, if you were trying to get your robot to drive a square, you could compare the intended square to the actual square by reading the robot's state.  The robot's state is available on the ROS topic ``gazebo/model_states``.
+Oftentimes you may be trying to get your robot to execute a certain behavior.  With a physical robot, you will usually assess success by observing its behavior visually.  In a simulator, you can actually "cheat" and read the robot's true state right from ROS.  For example, if you were trying to get your robot to drive a square, you could compare the intended square to the actual square by reading the robot's state.  The robot's state is available on the ROS topic ``gazebo/model_states``.
 
 ## Shuting Down the Simulator
 
