@@ -24,7 +24,7 @@ If you want to show off something you did, add it to <a onclick="window.open('ht
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork [this repo as a starting point](https://github.com/comprobo20/warmup_project) for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a onclick="window.open('https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">this Google sheet</a>.
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a onclick="window.open('https://github.com/comprobo20/warmup_project', '_blank', 'location=yes,scrollbars=yes,status=yes');">this repo as a starting point</a> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a onclick="window.open('https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">this Google sheet</a>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
