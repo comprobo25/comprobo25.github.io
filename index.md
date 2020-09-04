@@ -16,7 +16,7 @@ feature_row_TODO:
   - image_path: website_graphics/faces_collage.png
     alt: "A 5 by 5 grid of face images with labels of whether each of them are smiling."
     title: "Computational Platform"
-    excerpt: "Students use Python as a programming environment during this module.  Use the button below to see sample code and other materials."
+    excerpt: "Students use Python as a programming language during this module.  Use the button below to see sample code and other materials."
     url: "#supporting-resources"
     btn_label: "Supporting Resources"
     btn_class: "btn--primary"
