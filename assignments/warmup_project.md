@@ -7,9 +7,7 @@ toc_h_max: 3
 
 ## Project Overview
 
-<a-o href="https://thewebplatformpodcast.com">Web Platform Podcast</a-o>
-
-Your goal in this project will be to program the Neato to execute a number of behaviors. In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment. If you want to substitute another behavior for one of the following, just let us know! For each of these behaviors, there is a straightforward way to implement the behavior and a more sophisticated way. See the going beyond section for some more information on these more sophisticated approaches. You should be spending about fifteen hours on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! The flip side is that if you find that you are stuck or having a difficult time making progress, please annotate this document (as long as you are viewing this through Canvas), post a note on the <a onclick="window.open('https://comproboworkspace.slack.com', '_blank', 'location=yes,scrollbars=yes,status=yes');">course Slack</a>, or send an [e-mail to the teaching team](mailto:comprobofaculty@olin.edu).  Even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers.
+Your goal in this project will be to program the Neato to execute a number of behaviors. In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment. If you want to substitute another behavior for one of the following, just let us know! For each of these behaviors, there is a straightforward way to implement the behavior and a more sophisticated way. See the going beyond section for some more information on these more sophisticated approaches. You should be spending about fifteen hours on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! The flip side is that if you find that you are stuck or having a difficult time making progress, please annotate this document (as long as you are viewing this through Canvas), post a note on the <a-o href="https://comproboworkspace.slack.com">course Slack</a-o>, or send an [e-mail to the teaching team](mailto:comprobofaculty@olin.edu).  Even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers.
 
 ### Learning Goals
 
@@ -22,11 +20,11 @@ Your goal in this project will be to program the Neato to execute a number of be
 
 ### Project Showcase
 
-If you want to show off something you did, add it to <a onclick="window.open('https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">this shared Google Slides presentation</a>.
+If you want to show off something you did, add it to <a-o href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a-o>.
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a onclick="window.open('https://github.com/comprobo20/warmup_project', '_blank', 'location=yes,scrollbars=yes,status=yes');">this repo as a starting point</a> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a onclick="window.open('https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">this Google sheet</a>.
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a-o href="https://github.com/comprobo20/warmup_project">this repo as a starting point</a-o> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a-o href="https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing">this Google sheet</a-o>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
@@ -68,10 +66,10 @@ In your github repository, create a markdown file called ``README.md`` to serve 
 #### Sample Writeups
 
 Here are some writeups that are particularly solid.  We hope that these might get you excited about putting in the effort to document your work.
-* <a onclick="window.open('https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Matthew Beaudouin-Lafon and Katya Soltan</a>
-* <a onclick="window.open('https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Mary Keenan</a>
-* <a onclick="window.open('https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf', '_blank', 'location=yes,scrollbars=yes,status=yes');">Cedric Kim</a>
-* <a onclick="window.open('https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project', '_blank', 'location=yes,scrollbars=yes,status=yes');">Jamie Cho</a> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
+* <a-o href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a-o>
+* <a-o href="https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf">Mary Keenan</a-o>
+* <a-o href="https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf">Cedric Kim</a-o>
+* <a-o href="https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project">Jamie Cho</a-o> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
 
 ## Robot Simulation
 
@@ -236,7 +234,7 @@ Using the rosbag instructions from earlier, record a demo of your person followe
 
 For this part you should program the Neato to move forward while reactively avoiding obstacles that block its path. A simple approach to the problem is to have the robot turn 90 degrees when it encounters an obstacle, and then turn back toward its preferred direction of motion once the obstacle is gone.
 
-A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or <a onclick="window.open('http://ijr.sagepub.com/content/5/1/90.short', '_blank', 'location=yes,scrollbars=yes,status=yes');">the original paper</a>). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
+A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or <a-o href="http://ijr.sagepub.com/content/5/1/90.short">the original paper</a-o>). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
 
 <p align="center">
 <img alt="A Neato in a potential field for robot motion planing." src="../website_graphics/obstacleavoidance.png"/>
@@ -290,6 +288,6 @@ Halfway through the project you should have the following parts of the project d
 
 ## Tips, Tricks, and Words of (Pseudo?) Wisdom
 
-* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a onclick="window.open('https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing', '_blank', 'location=yes,scrollbars=yes,status=yes');">a Google doc that we can use for collecting useful tips for this assignment</a>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
+* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a-o href="https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing">a Google doc that we can use for collecting useful tips for this assignment</a-o>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
 * When programming robots you have to get used to the idea that your code is never "bug free" in the same way that an implementation of a sorting algorithm can be bug free (there is always more work to do to make your robot code more robust to various scenarios).
 * When your robot is not doing what you expect it to, you are often faced with the decision of spending time tweaking your code to get it to work or spending time writing code to visualize / understand what your code is doing.  Students often are comfortable with the former (tweaking) and hesitant to pursue the latter (visualizing).  We advise you to push yourself to work on visualization and other means to understand what your code is doing.  You will find that for robotics programming, these visualizations will prove invaluable for rooting out bugs and finding ways to improve your code. 
