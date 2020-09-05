@@ -7,6 +7,8 @@ toc_h_max: 3
 
 ## Project Overview
 
+<my-link href="http://google.com">Google</my-link>
+
 Your goal in this project will be to program the Neato to execute a number of behaviors. In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment. If you want to substitute another behavior for one of the following, just let us know! For each of these behaviors, there is a straightforward way to implement the behavior and a more sophisticated way. See the going beyond section for some more information on these more sophisticated approaches. You should be spending about fifteen hours on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! The flip side is that if you find that you are stuck or having a difficult time making progress, please annotate this document (as long as you are viewing this through Canvas), post a note on the <a onclick="window.open('https://comproboworkspace.slack.com', '_blank', 'location=yes,scrollbars=yes,status=yes');">course Slack</a>, or send an [e-mail to the teaching team](mailto:comprobofaculty@olin.edu).  Even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers.
 
 ### Learning Goals
