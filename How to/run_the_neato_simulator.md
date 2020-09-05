@@ -5,7 +5,7 @@ toc_sticky: true
 
 ## Purpose of this How-to
 
-This document will help you run the Neato simulator.  Before going through these instructions, make sure that you have already [setup your computing environment](setup_your_environment).
+This document will help you run the Neato simulator.  Before going through these instructions, make sure that you have already <a is="no-proxy" href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a>.
 
 ## What is a Robot Simulator?
 

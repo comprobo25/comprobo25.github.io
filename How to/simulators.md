@@ -2,7 +2,7 @@
 title: "Simulators"
 toc_sticky: true
 ---
-In the beginning of the class you'll be mainly working wth [the Neato simulator](../How to/run_the_neato_simulator).  However, there will be lots of opportunities to use other simulators for other projects.  The simulators on this page, at least currently, are provided as starting points for your own investigation.  They are not fully built out tutorials (in the way that the Neato simulator is).  By working together (with you all), we hope that we can improve the level of detail on this page and add additional simulators. 
+In the beginning of the class you'll be mainly working wth <a is="no-proxy" data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">the Neato simulator</a>.  However, there will be lots of opportunities to use other simulators for other projects.  The simulators on this page, at least currently, are provided as starting points for your own investigation.  They are not fully built out tutorials (in the way that the Neato simulator is).  By working together (with you all), we hope that we can improve the level of detail on this page and add additional simulators.
 
 ## Prius Simulator
 The Open Source Robotics Foundation (OSRF) put together a demo of a Prius that can be controlled through ROS.  Notably,
