@@ -78,7 +78,7 @@ We will be using the Gazebo simulator for much of this course.  For the warmup p
 <img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
 </p>
 
-The documentation on how to run the simulator, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our [how to run the simulator page](../How to/run_the_neato_simulator).
+The documentation on how to run the simulator, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a is="no-proxy" canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">how to run the simulator page</a>.
 
 ## Robot Debugging Tools
 
