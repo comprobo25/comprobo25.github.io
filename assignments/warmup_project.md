@@ -19,11 +19,11 @@ Your goal in this project will be to program the Neato to execute a number of be
 
 ### Project Showcase
 
-If you want to show off something you did, add it to <a is="no-proxy" href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a>.
+If you want to show off something you did, add it to <a-no-proxy" href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a-no-proxy>.
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a is="no-proxy" href="https://github.com/comprobo20/warmup_project">this repo as a starting point</a> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a is="no-proxy" href="https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing">this Google sheet</a>.
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a-no-proxy href="https://github.com/comprobo20/warmup_project">this repo as a starting point</a-no-proxy> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a-no-proxy href="https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing">this Google sheet</a-no-proxy>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
@@ -65,10 +65,10 @@ In your github repository, create a markdown file called ``README.md`` to serve 
 #### Sample Writeups
 
 Here are some writeups that are particularly solid.  We hope that these might get you excited about putting in the effort to document your work.
-* <a is="no-proxy" href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a>
-* <a is="no-proxy" href="https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf">Mary Keenan</a>
-* <a is="no-proxy" href="https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf">Cedric Kim</a>
-* <a is="no-proxy" href="https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project">Jamie Cho</a> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
+* <a-no-proxy href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a-no-proxy>
+* <a-no-proxy href="https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf">Mary Keenan</a-no-proxy>
+* <a-no-proxy href="https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf">Cedric Kim</a-no-proxy>
+* <a-no-proxy href="https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project">Jamie Cho</a-no-proxy> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
 
 ## Robot Simulation
 
@@ -78,7 +78,7 @@ We will be using the Gazebo simulator for much of this course.  For the warmup p
 <img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
 </p>
 
-The documentation on how to run the simulator, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a is="no-proxy" data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">how to run the simulator page</a>.
+The documentation on how to run the simulator, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a-no-proxy data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">how to run the simulator page</a-no-proxy>.
 
 ## Robot Debugging Tools
 
