@@ -10,10 +10,10 @@ toc_sticky: true
 
 ## For Next Time
 * Fill out <a-no-proxy href="https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform">the course entrance survey</a-no-proxy>
-* <a is="no-proxy" href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">Get your environment setup</a>
+* <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">Get your environment setup</a-no-proxy>
 * Read Ch. 1 and 2 of ["A Gentle Introduction to ROS" (AGIR)](https://www.cse.sc.edu/~jokane/agitr/).  The first chapter has some good background on the motivation behind ROS and what it is and is not.  The beginning of Chapter 2 through 2.2 you can skip (it has outdated installation instructions).  The rest of chapter 2 is a really nice intro to the basics of topics and nodes.
 * Once you have read chapter 2 of AGIR, [startup the Neato simulator](../How to/run_the_neato_simulator).  What topics are published?  Which nodes are running?  Which nodes subscribe to which topics?  Come to class with questions about the Neato simulator's architecture (e.g. do you want to know more about any of the topics?, what are all the nodes for?, etc.).
-* Start working on <a is="no-proxy" href="../assignments/warmup_project" data-canvas="https://olin.instructure.com/courses/143/assignments/440">the Warmup Project</a>
+* Start working on <a-no-proxy href="../assignments/warmup_project" data-canvas="https://olin.instructure.com/courses/143/assignments/440">the Warmup Project</a-no-proxy>
 
 
 ## Sensory-Motor Loops
