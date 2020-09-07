@@ -19,7 +19,7 @@ Your goal in this project will be to program the Neato to execute a number of be
 
 ### Project Showcase
 
-If you want to show off something you did, add it to <a-no-proxy" href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a-no-proxy>.
+If you want to show off something you did, add it to <a-no-proxy href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a-no-proxy>.
 
 ### Logistics
 
