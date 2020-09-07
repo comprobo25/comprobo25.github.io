@@ -5,7 +5,7 @@ toc_sticky: true
 
 ## Today
 * Intro to the teaching team!
-* Intro to CompRobo! ([slides](https://drive.google.com/file/d/1kIdBG8QJD5rUnM37uYxWR1XH_zFMPhxo/view?usp=sharing))
+* Intro to CompRobo! (<a-no-proxy href="https://drive.google.com/file/d/1kIdBG8QJD5rUnM37uYxWR1XH_zFMPhxo/view?usp=sharing">slides</a-no-proxy>)
 * Robot Tortoises and Braitenberg Vehicles
 
 ## For Next Time
