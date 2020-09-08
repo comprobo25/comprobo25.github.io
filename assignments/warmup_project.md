@@ -120,10 +120,15 @@ $ rosbag record -a -x ".*image_raw$" -o bag-file-name
 
 Where **bag-file-name** is where you'd like to store the recorded messages.  Alternatively, if you started the simulator without specifying ``load_camera:=true``, then you don't have to worry about this problem (since there are no images being published).
 
-Once you have recorded your bag file, play it back and visualize the results in rviz. Make sure to disconnect from the robot before playing back your bag file!  Be very careful about the system clock when using rosbag. You want ROS to use the time stamps as they were recorded in the bag file, so be sure to specify the --clock argument when playing back your bagfile. Also, you may need to restart rviz to ensure it uses the clock from the bag file as opposed to the system time.
+Once you have recorded your bag file, play it back and visualize the results in rviz. Make sure to disconnect from the robot before playing back your bag file!  Be very careful about the system clock when using rosbag. You want ROS to use the time stamps as they were recorded in the bag file, so be sure to specify the --clock argument when playing back your bagfile.
 
 ```bash
 $ rosbag play --clock path-to-bag-file
+```
+
+> If you you are not able to view the visual of the robot through rviz, or rviz shows ROS time as being the same as wall time (instead of the time in the bag file), try running the following command, and then restarting rviz.
+> ```bash
+$ roslaunch neato_gazebo prep_for_bag.launch
 ```
 
 Please push your, hopefully not too large, bag file to your repo in a subdirectory called **bags**.  If the bag file is more than 50 megabytes or so, something is likely wrong (e.g., you captured the uncompressed images on mistake).  For our convenience please name the bag something that allows us to determine which part it corresponds to (you will be generating more bag files later).
