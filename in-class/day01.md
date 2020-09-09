@@ -117,7 +117,7 @@ Notice how the only difference when we click on one sensor or the other is which
 
 ### Additional Exercises
 
-At this point, you can feel free to come up with your desired behavior and see if you can create a Braitenberg vehicle to realize this behavior.  Instead, you can also work on creating vehicle for each of the following behaviors.  We are intentionally giving more than you can probably do in during class, so don't feel like you should be able to finish all of these.
+At this point, you can feel free to come up with your desired behavior and see if you can create a Braitenberg vehicle to realize this behavior.  Instead, you can also work on creating vehicle for each of the following behaviors.  ***We are intentionally giving more than you can probably do in during class, so don't feel like you should be able to finish all of these.***
 
 1. Build a vehicle that will turn towards a light source if it passes it on its left side and turn away from it if it passes a light source on its right side.
 2. Build a vehicle that, like the love vehicle, approaches light sources.  The key difference is that this vehicle should stop with its front at a 45 degree angle from the light source.
