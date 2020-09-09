@@ -20,7 +20,7 @@ Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where
 
 In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system world, in many situations this will be cumbersome.
 
-**Exercise:** Taking the Neato as an example, make a list of the coordinate systems that you feel would be convenient to define.  For each coordinate system, define its origin and give a few examples of entities that would be natural to express in the coordinate system. TODO: more scaffolding
+**Exercise:** Taking the Neato as an example, make a list of the coordinate systems that you feel would be convenient to define.  For each coordinate system, define its origin and give a few examples of entities that would be natural to express in the coordinate system. 
 
 ### base_link
 
@@ -40,7 +40,7 @@ Now that we have defined our new coordinate system, we'd like to be able to take
 
 ### From ``world`` to ``base_link``
 
-There are multiple ways to tackle this one.  I think it's easiest to do algebraically, but you can do it in terms of geometry / trigonometry too.  Don't get too hung up on the mechanics, try to understand conceptually how you would solve the problem.
+There are multiple ways to tackle this one.  We think it's easiest to do algebraically, but you can do it in terms of geometry / trigonometry too.  Don't get too hung up on the mechanics, try to understand conceptually how you would solve the problem.
 
 **Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the world coordinate system in the base_link coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
 
