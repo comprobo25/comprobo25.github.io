@@ -92,7 +92,7 @@ Rviz contains visualization tools for common sensory data.  Further, there are 
 
 For part 1 you will be using rviz to visualize the data from the simulated Neatos. Start the Neato simulator. Read through the documentation for rviz and perform the following steps:
 
-1. Set the base_frame to "odom"
+1. Set the ``fixed_frame`` to ``odom``
 2. Add a visualization of the Neato's laser scan (topic /scan).  This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them).
 3. Add a visualization of the Neato itself (this can be done by selecting "Robot Model" from the insert menu")
 4. If you start the simulator with the ``load_camera:=true`` option, you can also add a visualization of the Neato's camera feed (topic camera/image_raw).
@@ -103,7 +103,8 @@ You do not have to turn in anything for this part.
 
 #### Part 2
 
-Write a ROS node that, 10 times a second, publishes a message of type ``visualization_messages/Marker``. The marker message you publish should specify to rviz to create a sphere at position x=1m and y=2m in the Neato's odometry coordinate system (odom). It is up to you how large and what color to make the sphere. Information on the visualization_messages/Marker message can be found [here](http://wiki.ros.org/rviz/DisplayTypes/Marker). Place your screenshot in a subdirectory called **screenshots**.  Try changing the coordinate frame for your sphere to **base_link**, how does the behavior of the visualization change?
+Write a ROS node that, 10 times a second, publishes a message of type ``visualization_messages/Marker``. The marker message you publish should specify to rviz to create a sphere at position x=1m and y=2m in the Neato's odometry coordinate system (odom). It is up to you how large and what color to make the sphere. Information on the visualization_messages/Marker message can be found [here](http://wiki.ros.org/rviz/DisplayTypes/Marker). Place your screenshot in a subdirectory called **screenshots**.  Try changing the coordinate frame for your sphere to **base_link**.  How does the behavior of the visualization change?  Try changing the coordinate frame for your sphere to a different coordinate system (e.g.,  **left_wheel_link**). How does the behavior of the visualization change?
+
 
 You do not have to turn in anything for this part.
 
@@ -119,10 +120,15 @@ $ rosbag record -a -x ".*image_raw$" -o bag-file-name
 
 Where **bag-file-name** is where you'd like to store the recorded messages.  Alternatively, if you started the simulator without specifying ``load_camera:=true``, then you don't have to worry about this problem (since there are no images being published).
 
-Once you have recorded your bag file, play it back and visualize the results in rviz. Make sure to disconnect from the robot before playing back your bag file!  Be very careful about the system clock when using rosbag. You want ROS to use the time stamps as they were recorded in the bag file, so be sure to specify the --clock argument when playing back your bagfile. Also, you may need to restart rviz to ensure it uses the clock from the bag file as opposed to the system time.
+Once you have recorded your bag file, play it back and visualize the results in rviz. Make sure to disconnect from the robot before playing back your bag file!  Be very careful about the system clock when using rosbag. You want ROS to use the time stamps as they were recorded in the bag file, so be sure to specify the --clock argument when playing back your bagfile.
 
 ```bash
 $ rosbag play --clock path-to-bag-file
+```
+
+> If you you are not able to view the visual of the robot through rviz, or rviz shows ROS time as being the same as wall time (instead of the time in the bag file), try running the following command, and then restarting rviz.
+> ```bash
+$ roslaunch neato_gazebo prep_for_bag.launch
 ```
 
 Please push your, hopefully not too large, bag file to your repo in a subdirectory called **bags**.  If the bag file is more than 50 megabytes or so, something is likely wrong (e.g., you captured the uncompressed images on mistake).  For our convenience please name the bag something that allows us to determine which part it corresponds to (you will be generating more bag files later).

@@ -129,19 +129,19 @@ This is the linear acceleration of the Neato in meters per second squared along 
 
 ### ``bump``
 
-This rotopic contains four binary outputs corresponding to each of the Neato's four bump sensors.  In the simulator, all bump sensors are either on or off (no differentiation is made between the bump sensors).
+This topic contains four binary outputs corresponding to each of the Neato's four bump sensors.  In the simulator, all bump sensors are either on or off (no differentiation is made between the bump sensors).
 
 ### ``bumper``
 
-This is an internal topic to Gazebo.  You can look at the output as you run into something if you are curious, but you don't need to worry about it in this class.
+This is an internal topic to Gazebo.  If you are curiouts, you can look at the output as you run into something, but you don't need to worry about it in this class.
 
 ### ``clock``
 
-This is the simulator clock.  This is useful for execcuting commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rospy`` (see the [ROS tutorials page](http://wiki.ros.org/rospy/Overview/Time) for details).
+This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rospy`` (see the [ROS tutorials page](http://wiki.ros.org/rospy/Overview/Time) for details).
 
 ### ``cmd_vel``
 
-You publish to this topic to set the robot's velocity.  The linear.x direction sets forward velocity and ``angular.z`` sets the angular velcoity.
+You publish to this topic to set the robot's velocity.  The ``linear.x`` direction sets forward velocity and ``angular.z`` sets the angular velocity.
 
 ### ``encoders``
 

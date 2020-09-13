@@ -20,10 +20,13 @@ A few quick notes:
 * When installing Ubuntu you will likely need to **shrink your Windows patition** to make room for Ubuntu.  The Itzgeek instructions show how you can use the Disk Management utility in Windows to accomplish this.  Unfortunately, sometimes you will not be able to shrink your volume in this way.  If this happens to you, we recommend using the Ubuntu installer to shrink your Windows partition.  If you continue to have issues, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html).  If that still doesn't work, send us an e-mail (see below).
 * You should probably reserve about 50 GB of space for Ubuntu.
 * When installing Ubuntu, you should select the options to **Download updates** and **Install third-party software**.
-* If you run into any issues with this, send an e-mail to <a href="mailto:comprobofaculty@olin.edu">comprobofaculty@olin.edu</a>. 
 
 
 *Once you have a freshly installed copy of Ubuntu 20.04, perform the following steps.*
+
+### Troubleshooting
+
+One student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to <a href="mailto:comprobofaculty@olin.edu">comprobofaculty@olin.edu</a>.
 
 ## Install ROS Noetic
 
@@ -49,7 +52,7 @@ Edit your ``~/.bashrc`` file so that the file ``catkin_ws/devel/setup.bash`` is 
 $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-**You must perform the rest of the setup in a new terminal window.**  To make sure you have done the previous steps correct, type ``$ roscd``.  You should be in the directory ``~/catkin_ws/devel`` if you did the previous steps correctly. 
+**You must perform the rest of the setup in a new terminal window.**  To make sure you have done the previous steps correctly, type ``$ roscd``.  You should be in the directory ``~/catkin_ws/devel``.
 
 ## Setup Your CompRobo GitHub Repository
 
