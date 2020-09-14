@@ -70,6 +70,7 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 * [Day 1](in-class/day01)
 * [Day 2](in-class/day02)
+* [Day 3](in-class/day03)
 
 ## Conclusion and Learning More
 
