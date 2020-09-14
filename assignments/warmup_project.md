@@ -266,11 +266,11 @@ For this part of the assignment you have two choices:
 1. Combine two or more of your behaviors from earlier to create a finite-state controller.
 2. Implement a new behavior using finite state control
 
+You may find that drawing a state transition diagram is helpful. Each state should indicate either a different behavior or a different stage with a single behavior. Each transition should be some condition that you can reliably detect in the environment. For instance, we might combine wall following with person tracking in the following way:
+
 <p align="center">
 <img alt="A finite state diagram of a two behavior system." src="../website_graphics/fsc.png"/>
 </p>
-
-You may find that drawing a state transition diagram is helpful. Each state should indicate either a different behavior or a different stage with a single behavior. Each transition should be some condition that you can reliably detect in the environment. For instance, we might combine wall following with person tracking in the following way:
 
 #### Visualization
 
