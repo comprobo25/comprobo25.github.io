@@ -11,6 +11,11 @@ toc_sticky: true
 
 ## For Next Time
 * Find a partner for the Warmup Project and get started (there is an intermediate deliverable due on class 4).
+* Read [this article on robots and liability](https://thehustle.co/when-robots-kill/)
+
+
+## What is a Robot Anyway?
+While Neatos, Spot and manufacturing robotic arms seem to clearly be "robots", the line is not always so clear - e.g. when we talk about things like washing machines, Alexa, RC cars. We like to think about robots as something that has a "brain" (processor), one or more sensors, and one or more actuators. By this definition, yes, machine machines and Alexa, are in fact robots. However, [there are also (less academic) definitions](https://roboticsandautomationnews.com/2020/05/11/opinion-what-is-a-robot-and-how-does-it-differ-from-a-machine/32192/) and shades of gray when what exactly is a robot. 
 
 ## Coordinate Frames and Coordinate Transforms in Robotics
 
