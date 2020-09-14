@@ -236,8 +236,10 @@ Modify the code you wrote previously (``test_message.py`` and ``receive_message.
 
 ### Viewing the Results in RViz
 
-TODO
+We can open up rviz and visualize the message.  First, open rviz.
 
-## Work time for the Warmup Project
+```bash
+$ rosrun rviz rviz
+```
 
-Take the rest of class to work on the warmup project.  Remember, you have the option of working with a partner for this project.
+Next, click ``add``, ``by topic``, and select your marker message.  Make sure to set the ``fixed frame`` appropriately.
