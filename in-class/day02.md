@@ -21,45 +21,49 @@ While Neatos, Spot and manufacturing robotic arms seem to clearly be "robots", t
 
 > Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
 
-Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw picture.  Make sure to label the axes of the world coordinate system (don't worry about the z-axis).
+If it's helpful, here's a video to refresh your memory.
 
-In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system world, in many situations this will be cumbersome.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGIhzgmOlRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).
+
+In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system ``world``, in many situations this will be cumbersome.
 
 **Exercise:** Taking the Neato as an example, make a list of the coordinate systems that you feel would be convenient to define.  For each coordinate system, define its origin and give a few examples of entities that would be natural to express in the coordinate system. 
 
 ### base_link
 
-Next, we'll define ``base_link``, which will serve as our robot-centric coordinate system.  The origin of this coordinate system will be at the midpoint of the line connecting the robot's wheels.  The x-axis will point forwards, the y-axis will point to the left, and the z-axis will point up.  Update your drawing to indicate the position of the base_link coordinate axes (again, don't worry about the z-axis).
+Next, we'll define ``base_link``, which will serve as our robot-centric coordinate system.  The origin of this coordinate system will be at the midpoint of the line connecting the robot's wheels.  The x-axis will point forwards, the y-axis will point to the left, and the z-axis will point up.  Update your drawing to indicate the position of the ``base_link`` coordinate axes (again, don't worry about the z-axis).
 
-Now that we have defined our new coordinate system, we'd like to be able to take points expressed in this coordinate system and map them to the world coordinate system (and vice-versa).  In order to do this, we need to specify the relationship between these two coordinate systems.  A natural way to specify the relationship between two coordinate systems is to specify the position of the origin of one coordinate system in the other as well as the directions of the coordinate axes of one frame in the other.  Going back to our original example we can say that the coordinate axes of the Neato's base_link coordinate system are at position 3.0m, 5.0m with a rotation of 30 degrees relative to the coordinate axes of the world coordinate frame.  We usually think of this information as defining the transformation from world to base_link.  It turns out that with just this information, we can map vectors between these two coordinate systems.  ROS has robust infrastructure to handle these transformations automatically, so for the most part when writing ROS code, you don't have to worry about how to actually perform these transformations.  However, to build your understanding, we'll dig into this the details a bit.
+Now that we have defined our new coordinate system, we'd like to be able to take points expressed in this coordinate system and map them to the ``world`` coordinate system (and vice-versa).  In order to do this, we need to specify the relationship between these two coordinate systems.  A natural way to specify the relationship between two coordinate systems is to specify the position of the origin of one coordinate system in the other as well as the directions of the coordinate axes of one frame in the other.  Going back to our original example we can say that the coordinate axes of the Neato's ``base_link`` coordinate system are at position 3.0m, 5.0m with a rotation of 30 degrees relative to the coordinate axes of the ``world`` coordinate frame.  We usually think of this information as defining the transformation from ``world`` to ``base_link``.  It turns out that with just this information, we can map vectors between these two coordinate systems.  ROS has robust infrastructure to handle these transformations automatically, so for the most part when writing ROS code, you don't have to worry about how to actually perform these transformations.  However, to build your understanding, we'll dig into this the details a bit.
 
-### From ``base_link to world``
+### From ``base_link`` to ``world``
 
-**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the base_link coordinate system in the world coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
+**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the ``base_link`` coordinate system in the ``world`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
 
-**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the base_link coordinate system in the world coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
+**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the ``base_link`` coordinate system in the ``world`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
 
 
-**Exercise:**  Determine the coordinates of a point located at (x, y) in the base_link coordinate system in the world coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
+**Exercise:**  Determine the coordinates of a point located at (x, y) in the ``base_link`` coordinate system in the ``world`` coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
 
 
 ### From ``world`` to ``base_link``
 
 There are multiple ways to tackle this one.  We think it's easiest to do algebraically, but you can do it in terms of geometry / trigonometry too.  Don't get too hung up on the mechanics, try to understand conceptually how you would solve the problem.
 
-**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the world coordinate system in the base_link coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
+**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the ``world`` coordinate system in the ``base_link`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
 
 
-**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the world coordinate system in the base_link coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
+**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the ``world`` coordinate system in the ``base_link`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
 
-**Exercise:**  Determine the coordinates of a point located at (x, y) in the world coordinate system in the base_link coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
+**Exercise:**  Determine the coordinates of a point located at (x, y) in the ``world`` coordinate system in the ``base_link`` coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
 
 
 ### Static Versus Dynamic Coordinate Transformations
 
 The relationship between some coordinate systems are dynamic (meaning they change over time) and some are static (meaning they are constant over time).
 
-**Exercise:**  Assume that our Neato robot can move about in the world by using its wheels.  Is the relationship between world and base_link static or dynamic?  Given the coordinate systems you came up with earlier, list some examples of coordinate system relationships that are static and some that are dynamic.
+**Exercise:**  Assume that our Neato robot can move about in the ``world`` by using its wheels.  Is the relationship between ``world`` and ``base_link`` static or dynamic?  Given the coordinate systems you came up with earlier, list some examples of coordinate system relationships that are static and some that are dynamic.
 Before Starting
 
 
