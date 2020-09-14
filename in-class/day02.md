@@ -76,7 +76,7 @@ Before Starting
 Let's write our code today in a package called in_class_day02 (Note: to avoid merge conflicts, I'll be checking in a sample solution under in_class_day02_solution).  To create the package run the following commands:
 
 ```bash
-$ cd ~/catkin_ws/src/comprobo18
+$ cd ~/catkin_ws/src/comprobo20
 $ catkin_create_pkg in_class_day02 rospy std_msgs geometry_msgs sensor_msgs
 ```
 
