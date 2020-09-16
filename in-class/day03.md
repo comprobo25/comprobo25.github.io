@@ -1,5 +1,5 @@
 ---
-title: "Writing our first sensor-moto loop"
+title: "Writing our first sensory-motor loop"
 toc_sticky: true
 ---
 
@@ -12,6 +12,11 @@ toc_sticky: true
 * Read <a-no-proxy href="https://smartech.gatech.edu/bitstream/handle/1853/22221/handbock.pdf">this paper</a-no-proxy> for historical context on reactive robotic control strategies
 * Work on the 
 <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> 
+
+## Discussion: Who is to blame when robots cause harm?
+Links to the <a-no-proxy href="https://thehustle.co/when-robots-kill/"> reading </a-no-proxy> and
+<a-no-proxy href="https://docs.google.com/presentation/d/19vvms_58HVD-8TtENqQD7XjgfM93wyVk2WlSxExM-Ww/edit?usp=sharing"> Slides </a-no-proxy>
+
 
 ## Sensory Motor Loops
 
