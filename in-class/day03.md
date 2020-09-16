@@ -9,8 +9,7 @@ toc_sticky: true
 
 ## For Next Time
 * Read <a-no-proxy href="https://smartech.gatech.edu/bitstream/handle/1853/22221/handbock.pdf">this paper</a-no-proxy> for historical context on reactive robotic control strategies
-* Work on the 
-<a-no-proxy href="../assignments/warmup_project"  data:canvas="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> 
+* Work on the <a-no-proxy href="../assignments/warmup_project" data-canvas="https://olin.instructure.com/courses/143/assignments/440">the Warmup Project</a-no-proxy>
 
 ## Discussion: Who is to blame when robots cause harm?
 Links to the <a-no-proxy href="https://thehustle.co/when-robots-kill/"> reading </a-no-proxy> and
