@@ -6,12 +6,11 @@ toc_sticky: true
 ## Today
 * Discussion: <a-no-proxy href="https://thehustle.co/when-robots-kill/">robots and liability</a-no-proxy>
 * Writing our first sensory-motor loops (in groups)
-* Work on the Warmup Project
 
 ## For Next Time
 * Read <a-no-proxy href="https://smartech.gatech.edu/bitstream/handle/1853/22221/handbock.pdf">this paper</a-no-proxy> for historical context on reactive robotic control strategies
 * Work on the 
-<a-no-proxy href="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> 
+<a-no-proxy href="../assignments/warmup_project"  data:canvas="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> 
 
 ## Discussion: Who is to blame when robots cause harm?
 Links to the <a-no-proxy href="https://thehustle.co/when-robots-kill/"> reading </a-no-proxy> and
@@ -39,7 +38,7 @@ $ cd ~/catkin_ws/src/comprobo20
 $ catkin_create_pkg in_class_day03 rospy std_msgs geometry_msgs neato_node sensor_msgs
 ```
 
-The first sensory-motor loop we will create is one in which the robot moves forward at a fixed speed until it senses an obstacle (using the bump sensor) and then stops.  For a rundown of the bump sensors on the Neato, check out the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> page.
+The first sensory-motor loop we will create is one in which the robot moves forward at a fixed speed until it senses an obstacle (using the bump sensor) and then stops.  For a rundown of the bump sensors on the Neato, check out the <a-no-proxy href="../How to/run_the_neato_simulator" data:canvas="https://olin.instructure.com/courses/143/modules/items/1305">Neato Simulator Page</a-no-proxy> page.
 
 Hints:
 
@@ -49,7 +48,7 @@ Call your node something like ``emergency_stop.py``.  Make sure to make it execu
 
 ### Using the Laser Range Finder
 
-The next sensory-motor loop I suggest that you create should be called ``distance_emergency_stop.py``.  This node should be identical to ``emergency_stop.py`` except it should use the laser range finder to detect when an obstacle is within a specified distance and stop if this is the case. It is up to you how you implement this.  You can either use just the measurements in front of the robot, or perhaps use all of the measurements.  You may want to use an all-or-nothing control strategy (also called bang-bang) where you are either going ahead at some fixed speed or you stop completely.  Alternatively, you may use something akin to proportional control where your speed slows proportionally with how close you are to the target distance.  Again, for more detail on using the Neato sensors (including the laser range finder), see the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/440">Warmup Project</a-no-proxy> page.
+The next sensory-motor loop I suggest that you create should be called ``distance_emergency_stop.py``.  This node should be identical to ``emergency_stop.py`` except it should use the laser range finder to detect when an obstacle is within a specified distance and stop if this is the case. It is up to you how you implement this.  You can either use just the measurements in front of the robot, or perhaps use all of the measurements.  You may want to use an all-or-nothing control strategy (also called bang-bang) where you are either going ahead at some fixed speed or you stop completely.  Alternatively, you may use something akin to proportional control where your speed slows proportionally with how close you are to the target distance.  Again, for more detail on using the Neato sensors (including the laser range finder), see the <a-no-proxy href="../How to/run_the_neato_simulator" data:canvas="https://olin.instructure.com/courses/143/modules/items/1305">Neato Simulator Page</a-no-proxy> page.
 
 
 ### Wall Bumping and Finite-state Control
