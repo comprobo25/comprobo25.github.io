@@ -28,6 +28,8 @@ Today, we will kick off a week long project to investigate how we can create sen
 
 ### Creating our First Sensory Motor Loop
 
+> Sample solutions to this can be found in the ``comprobo20`` Github repository under <a-no-proxy href="https://github.com/comprobo20/comprobo20/tree/master/in_class_day03_sample">in_class_day_03_sample</a-no-proxy>.  If you don't see it in your fork, make sure to do a ``$ git pull upstream master``
+
 Find another person in the class to work with.  In pairs, you will begin to explore the idea of a sensory-motor loop on the Neatos.
 
 In order to get started, create a package for the code that you will be writing today.  As with all ROS packages in your workspace, it must be inside of your ``catkin_ws/src `` folder.  Besides this requirement, you are free to put the package anywhere, however, I recommend that put it in the root directory of your ``comprobo20`` repository.
@@ -48,42 +50,3 @@ Call your node something like ``emergency_stop.py``.  Make sure to make it execu
 ### Using the Laser Range Finder
 
 The next sensory-motor loop I suggest that you create should be called ``distance_emergency_stop.py``.  This node should be identical to ``emergency_stop.py`` except it should use the laser range finder to detect when an obstacle is within a specified distance and stop if this is the case. It is up to you how you implement this.  You can either use just the measurements in front of the robot, or perhaps use all of the measurements.  You may want to use an all-or-nothing control strategy (also called bang-bang) where you are either going ahead at some fixed speed or you stop completely.  Alternatively, you may use something akin to proportional control where your speed slows proportionally with how close you are to the target distance.  Again, for more detail on using the Neato sensors (including the laser range finder), see the <a-no-proxy href="../How to/run_the_neato_simulator" data:canvas="https://olin.instructure.com/courses/143/modules/items/1305">Neato Simulator Page</a-no-proxy> page.
-
-
-### Wall Bumping and Finite-state Control
-
-Sometimes you want your robot to switch between multiple behaviors.  One very simple architecture for this is to use something called finite-state control.  The idea is that your robot can be in one of a finite number of states.  Each state prescribes a different pattern of behavior for the robot.  The robot transitions between states using various rules.
-
-As an example, let's consider a robot that can be in one of three states:
-
-1. moving forward
-2. moving backward
-3. rotating left
-
-Each state prescribes a very easy to program behavior.  In each case depending on the robot's state we would either drive forward at a fixed velocity, drive backward at a fixed velocity, or rotate left at a fixed velocity.
-
-Let's say that our robot starts in the **moving forward** state.  We can now define a series of rules for transitioning between the states based on the Neato's sensors.
-
-**moving forward**
-
-* if any bump sensor becomes activated, change state to moving backward.
-* otherwise, stay in the moving forward state
-
-**moving backward**
-
-* if the obstacle detected in front of the robot exceeds a specified threshold, change state to rotating left.  Also, record the time at which the robot began rotating left.
-* otherwise, stay in the moving backward state.
-
-**rotating left**
-
-* if the current time is more than 1 second greater than when the robot started rotating left, change state to moving forward.
-* otherwise, stay in the rotating left state.
-
-What would the behavior of this robot be?  Do a quick whiteboard based simulation to probe the robot's behavior in various situations.  What range of behaviors would the robot exhibit.
-
-With your partner, implement a ROS Python node that realizes this behavior.  For the timing related tasks you will want to check out this ROS documentation page.
-
-
-### Extension (optional)
-
-Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials for the smach ROS package</a-no-proxy> Use smach to either rewrite your finite state controller to use smach, or devise a new finite-state controller and implement it using smach.  
