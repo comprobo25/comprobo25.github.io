@@ -28,6 +28,42 @@ A few quick notes:
 
 One student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to <a href="mailto:comprobofaculty@olin.edu">comprobofaculty@olin.edu</a>.
 
+## Make Sure Your NVIDIA Card is Setup
+
+Depending on how you installed Ubuntu, you may not have the drivers installed for your NVIDIA graphics card.  To check whether you have the NVIDIA drivers installed, you can run the following command.
+
+```bash
+$ nvidia-smi
+```
+
+If you have the drivers installed, you should see output similar to the following.
+```bash
+Wed Sep 16 13:53:41 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.100      Driver Version: 440.100      CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce MX150       Off  | 00000000:02:00.0 Off |                  N/A |
+| N/A   54C    P0    N/A /  N/A |    316MiB /  2002MiB |      5%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1024      G   /usr/lib/xorg/Xorg                            29MiB |
+|    0      1786      G   /usr/lib/xorg/Xorg                           126MiB |
+|    0      2019      G   /usr/bin/gnome-shell                         101MiB |
+|    0      4581      G   ...AAAAAAAAAAAACAAAAAAAAAA= --shared-files    19MiB |
+|    0     78591      G   /opt/zoom/zoom                                24MiB |
+|    0     84198      G   /usr/lib/firefox/firefox                       1MiB |
++-----------------------------------------------------------------------------+
+```
+
+If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux) to install it.
+
 ## Install ROS Noetic
 
 Follow [this tutorial](http://wiki.ros.org/noetic/Installation) (make sure to complete the steps for ``Ubuntu`` and ``ros-noetic-desktop-full``).
