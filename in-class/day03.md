@@ -1,5 +1,5 @@
 ---
-title: "Writing our first sensor-moto loop"
+title: "Writing our first sensor-motor loop"
 toc_sticky: true
 ---
 
