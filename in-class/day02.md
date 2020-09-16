@@ -205,7 +205,7 @@ Next, we will define our callback function.  Our callback function takes as inpu
 
 ```python
 def process_point(msg):
-    print msg.header
+    print(msg.header)
 ```
 
 Next, we must subscribe to the appropriate topic.
