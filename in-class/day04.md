@@ -19,10 +19,10 @@ To get the idea, program the Neato to adjust its position so that it is a specif
 
 > If you're still a bit fuzzy on how to structure your code in ROS we have provided some starter code (look for ``wall_approach_starter.py`` in the ``in_class_day04_sample/scripts`` folder.
 
-A helpful tool for visualizing the results of your program is to use the rqt_gui tool.  First, start up the GUI:
+A helpful tool for visualizing the results of your program is to use the <a-no-proxy href="http://wiki.ros.org/rqt/UserGuide">rqt_gui tool</a-no-proxy>.  First, start up the GUI:
 
 ```bash
-$ rosrun rqt_gui rqt_gui
+$ rosrun rqt
 ```
 
 Next, go to ``plugins -> visualization -> plot``.
