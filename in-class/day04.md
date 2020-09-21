@@ -22,7 +22,7 @@ To get the idea, program the Neato to adjust its position so that it is a specif
 A helpful tool for visualizing the results of your program is to use the <a-no-proxy href="http://wiki.ros.org/rqt/UserGuide">rqt_gui tool</a-no-proxy>.  First, start up the GUI:
 
 ```bash
-$ rosrun rqt
+$ rqt
 ```
 
 Next, go to ``plugins -> visualization -> plot``.
