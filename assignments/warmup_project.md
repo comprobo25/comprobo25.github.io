@@ -112,13 +112,15 @@ You do not have to turn in anything for this part.
 
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
-[Create a bag file](http://wiki.ros.org/rosbag/Tutorials/Recording%20and%20playing%20back%20data) of you driving the Neato around.  You can do this by using the ``rosbag record`` command.  If you started the simulator with the ``load_camera:=true`` command, Be careful not to record the ``/camera/image_raw`` topic (this topic is an uncompressed image which is surprisingly large). In order to avoid recording the this topic you can use the following command, which excludes any topic that ends with the string "image_raw".
+[Create a bag file](http://wiki.ros.org/rosbag/Tutorials/Recording%20and%20playing%20back%20data) of you driving the Neato around.  You can do this by using the ``rosbag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (don't worry, this command won't exclude any necessary topics from the bag file).
 
 ```bash
-$ rosbag record -a -x ".*image_raw$" -o bag-file-name
+$ rosbag record -j -a -x ".*image_raw$|/gazebo/.*" -o bag-file-name
 ```
 
-Where **bag-file-name** is where you'd like to store the recorded messages.  Alternatively, if you started the simulator without specifying ``load_camera:=true``, then you don't have to worry about this problem (since there are no images being published).
+> Note: these instructions result in an almost 50x reduction in file size when compared to the previous instructions!
+
+Where **bag-file-name** is where you'd like to store the recorded messages (``rosbag`` will add a time stamp to your bag file name automatically).
 
 Once you have recorded your bag file, play it back and visualize the results in rviz. Make sure to disconnect from the robot before playing back your bag file!  Be very careful about the system clock when using rosbag. You want ROS to use the time stamps as they were recorded in the bag file, so be sure to specify the --clock argument when playing back your bagfile.
 
