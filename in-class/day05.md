@@ -48,3 +48,10 @@ With your partner, implement a ROS Python node that realizes this behavior.  For
 ### Extension (optional)	
 
 Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials for the smach ROS package</a-no-proxy> Use smach to either rewrite your finite state controller to use smach, or devise a new finite-state controller and implement it using smach.
+
+Unfortunately, the smach viewer application doesn't seem to work with Python3 very easily, so for now we won't be able to use that.  Here are some notes of how to try to get things working.
+
+```bash
+$ sudo apt-get install ros-noetic-smach-viewer
+$ sudo ln -s /usr/bin/python3 /usr/bin/python
+```
