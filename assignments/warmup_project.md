@@ -29,6 +29,17 @@ We have included several extensions to the basic project that we hope will keep 
 
 You may find the [resources page](../useful_resources) useful for completing this assignment.
 
+## Intermediate checkpoint
+
+Halfway through the project you should have the following parts of the project done.
+
+* Simple visualizations using rviz
+* Test drive bag file
+* Teleop
+* Drive square
+* Wall following
+* A preliminary writeup of your wall follower
+
 ### Code Structure
 
 Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS tutorial on creating a catkin package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage).
@@ -282,16 +293,6 @@ While not required, we recommend that you choose a visualization strategy that h
 
 Using the rosbag instructions from earlier, record a demo of your finite-state controller in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-## Intermediate checkpoint
-
-Halfway through the project you should have the following parts of the project done.
-
-* Simple visualizations using rviz
-* Test drive bag file
-* Teleop
-* Drive square
-* Wall following
-* A preliminary writeup of your wall follower
 
 ## Tips, Tricks, and Words of (Pseudo?) Wisdom
 
