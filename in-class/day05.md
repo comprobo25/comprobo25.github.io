@@ -44,14 +44,12 @@ What would the behavior of this robot be?  Do a quick whiteboard based simulatio
 
 With your partner, implement a ROS Python node that realizes this behavior.  For the timing related tasks you will want to check out this ROS documentation page.
 
+> An implementation of this as a ROS node can be found in the upstream ``comprobo20`` github repository under ``in_class_day05_sample/scripts/finite_state_example.py`` (here is a [link to code on the course website](../Sample_code/day05_solutions#finite_state_examplepy)).
 
-### Extension (optional)	
+### Extension (optional)
 
 Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials for the smach ROS package</a-no-proxy> Use smach to either rewrite your finite state controller to use smach, or devise a new finite-state controller and implement it using smach.
 
-Unfortunately, the smach viewer application doesn't seem to work with Python3 very easily, so for now we won't be able to use that.  Here are some notes of how to try to get things working.
+We have adapted the example from earlier to use the smach package.  The code can be found in the ``comprobo20`` upstream repository under ``in_class_day05_sample/scripts/finite_state_example_smach.py`` (here is a [link to the solution on the course website](../Sample_code/day05_solutions#finite_state_example_smachpy-example-of-using-the-smach-library)).
 
-```bash
-$ sudo apt-get install ros-noetic-smach-viewer
-$ sudo ln -s /usr/bin/python3 /usr/bin/python
-```
+To use the smach viewer, unfortunately requires quite a bit more work.  We're not even sure it can be done using Python3 in ROS Noetic.  We tried for a while and gave up... If you get it working let us know!  It will probably work pretty easily in ROS melodic.
