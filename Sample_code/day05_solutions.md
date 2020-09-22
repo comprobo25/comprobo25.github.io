@@ -1,4 +1,5 @@
 ---
+layout: splash
 title: "Sample Solution for Day 5 Coding"
 toc_sticky: true 
 source1: "in_class_day05_sample/finite_state_example.py" 
