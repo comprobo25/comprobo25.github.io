@@ -17,34 +17,34 @@ Sometimes you want your robot to switch between multiple behaviors.  One very si
 
 As an example, let's consider a robot that can be in one of three states:	
 
-1. moving forward	
-2. moving backward	
-3. rotating left	
+1. moving forward
+2. moving backward
+3. rotating left
 
-Each state prescribes a very easy to program behavior.  In each case depending on the robot's state we would either drive forward at a fixed velocity, drive backward at a fixed velocity, or rotate left at a fixed velocity.	
+Each state prescribes a very easy to program behavior.  In each case depending on the robot's state we would either drive forward at a fixed velocity, drive backward at a fixed velocity, or rotate left at a fixed velocity.
 
-Let's say that our robot starts in the **moving forward** state.  We can now define a series of rules for transitioning between the states based on the Neato's sensors.	
+Let's say that our robot starts in the **moving forward** state.  We can now define a series of rules for transitioning between the states based on the Neato's sensors.
 
 **moving forward**	
 
 * if any bump sensor becomes activated, change state to moving backward.	
-* otherwise, stay in the moving forward state	
+* otherwise, stay in the moving forward state
 
-**moving backward**	
+**moving backward**
 
-* if the obstacle detected in front of the robot exceeds a specified threshold, change state to rotating left.  Also, record the time at which the robot began rotating left.	
-* otherwise, stay in the moving backward state.	
+* if the laser scanner determines that the obstacle obstacle in front of the robot exceeds a specified distance threshold, change state to rotating left.
+* otherwise, stay in the moving backward state.
 
-**rotating left**	
+**rotating left**
 
-* if the current time is more than 1 second greater than when the robot started rotating left, change state to moving forward.	
-* otherwise, stay in the rotating left state.	
+* if the current time is more than 1 second greater than when the robot started rotating left, change state to moving forward.
+* otherwise, stay in the rotating left state.
 
-What would the behavior of this robot be?  Do a quick whiteboard based simulation to probe the robot's behavior in various situations.  What range of behaviors would the robot exhibit.	
+What would the behavior of this robot be?  Do a quick whiteboard based simulation to probe the robot's behavior in various situations.  What range of behaviors would the robot exhibit.
 
-With your partner, implement a ROS Python node that realizes this behavior.  For the timing related tasks you will want to check out this ROS documentation page.	
+With your partner, implement a ROS Python node that realizes this behavior.  For the timing related tasks you will want to check out this ROS documentation page.
 
 
 ### Extension (optional)	
 
-Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials for the smach ROS package</a-no-proxy> Use smach to either rewrite your finite state controller to use smach, or devise a new finite-state controller and implement it using smach. 
+Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials for the smach ROS package</a-no-proxy> Use smach to either rewrite your finite state controller to use smach, or devise a new finite-state controller and implement it using smach.
