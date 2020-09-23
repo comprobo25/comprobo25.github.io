@@ -57,4 +57,6 @@ Check out the <a-no-proxy href="http://wiki.ros.org/smach/Tutorials">tutorials f
 
 We have adapted the example from earlier to use the smach package.  The code can be found in the ``comprobo20`` upstream repository under ``in_class_day05_sample/scripts/finite_state_example_smach.py`` (here is a [link to the solution on the course website](../Sample_code/day05_solutions#finite_state_example_smachpy-example-of-using-the-smach-library)).
 
-To use the smach viewer, unfortunately requires quite a bit more work.  We're not even sure it can be done using Python3 in ROS Noetic.  We tried for a while and gave up... If you get it working let us know!  It will probably work pretty easily in ROS melodic.
+To use the smach viewer, unfortunately requires quite a bit more work.  We're not even sure it can be done using Python3 in ROS Noetic.  We tried for a while and gave up... If you get it working let us know!  It will probably work in ROS melodic.
+
+> It might also be worth checking out [FlexBE](http://wiki.ros.org/flexbe), which is a more up to date tool for creating state machines (that uses ``smach`` internally).  We have no experience with it though.
