@@ -52,6 +52,17 @@ feature_row_warmup_project:
 * [Warmup Project Assignment Document](assignments/warmup_project)\n
 * [Class-generated Tips and Tricks](https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing)\n"
 
+feature_row_robot_localization_project:
+  - image_path: website_graphics/neato_gazebo.png
+    alt: "The Neato robot in an empty, simulated world"
+    excerpt: "
+   The Robo localization project is a scaffolded assignment for students to learn about the particle filter algorithm.  Along the way the will learn some basics of Bayesian inference and some new ROS tools and workflows.
+
+    ### Supporting Documents
+
+* [Robo Localization Assignment Document](assignments/robot_localization)\n
+* [Dude, where's my robot? A Localization Challenge for Undergraduate Robotics](https://dl.acm.org/doi/abs/10.5555/3297863.3297895)\n"
+
 ---
 
 The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning.
@@ -65,6 +76,8 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 ## <a name="module-details"/> Warmup Project
 
 {% include feature_row id="feature_row_warmup_project" type="right" %}
+
+{% include feature_row id="feature_row_robot_localization_project" type="left" %}
 
 ## In-class Activities
 
