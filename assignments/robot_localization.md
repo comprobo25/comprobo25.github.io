@@ -10,15 +10,15 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 
 
 ## Learning Objectives
+
 * Build fluency with ROS
 * Learn about one core problem (robot localization) and one state of the art algorithm (particle filtering)
 * Learn strategies for developing and debugging algorithms for robotics
 Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
 
-
 ## Teaming
-For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
 
+For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
 
 ## Deliverables
 
@@ -75,31 +75,31 @@ The particle filter involves the following steps
 
 ## Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of the ``robot_localization`` Github repo.  Before you can run the starter code, you must install scikit learn and scipy.
+The starter code will be in a package called ``robot_localizer`` inside of the ``robot_localization`` Github repo.  Before you can run the starter code, you must install scikit learn.
 
-> TODO: test all of this on melodic and noetic
+> TODO: test all of this on melodic
 
 ```bash
-$ pip install sklearn scipy
+$ pip3 install sklearn sklearn
 ```
 
 You will need some additional ROS packages that we haven't used thus far.
 
+> Note: if you are on Melodic, you would want replace ``noetic`` with ``melodic`` in the commands below.
+
 ```bash
-$ sudo apt install ros-melodic-map-server ros-melodic-pointcloud-to-laserscan ros-melodic-amcl
+$ sudo apt install ros-noetic-map-server ros-noetic-amcl ros-noetic-openslam-gmapping # might be needed for melodic ros-melodic-pointcloud-to-laserscan
 ```
 
-## Gmapping on Melodic (TODO: probably this will be for Noetic)
+## Gmapping on Noetic
 
+Gmapping has not been released as a pre-built binary for Noetic yet.  If you are running Noetic, to get around this run the following commands.
 
-Gmapping has not been released as a pre-built binary for Melodic yet.  To get around this run the following commands.
-
-> TODO: we might not need ``openslam_gmapping``
+> TODO: we should be able to get around doing this on Melodic
 
 ```bash
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/ros-perception/slam_gmapping
-$ git clone https://github.com/ros-perception/openslam_gmapping
 $ cd ..
 $ catkin_make
 ```
@@ -134,7 +134,6 @@ In rviz, add the displays for the following topics (use the "By Topic" tab after
 * ``/particlecloud``
 * ``/map_pose``
 * ``/map``
-```
 
 Also, change the fixed frame to ``map``.
 
@@ -156,9 +155,15 @@ To make a map, first connect to the robot simualtor (TODO: add instructions for 
 $ roslaunch neato_2dnav gmapping_demo.launch
 ```
 
-This will start the SLAM code.  To view the results, you will need to add a map topic visualization in rviz.  
+This will start the SLAM code and launch rviz with the appropriate settings.
 
-Pilot the robot around for a while.  Once you are satisfied with your map, save it by runnign the following command.
+Pilot the robot around for a while.  The easiest way to do that is to use the following command.
+
+```bash
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+Once you are satisfied with your map, save it by running the following command.
 
 ```bash
 $ rosrun map_server map_saver -f ~/mymap

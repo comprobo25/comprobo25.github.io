@@ -56,11 +56,11 @@ feature_row_robot_localization_project:
   - image_path: website_graphics/neato_gazebo.png
     alt: "The Neato robot in an empty, simulated world"
     excerpt: "
-   The Robo localization project is a scaffolded assignment for students to learn about the particle filter algorithm.  Along the way the will learn some basics of Bayesian inference and some new ROS tools and workflows.
+   The Robot localization project is a scaffolded assignment for students to learn about the particle filter algorithm.  Along the way the will learn some basics of Bayesian inference and some new ROS tools and workflows.
 
     ### Supporting Documents
 
-* [Robo Localization Assignment Document](assignments/robot_localization)\n
+* [Robot Localization Assignment Document](assignments/robot_localization)\n
 * [Dude, where's my robot? A Localization Challenge for Undergraduate Robotics](https://dl.acm.org/doi/abs/10.5555/3297863.3297895)\n"
 
 ---
