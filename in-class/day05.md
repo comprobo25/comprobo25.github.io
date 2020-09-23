@@ -11,11 +11,16 @@ toc_sticky: true
 ## For Next Time
 * Finish the <a-no-proxy href="../assignments/warmup_project" data-canvas="https://olin.instructure.com/courses/143/assignments/440">the Warmup Project</a-no-proxy> (due next Monday, the 28th).
 
-## Wall Bumping and Finite-state Control	
+## Solutions for Today
 
-Sometimes you want your robot to switch between multiple behaviors.  One very simple architecture for this is to use something called finite-state control.  The idea is that your robot can be in one of a finite number of states.  Each state prescribes a different pattern of behavior for the robot.  The robot transitions between states using various rules.	
+* The solutions can be found in the upstream comprobo20 Github repository (do ``git pull upstream master`` from your comprobo20 directory).
+* If you want to view the code on the web, the two solution files are available [here](https://comprobo20.github.io/Sample_code/day05_solutions).
 
-As an example, let's consider a robot that can be in one of three states:	
+## Wall Bumping and Finite-state Control
+
+Sometimes you want your robot to switch between multiple behaviors.  One very simple architecture for this is to use something called finite-state control.  The idea is that your robot can be in one of a finite number of states.  Each state prescribes a different pattern of behavior for the robot.  The robot transitions between states using various rules.
+
+As an example, let's consider a robot that can be in one of three states:
 
 1. moving forward
 2. moving backward
@@ -42,7 +47,7 @@ Let's say that our robot starts in the **moving forward** state.  We can now def
 
 What would the behavior of this robot be?  Do a quick whiteboard based simulation to probe the robot's behavior in various situations.  What range of behaviors would the robot exhibit.
 
-With your partner, implement a ROS Python node that realizes this behavior.  For the timing related tasks you will want to check out this ROS documentation page.
+With your partner, implement a ROS Python node that realizes this behavior.  For the timing task, consider using the ``rospy.sleep`` function (a ``while`` loop could also do the job).  Our solution uses ``rospy.sleep``.
 
 > An implementation of this as a ROS node can be found in the upstream ``comprobo20`` github repository under ``in_class_day05_sample/scripts/finite_state_example.py`` (here is a [link to code on the course website](../Sample_code/day05_solutions#finite_state_examplepy)).
 
