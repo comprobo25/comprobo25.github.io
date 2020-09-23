@@ -75,7 +75,17 @@ The particle filter involves the following steps
 
 ## Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of the ``robot_localization`` Github repo.  Before you can run the starter code, you must install scikit learn.
+### Refresh your ``comprobo20`` repository
+
+In a terminal, Go to your fork of the ``comprobo20`` repository and run the following command.
+
+```bash
+$ git pull upstream master
+```
+
+### Getting the Robot Localizer Starter Code
+
+The starter code will be in a package called ``robot_localizer`` inside of your fork of the [``robot_localization`` Github repo](https://github.com/comprobo20/robot_localization).  Before you can run the starter code, you must install scikit learn.
 
 > TODO: test all of this on melodic
 
@@ -128,6 +138,8 @@ Hit space to toggle paused, or 's' to step.
 You'll likely recognize this as the output of ROS bag.  To start the bag file you would hit the space bar, however, first we'll get thing setup in rviz.
 
 ### Getting Set with RViz
+
+> TODO: this happens by default now with the launch file, but it might be worth doing anyway for learning purposes.
 
 In rviz, add the displays for the following topics (use the "By Topic" tab after clicking on the add button).
 
