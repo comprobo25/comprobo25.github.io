@@ -1,5 +1,5 @@
 ---
-title: "Proportional Control and ROS Parameters"
+title: "Wall Bumping and Finite-State Control"
 toc_sticky: true
 ---
 
