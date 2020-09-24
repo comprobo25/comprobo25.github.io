@@ -142,6 +142,12 @@ source /opt/ros/melodic/setup.bash
 source ~/catkin_ws/devel/setup.bash
 ```
 
+You will also need scikit learn.
+
+```bash
+$ pip3 install sklearn
+```
+
 ## A View of the Finish Line and Getting Set with RViz
 
 > TODO: make this required between Monday and Wednesday 
