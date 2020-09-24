@@ -87,25 +87,21 @@ $ git pull upstream master
 
 The starter code will be in a package called ``robot_localizer`` inside of your fork of the [``robot_localization`` Github repo](https://github.com/comprobo20/robot_localization).  Before you can run the starter code, you must install scikit learn.
 
-> TODO: test all of this on melodic
-
-```bash
-$ pip3 install sklearn sklearn
-```
+### Installing Supporting Packages: Noetic
 
 You will need some additional ROS packages that we haven't used thus far.
 
-> Note: if you are on Melodic, you would want replace ``noetic`` with ``melodic`` in the commands below.
-
 ```bash
-$ sudo apt install ros-noetic-map-server ros-noetic-amcl ros-noetic-openslam-gmapping # might be needed for melodic ros-melodic-pointcloud-to-laserscan
+$ sudo apt install ros-noetic-map-server ros-noetic-amcl ros-noetic-openslam-gmapping
 ```
 
-## Gmapping on Noetic
+You will also need scikit learn.
 
-Gmapping has not been released as a pre-built binary for Noetic yet.  If you are running Noetic, to get around this run the following commands.
+```bash
+$ pip3 install sklearn
+```
 
-> TODO: we should be able to get around doing this on Melodic
+Finally, you will have to build the SLAM gmapping package from source (the binary version is not available in Noetic yet).
 
 ```bash
 $ cd ~/catkin_ws/src
@@ -114,6 +110,37 @@ $ cd ..
 $ catkin_make
 ```
 
+### Installing Supporting Packages: Melodic
+
+You will need some additional ROS packages that we haven't used thus far.
+
+```bash
+$ sudo apt install ros-melodic-map-server ros-melodic-amcl ros-melodic-slam-gmapping
+```
+
+You will also need to build the tf2 package for Python3.
+
+```bash
+$ sudo apt install python3-catkin-pkg-modules python3-rospkg-modules python3-empy python-rosdep python3-wstool
+$ sudo rosdep init
+$ rosdep update
+$ wstool init
+$ wstool set -y src/geometry2 --git https://github.com/ros/geometry2 -v 0.6.5
+$ wstool up
+$ rosdep install --from-paths src --ignore-src -y -r
+$ catkin_make --cmake-args \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+            -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m \
+            -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so
+```
+
+Make sure your ``.bashrc`` has the following two lines in exactly this order.  To edit / view your ``.bashrc`` file, use a text editor (e.g., a simple one is ``nano``).
+
+```bash
+source /opt/ros/melodic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+```
 
 ## A View of the Finish Line and Getting Set with RViz
 
