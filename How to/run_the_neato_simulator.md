@@ -283,6 +283,11 @@ Assuming you performed the steps above to save the world, if you want to reload 
 $ roslaunch neato_gazebo neato_world_no_spawn.launch neato_world:=a_whole_new_world
 ```
 
+### Video Walkthrough
+
+![A walkthrough of saving a world using the Gazebo simulator](../website_graphics/gazebo_populate.gif)
+
+
 ## Some Cool Stuff About Simulators
 
 While real robots are undoubtedly cool, there are some really awesome things you can do with as simulator.
