@@ -65,7 +65,7 @@ feature_row_robot_localization_project:
 
 ---
 
-The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning.
+The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning. This year we are also piloting student led discussions on societal issues and robotics. 
 
 <!-- {% include feature_row %}-->
 
