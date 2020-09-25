@@ -63,6 +63,16 @@ feature_row_robot_localization_project:
 * [Robot Localization Assignment Document](assignments/robot_localization)\n
 * [Dude, where's my robot? A Localization Challenge for Undergraduate Robotics](https://dl.acm.org/doi/abs/10.5555/3297863.3297895)\n"
 
+feature_row_robots_society:
+  - image_path: website_graphics/neato_gazebo.png
+    alt: "The Neato robot in an empty, simulated world"
+    excerpt: "
+   The goal of this assignment is to examine the effects robots are having on our world and what we can do to make that effect positive. (TODO: Better image)
+
+    ### Supporting Documents
+
+* [Student Led Discussions](assignments/ethics_discussion_assignment)\n"
+
 ---
 
 The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning. This year we are also piloting student led discussions on societal issues and robotics. 
@@ -77,7 +87,13 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 {% include feature_row id="feature_row_warmup_project" type="right" %}
 
+## <a name="module-details"/> Robot Localization Project
+
 {% include feature_row id="feature_row_robot_localization_project" type="left" %}
+
+## <a name="module-details"/> Robots in the World
+
+{% include feature_row id="feature_row_robots_society" type="right" %}
 
 ## In-class Activities
 
