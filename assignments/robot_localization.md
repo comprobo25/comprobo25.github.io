@@ -12,9 +12,9 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 ## Learning Objectives
 
 * Build fluency with ROS
-* Learn about one core problem (robot localization) and one state of the art algorithm (particle filtering)
+* Learn about one core problem (robot localization) and one important algorithm (particle filtering)
 * Learn strategies for developing and debugging algorithms for robotics
-Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
+* Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
 
 ## Teaming
 
@@ -24,17 +24,21 @@ For this project, you should work with one other student. Since we have an odd n
 
 ### Topdown Exploration of the Particle Filter (Due 9-30)
 
-For this part of the assignment you should go through the steps outlined in the [A View of the Finish Line Section](#a-view-of-the-finish-line-and-getting-set-with-rviz).
+For this part of the assignment you should go through the steps outlined in [Starter Code](#starter-code) and the [A View of the Finish Line Section](#a-view-of-the-finish-line-and-getting-set-with-rviz).
 
 ### Implementation Plan (Due 10-5)
 
 You should come to class on Friday with a plan for how you will structure your code for this project.  Your plan could be explained in text, figures, charts, or some combination of these.  The plan should include the following content (not necessarily in this structure).
-* What classes will you create for your implementation (everyone should have a ParticleFilter class as given in the starter code, but more are probably better)?
-* What functions will be implemented in these classes?
-* If you will be using the code in the helper classes, how will your code utilize them.
-* Define a timeline of how the code will interact with the sensor data coming from the robot and generate update estimates of the robot's location.
 
-It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  If you feel like there are still major parts you don't understand, please add appropriate questions to your writeup so we can discuss them in class.
+There are two general strategies you can pursue when implementing this project.
+
+1. You can use our basic starter code that will require you to handle much of the interactions with ROS.  This will require you to learn more about how ROS works and you will have to decide how best to structure your code.
+2. You can use our more extensive starter code that will setup much of the interactions with ROS for you, allowing you to focus mainly on the particle filter algorithm itself.
+
+* Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
+* Propose a testing and implementation plan for your particle filter.  Your plan should cover the order in which you will implement the key steps of the particle filter and how you would test to see whether each of them is working.
+
+It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
 
 ### In-class Presentation / Demo (Due 10-19)
@@ -348,7 +352,6 @@ As the bag plays you will see the robot move around in the map.  If all is well,
 * Implement a simple laser scan likelihood function. Test it using just a subset of the Lidar measurements. Make sure that the results conform to what you expect (the simulator or rosbag will be helpful here).
 * Improve your laser scan likelihood to maximize performance. Again, rosbag and visualization will be instrumental here.
 
-
 ### Previous Student Advice
 
 Here is some advice from the Fall 2018 class that they wrote up after they completed the robot localization project.
@@ -366,3 +369,10 @@ Here is some advice from the Fall 2018 class that they wrote up after they compl
 * Creativity in the weighting algorithm was nice since the x/y distance helper function just worked
 * Rosbags are wonderful, wonderful things +1000
 * Possibly some more scaffold around researching what amcl does and pull from it to test each part of the filter
+
+## Resources
+
+* [Video Explaining Particle Filter without Equations](https://www.youtube.com/watch?v=aUkBa1zMKv4)
+* [An Example of a Particle Filter that Might Give More Intuition](https://www.youtube.com/watch?v=sz7cJuMgKFg)
+* [Very Math / Theoretical Treatment of Particle Filter](https://www.youtube.com/watch?v=eAqAFSrTGGY) (not for the faint of heart, but we can help you through it)
+
