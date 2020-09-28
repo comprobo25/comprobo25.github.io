@@ -46,7 +46,7 @@ This deliverable be assessed in a binary fashion (did you do the above or not).
 
 ### Your Code and Bag Files (Due 10-19)
 
-Your code should be forked from [this repo](https://github.com/comprobo20/robot_localization).  Please push your code to your fork in order to turn it in.
+Your code should be forked from <a-no-proxy href="https://github.com/comprobo20/robot_localization">this repo</a-no-proxy>.  Please push your code to your fork in order to turn it in.
 
 You must include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
 
@@ -65,10 +65,10 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Sample Writeups
 
-* [Anil Patel and Cedric Kim](https://github.com/anilpatel38/robot_localization/blob/master/robot_localizer/Anil_Cedric_Localiztion_Report.pdf)
-* [Katya Soltan and Charlie Weiss](https://github.com/shootingd/robot_localization) 
-* [Mary Keenan](https://github.com/mary-keenan/robot_localization)
-* [Nick Steelman and Ben Ziemann](https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf)
+* <a-no-proxy href="https://github.com/anilpatel38/robot_localization/blob/master/robot_localizer/Anil_Cedric_Localiztion_Report.pdf">Anil Patel and Cedric Kim</a-no-proxy>
+* <a-no-proxy href="https://github.com/shootingd/robot_localization">Katya Soltan and Charlie Weiss</a-no-proxy>
+* <a-no-proxy href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a-no-proxy>
+* <a-no-proxy href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a-no-proxy>
 
 ## Robot Localization and the Particle Filter
 
@@ -96,7 +96,7 @@ $ git pull upstream master
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of your fork of the [``robot_localization`` Github repo](https://github.com/comprobo20/robot_localization).  Before you can run the starter code, you must install scikit learn.
+The starter code will be in a package called ``robot_localizer`` inside of your fork of the <a-no-proxy href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a-no-proxy>.  Before you can run the starter code, you must install scikit learn.
 
 ### Installing Supporting Packages: Noetic
 
@@ -230,7 +230,7 @@ Return to the terminal where the rosbag is playing and click space bar.  Return 
 
 ## Testing the Particle Filter with the Robot Simulator
 
-In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in [Running the Neato Simualator](../How to/running_the_neato_simulator).  We have added a world file for a maze environment (original source: [https://github.com/fsuarez6/labrob](https://github.com/fsuarez6/labrob)).
+In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in <a-no-proxy data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">running the neato simulator</a-no-proxy>).  We have added a world file for a maze environment (original source: <a-no-proxy href="https://github.com/fsuarez6/labrob">https://github.com/fsuarez6/labrob</a-no-proxy>).
 
 To make a map, first connect to the robot simulator.  If you'd like to use the maze world referenced above, run the following command.
 
