@@ -12,9 +12,9 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 ## Learning Objectives
 
 * Build fluency with ROS
-* Learn about one core problem (robot localization) and one state of the art algorithm (particle filtering)
+* Learn about one core problem (robot localization) and one important algorithm (particle filtering)
 * Learn strategies for developing and debugging algorithms for robotics
-Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
+* Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
 
 ## Teaming
 
@@ -22,35 +22,38 @@ For this project, you should work with one other student. Since we have an odd n
 
 ## Deliverables
 
-### (TODO: revise this) Code Architecture Plan (due by the start of class on Friday, September 28th)
+### Topdown Exploration of the Particle Filter (Due 9-30)
 
-You should come to class on Friday with a plan for how you will structure your code for this project.  Your plan could be explained in text, figures, charts, or some combination of these.  The plan should include the following content (not necessarily in this structure).
-* What classes will you create for your implementation (everyone should have a ParticleFilter class as given in the starter code, but more are probably better)?
-* What functions will be implemented in these classes?
-* If you will be using the code in the helper classes, how will your code utilize them.
-* Define a timeline of how the code will interact with the sensor data coming from the robot and generate update estimates of the robot's location.
+For this part of the assignment you should go through the steps outlined in [Starter Code](#starter-code) and the [A View of the Finish Line Section](#a-view-of-the-finish-line-and-getting-set-with-rviz).
 
-It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  If you feel like there are still major parts you don't understand, please add appropriate questions to your writeup so we can discuss them in class.
+### Implementation Plan (Due 10-5)
+
+You should come to class on Friday with a plan for how you will implement this project.
+
+* Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
+* Propose a testing and implementation plan for your particle filter.  Your plan should cover the order in which you will implement the key steps of the particle filter and how you would test to see whether each of them is working.
+* Decide whether you will build your code on ``pf.py``, ``pf_scaffold.py``, or create your code from scratch.
+
+It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
 
-### (TODO revise deadlines) In-class Presentation / Demo (due by the start of class on Tuesday, October 9th)
+### In-class Presentation / Demo (Due 10-19)
 
 Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc.  In addition, you should show a demo of your system in action.
 
 This deliverable be assessed in a binary fashion (did you do the above or not).
 
 
-### (TODO revise deadlines) Your code and bag files (due by the start of class on Tuesday, October 9th)
+### Your Code and Bag Files (Due 10-19)
 
-Your code should be forked from [this repo](https://github.com/comprobo20/robot_localization).  Please push your code to your fork in order to turn it in.
+Your code should be forked from <a-no-proxy href="https://github.com/comprobo20/robot_localization">this repo</a-no-proxy>.  Please push your code to your fork in order to turn it in.
 
 You must include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
 
-### Writeup (due by the start of class on Tuesday, October 9th)
+### Writeup (due 10-19)
 
-In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics:
+In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
-> TODO: revise based on what we did for the warmup project
 
 * What was the goal of your project?
 * How did you solve the problem? (Note: this doesn't have to be super-detailed, you should try to explain what you did at a high-level so that others in the class could reasonably understand what you did).
@@ -59,6 +62,13 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * What would you do to improve your project if you had more time?
 * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
 
+
+### Sample Writeups
+
+* <a-no-proxy href="https://github.com/anilpatel38/robot_localization/blob/master/robot_localizer/Anil_Cedric_Localiztion_Report.pdf">Anil Patel and Cedric Kim</a-no-proxy>
+* <a-no-proxy href="https://github.com/shootingd/robot_localization">Katya Soltan and Charlie Weiss</a-no-proxy>
+* <a-no-proxy href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a-no-proxy>
+* <a-no-proxy href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a-no-proxy>
 
 ## Robot Localization and the Particle Filter
 
@@ -72,6 +82,7 @@ The particle filter involves the following steps
 2. Update the particles using data from odometry
 3. Reweight the particles based on their compatibility with the laser scan
 4. Resample with replacement a new set of particles with probability proportional to their weights.
+5. Update your estimate of the robot's pose given the new particles.  Update the ``map`` to ``odom`` transform.
 
 ## Starter Code
 
@@ -85,7 +96,7 @@ $ git pull upstream master
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of your fork of the [``robot_localization`` Github repo](https://github.com/comprobo20/robot_localization).  Before you can run the starter code, you must install scikit learn.
+The starter code will be in a package called ``robot_localizer`` inside of your fork of the <a-no-proxy href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a-no-proxy>.  Before you can run the starter code, you must install scikit learn.
 
 ### Installing Supporting Packages: Noetic
 
@@ -148,14 +159,38 @@ You will also need scikit learn.
 $ pip3 install sklearn
 ```
 
+### Key Contents of Starter Code
+
+#### ``pf.py``
+
+This file has a basic skeleton of your particle filter (you don't have to build on this if you don't want to).  Check the comments in the file for more details.  You'll probably also want to ask questions as you go through it if something doesn't make sense.  If you want more scaffolding, you can build your code on ``pf_scaffold.py`` instead (see below).
+
+
+#### ``pf_scaffold.py``
+
+> Note: you will want to either use ``pf.py`` or ``pf_scaffold.py`` (not both)
+
+This file has pretty much all of the interactions with ROS handled.  If you use this as your starting point for your code, you will probably want to overwrite ``pf.py`` with this file (so all of the launch files work as expected).  You should choose this option if you want to focus on implementing the particle filter algorithm and you don't care so much about learning the ins-and-outs of how the particle filter interacts with ROS.
+
+#### ``helper_functions.py``
+
+This file has helper functions for dealing with transforms and poses in ROS. Functionality includes converting poses between various formats, computing the ``map`` to ``odom`` transform, and computing angle differences. 
+
+#### ``occupancy_field.py``
+
+This file implements something called an occupancy field (also called a likelihood field).  This structure has the following capability: given a x,y coordinate in the map, it returns the distance to the closest obstacle in the map.  This can be used as a way to compute the closeness of the match the scan data and the map given a hypothesized location of the robot (particle).
+
+You can find an explanation of the likelihood field model in [Pieter Abbeel's slides](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa12/slides/ScanMatching.pdf) (start at page 11).
+
 ## A View of the Finish Line and Getting Set with RViz
 
-> TODO: make this required between Monday and Wednesday 
+Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be testing ROS's built-in particle filter on a bag file and map that I collected last year during CompRobo.  To get started, run the following command.
 
-Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be testing ROS's built-in particle filter on a bag file and map that I collected last year during CompRobo.  To get started, run the following command.  Note: before starting this, start roscore in a separate terminal.
+> * Note: before starting this, start roscore in a separate terminal.
+> * Note: you should not have Gazebo running as you will be using recorded data from a real robot.
 
 ```bash
-$ roslaunch robot_localizer test_bagfile.launch map_name:=ac109_1 use_builtin:=true
+$ roslaunch robot_localizer test_bagfile_no_rviz.launch map_name:=ac109_1 use_builtin:=true
 ```
 If all went well you will streaming text that says
 
@@ -172,29 +207,38 @@ You'll likely recognize this as the output of ROS bag.  To start the bag file yo
 
 ### Getting Set with RViz
 
-> TODO: this happens by default now with the launch file, but it might be worth doing anyway for learning purposes.
-
-In rviz, add the displays for the following topics (use the "By Topic" tab after clicking on the add button).
+In rviz, add the displays for the following topics (use the ``By Topic`` tab after clicking on the add button).
 
 * ``/particlecloud``
 * ``/map_pose``
 * ``/map``
+* ``/scan`` 
+
+You should also add a visualization for ``Robot Model`` by clicking ``Add`` and then looking on the ``By Display Type`` tab.
 
 Also, change the fixed frame to ``map``.
 
 Using the ``2D Pose Estimate Widget`` (it should be at the top of the rviz bar), click and drag an estimate of for the robot's pose in the map (don't worry about where it is).
 
-> TODO: add an animated gif for this.
+Here is a video showing the process in action (note: we forgot to add the ``/scan`` topic in the video, but that should be straightforward..
+
+![A walkthrough of running the particle filter on a bag file](../website_graphics/viewofthefinishline.gif)
 
 ### Localizing a Robot
 
-Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on where you think the robot is based on the laser scan.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
+Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on the arrow shown by the ``map_pose`` topic.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
 
 ## Testing the Particle Filter with the Robot Simulator
 
-In order to code the particle filter, you will need to create a map of the environment you'll be testing in (TODO: suggest a pre-built ``.world`` file).
+In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in <a-no-proxy data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">running the neato simulator</a-no-proxy>).  We have added a world file for a maze environment (original source: <a-no-proxy href="https://github.com/fsuarez6/labrob">https://github.com/fsuarez6/labrob</a-no-proxy>).
 
-To make a map, first connect to the robot simualtor (TODO: add instructions for new world file) in the usual way.  Next, run:
+To make a map, first connect to the robot simulator.  If you'd like to use the maze world referenced above, run the following command.
+
+```bash
+$ roslaunch neato_gazebo neato_maze_world.launch
+```
+
+Next, run:
 
 ```bash
 $ roslaunch neato_2dnav gmapping_demo.launch
@@ -230,13 +274,13 @@ When you start to implement your own particle filter, you can run it using.
 $ roslaunch robot_localizer test_live.launch map_file:=/home/pruvolo/mymap.yaml
 ```
 
-> Note: You need to put a full path to the map file (relative paths or using the "~" for your home directory will not work)
+> * Note: You need to put a full path to the map file (relative paths or using the "~" for your home directory will not work)
+> * Note: the launch file ``test_live.launch`` will take care of starting ``rviz`` for you.
 
-Follow the same directions for rviz that are detailed above (TODO: add an anchor link) to visualize the state of the filter and set an initial guess as to the pose of the robot.
-
-Next, drive the robot around. If you had a good initial guess, hopefully the robot will be able to localize itself in the environment.
+Next, drive the robot around.  If you had a good initial guess, hopefully the robot will be able to localize itself in the environment.
 
 ## Validation with Bag Files
+
 We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.
 
 ```bash
@@ -293,7 +337,7 @@ topics:      accel                   2504 msgs    : neato_node/Accel
 
 This bag file has all of the topics you are accustomed to seeing with the addition of two new topics: ``map_pose`` and ``map_pose_continuous``.  These topics each encode the position of the robot in the map frame as determined from  ceiling mounted April tag markers (where the map is defined by the map stored in the maps subdirectory).  The two topics are slightly different in that the ``map_pose`` topic is only published when a marker can be seen by the camera, and the ``map_pose_continuous`` topic is updated with the odometry from the robot even when the robot can't seen one of the markers.  For the purposes of the bag files we have provided, you can use ``map_pose`` for your validation.  ``map_pose_continuous`` may come in handy for working with maps where the robot moves out of range of the markers.
 
-In order to test your code with the bag file, you will want to use a different launch file that will automatically start your particle filter, load the map, and play the bag file.  These instructions should be identical to what you did in the "A View of the Finish Line and Getting Set with RViz" (TODO: add anchor link) section.
+In order to test your code with the bag file, you will want to use a different launch file that will automatically start your particle filter, load the map, and play the bag file.  The instructions below provide a different launch file that will automatically start rviz for you.  If you don't want to start rviz automatically, you can use the instructions in the [Getting Set with RViz section](#getting-set-with-rviz).
 
 ```bash
 $ roslaunch robot_localizer test_bagfile.launch map_name:=ac109_1
@@ -301,10 +345,37 @@ $ roslaunch robot_localizer test_bagfile.launch map_name:=ac109_1
 
 As the bag plays you will see the robot move around in the map.  If all is well, the icon of the robot should line up with the red arrow.  The difference between the two tells you the magnitude of the error of the particle filter.  This can, in theory, be used to automatically tune a particle filter (although doing this might be out of the scope of this project).
 
-## Project Hints
+## Project Advice
+
+### Instructor Advice
 
 * Use the provided rosbags to debug your code (or, for practice, make your own ROS bags) 
 * Visualize as many intermediate computations as possible
 * Start with simple cases, e.g. start with just one particle, make sure you can visualize the particle in rviz 
 * Implement a simple laser scan likelihood function. Test it using just a subset of the Lidar measurements. Make sure that the results conform to what you expect (the simulator or rosbag will be helpful here).
 * Improve your laser scan likelihood to maximize performance. Again, rosbag and visualization will be instrumental here.
+
+### Previous Student Advice
+
+Here is some advice from the Fall 2018 class that they wrote up after they completed the robot localization project.
+
+* Pixels vs meters on map (know how these relate to each other)
+* Know how coordinate frames as they relate to rviz displays
+* Know the what the different rviz topics represent
+* Probabilistic justification for parameters (and then cube it for good measure)
+* High level understanding (videos) were helpful +1 +1
+* Visualization in rviz is crucial
+* First pass architecture (should be evaluated / given feedback) (note: this is more of a suggestion for the teaching team than you all).
+* Maybe should have done a “ugly, rugged thing” would have helped to get an MVP. Maybe a more iterative process rather than strict planning. All the object we created were hard to glue together.
+* Take a “second pass” at the architecture after attempting to implement your first one. Take a step back and ask what you would do differently after having grappled with the low-level code for a week.
+* Test each step of the particle filter separately, with full rviz visualizations, with single particles. Create a testing plan!
+* Creativity in the weighting algorithm was nice since the x/y distance helper function just worked
+* Rosbags are wonderful, wonderful things +1000
+* Possibly some more scaffold around researching what amcl does and pull from it to test each part of the filter
+
+## Resources
+
+* [Video Explaining Particle Filter without Equations](https://www.youtube.com/watch?v=aUkBa1zMKv4)
+* [An Example of a Particle Filter that Might Give More Intuition](https://www.youtube.com/watch?v=sz7cJuMgKFg)
+* [Very Mathy / Theoretical Treatment of Particle Filter](https://www.youtube.com/watch?v=eAqAFSrTGGY) (not for the faint of heart, but we can help you through it)
+
