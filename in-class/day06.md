@@ -13,10 +13,10 @@
 The particle filter as <a-no-proxy href="https://docs.google.com/presentation/d/1viXb11AmVX3hI53HkJfYveJRdm6aJJhD6JaNkc1xQNk/edit#slide=id.p">zoom art</a-no-proxy>. Find the lost robot at Olin. 
 
 ## We're all living in a 1D world!
-To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use 
+To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use
 
 ```
-$ pip3 list
+$ pip3 show matplotlib scipy
 ```
 
  If these are not installed, try the following (if you are using Python 2.7, replace the first line with python-tk). For Melinda, matplotlib was installed, but not scipy. 
