@@ -28,15 +28,11 @@ For this part of the assignment you should go through the steps outlined in [Sta
 
 ### Implementation Plan (Due 10-5)
 
-You should come to class on Friday with a plan for how you will structure your code for this project.  Your plan could be explained in text, figures, charts, or some combination of these.  The plan should include the following content (not necessarily in this structure).
-
-There are two general strategies you can pursue when implementing this project.
-
-1. You can use our basic starter code that will require you to handle much of the interactions with ROS.  This will require you to learn more about how ROS works and you will have to decide how best to structure your code.
-2. You can use our more extensive starter code that will setup much of the interactions with ROS for you, allowing you to focus mainly on the particle filter algorithm itself.
+You should come to class on Friday with a plan for how you will implement this project.
 
 * Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
 * Propose a testing and implementation plan for your particle filter.  Your plan should cover the order in which you will implement the key steps of the particle filter and how you would test to see whether each of them is working.
+* Decide whether you will build your code on ``pf.py``, ``pf_scaffold.py``, or create your code from scratch.
 
 It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
@@ -167,7 +163,14 @@ $ pip3 install sklearn
 
 #### ``pf.py``
 
-This file has a basic skeleton of your particle filter (you don't have to build on this if you don't want to).  Check the comments in the file for more details.  You'll probably also want to ask questions as you go through it if something doesn't make sense.
+This file has a basic skeleton of your particle filter (you don't have to build on this if you don't want to).  Check the comments in the file for more details.  You'll probably also want to ask questions as you go through it if something doesn't make sense.  If you want more scaffolding, you can build your code on ``pf_scaffold.py`` instead (see below).
+
+
+#### ``pf_scaffold.py``
+
+> Note: you will want to either use ``pf.py`` or ``pf_scaffold.py`` (not both)
+
+This file has pretty much all of the interactions with ROS handled.  If you use this as your starting point for your code, you will probably want to overwrite ``pf.py`` with this file (so all of the launch files work as expected).  You should choose this option if you want to focus on implementing the particle filter algorithm and you don't care so much about learning the ins-and-outs of how the particle filter interacts with ROS.
 
 #### ``helper_functions.py``
 
