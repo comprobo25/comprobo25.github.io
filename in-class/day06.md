@@ -10,7 +10,7 @@
 * For more reinforcement of the concepts behind the particle filter, watch this <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a-no-proxy>.
 
 ## Conceptual Introduction to the Particle Filter
-The particle filter as <a-no-proxy href="https://docs.google.com/presentation/d/1viXb11AmVX3hI53HkJfYveJRdm6aJJhD6JaNkc1xQNk/edit#slide=id.p">zoom art</a-no-proxy>. Or.. where find the robot at Olin. 
+The particle filter as <a-no-proxy href="https://docs.google.com/presentation/d/1viXb11AmVX3hI53HkJfYveJRdm6aJJhD6JaNkc1xQNk/edit#slide=id.p">zoom art</a-no-proxy>. Find the lost robot at Olin. 
 
 ## We're all living in a 1D world!
 To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use 
@@ -34,7 +34,7 @@ $ cd ~/catkin_ws/src/comprobo20
 $ git pull upstream master
 ```
 
-To try things out, let's first startup a 1d simulation of the world
+To try things out, let's first startup a 1d simulation of the world. 
 
 ```
 $ rosrun simple_filter simple_filter_world.py _walls:=[0.0,3.0]
