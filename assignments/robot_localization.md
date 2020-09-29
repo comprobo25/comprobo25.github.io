@@ -28,7 +28,7 @@ For this part of the assignment you should go through the steps outlined in [Sta
 
 ### Implementation Plan (Due 10-5)
 
-You should come to class on Friday with a plan for how you will implement this project.
+You should come to class with a plan for how you will implement this project.
 
 * Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
 * Propose a testing and implementation plan for your particle filter.  Your plan should cover the order in which you will implement the key steps of the particle filter and how you would test to see whether each of them is working.

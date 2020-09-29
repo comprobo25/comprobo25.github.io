@@ -1,5 +1,6 @@
 ## Today
 
+* Warm-Up Project Debrief
 * Conceptual introduction to the particle filter
 * We're all living in a 1D world! (a simple particle filter example)
 
@@ -7,10 +8,13 @@
 
 * Complete this assignment on basic probability <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1317">basic probability</a-no-proxy>. Submit your work on canvas. 
 * Read over the description of the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>
+* Check out your topics and team assignments for the  <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1314"> Discussion Assignment </a-no-proxy>
 * For more reinforcement of the concepts behind the particle filter, watch this <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a-no-proxy>.
 
 ## Conceptual Introduction to the Particle Filter
 The particle filter as <a-no-proxy href="https://docs.google.com/presentation/d/1viXb11AmVX3hI53HkJfYveJRdm6aJJhD6JaNkc1xQNk/edit#slide=id.p">zoom art</a-no-proxy>. Find the lost robot at Olin. 
+
+
 
 ## We're all living in a 1D world!
 To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use
