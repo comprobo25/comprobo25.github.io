@@ -4,8 +4,9 @@
 
 ## For Next Time
 
-* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy> Next class you should have done the part of the "Code Architecture Plan" part of the assignment.
+* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>. For the next class you should have done the part of the "Code Architecture Plan" part of the assignment.
 * Make sure to check out the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1314"> Discussion Assignment </a-no-proxy> for your teams and presentation times. 
+* Read <a-no-proxy href="https://robohub.org/the-legal-issues-of-robotics/"> this summary on legal issues in robotics </a-no-proxy>, <a-no-proxy href="https://www.therobotreport.com/liability-robot-legal-debate/"> this article on liability </a-no-proxy>, and this <a-no-proxy href="https://www.youtube.com/watch?v=DHyUYg8X31c" > quick video </a-no-proxy> to prepare for Monday's discussion. 
 
 ## Bayesian Filtering and the Particle Filter
 Paul's notes on Bayes' filter and how it applies to robot localization are <a-no-proxy href="https://drive.google.com/file/d/19sKAjnXwNeYJG45RLjHPRsiTbP8TuF7A/view">here</a-no-proxy>.
