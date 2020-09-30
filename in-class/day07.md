@@ -24,3 +24,5 @@ With your partner and another team, work through the notes on a chalkboard.  Her
 
 ## The Particle Filter Algorithm (together as a class)
 As a class, let's go through the basic steps of the particle filter algorithm and the issues around scalability of the Bayes filter.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l7CrjOTlioU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
