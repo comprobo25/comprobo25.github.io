@@ -375,7 +375,7 @@ Here is some advice from the Fall 2018 class that they wrote up after they compl
 
 ## Resources
 
-* [Video Explaining Particle Filter without Equations](https://www.youtube.com/watch?v=aUkBa1zMKv4)
-* [An Example of a Particle Filter that Might Give More Intuition](https://www.youtube.com/watch?v=sz7cJuMgKFg)
-* [Very Mathy / Theoretical Treatment of Particle Filter](https://www.youtube.com/watch?v=eAqAFSrTGGY) (not for the faint of heart, but we can help you through it)
+* <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">Video Explaining Particle Filter without Equations</a-no-proxy>
+* <a-no-proxy href="https://www.youtube.com/watch?v=sz7cJuMgKFg">An Example of a Particle Filter that Might Give More Intuition</a-no-proxy>
+* <a-no-proxy href="https://www.youtube.com/watch?v=eAqAFSrTGGY">Very Mathy / Theoretical Treatment of Particle Filter</a-no-proxy> (not for the faint of heart, but we can help you through it)
 
