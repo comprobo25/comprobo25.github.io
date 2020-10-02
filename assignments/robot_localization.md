@@ -224,6 +224,14 @@ Here is a video showing the process in action (note: we forgot to add the ``/sca
 
 ![A walkthrough of running the particle filter on a bag file](../website_graphics/viewofthefinishline.gif)
 
+#### Troubleshooting
+
+If you see some red text fly by right after unpausing the bag file, the built-in particle filter might have crashed.  This crash is due to a buffer overflow problem that has been fixed in the latest version of ROS Noetic.  To get the updated version of the particle filter that fixes this bug, you can run the following command.
+
+```bash
+$ sudo apt-get dist-upgrade
+```
+
 ### Localizing a Robot
 
 Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on the arrow shown by the ``map_pose`` topic.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
