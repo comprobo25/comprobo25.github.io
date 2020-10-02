@@ -12,6 +12,10 @@ TODO
 
 ## ROS Infrastructure to Support the Particle Filter
 
-* Estimating Robot Motion for a LIDAR Scan
-* Publishing the ``map`` to ``odom`` transform
+### Estimating Robot Motion Using ``tf2``
+
+[http://wiki.ros.org/tf2/Tutorials](Tf2 Tutorials)
+
+
+### Publishing the ``map`` to ``odom`` transform
 
