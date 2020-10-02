@@ -4,12 +4,14 @@
 
 ## For Next Time
 
-* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>. For the next class you should have done the part of the "Code Architecture Plan" part of the assignment.
+* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>. For the next class you should have done the part of the "Implementation Plan" part of the assignment.
 * Make sure to check out the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1314"> Discussion Assignment </a-no-proxy> for your teams and presentation times. 
 * Read <a-no-proxy href="https://robohub.org/the-legal-issues-of-robotics/"> this summary on legal issues in robotics </a-no-proxy>, <a-no-proxy href="https://www.therobotreport.com/liability-robot-legal-debate/"> this article on liability </a-no-proxy>, and this <a-no-proxy href="https://www.youtube.com/watch?v=DHyUYg8X31c" > quick video </a-no-proxy> to prepare for Monday's discussion. 
 
 ## Bayesian Filtering and the Particle Filter
-Paul's notes on Bayes' filter and how it applies to robot localization are <a-no-proxy href="https://drive.google.com/file/d/19sKAjnXwNeYJG45RLjHPRsiTbP8TuF7A/view">here</a-no-proxy>.
+
+* [Notes from Today on Bayes' filter](bayes_filter.pdf)
+* Notes from Previous Years on Bayes' filter and how it applies to robot localization are <a-no-proxy href="https://drive.google.com/file/d/19sKAjnXwNeYJG45RLjHPRsiTbP8TuF7A/view">here</a-no-proxy>.
 
 ### Proposed Model for Working through this Derivation
 With your partner and another team, work through the notes on a chalkboard.  Here are some guidelines.
@@ -22,3 +24,5 @@ With your partner and another team, work through the notes on a chalkboard.  Her
 
 ## The Particle Filter Algorithm (together as a class)
 As a class, let's go through the basic steps of the particle filter algorithm and the issues around scalability of the Bayes filter.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l7CrjOTlioU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

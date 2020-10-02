@@ -3,8 +3,10 @@
 * Practical considerations for particle filters
 
 ## For Next Time
-* Continue working on the robot localization project
-* Find another two other teams.  Take turns each sketching out your code architecture plan at the chalkboard.  The description of what you should have for this by today is available on the robot localization project page (reproduced here for convenience).
+* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
+* Disscussion Readings
+
+## Particle Filter Implementation Plan
 
 * What classes will you create for your implementation (everyone should have a ParticleFilter class as given in the starter code, but more are probably better)?
 * What functions will be implemented in these classes?
@@ -21,3 +23,19 @@ Probabilistic Robotics by Thrun, Burgard, and Fox has some great material on the
 * Add visualizations: For example, you might want to publish weighted arrows to communicate the weights of the particles before resampling.
 * Get comfortable with using the odometry to get the robot's motion: you'll have to calculate the motion to apply to each particle based on the readings you get from your odometry.
 * Use bag files to increase the repeatability of your testing: if your particle filter is doing something weird, make a bag file and use the bag file to debug your code.
+
+* Bayesian filtering and the particle filter
+
+## For Next Time
+
+* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
+
+## Discussion on Legal Issues in Robotics
+
+TODO
+
+## ROS Infrastructure to Support the Particle Filter
+
+* Estimating Robot Motion for a LIDAR Scan
+* Publishing the ``map`` to ``odom`` transform
+
