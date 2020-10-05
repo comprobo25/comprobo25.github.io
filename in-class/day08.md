@@ -1,17 +1,19 @@
 ## Today
 
-* Wrap on last week's lecture
+* Wrap-up on last week's lecture
 * Discussion on Legal Issues in Robotics
-* Debrief on software architecture plans for particle filter
+* Debrief on implementation plans for particle filter
 * Practical considerations for particle filters
 
 ## For Next Time
 * Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
-* Discussion Readings
+* Discussion Readings: 
+  * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
+  * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
+  * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
 
 ## Discussion on Legal Issues in Robotics
-
-TODO
+* Link to <a-no-proxy href="https://docs.google.com/presentation/d/1TLTV-q67P7cgTb09ho6nzXvyprFYKCk9ozQm4j6gHRU/edit#slide=id.g9dea26f006_1_5">Robots - Legal Landscape</a-no-proxy> slides. 
 
 ## Particle Filter Implementation Plan
 
