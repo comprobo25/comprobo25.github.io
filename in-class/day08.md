@@ -7,7 +7,7 @@
 
 ## For Next Time
 * Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
-* Disscussion Readings
+* Discussion Readings
 
 ## Discussion on Legal Issues in Robotics
 
@@ -16,6 +16,32 @@ TODO
 ## Particle Filter Implementation Plan
 
 Join up with another team and compare your implementation plans.  Try to identify parts of these plans that are fuzzy.  This would be a great time to ask clarifying questions of the teaching team.
+
+## Estimating Robot Motion Using ``tf2``
+
+> Note: before you go through this section and the next section, you may consider watching the video on coordinate frames from [day 2](day02).
+
+In the warmup project some of you used the ``/odom`` topic as a way to figure out the position of your robot (according to its odometry).  By now we know that the for our particle filter we'll need to apply our motor model to update our particles.  One way to imagine doing would be to listen to the ``cmd_vel`` to see what velocities are sent to the robot.  Instead of doing this we can use our robot's odometry as a baseline to apply our motor model update.
+
+In order to use our odometry to do our motor model update, we have two choices.  First, we could listen to the ``odom`` topic and try to track how much the position and orientation has changed since the last time we did an update.  Second, we can use ROS's ``tf2`` module as a way to compute how much the robot has moved between the last time we did an update and the current time.
+
+> Let's quickly discuss what some advantages might be of the using the ``tf`` module.
+
+We have put together some code to demonstrate how ``tf2`` can be used to estimate the relative motion of the robot between two points in time.  We'll leave it to you to decide when / if to go through the example.  To run the code, run the following command (make sure to do a ``git pull upstream master`` in the ``comprobo20`` directory to make sure you have this code).
+
+```bash
+$ roslaunch neato_gazebo neato_empty_world.launch
+```
+
+In a new terminal, run the following command and start the robot driving around (e.g., in a straight line by pressing ``i`` or in a donut by pressing ``u``).
+```bash```
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+In a new terminal, run the code for today.
+```bash
+$ rosrun in_class_day08 relative_motion.py
+```
 
 ## The Particle Filter and Coordinate Frames
 
@@ -55,13 +81,9 @@ In this way we have shown how to take the pose of the robot in the odom and the 
 
 Once the ``map`` to ``odom`` transform is computed, your particle filter should publish it repeatedly in your run loop in-case another node is waiting on the transform to become available.
 
-### Estimating Robot Motion Using ``tf2``
-
-[http://wiki.ros.org/tf2/Tutorials](Tf2 Tutorials)
 
 ## Some Additional Advice
 
 * Don't update your particles too often:  Typically you only want to update your particle set when the robot has moved a little bit or rotated a little bit.  This will prevent your filter from too aggressively incorporating sensor measurements from the current moment in time.
 * Start with the easier case: try to track your robot given that you have accurate knowledge of its initial position.  You should not be trying to localize a robot when you have no idea where it is in the map right off the bat (and it's okay if you never solve this case!).
-* Add visualizations: For example, you might want to publish weighted arrows to communicate the weights of the particles before resampling.
-* Get comfortable with using the odometry to get the robot's motion: you'll have to calculate the motion to apply to each particle based on the readings you get from your odometry.
+* **Visualizations:** Consider publishing weighted arrows to communicate the weights of the particles before resampling.
