@@ -34,7 +34,7 @@ $ roslaunch neato_gazebo neato_empty_world.launch
 ```
 
 In a new terminal, run the following command and start the robot driving around (e.g., in a straight line by pressing ``i`` or in a donut by pressing ``u``).
-```bash```
+```bash
 $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
