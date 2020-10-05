@@ -1,9 +1,9 @@
 ## Coordinate Frames and Robot Localization
 
 * Wrap-up on last week's lecture
-* Discussion on Legal Issues in Robotics
-* Debrief on implementation plans for particle filter
 * Practical considerations for particle filters
+* Debrief on implementation plans for particle filter
+* Discussion on Legal Issues in Robotics
 
 ## For Next Time
 * Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
@@ -12,13 +12,7 @@
   * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
   * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
 
-## Discussion on Legal Issues in Robotics
-* Link to <a-no-proxy href="https://docs.google.com/presentation/d/1TLTV-q67P7cgTb09ho6nzXvyprFYKCk9ozQm4j6gHRU/edit#slide=id.g9dea26f006_1_5">Robots - Legal Landscape</a-no-proxy> slides. 
-
-## Particle Filter Implementation Plan
-
-Join up with another team and compare your implementation plans.  Try to identify parts of these plans that are fuzzy.  This would be a great time to ask clarifying questions of the teaching team.
-
+## Wrap-up on Particle Filter Theory Lecture
 
 ## The Particle Filter and Coordinate Frames
 
@@ -85,9 +79,15 @@ In a new terminal, run the code for today.
 $ rosrun in_class_day08 relative_motion.py
 ```
 
-
 ## Some Additional Advice
 
 * Don't update your particles too often:  Typically you only want to update your particle set when the robot has moved a little bit or rotated a little bit.  This will prevent your filter from too aggressively incorporating sensor measurements from the current moment in time.
 * Start with the easier case: try to track your robot given that you have accurate knowledge of its initial position.  You should not be trying to localize a robot when you have no idea where it is in the map right off the bat (and it's okay if you never solve this case!).
 * **Visualizations:** Consider publishing weighted arrows to communicate the weights of the particles before resampling.
+
+## Particle Filter Implementation Plan
+
+Join up with another team and compare your implementation plans.  Try to identify parts of these plans that are fuzzy.  This would be a great time to ask clarifying questions of the teaching team.
+
+## Discussion on Legal Issues in Robotics
+* Link to <a-no-proxy href="https://docs.google.com/presentation/d/1TLTV-q67P7cgTb09ho6nzXvyprFYKCk9ozQm4j6gHRU/edit#slide=id.g9dea26f006_1_5">Robots - Legal Landscape</a-no-proxy> slides. 
