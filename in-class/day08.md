@@ -14,6 +14,8 @@
 
 ## Wrap-up on Particle Filter Theory Lecture
 
+[Notes from today on Particle Filter and the map->odom->base_link coordinate chain](day08_notes.pdf).
+
 ## The Particle Filter and Coordinate Frames
 
 > Note: we'll quickly review the idea of transformation matrices to encode coordinate frames, but if you want to see things in more detail consider watching the video on coordinate frames from [day 2](day02).
