@@ -37,17 +37,27 @@ In the particle filter project we are introducing an additional coordinate frame
 
 By considering a chain of transforms, the transform from ``base_link`` to ``map`` can be computed by first applying the transform from ``base_link`` to ``odom`` and then applying the transform from ``odom`` to ``map``.  In this way, the position of the robot in the map is affected by our wheel odometry (which is good since it is fast and always available), but we can also affect the position by changing the ``map`` to ``odom`` transform.  Changing the map to ``odom`` transform is exactly what we are going to do with our particle filters! 
 
+### Computing the ``map`` to ``odom`` transform
+
+In computing the ``map`` to ``odom`` transform, you will start with two things.
+ 1. The pose of the robot in the ``odom`` frame (think of this as the ``base_link`` to ``odom`` transform) let's call this transform $$T_{base\_link \rightarrow odom}$$.
+ 2. The pose of the robot in the ``map`` frame (e.g., as calculated by your particle filter).  We can think of the pose of the robot in the ``map`` frame as encoding the ``base_link`` to ``map`` transform, which we can call $$T_{base\_link \rightarrow map}$$.
+
+If we think of these transforms as matrices (e.g., [homogeneous transformation matrices](http://planning.cs.uiuc.edu/node99.html) as we saw in [our second meeting](day02)), then the following must hold.
+
+$$\begin{align}T_{odom \rightarrow map} T_{base\_link \rightarrow odom} &= T_{base\_link \rightarrow map} \\
+T_{odom \rightarrow map} &= T_{base\_link \rightarrow map}T_{base\_link \rightarrow odom}^{-1} \\
+T_{odom \rightarrow map}^{-1} &= \left(T_{base\_link \rightarrow map}T_{base\_link \rightarrow odom}^{-1} \right)^{-1} \\
+T_{map \rightarrow odom} &= T_{base\_link \rightarrow odom} T_{base\_link \rightarrow map}^{-1}
+\end{align}$$
+
+In this way we have shown how to take the pose of the robot in the odom and the map frame and use it to compute the ``map`` to ``odom`` transform.  Note that this is a computation that is available in ``helper_functions.py``, but we wanted to give you a sense of what's going on in the function ``fix_map_to_odom_transform`` in ``helper_functions.py``.
+
+Once the ``map`` to ``odom`` transform is computed, your particle filter should publish it repeatedly in your run loop in-case another node is waiting on the transform to become available.
+
 ### Estimating Robot Motion Using ``tf2``
 
 [http://wiki.ros.org/tf2/Tutorials](Tf2 Tutorials)
-
-### Publishing the ``map`` to ``odom`` transform
-
-## Models of Laser Scans
-
-### Modeling the Likelihood of Each Measurement
-
-### Combining Multiple Measurements
 
 ## Some Additional Advice
 
