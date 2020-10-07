@@ -61,4 +61,4 @@ $$p(z_t | x_t) = p(z_{t,1} | z_{t,1}) \times p(z_{t,2} | x_{t}) \ldots \times p(
 
 You might imagine other things that would make sense (e.g., averaging the probabilities).  It probably helps to think about what sorts of behavior these two alternatives would have.
 
-In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293)... there are some very ad hoc ways of combining measurements (we'll talk about why this makes some sense, but if someone can find a more principled justification, it would be great to hear it).
+In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293)... there are some very ad hoc ways of combining measurements (we'll talk about why this makes some sense, but if someone can find a more principled justification, it would be great to hear it).  Also see this [pull request](https://github.com/ros-planning/navigation/pull/462) for some interesting discussion.
