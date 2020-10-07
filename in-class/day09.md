@@ -66,7 +66,7 @@ In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963
 
 ## Fair Access to Robotics
 
-* Slides: <<a-no-proxy href="https://docs.google.com/presentation/d/1dE-yPRNsVzmszORohqEZeSojh2N8vvCuAHm5JYNYIyY/edit#slide=id.p"> here </a-no-proxy>
+* Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1dE-yPRNsVzmszORohqEZeSojh2N8vvCuAHm5JYNYIyY/edit#slide=id.p"> here </a-no-proxy>
 * As a reminder, these were our discussion readings: 
   * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
   * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
