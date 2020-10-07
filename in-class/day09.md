@@ -1,6 +1,7 @@
 ## Laser Scan Likelihood Functions
 
 * Laser scan likelihood functions
+* Fair Access to Robotics Discussion
 * Project work time
 
 ## For Next Time
@@ -58,3 +59,11 @@ $$p(z_t | x_t) = p(z_{t,1} | z_{t,1}) \times p(z_{t,2} | x_{t}) \ldots \times p(
 You might imagine other things that would make sense (e.g., averaging the probabilities).  It probably helps to think about what sorts of behavior these two alternatives would have.
 
 In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293)... there are some very ad hoc ways of combining measurements (we'll talk about why this makes some sense, but if someone can find a more principled justification, it would be great to hear it).  Also see this [pull request](https://github.com/ros-planning/navigation/pull/462) for some interesting discussion.
+
+## Fair Access to Robotics
+
+* Slides: <<a-no-proxy href="https://docs.google.com/presentation/d/1dE-yPRNsVzmszORohqEZeSojh2N8vvCuAHm5JYNYIyY/edit#slide=id.p"> here </a-no-proxy>
+* As a reminder, these were our discussion readings: 
+  * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
+  * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
+  * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
