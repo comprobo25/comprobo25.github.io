@@ -1,7 +1,11 @@
-## Today
+## Laser Scan Likelihood Functions
 
 * Laser scan likelihood functions
 * Project work time
+
+## For Next Time
+
+* Keep working on the particle filter project
 
 ## Laser scan likelihood functions
 
@@ -29,9 +33,9 @@ The typical approach to the problem is to think about the various causes that co
 
 When we determining the likelihood of our laser scan measurement we might consider what the likelihood of the data would be under each of these cases.  The overall likelihood could then be constructed as a weighted average of each of the likelihood functions.
 
-In order to dig into (2)-(4), we will refer you to [these detailed notes](http://ais.informatik.uni-freiburg.de/teaching/ss10/robotics/slides/07-sensor-models.pdf) (start looking on slide 8).  In order to figure out the probability of a laser scan measurement if it did indeed contact an object, consider the following picture (remember we are considering the case where the laser scanner returns a reading of $$2$$ meters directly in front of it).
+In order to dig into (2)-(4), we will refer you to [these detailed notes](http://ais.informatik.uni-freiburg.de/teaching/ss10/robotics/slides/07-sensor-models.pdf) (start looking on slide 8).  Note that much of the material in these slides is from Thrun and Fox's "Probabilistic Robotics" ([a draft copy](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) is available freely online).  In order to figure out the probability of a laser scan measurement if it did indeed contact an object, consider the following picture (remember we are considering the case where the laser scanner returns a reading of $$2$$ meters directly in front of it).
 
-![A picture showing two particles, the likelihood of a particular range measurement at a particular distance, and the resultant probability](beam.svg)
+![A picture showing two particles, the likelihood of a particular range measurement at a particular distance, and the resultant probability](day09images/beam.svg)
 
 As you can see from the graph, the probability that we read off from the second particle is higher than the one we read off from the first.  This should make sense since the scan projected from the second particle is a closer match to the map than the scan projected from the first particle.
 
@@ -42,6 +46,15 @@ The main difference with a scan-based model versus a beam model is that you dire
 
 ### Combining multiple measurements
 
-## For Next Time
+Up until now we've only thought about how to calculate the probability of a single measurement given a particle location.  For our Neato we are going to get 360 measurements for each scan.  As a result we need a way to compute the overall probability of a scan instead of just a single measurement.  Let's use the notation $$z_{t,j}$$ to refer to the $$j$$th scan reading at time $$t$$ (e.g., in our Neato we could consider that $$j$$ goes from 1 to 360).  We'd like to compute the following probability.
 
-* Keep working on the particle filter project
+$$p(z_t | x_t) = p(z_{t,1}, z_{t,2}, \ldots, z_{t,n} | x_t)$$
+
+Where $$n$$ is the number of measurements in a particular laser scan.  A very common assumption that is applied to simplify this is that each of the measurements is conditionally independent given the robot's state $$x_t$$.  Applying this assumption yields the following equation.
+
+
+$$p(z_t | x_t) = p(z_{t,1} | z_{t,1}) \times p(z_{t,2} | x_{t}) \ldots \times p(z_{t,n}|x_t)$$
+
+You might imagine other things that would make sense (e.g., averaging the probabilities).  It probably helps to think about what sorts of behavior these two alternatives would have.
+
+In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293)... there are some very ad hoc ways of combining measurements (we'll talk about why this makes some sense, but if someone can find a more principled justification, it would be great to hear it).
