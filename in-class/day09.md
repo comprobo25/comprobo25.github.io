@@ -53,7 +53,7 @@ $$p(z_t | x_t) = p(z_{t,1}, z_{t,2}, \ldots, z_{t,n} | x_t)$$
 Where $$n$$ is the number of measurements in a particular laser scan.  A very common assumption that is applied to simplify this is that each of the measurements is conditionally independent given the robot's state $$x_t$$.  Applying this assumption yields the following equation.
 
 
-$$p(z_t | x_t) = p(z_{t,1} | z_{t,1}) \times p(z_{t,2} | x_{t}) \ldots \times p(z_{t,n}|x_t)$$
+$$p(z_t | x_t) = p(z_{t,1} | x_t) \times p(z_{t,2} | x_{t}) \ldots \times p(z_{t,n}|x_t)$$
 
 You might imagine other things that would make sense (e.g., averaging the probabilities).  It probably helps to think about what sorts of behavior these two alternatives would have.
 
