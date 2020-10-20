@@ -23,7 +23,7 @@ For this project, you should work with one other student. Since we have an odd n
 
 Your project should be about computer vision and its intersection with mobile robotics.  While it is likely that a substantial component of your project will be about the vision part (and not necessarily its application to mobile robots), you should scope your project so that you have time to deploy your system on the Neatos.
 
-In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with programming the Neatos to do something interesting.  As a brief aside about the pedagogy of this course, since as the course goes on we are going to spend less time discussing algorithms in the structured portion of the class, it is important for you to do project-based exploration of algorithms.  To this end, we expect that you will implement some portion of the algorithms you wind up using.
+In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with programming the Neatos (or another robot) to do something interesting.  As a brief aside about the pedagogy of this course, since as the course goes on we are going to spend less time discussing algorithms in the structured portion of the class, it is important for you to do project-based exploration of algorithms.  To this end, we expect that you will implement some portion of the algorithms you wind up using. That said, you have a limited amount of time for this project (2.5 weeks), so plan accordingly. 
 
 Suggested Algorithm Topics
 * Object tracking
@@ -38,8 +38,10 @@ Suggested Algorithm Topics
 
 ## Robot Platform
 
-* TODO: Link to simulators page
-* TODO: Datasets list
+* One option is to continue to work with the Neato simulator in Gazebo, and use the simulated world for your computer vision project. You will probably want to build a more complex world (see instructions for doing that in the how-tos for the <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1305"> Neato Simulator </a-no-proxy>. While we've mostly been using simple shapes in previous projects, there are a lot of built-in models that you can use to build a world. 
+* We've been working with the Neato simulator, but there are many other simulators out there, which you're welcome to use in this project. You can find some of them here: <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1306"> Other Robot Simulators</a-no-proxy>.
+* You may want to use an external dataset for your project. Here are some possible starting points. 
+    * [Visual Data ](https://www.visualdata.io/discovery) has a nice collection of computer vision datasets and projects. 
 
 ## Deliverables
 
@@ -82,7 +84,8 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 ## Resources and Potential Project Directions
 
 * [Convert ROS image messages to OpenCV using CvBridge](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
-* An overview of methods for object tracking (TODO: old link is broken) 
+* [Connecting a webcam to ROS and OpenCV](https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/)
+* [An overview of methods for object tracking](https://www.crcv.ucf.edu/papers/Object%20Tracking.pdf)
 * [Slides from the CompRobo Learning Project 2018 Class Report Out](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit?usp=sharing)
 * [Mastering OpenCV with Practical Computer Vision Projects](https://www.cs.ccu.edu.tw/~damon/photo/,OpenCV/,Mastering_OpenCV.pdf)
 * Visual odometry resources ([one example](http://www.cvlibs.net/software/libviso/))
