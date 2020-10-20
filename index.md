@@ -73,6 +73,16 @@ feature_row_robots_society:
 
 * [Student Led Discussions](assignments/ethics_discussion_assignment)\n"
 
+feature_row_computer_vision_project:
+  - image_path: website_graphics/neato_gazebo.png
+    alt: "The Neato robot in an empty, simulated world"
+    excerpt: "
+The computer vision project is an open-ended project on using computer vision in the context of robotics.
+
+    ### Supporting Documents
+
+* [Computer Vision Project Document](assignments/computer_vision_project)"
+
 ---
 
 The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning. This year we are also piloting student led discussions on societal issues and robotics. 
@@ -94,6 +104,10 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 ## <a name="module-details"/> Robots in the World
 
 {% include feature_row id="feature_row_robots_society" type="right" %}
+
+## <a name="module-details"/> Computer Vision Project
+
+{% include feature_row id="feature_row_computer_vision_project" type="left" %}
 
 ## In-class Activities
 
