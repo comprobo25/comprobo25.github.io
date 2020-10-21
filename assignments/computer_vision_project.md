@@ -21,11 +21,11 @@ For this project, you should work with one other student. Since we have an odd n
 
 ## Project Topic
 
-Your project should be about computer vision and its intersection with mobile robotics.  While it is likely that a substantial component of your project will be about the vision part (and not necessarily its application to mobile robots), you should scope your project so that you have time to deploy your system on the Neatos.
+Your project should be about computer vision and its intersection with robotics.  In our simulated robot reality of the pandemic, this means that you should choose a computer vision topic that has some plausible application in robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, or some combination of both.
 
-In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with programming the Neatos (or another robot) to do something interesting.  As a brief aside about the pedagogy of this course, since as the course goes on we are going to spend less time discussing algorithms in the structured portion of the class, it is important for you to do project-based exploration of algorithms.  To this end, we expect that you will implement some portion of the algorithms you wind up using. That said, you have a limited amount of time for this project (2.5 weeks), so plan accordingly. 
+In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simualted Neatos (or another robot) to do something interesting).  You have substantial lattitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms).  That said, we expect that you will do some exploration of algorithms as part of this project (which could could include implementation or perhaps subsantial learning about an algorithm or class of algorithms).
 
-Suggested Algorithm Topics
+Potential Algorithm Topics
 * Object tracking
 * Image segmentation
 * Object detection
@@ -34,14 +34,18 @@ Suggested Algorithm Topics
 * Visual odometry
 * Structure from motion
 
-(Note: see attached files at the end of of this page for some resources)
+(Note: there are some resources for these topics later in the document)
 
 ## Robot Platform
 
 * One option is to continue to work with the Neato simulator in Gazebo, and use the simulated world for your computer vision project. You will probably want to build a more complex world (see instructions for doing that in the how-tos for the <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1305"> Neato Simulator </a-no-proxy>. While we've mostly been using simple shapes in previous projects, there are a lot of built-in models that you can use to build a world. 
 * We've been working with the Neato simulator, but there are many other simulators out there, which you're welcome to use in this project. You can find some of them here: <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1306"> Other Robot Simulators</a-no-proxy>.
 * You may want to use an external dataset for your project. Here are some possible starting points. 
-    * [Visual Data ](https://www.visualdata.io/discovery) has a nice collection of computer vision datasets and projects. 
+    * [Visual Data](https://www.visualdata.io/discovery) has a nice collection of computer vision datasets and projects.
+    * If you want a huge (but very cool) dataset for self-driving vehicles, consider usign Waymo's [Open Dataset](https://waymo.com/open/)
+    * [Here's another list of datasets specifically for robotics (not all are about computer vision)](https://lionbridge.ai/datasets/17-best-robotics-datasets-for-machine-learning/)
+    * If you're interested in machine learning for robot control, you might consider building off some of [the datasets (and code) from the 2018 Robot Learning project](https://github.com/comprobo18/robot_learning/network/members) (You also might want to check out [the Google Slides presentation summarizing their results](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit)).
+    * A lof these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets.  That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
 
 ## Deliverables
 
@@ -68,7 +72,10 @@ We'd like each team to spend about 10 minutes presenting what they did for this 
 * At a high-level explain how your system works
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
-Code
+
+
+### Code (Due 11-9)
+
 * You should turn in your code and writeup via Github.  Please fork your repo from this one.
 
 ### Writeup (Due 11-9)
@@ -79,9 +86,13 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * What was the goal of your project?  Since everyone is doing a different project, you will have to spend some time setting this context.
 * How did you solve the problem (i.e., what methods / algorithms did you use and how do they work)?  As above, since not everyone will be familiar with the algorithms you have chosen, you will need to spend some time explaining what you did and how everything works.
 * Describe a design decision you had to make when working on your project and what you ultimately did (and why)? These design decisions could be particular choices for how you implemented some part of an algorithm or perhaps a decision regarding which of two external packages to use in your project.
-* What if any challenges did you face along the way?  * What would you do to improve your project if you had more time?  * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
+* What if any challenges did you face along the way?
+* What would you do to improve your project if you had more time?
+* Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
 
 ## Resources and Potential Project Directions
+
+### Resources
 
 * [Convert ROS image messages to OpenCV using CvBridge](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
 * [Connecting a webcam to ROS and OpenCV](https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/)
@@ -100,3 +111,19 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * [Arithmetic Operations on Images](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_core/py_image_arithmetics/py_image_arithmetics.html#image-arithmetics)
 * [Corner Detection](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html)
 * [Numpy Examples List](https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html)
+
+### Previous Student Projects to Draw From
+
+* [Robot Learning Report out 2018](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit) 
+* Computer Vision Project Writeups from 2017
+   * [Self Driving Neato](https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md)
+   * [Visual Odometry](https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf)
+   * [Emotion Detection for Social Robots](https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf)
+   * [Visual Localization](https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf)
+   * [Predicting Paths of Tracked Objects](https://github.com/shanek21/cv_motion_prediction)
+   * [Neato Keeper](https://github.com/krusellp/neato_keeper/blob/master/Neato_Keeper.pdf)
+   * [Lane Follower](https://github.com/kzhang8850/lane_follower)
+   * [Meal Recognition](https://github.com/CompRoboMealVision/meal_recognition)
+   * [Pac Neato](https://github.com/jsutker/computer_vision_2017/blob/master/pacneato/scripts/Pacneato_Writeup.md)
+   * [Neato Augmented Reality Parking](https://github.com/jovanduy/computer_vision_2017)
+
