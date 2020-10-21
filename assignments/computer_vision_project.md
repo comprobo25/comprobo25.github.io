@@ -18,6 +18,7 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 
 For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
 
+Please fill out [this Google Sheet](https://docs.google.com/spreadsheets/d/13o6yErKLus7AsdG2PzH4Fh0Jno3YeTf1mArE_2uPMQM/edit?usp=sharing) when you have a project team and Github repo.
 
 ## Project Topic
 
