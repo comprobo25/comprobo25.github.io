@@ -120,11 +120,11 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * Computer Vision Project Writeups from 2017
    * [Self Driving Neato](https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md)
    * [Computer Vision Emotion Detection](https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf)
-   * [Visual Localization](https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf)
-   * [Predicting Paths of Tracked Objects](https://github.com/shanek21/cv_motion_prediction)
-   * [Neato Keeper](https://github.com/krusellp/neato_keeper/blob/master/Neato_Keeper.pdf)
-   * [Lane Follower](https://github.com/kzhang8850/lane_follower)
-   * [Meal Recognition](https://github.com/CompRoboMealVision/meal_recognition)
-   * [Pac Neato](https://github.com/jsutker/computer_vision_2017/blob/master/pacneato/scripts/Pacneato_Writeup.md)
+   * <a-no-proxy href="https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf">Visual Localization</a-no-proxy>
+   * <a-no-proxy href="https://github.com/shanek21/cv_motion_prediction">Predicting Paths of Tracked Objects</a-no-proxy>
+   * <a-no-proxy href="https://github.com/krusellp/neato_keeper/blob/master/Neato_Keeper.pdf">Neato Keeper</a-no-proxy>
+   * <a-no-proxy href="https://github.com/kzhang8850/lane_follower">Lane Follower</a-no-proxy>
+   * <a-no-proxy href="https://github.com/CompRoboMealVision/meal_recognition">Meal Recognition</a-no-proxy>
+   * <a-no-proxy href="https://github.com/jsutker/computer_vision_2017/blob/master/pacneato/scripts/Pacneato_Writeup.md">Pac Neato</a-no-proxy>
    * [Neato Augmented Reality Parking](https://github.com/jovanduy/computer_vision_2017)
 
