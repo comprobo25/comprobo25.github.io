@@ -18,7 +18,7 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 
 For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
 
-Please fill out [this Google Sheet](https://docs.google.com/spreadsheets/d/13o6yErKLus7AsdG2PzH4Fh0Jno3YeTf1mArE_2uPMQM/edit?usp=sharing) when you have a project team and Github repo.
+Please fill out (<a-no-proxy href="https://docs.google.com/spreadsheets/d/13o6yErKLus7AsdG2PzH4Fh0Jno3YeTf1mArE_2uPMQM/edit?usp=sharing">this Google Sheet</a-no-proxy> when you have a project team and Github repo.
 
 ## Project Topic
 
@@ -45,7 +45,7 @@ Potential Algorithm Topics
     * [Visual Data](https://www.visualdata.io/discovery) has a nice collection of computer vision datasets and projects.
     * If you want a huge (but very cool) dataset for self-driving vehicles, consider usign Waymo's [Open Dataset](https://waymo.com/open/)
     * [Here's another list of datasets specifically for robotics (not all are about computer vision)](https://lionbridge.ai/datasets/17-best-robotics-datasets-for-machine-learning/)
-    * If you're interested in machine learning for robot control, you might consider building off some of [the datasets (and code) from the 2018 Robot Learning project](https://github.com/comprobo18/robot_learning/network/members) (You also might want to check out [the Google Slides presentation summarizing their results](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit)).
+    * If you're interested in machine learning for robot control, you might consider building off some of <a-no-proxy href="https://github.com/comprobo18/robot_learning/network/members">the datasets (and code) from the 2018 Robot Learning project</a-no-proxy> <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">You also might want to check out [the Google Slides presentation summarizing their results</a-no-proxy>.
     * A lof these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets.  That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
 
 ## Deliverables
@@ -95,10 +95,10 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Resources
 
-* [Convert ROS image messages to OpenCV using CvBridge](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
+* <a-no-proxy>Convert ROS image messages to OpenCV using CvBridge](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
 * [Connecting a webcam to ROS and OpenCV](https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/)
 * [An overview of methods for object tracking](https://www.crcv.ucf.edu/papers/Object%20Tracking.pdf)
-* [Slides from the CompRobo Learning Project 2018 Class Report Out](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit?usp=sharing)
+* <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit?usp=sharing">Slides from the CompRobo Learning Project 2018 Class Report Out</a-no-proxy>
 * [Mastering OpenCV with Practical Computer Vision Projects](https://www.cs.ccu.edu.tw/~damon/photo/,OpenCV/,Mastering_OpenCV.pdf)
 * Visual odometry resources ([one example](http://www.cvlibs.net/software/libviso/))
 * [Canny edge detection](https://docs.opencv.org/master/da/d22/tutorial_py_canny.html)
@@ -115,7 +115,8 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Previous Student Projects to Draw From
 
-* [Robot Learning Report out 2018](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit) 
+* [Visual Navigation for Flying Robots](https://vision.in.tum.de/teaching/ss2013/visnav2013) is a course on said topic.  The linked page includes lectures and even some bag files.
+* <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">Robot Learning Report out 2018</a-no-proxy>
 * Computer Vision Project Writeups from 2017
    * [Self Driving Neato](https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md)
    * [Visual Odometry](https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf)
