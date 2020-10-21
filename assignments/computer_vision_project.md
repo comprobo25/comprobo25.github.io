@@ -118,8 +118,7 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * [Robot Learning Report out 2018](https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit) 
 * Computer Vision Project Writeups from 2017
    * [Self Driving Neato](https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md)
-   * [Visual Odometry](https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf)
-   * [Emotion Detection for Social Robots](https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf)
+   * [Computer Vision Emotion Detection](https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf)
    * [Visual Localization](https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf)
    * [Predicting Paths of Tracked Objects](https://github.com/shanek21/cv_motion_prediction)
    * [Neato Keeper](https://github.com/krusellp/neato_keeper/blob/master/Neato_Keeper.pdf)
