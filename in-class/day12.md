@@ -11,6 +11,8 @@ toc_sticky: true
 
 * [Computer Vision Project Proposal](../assignments/computer_vision_project#project-proposal-due-1026) Due
 
-## Computer Vision in Robotics
+## Computer Vision Project Kickoff
+
+The prompts for this are located in [this Google Slide Deck](https://docs.google.com/presentation/d/1qi7827wM7BItZoUukWVM28DhWJl1kEiaNFsROywtFLg/edit?usp=sharing).
 
 
