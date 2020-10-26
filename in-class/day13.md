@@ -128,15 +128,18 @@ To get started I'll walk you through making the lower bound for the red channel 
         cv2.namedWindow('threshold_image')
         self.red_lower_bound = 0
         cv2.createTrackbar('red lower bound', 'threshold_image', 0, 255, self.set_red_lower_bound)
+```
+
 The last line of code registers a callback function to handle changes in the value of the slider (this is very similar to handling new messages from a ROS topic).  To create the call back, use the following code:
 
+```python
     def set_red_lower_bound(self, val):
         """ A callback function to handle the OpenCV slider to select the red lower bound """
 
         self.red_lower_bound = val
 ```
 
-All that remains is to modify your call to the inRange function to use the attribute you have created to track the lower bound for the red channel.   Remember the channel ordering!!!  In order to fully take advantage of this debugging approach you will want to create sliders for the upper and lower bounds of all three color channels.
+All that remains is to modify your call to the ``inRange`` function to use the attribute you have created to track the lower bound for the red channel.   Remember the channel ordering!!!  In order to fully take advantage of this debugging approach you will want to create sliders for the upper and lower bounds of all three color channels.
 
 If you find the video feed lagging on your robot, it may be because your code is not processing frames quickly enough.  Try only processing every fifth frame to make sure your computer is able to keep up with the flow of data.
 
@@ -161,20 +164,20 @@ Tips:
 <ul>
 <li>To compute the center of mass in the x-direction, use the ``cv2.moments`` function.  You can easily code this in pure Python, but it will be pretty slow.  For example,
 
-```python
+{% highlight python %}
 moments = cv2.moments(binary_image)
 if moments['m00'] != 0:
     self.center_x, self.center_y = moments['m10']/moments['m00'], moments['m01']/moments['m00']
-```
+{% endhighlight %}
 </li>
 <li>
 When doing your proportional control, make sure to normalize <tt>self.center_x</tt> based on how wide the image is.  Specifically, you'll find it easier to write your proportional control if you rescale <tt>self.center_x</tt> to range from -0.5 to 0.5. We recommend sending the motor commands in the <tt>self.run</tt> function.
 
 If you want to use the sliders to choose the right upper and lower bounds before you start moving, you can set a flag in your <tt>__init__</tt> function that will control whether the robot should move or remain stationary.  You can toggle the flag in your <tt>process_mouse_event</tt> function whenever the event is a left mouse click.  For instance if your flag controlling movement is <tt>should_move</tt> you can add this to your <tt>process_mouse_event</tt> function:
 
-```python
+{% highlight python %}
         if event == cv2.EVENT_LBUTTONDOWN:
             self.should_move = not(self.should_move)
-```
+{% endhighlight %}
 </li>
 </ul>
