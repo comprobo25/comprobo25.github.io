@@ -46,7 +46,31 @@ Next, go to ``Plugins``, then ``Visualization``, and then select ``Image View``.
 
 Once you've started the simulator, you'll need to create some sort of ball or puck for your robot to kick around.  We've found that this will probably work a bit better as neato hockey than neato soccer, so we suggest you perform the following steps.
 
-TODO put screenshots
+<ol>
+<li>Start model editor by clicking <tt>edit</tt> and then <tt>model editor</tt>
+
+<img src="day13images/model_editor.png"/>
+</li>
+<li>Insrt a cylinder into the scene by clicking on the cylinder shape on the left menu.
+
+<img src="day13images/insert_cylinder.png"/>
+</li>
+<li>Start the link editor by right clicking on the cylinder and selecting <tt>link editor</tt>.</li>
+<li>Change the color by selecting a different material (<a href="http://wiki.ros.org/simulator_gazebo/Tutorials/ListOfMaterials">materials list</a>).
+
+<img src="day13images/change_color.png"/>
+</li>
+<li>
+Change the coefficient of friction (this will make it slide more like a hockey puck.
+<img src="day13images/change_friction.png"/>
+</li>
+
+<li>
+Save the model by first exiting the model editor, clicking <tt>save and exit</tt>, and then giving the model a name (it doesn't matter so much what it is).
+
+<img src="day13images/save.png"/>
+</li> 
+</ol>
 
 Run the starter code and you'll see the dimensionality of the resultant ``numpy`` array as printed out in ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 600x600 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
 
@@ -61,16 +85,18 @@ If all went well, you should see an image that looks like this pop up on the scr
 Our first step towards finding the ball in the field of view of the camera (which will ultimately allow us to track it), is to filter the image based on the color values of the pixels.  We will be using the ``cv2.inRange`` function to create a binarized version of the image (meaning all pixels are either black or white) depending on whether they fall into the specified range.  As an example, here is some code that would create a binary image where white pixels would correspond to brighter pixels in the original image, and black pixels would correspond to darker ones
 
 ```python
-binary_image = cv2.inRange(self.cv_image, (128,128,128), (255,255,255))
+       self.binary_image = cv2.inRange(self.cv_image, (128,128,128), (255,255,255))
 ```
 
 This code could be placed inside of the ``process_image`` function at any point after the creation of ``self.cv_image``.  Notice that there are three pairs lower and upper bounds.  Each pair specifies the desired range for one of the color channels (remember, the order is blue, green, red).  If you are unfamiliar with the concept of a colorspaces, you might want to do some reading about them on Wikipedia.  Here is the link to the RGB color space (notice the different order of the color channels from OpenCV's BGR).  Another website that might be useful is this color picker widget that lets you see the connection between specific colors and their RGB values.
 
 Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``threshold_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
 
+> Super, super, super important: don't put the ``cv2.namedWindow`` or ``cv2.imshow`` inside the ``process_image`` function.  You can only call OpenCV functions that display graphical objects from your main thread (follow the template of what's already there). 
+
 #### Debugging Tips
 
-The first thing that might be useful is to display the color values for a particular pixel in the image as you hover your mouse over it.  To accomplish this, add the following line to your __init__ function.  This lines will register a callback function to handle mouse events (the callback function will be inserted next, see below).
+The first thing that might be useful is to display the color values for a particular pixel in the image as you hover your mouse over it.  To accomplish this, add the following line to your ``__init__`` function.  This lines will register a callback function to handle mouse events (the callback function will be inserted next, see below).
 
 ```python
         cv2.setMouseCallback('video_window', self.process_mouse_event)
@@ -142,11 +168,13 @@ if moments['m00'] != 0:
 ```
 </li>
 <li>
-When doing your proportional control, make sure to normalize ``self.center_x`` based on how wide the image is.  Specifically, you'll find it easier to write your proportional control if you rescale ``self.center_x`` to range from -0.5 to 0.5. We recommend sending the motor commands in the self.run function.
+When doing your proportional control, make sure to normalize <tt>self.center_x</tt> based on how wide the image is.  Specifically, you'll find it easier to write your proportional control if you rescale <tt>self.center_x</tt> to range from -0.5 to 0.5. We recommend sending the motor commands in the <tt>self.run</tt> function.
 
-If you want to use the sliders to choose the right upper and lower bounds before you start moving, you can set a flag in your __init__ function that will control whether the robot should move or remain stationary.  You can toggle the flag in your ``process_mouse_event`` function whenever the event is a left mouse click.  For instance if your flag controlling movement is ``should_move`` you can add this to your ``process_mouse_event`` function:
+If you want to use the sliders to choose the right upper and lower bounds before you start moving, you can set a flag in your <tt>__init__</tt> function that will control whether the robot should move or remain stationary.  You can toggle the flag in your <tt>process_mouse_event</tt> function whenever the event is a left mouse click.  For instance if your flag controlling movement is <tt>should_move</tt> you can add this to your <tt>process_mouse_event</tt> function:
 
 ```python
         if event == cv2.EVENT_LBUTTONDOWN:
             self.should_move = not(self.should_move)
 ```
+</li>
+</ul>
