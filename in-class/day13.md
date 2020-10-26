@@ -12,10 +12,17 @@ toc_sticky: true
 ## For Next Time
 
 * Keep on working on the comptuer vision project
+* Reading materials for discussion on environmental impact of robotics:
+   * <a-no-proxy href="https://theconversation.com/if-robots-take-our-jobs-what-will-it-mean-for-climate-change-123507"> Reading #1: If robots take our jobs what will it mean for climate change? </a-no-proxy>
+   * <a-no-proxy href="https://www.iisd.org/articles/automation-environment"> Reading #2: What Effect Will Automation Have on the Environment? </a-no-proxy>
+   * Optional (but cool) readings: 
+      * <a-no-proxy href="https://time.com/4476614/self-driving-cars-environment/"> Self-Driving Cars </a-no-proxy> 
+      * <a-no-proxy href="https://exchange.telstra.com.au/skygrow-muru-d-climate-change/"> Tree Planting Robots </a-no-proxy> 
+      * <a-no-proxy href="https://www.youtube.com/watch?v=CVdPhUPO5YU"> Robots to Fighting Pollution </a-no-proxy>
 
 ## Robots and Society Discussion
 
-James will be leading us through this.
+James will be leading us through this. <a-no-proxy href="https://pasteapp.com/p/AeIAWd3HpVx?view=fhmWGJbzAMo"> Slides available here </a-no-proxy>.
 
 ## Neato Soccer (or maybe Neato Hockey)
 
