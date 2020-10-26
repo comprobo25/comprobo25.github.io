@@ -70,6 +70,8 @@ Save the model by first exiting the model editor, clicking <tt>save and exit</tt
 
 <img src="day13images/save.png"/>
 </li> 
+
+<li>Unpause the simulation to make sure you can still drive the robot around and you are getting new images.</li>
 </ol>
 
 Run the starter code and you'll see the dimensionality of the resultant ``numpy`` array as printed out in ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 600x600 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
@@ -85,7 +87,7 @@ If all went well, you should see an image that looks like this pop up on the scr
 Our first step towards finding the ball in the field of view of the camera (which will ultimately allow us to track it), is to filter the image based on the color values of the pixels.  We will be using the ``cv2.inRange`` function to create a binarized version of the image (meaning all pixels are either black or white) depending on whether they fall into the specified range.  As an example, here is some code that would create a binary image where white pixels would correspond to brighter pixels in the original image, and black pixels would correspond to darker ones
 
 ```python
-       self.binary_image = cv2.inRange(self.cv_image, (128,128,128), (255,255,255))
+        self.binary_image = cv2.inRange(self.cv_image, (128,128,128), (255,255,255))
 ```
 
 This code could be placed inside of the ``process_image`` function at any point after the creation of ``self.cv_image``.  Notice that there are three pairs lower and upper bounds.  Each pair specifies the desired range for one of the color channels (remember, the order is blue, green, red).  If you are unfamiliar with the concept of a colorspaces, you might want to do some reading about them on Wikipedia.  Here is the link to the RGB color space (notice the different order of the color channels from OpenCV's BGR).  Another website that might be useful is this color picker widget that lets you see the connection between specific colors and their RGB values.
@@ -93,6 +95,8 @@ This code could be placed inside of the ``process_image`` function at any point 
 Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``threshold_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
 
 > Super, super, super important: don't put the ``cv2.namedWindow`` or ``cv2.imshow`` inside the ``process_image`` function.  You can only call OpenCV functions that display graphical objects from your main thread (follow the template of what's already there). 
+
+> Also important: white pixels will correspond to pixels that are in the specified range and black pixels will correspond to pixels that are not in the range (it's easy to convince yourself that it is the other way around, so be careful).
 
 #### Debugging Tips
 
@@ -162,12 +166,12 @@ There are probably lots of good methods, but what we implemented was basic propo
 Tips:
 
 <ul>
-<li>To compute the center of mass in the x-direction, use the ``cv2.moments`` function.  You can easily code this in pure Python, but it will be pretty slow.  For example,
+<li>To compute the center of mass in the x-direction, use the ``cv2.moments`` function.  You can easily code this in pure Python, but it will be pretty slow.  For example, you could add the following code to your <tt>process_image</tt> function.
 
 {% highlight python %}
-moments = cv2.moments(binary_image)
-if moments['m00'] != 0:
-    self.center_x, self.center_y = moments['m10']/moments['m00'], moments['m01']/moments['m00']
+        moments = cv2.moments(self.binary_image)
+        if moments['m00'] != 0:
+            self.center_x, self.center_y = moments['m10']/moments['m00'], moments['m01']/moments['m00']
 {% endhighlight %}
 </li>
 <li>
