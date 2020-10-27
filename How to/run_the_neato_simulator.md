@@ -300,6 +300,36 @@ Using the "move" tool in Gazebo, you can select your robot and move it around (s
 
 Oftentimes you may be trying to get your robot to execute a certain behavior.  With a physical robot, you will usually assess success by observing its behavior visually.  In a simulator, you can actually "cheat" and read the robot's true state right from ROS.  For example, if you were trying to get your robot to drive a square, you could compare the intended square to the actual square by reading the robot's state.  The robot's state is available on the ROS topic ``gazebo/model_states``.
 
-## Shuting Down the Simulator
+## Shutting Down the Simulator
 
-Go to the terrminal where you executed **step 2** (launch Gazebo) and hit control-c.
+Go to the terminal where you executed **step 2** (launch Gazebo) and hit control-c.
+
+## Beta Features
+
+This section includes things that folks might be interesting in utilizing but have some key limitations.
+
+### Support for Multiple Robots
+
+Once you've done an update to your ``comprobo20`` repository, you should be able to access a new launch file with support for multiple robots.
+
+```bash
+$ roslaunch neato_gazebo neato_world_2bots.launch neato_world:=flatland load_camera:=true
+```
+
+To pilot robot 1, run this command.
+
+```bash
+$ ROS_NAMESPACE=robot1 rosrun  teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+To pilot robot 2, run this command.
+
+```bash
+$ ROS_NAMESPACE=robot2 rosrun  teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+You should explore the topics by doing a ``rostopic list``.  You will see that the topics have now been placed into namespace.
+
+#### Limitations
+
+The biggest limitation is that the static transforms relating ``base_footprint`` to all of the parts of the robot are not properly handled.  The only transforms that are properly namespaced are the ones that Gazebo publishes (namely ``base_footprint`` to ``odom``).  This is hard to support until <a-no-proxy href="https://github.com/ros/robot_state_publisher/pull/139">this pull request</a-no-proxy> is merged.
