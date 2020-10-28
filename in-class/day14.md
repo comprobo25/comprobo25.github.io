@@ -12,9 +12,10 @@ toc_sticky: true
 
 * Keep on working on the computer vision project
 * Readings for next Robots and Society discussion
+   * <a-no-proxy href="https://time.com/5876604/machines-jobs-coronavirus/"> Job Loss and Replacement </a-no-proxy>
 
 ## Robots and Society Discussion
-
+* Environmental Impact of Robotics: <a-no-proxy href="https://docs.google.com/presentation/d/1GXaKVWb-J__nanhWBgLj3WkIHc9vlZ01sLJxJzzQjY4/edit#slide=id.g633c9ab0c4_0_1799"> Slides here </a-no-proxy>
 
 ## Keypoints, Descriptors, and Keypoint Matching
 
