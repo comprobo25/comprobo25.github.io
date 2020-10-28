@@ -15,7 +15,7 @@ toc_sticky: true
    * <a-no-proxy href="https://time.com/5876604/machines-jobs-coronavirus/"> Job Loss and Replacement </a-no-proxy>
 
 ## Robots and Society Discussion
-* Environmental Impact of Robotics: <a-no-proxy href="https://docs.google.com/presentation/d/1GXaKVWb-J__nanhWBgLj3WkIHc9vlZ01sLJxJzzQjY4/edit#slide=id.g633c9ab0c4_0_1799"> Slides here </a-no-proxy>
+* Environmental Impact of Robotics: <a-no-proxy href="https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/edit?usp=sharing">Slides here </a-no-proxy>
 
 ## Keypoints, Descriptors, and Keypoint Matching
 
