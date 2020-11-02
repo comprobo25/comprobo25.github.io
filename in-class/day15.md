@@ -23,11 +23,11 @@ The slides for today are available <a-no-proxy href="https://docs.google.com/pre
 
 ## Camera Calibration Resources
 
-If you are running your computer vision project in Gazebo, you should not really need to do camera calibration as Gazebo does not inject distortion into the image. However if you for some reason wanted to do this, here are a few resources:
+If you are running your computer vision project on the simulator, you should not need to do camera calibration; as Gazebo does not inject distortion into the image. However if you for some reason wanted to do this, here are a few resources:
 
 * <a-no-proxy href="http://gazebosim.org/tutorials?tut=camera_distortion&cat=sensors"> Gazebo article on creating distortion </a-no-proxy>
-* A <a-no-proxy href="https://github.com/oKermorgant/calibration_gazebo"> github repo </a-no-proxy> for camera calibration in Gazebo (note that we haven't had a chance to try this yet. No guarantees!)
+* A <a-no-proxy href="https://github.com/oKermorgant/calibration_gazebo"> github repo </a-no-proxy> for camera calibration in Gazebo (note that we haven't had a chance to try this yet. No guarantees.)
 
 
-If you want to work with real Neatos in the future, or want to calibrate a different camera (e.g. your webcam) here is the <a-no-proxy href="http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration"> ROS documentation on camera calibration. </a-no-proxy>
+If you want to work with real Neatos in the future, or want to calibrate a different camera (e.g. your webcam) here is the <a-no-proxy href="http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration"> ROS documentation on camera calibration. </a-no-proxy> Note that you'll need a checkerboard.
 
