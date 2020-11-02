@@ -19,3 +19,41 @@ See  <a-no-proxy href="https://docs.google.com/spreadsheets/d/1VuVWl0FXGH8GClKSo
 Dates were assigned randomly by picking numbers out of a hat. If you want to trade with another team and they are amenable - that's fine, just let us know! 
 
 ## Repository for Past and Current Readings:
+
+* Blame and Liability (Meeting 3)
+   * Reading: <a-no-proxy href="https://thehustle.co/when-robots-kill/"> When Robots Kill </a-no-proxy> 
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/19vvms_58HVD-8TtENqQD7XjgfM93wyVk2WlSxExM-Ww/edit?usp=sharing"> here </a-no-proxy>
+* Legal Liability and Robot Rights (Meeting 8)
+   * Readings: 
+      * <a-no-proxy href="https://robohub.org/the-legal-issues-of-robotics/"> Summary on legal issues in robotics </a-no-proxy>
+      * <a-no-proxy href="https://www.therobotreport.com/liability-robot-legal-debate/"> Article on liability </a-no-proxy>
+      * <a-no-proxy href="https://www.youtube.com/watch?v=DHyUYg8X31c" > Video: Do Robots Deserve Rights? What if Machines Become Conscious? </a-no-proxy>  
+    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1TLTV-q67P7cgTb09ho6nzXvyprFYKCk9ozQm4j6gHRU/edit#slide=id.g9dea26f006_1_5"> here </a-no-proxy>
+* Fair Access to Robotics - in Education (Meeting 9)
+   * Readings: 
+      * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
+      * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
+      * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
+      * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1dE-yPRNsVzmszORohqEZeSojh2N8vvCuAHm5JYNYIyY/edit#slide=id.p"> here </a-no-proxy>
+* Public Perception of Robots (Meeting 13)
+   * Slides: <a-no-proxy href="https://pasteapp.com/p/AeIAWd3HpVx?view=fhmWGJbzAMo"> here </a-no-proxy>.
+* Environmental Effects of Robots (Meeting 14)
+   * Required Reading Materials:
+      *  <a-no-proxy href="https://theconversation.com/if-robots-take-our-jobs-what-will-it-mean-for-climate-change-123507"> Reading #1: If robots take our jobs what will it mean for climate change? </a-no-proxy>
+      * <a-no-proxy href="https://www.iisd.org/articles/automation-environment"> Reading #2: What Effect Will Automation Have on the Environment? </a-no-proxy>
+   * Optional (but cool) readings: 
+      * <a-no-proxy href="https://time.com/4476614/self-driving-cars-environment/"> Self-Driving Cars </a-no-proxy> 
+      * <a-no-proxy href="https://exchange.telstra.com.au/skygrow-muru-d-climate-change/"> Tree Planting Robots </a-no-proxy> 
+      * <a-no-proxy href="https://www.youtube.com/watch?v=CVdPhUPO5YU"> Robots to Fighting Pollution </a-no-proxy>
+    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/edit?usp=sharing"> here </a-no-proxy>
+* Privacy (Monday Nov 2nd, Meeting 15)
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1CL0kqJPcm2B2fiJgnZUSY_n4KXUTVVO3sLs50RWVQAg/edit#"> here </a-no-proxy>
+* Job Loss and Replacement (Wed Nov 4th, Meeting 16)
+   *  Reading: <a-no-proxy href="https://time.com/5876604/machines-jobs-coronavirus/"> Millions of Americans Have Lost Jobs in the Pandemic—And Robots and AI Are Replacing Them Faster Than Ever (Time, 2020) </a-no-proxy>
+
+### Future Discussions:
+* Robots in Warfare (Wed Nov 11th)
+* Bias in Algorithms - Part 1 (Wed Nov 18th)
+* Bias in Algorithms - Part 2 (Mon Nov 23rd)
+* Security (Mon Nov 30th) 
+* Adding to Economic Inequality (Wed Dec 9th)
