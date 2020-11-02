@@ -190,8 +190,11 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Resources
 
-
-
+* In-Class Activities from Past CompRobo Offerings
+  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoZnBSZ0FiSjZGRDA/view?usp=sharing">Object Tracking</a-no-proxy>
+  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoTTBHLWl1c3FqRnM/view?usp=sharing">3D Structure from Motion</a-no-proxy>
+  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyocndyTDI2U2I1M1k/view?usp=sharing">Image Filtering</a-no-proxy>
+  - <a-no-proxy href="https://sites.google.com/site/comprobofall14/home/labs/day-18?authuser=0">Object Recognition</a-no-proxy> (the instructions on running the code are out of date, but the ideas might help).
 * <a-no-proxy href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">Convert ROS image messages to OpenCV using CvBridge</a-no-proxy>
 
 * <a-no-proxy href="https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/">Connecting a webcam to ROS and OpenCV</a-no-proxy>
