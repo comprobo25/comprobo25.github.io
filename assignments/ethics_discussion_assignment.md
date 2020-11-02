@@ -17,3 +17,5 @@ Your lesson plan is due by midnight on the night before the class before your pr
 See  <a-no-proxy href="https://docs.google.com/spreadsheets/d/1VuVWl0FXGH8GClKSoJb52mcvaJhRlQhN7utXucGMoyY/edit#gid"> Team Assignments</a-no-proxy>
 
 Dates were assigned randomly by picking numbers out of a hat. If you want to trade with another team and they are amenable - that's fine, just let us know! 
+
+## Repository for Past and Current Readings:
