@@ -57,7 +57,7 @@ Your deliverables should be turned findable through your Github repository (even
 * Website.  Includes project stories (or blog) and project documentation.  (10% for blog entry 1, 10% for blog entry 2, 10% for the final project documentation).
 * YOGA (30%)
 
-## Project Proposal (due by 9am on Monday 11/16)
+## Project Proposal (due 9 am on Monday 11/16)
 * Who is on the team?
 * What is the main idea of the project? 
 * What topics will you explore and what will you generate?  What frameworks / algorithms are you planning to explore (do your best to answer this even if things are still fuzzy)?  What is your MVP?  What are your stretch goals?
@@ -72,7 +72,7 @@ On Thursday, December 17th from 12:15pm-2pm, we will have our final event.  You 
 This is pretty self-explanatory.  We will be using the same rubric as for the other assignments.
 
 ## Website / blog
-You should create a project website.  The project website will serve two purposes: to explain how your system works and to document the story of how you arrived at your final product.  You should create these deliverables for multiple audiences: general readers interested in your project, potential employers, other students in the course, and the .
+You should create a project website.  The project website will serve two purposes: to explain how your system works and to document the story of how you arrived at your final product.  You should create these deliverables for multiple audiences: general readers interested in your project, potential employers, other students in the course, and the CompRobo teaching staff (course assistants and faculty).
 
 ### Project Stories (blog)
 Twice during the project you will be writing a blog entry that tells a story about some phase of your project.  Possible templates for these stories are:
@@ -85,23 +85,22 @@ Project story 1 will be due by class on Tuesday 11/18
 
 Project story 2 will be due by class on Tuesday 12/4
 
-## Project Documentation
+## Project Documentation (Due at the final event Thurs Dec 17th)
 At the end of the project your website should include the following information:
 
-Show it off:  Describe the main idea of your project.  What does your system do?  What are the major components to your system and how do they fit together?  Hopefully you will have some cool videos to put in the website by this point.  (Note: more details will be added to this section soon).
-System architecture: In detail describe each component of your project.  Make sure to touch upon both code structure as well as algorithms.  (Note: more details will be added to this section soon).
-Project documentation is due 12/14 at 1pm.
+* Show it off:  Describe the main idea of your project.  What does your system do?  Why would you want to do this? What are the major components to your system and how do they fit together?  Hopefully you will have some cool videos to put in the website by this point. 
+* System architecture: In detail describe each component of your project.  Make sure to touch upon both code structure as well as algorithms.  
 
 ## YOGA
-### Phase 0 (identification of learning goals) Due Tuesday 11/13
+### Phase 0 (identification of learning goals) Due 9 am Monday 11/16
 As you finalize your project topic and proposal, you will write up a list of three goals that you wish to achieve during the final project. Your goals can take any form as long as they represent your own interests and learning objectives for the project. Since you know, generally, what project you will be working on, these goals should be reasonably well-aligned with your choice of project.  You may consider building on the course learning objectives, or you can strike out in a new direction. Make sure that each goal is written in a clear manner: the goal should be something that you can achieve, and you need to be able to know if/when/how well you have achieved it.
 
 The phase 0 submission should be a list of three goals, each one about a paragraph (3­-4 sentences).  To make things easier later on, please use a Google doc to write down your goals.  Explain what you hope to do or learn, how you will achieve it, and (briefly!) why it is important.  Bring a printed copy of your learning goals to class with you on Friday, 11/9.  You will be engaging with your assignment during class, so make sure to have it with you.
 
-### Phase 1 (mid-project revision and assessment plan) Due Friday, 11/30.
+### Phase 1 (mid-project revision and assessment plan) Due Monday Nov 30.
 Now that you are a little more than halfway through the project, you may wish to revise your goals. This is your chance to change your goals for whatever reason, or perhaps to clarify them. If you are happy with the goals that you identified, then you can leave them unchanged. Whether you revise them or not, at this time you should add an assessment plan for each goal. How will you (and we) know that you achieved each goal, and how will we know how well you achieved it? The assessment plan does not need to be a tangible assignment; you are welcome to propose a reflection or any other strategy.  To turn in this assignment you should include all of the content from you phase 0 goals, any revisions to your goals, and your assessment plan.  To turn your assignment in, share a Google doc with me (paullundyruvolo@gmail.com).  Please name your document "Lastname, Firstname CompRobo YOGA" so that I can keep track.  
 
-### Phase 2 (reflection and assessment) Due Friday 12/14
+### Phase 2 (reflection and assessment) Due by final event Thursday 12/17
 At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send me a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end.  This is due 12/14.
 
 For phase 2, please turn in a document that has a section devoted to each learning goal.  The section should have the following subsections:
