@@ -81,7 +81,17 @@ The computer vision project is an open-ended project on using computer vision in
 
     ### Supporting Documents
 
-* [Computer Vision Project Document](assignments/computer_vision_project)"
+* [Computer Vision Project Document](assignments/computer_vision_project)\n"
+
+feature_row_final_project:
+  - image_path: website_graphics/neato_gazebo.png
+    alt: "The Neato robot in an empty, simulated world"
+    excerpt: "
+   The final project is an open-ended project that lets students explore a robotics topic and algorithms in depth.
+
+    ### Supporting Documents
+
+* [Final Project Assignment Document](assignments/final_project)"
 
 ---
 
@@ -108,6 +118,10 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 ## <a name="module-details"/> Computer Vision Project
 
 {% include feature_row id="feature_row_computer_vision_project" type="left" %}
+
+## <a name="module-details"/> Final Project
+
+{% include feature_row id="feature_row_final_project" type="right" %}
 
 ## In-class Activities
 
