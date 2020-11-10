@@ -11,7 +11,7 @@ toc_sticky: true
 
 ## For Next Time
 
-* Keep on working on the comptuer vision project
+* Keep on working on the computer vision project
 * Reading materials for discussion on environmental impact of robotics:
    * <a-no-proxy href="https://theconversation.com/if-robots-take-our-jobs-what-will-it-mean-for-climate-change-123507"> Reading #1: If robots take our jobs what will it mean for climate change? </a-no-proxy>
    * <a-no-proxy href="https://www.iisd.org/articles/automation-environment"> Reading #2: What Effect Will Automation Have on the Environment? </a-no-proxy>
