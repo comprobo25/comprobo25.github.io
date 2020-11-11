@@ -51,8 +51,8 @@ Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/1lrsnWc
 
 Your deliverables should be turned findable through your Github repository (even if via an external link embedded within your Github readme).  
 
-* Project Proposal (0%)
-* Poster / demo (10%)
+* Project Proposal (5%)
+* Poster / demo (5%)
 * Code (functionality, design, documentation) (30%)
 * Website.  Includes project stories (or blog) and project documentation.  (10% for blog entry 1, 10% for blog entry 2, 10% for the final project documentation).
 * YOGA (30%)
