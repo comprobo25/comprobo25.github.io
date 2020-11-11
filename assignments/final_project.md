@@ -38,6 +38,7 @@ Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/1lrsnWc
 * The project work should primarily be computational. We expect that, given the virtual nature of the class, projects will be in simulation. Please talk to us ASAP if you want to do things in hardware (e.g. on a physical NEATO, or on another robot)
 
 ### Opportunities
+
 * You may consider utilizing additional hardware (likely simulated) above and beyond the standard Neato platform. This could come in the form of multiple robots, a new sensor (e.g., Gazebo allows you to add-on additional sensors to a robot), a new actuator (e.g. a (simulated) robotic arm), or a new robot simulator (the <a-no-proxy href="../How to/simulators">simulators page</a-no-proxy> on the website has information on some choices here).
 * This might be a good chance to go into depth with Gazebo.  You might be interested in learning what it would take to go from a physical model of a robot (e.g., in SolidWorks) to an actual 3D simulation with sensors and actuators in Gazebo.
 * You might explore computer vision more broadly, e.g. explore new algorithms or look at computer vision with a focus on learning.  There is a good amount of content from previous CompRobo classes to scaffold this.
@@ -46,6 +47,10 @@ Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/1lrsnWc
 ### Challenges
 * With more ambitious projects comes more risk. You should have contingency plans in place if your initial plan proves infeasible.
 * Longer projects are tougher to undertake from a scheduling / project management standpoint. You will have to be diligent about continually making progress on the project despite the longer duration of the assignment.
+
+### Past Projects
+
+* Previous <a-no-proxy href="https://docs.google.com/spreadsheets/d/1XjON7LWyQjXAk7IBdTdnCo1j_3hpqZbktN03I10F2Lc/edit?usp=sharing">project repositories</a-no-proxy> can be found in this Google Sheet.
 
 ## Deliverables Overview and Assessment Breakdown
 
