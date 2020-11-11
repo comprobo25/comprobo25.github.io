@@ -50,9 +50,13 @@ Dates were assigned randomly by picking numbers out of a hat. If you want to tra
    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1CL0kqJPcm2B2fiJgnZUSY_n4KXUTVVO3sLs50RWVQAg/edit#"> here </a-no-proxy>
 * Job Loss and Replacement (Wed Nov 4th, Meeting 16)
    *  Reading: <a-no-proxy href="https://time.com/5876604/machines-jobs-coronavirus/"> Millions of Americans Have Lost Jobs in the Pandemic—And Robots and AI Are Replacing Them Faster Than Ever (Time, 2020) </a-no-proxy>
-
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1tMus764Um1YEe1u7cPoEQqvi31sOtotlPgUjQc_BQ2o/edit?usp=sharing#"> here </a-no-proxy>
+* Robots in Warfare (Mon Nov 16th)
+   * Readings for next Robots and Society discussion: Robots in Warfare
+      * <a-no-proxy href="https://www.nytimes.com/2018/11/15/magazine/autonomous-robots-weapons.html"> Are Killer Robots the Future of War? Parsing the Facts on Autonomous Weapons </a-no-proxy>
+      * <a-no-proxy href="https://www.cc.gatech.edu/ai/robot-lab/online-publications/arkin-rev.pdf"> Ethical Robots in Warefare </a-no-proxy>
+      
 ### Future Discussions:
-* Robots in Warfare (Wed Nov 11th)
 * Bias in Algorithms - Part 1 (Wed Nov 18th)
 * Bias in Algorithms - Part 2 (Mon Nov 23rd)
 * Security (Mon Nov 30th) 
