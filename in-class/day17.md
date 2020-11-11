@@ -1,10 +1,15 @@
 ---
+<<<<<<< HEAD
 title: "Pinhole Camera Model and Camera Calibration"
+=======
+title: "Studio Time"
+>>>>>>> 5ac9b05508dbfd24d4da99d7b68c18292b811e96
 toc_sticky: true
 ---
 
 ## Today
 
+<<<<<<< HEAD
 * Computer Vision Project Showcase
 * Final Project Ideation
 
@@ -19,3 +24,14 @@ toc_sticky: true
 
 ## Final Project 
 
+=======
+* Studio time
+* Job Loss and Replacement
+
+## For Next Time
+
+* Computer Vision Project due Wednesday
+
+## Robots and Society Discussion
+* Privacy: <a-no-proxy href="https://docs.google.com/presentation/d/1tMus764Um1YEe1u7cPoEQqvi31sOtotlPgUjQc_BQ2o/edit#slide=id.p">Slides here </a-no-proxy>
+>>>>>>> 5ac9b05508dbfd24d4da99d7b68c18292b811e96
