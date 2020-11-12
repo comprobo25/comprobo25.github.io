@@ -38,9 +38,7 @@ Ask Melinda if you have more questions especially about particular algorithms.
 
 ROS/Gazebo:
 * Tutorials for simulating multiple Turtlebots in ROS: <a-no-proxy href="https://wiki.nps.edu/pages/viewpage.action?pageId=1018462212"> This one </a-no-proxy> is for multi-robot mapping (from 2018 so may need to adjust for ROS versions) but there are several other assignments and exercises. 
-Medium-High Barrier to Entry:
 * ARGoS: <a-no-proxy href="http://argos-sim.info/index.php"> Available here </a-no-proxy>. This is somewhere in-between ROS and Netlogo - it has a built in model for the Kilobot, epuck and other robots for swarms. 
-*  Kilosim <a-no-proxy href="https://github.com/jtebert/kilosim"> available on github </a-no-proxy> A simulator for <a-no-proxy href="http://www.kilobotics.com/documentation"> Kilobots </a-no-proxy> . 
+*  Kilosim: <a-no-proxy href="https://github.com/jtebert/kilosim"> available on github </a-no-proxy>. A simulator for <a-no-proxy href="http://www.kilobotics.com/documentation"> Kilobots </a-no-proxy> . 
 * Box2D: <a-no-proxy href="http://argos-sim.info/index.php"> A 2D physics simulator </a-no-proxy> that can be used for simulating swarms (e.g. in Melinda's research). 
-Low Barrier to Entry: 
-* Netlogo simulator: A multi-agent simulator (good for if you want to simulate swarms/large groups of robots e.g. hundreds of robots) <a-no-proxy href="https://ccl.northwestern.edu/netlogo/"> Available here </a-no-proxy>. 
+* Netlogo simulator: A multi-agent simulator (good for if you want to simulate swarms/large groups of robots e.g. hundreds of robots, not intended soley for robots) <a-no-proxy href="https://ccl.northwestern.edu/netlogo/"> Available here </a-no-proxy>. 
