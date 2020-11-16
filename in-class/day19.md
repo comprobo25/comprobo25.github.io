@@ -17,3 +17,8 @@ toc_sticky: true
    * <a-no-proxy href="https://www.cc.gatech.edu/ai/robot-lab/online-publications/arkin-rev.pdf"> Ethical Robots in Warefare </a-no-proxy>
 
 ## Robots and Society Discussion:
+
+Robots and Warfare
+* Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1JbUo05gOT669Vm110FJdis3MfT7Q7y-DCxnZK0hMzUk/edit?usp=sharing"> here </a-no-proxy>
+
+## Learning Goal and Final Project Alignment
