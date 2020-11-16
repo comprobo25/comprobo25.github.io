@@ -149,6 +149,7 @@ The full documentation of how to work with the simulator can be found on [the PX
 
 ```bash
 $ cd ~
+$ python3 -m pip install jinja2 toml
 $ git clone https://github.com/PX4/Firmware
 $ cd ~/Firmware
 $ make px4_sitl gazebo
