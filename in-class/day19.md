@@ -20,3 +20,5 @@ Robots and Warfare
 * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1JbUo05gOT669Vm110FJdis3MfT7Q7y-DCxnZK0hMzUk/edit?usp=sharing"> here </a-no-proxy>
 
 ## Learning Goal and Final Project Alignment
+
+Take another look at your project proposal and your individual YOGAs. Given each of your YOGAs, in what ways is this project well-aligned with these goals, and in what ways is it misaligned?  If there are ways in which it is not well-aligned, some up with a potential strategy for bringing the project and your learning goals into better alignment.  There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
