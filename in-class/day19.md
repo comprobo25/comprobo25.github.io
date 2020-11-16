@@ -13,6 +13,7 @@ toc_sticky: true
 
 * Work on your final projects!
 * Readings for next Robots and Society discussion: Bias in Algorithms (Part 1)
+    * Check out slide for readings <a-no-proxy href="https://docs.google.com/presentation/d/19oXgsvH8aBn5t8K33y6edk9_ovuT83sAJMZ7xO5ulVE/edit?usp=sharing"> here </a-no-proxy>
 
 ## Robots and Society Discussion:
 
