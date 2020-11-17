@@ -55,7 +55,9 @@ Dates were assigned randomly by picking numbers out of a hat. If you want to tra
    * Readings for next Robots and Society discussion: Robots in Warfare
       * <a-no-proxy href="https://www.nytimes.com/2018/11/15/magazine/autonomous-robots-weapons.html"> Are Killer Robots the Future of War? Parsing the Facts on Autonomous Weapons </a-no-proxy>
       * <a-no-proxy href="https://www.cc.gatech.edu/ai/robot-lab/online-publications/arkin-rev.pdf"> Ethical Robots in Warefare </a-no-proxy>
-   * * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1tMus764Um1YEe1u7cPoEQqvi31sOtotlPgUjQc_BQ2o/edit?usp=sharing#"> here </a-no-proxy>
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1JbUo05gOT669Vm110FJdis3MfT7Q7y-DCxnZK0hMzUk/edit?usp=sharing"> here </a-no-proxy>
+* Bias in Algorithms - Part 1 (Wed Nov 18th)
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/19oXgsvH8aBn5t8K33y6edk9_ovuT83sAJMZ7xO5ulVE/edit?usp=sharing"> here </a-no-proxy>
 ### Future Discussions:
 * Bias in Algorithms - Part 1 (Wed Nov 18th)
 * Bias in Algorithms - Part 2 (Mon Nov 23rd)
