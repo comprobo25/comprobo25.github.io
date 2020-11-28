@@ -261,3 +261,4 @@ $ roslaunch uuv_descriptions upload_rexrov.launch mode:=default x:=0 y:=0 z:=-20
 If all goes well you should see the underwater vehicle (it might takea w hile to find it, but the Gazebo GUI, ``follow`` mode can help).
 
 ![An underwater simualation](../website_graphics/uuv_sim_example.png)
+
