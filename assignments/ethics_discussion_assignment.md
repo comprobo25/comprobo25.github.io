@@ -58,8 +58,12 @@ Dates were assigned randomly by picking numbers out of a hat. If you want to tra
    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1JbUo05gOT669Vm110FJdis3MfT7Q7y-DCxnZK0hMzUk/edit?usp=sharing"> here </a-no-proxy>
 * Bias in Algorithms - Part 1 (Wed Nov 18th)
    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/19oXgsvH8aBn5t8K33y6edk9_ovuT83sAJMZ7xO5ulVE/edit?usp=sharing"> here </a-no-proxy>
-### Future Discussions:
-* Bias in Algorithms - Part 1 (Wed Nov 18th)
 * Bias in Algorithms - Part 2 (Mon Nov 23rd)
-* Security (Mon Nov 30th) 
+   * Readings on slides.
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/19oXgsvH8aBn5t8K33y6edk9_ovuT83sAJMZ7xO5ulVE/edit?usp=sharing"> here </a-no-proxy>
+* Security (Mon Nov 30th)
+   * Readings on the slides. 
+   * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1f8qpIBl4Ch_-NOqsc6SRLIwseMJDG_6fSPTErqs1sss/edit?usp=sharing"> here </a-no-proxy>
+
+### Future Discussions:
 * Adding to Economic Inequality (Wed Dec 9th)
