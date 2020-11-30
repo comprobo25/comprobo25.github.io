@@ -61,7 +61,7 @@ Dates were assigned randomly by picking numbers out of a hat. If you want to tra
 * Bias in Algorithms - Part 2 (Mon Nov 23rd)
    * Readings on slides.
    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/19oXgsvH8aBn5t8K33y6edk9_ovuT83sAJMZ7xO5ulVE/edit?usp=sharing"> here </a-no-proxy>
-* Security (Mon Nov 30th)
+* Security and Safety in Testing (Wed Dec 2nd)
    * Readings on the slides. 
    * Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1f8qpIBl4Ch_-NOqsc6SRLIwseMJDG_6fSPTErqs1sss/edit?usp=sharing"> here </a-no-proxy>
 
