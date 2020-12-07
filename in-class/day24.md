@@ -11,7 +11,12 @@ toc_sticky: true
 ## For Next Time
 
 * Work on your final projects!
-* Readings for next Robots and Society discussion
+* Readings for next Robots and Society discussion: Robots Adding to Economic Inequality  (Pick at least one to read based on your interest).
+   * <a-no-proxy href="https://news.mit.edu/2020/how-many-jobs-robots-replace-0504"> How many jobs do robots really replace? </a-no-proxy>
+   * <a-no-proxy href="https://news.mit.edu/2020/robots-help-firms-workers-struggle-0505"> Robots help some firms, even while workers across industries struggle </a-no-proxy>
+   * <a-no-proxy href="https://hbr.org/2020/10/algorithms-are-making-economic-inequality-worse"> Study finds stronger links between automation and inequality </a-no-proxy>
+   * <a-no-proxy href="https://hbr.org/2020/10/algorithms-are-making-economic-inequality-worse"> Algorithms Are Making Economic Inequality Worse </a-no-proxy>
+   * <a-no-proxy href="https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm"> Robots, Growth, and Inequality </a-no-proxy>
 
 ## Kalman Filter
 
