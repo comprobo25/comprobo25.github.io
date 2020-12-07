@@ -15,7 +15,7 @@ toc_sticky: true
 
 ## Kalman Filter
 
-We'll be running through this slide deck (pptx, PDF)
+We'll be running through this slide deck ([pptx](https://drive.google.com/file/d/1yVFgAFPqXGgN2F0FlHZPxA7lYgJlGYPF/view?usp=sharing), [PDF](https://drive.google.com/file/d/1vtcSzF_Q7o6PEhUoXCoIfLgYFX_Xs4-_/view?usp=sharing))
 
 Once we've given you the basic ideas, we'll also show you how to run your own simple Kalman filter.  The commands to run the filter are.
 
@@ -34,7 +34,7 @@ $ rosrun simple_filter simple_kalman.py
 
 In a new terminal, run the following command.
 ```bash
-rosrun rqt_gui rqt_gui
+$ rosrun rqt_gui rqt_gui
 ```
 
 In the ``rqt_gui`` window, go to ``plugins``, ``Visualization``, ``Dynamic Reconfigure``.  You should now have a window that looks like this.
