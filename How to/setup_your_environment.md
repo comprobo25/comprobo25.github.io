@@ -3,16 +3,14 @@ title: "Setup Your Computing Environment"
 toc_sticky: true
 ---
 
-The teaching team will be using ROS Noetic with Ubuntu 20.04, but you should be able to use 18.04 and Melodic.  We will indicate where the instructions would differ if you were using Melodic.
+The teaching team will be using ROS2 Foxy with Ubuntu 20.04 and we recommend you do the same.  If you are very brave and have a very good reason to try it, come talk to us about Ubuntu 22.04 ROS2 Humble (we have had some limited success).
 
-> While there are other ways to install ROS on a computer (ROS for Windows, ROS through Docker, ROS through Windows Subsystem for Linux, ROS2), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  The biggest issue you will see is that most of these other setups will not allow you to run robot simulators with hardware-based graphics acceleration.  Given how much we will be using simulators this semester, you really want the superior performance that comes from hardware acceleration.
+> While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
 
 
 ## Setting up a Dual Boot
 
-In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 20.04 on it.  Itzgeek has [a nice walkthrough of how to do this](https://www.itzgeek.com/post/how-to-install-ubuntu-20-04-alongside-with-windows-10-in-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.
-
-> Although we recommend Noetic, if you are using Melodic, you would want to install Ubuntu 18.04 instead.
+In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 20.04 on it.  Itzgeek has [a nice walkthrough of how to do this](https://www.itzgeek.com/post/how-to-install-ubuntu-20-04-alongside-with-windows-10-in-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have some of these thumb drives available for you to use, so look for them in MAC126.
 
 A few quick notes:
 * If you have Ubuntu 18.04, you can upgrade it 20.04 using [these instructions](https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today).
@@ -26,14 +24,15 @@ A few quick notes:
 
 ### Troubleshooting
 
-One student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to <a href="mailto:comprobofaculty@olin.edu">comprobofaculty@olin.edu</a>.
+One student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to <a href="mailto:pruvolo@olin.edu">pruvolo@olin.edu</a>.
 
 ## Make Sure Your NVIDIA Card is Setup
 
-Depending on how you installed Ubuntu, you may not have the drivers installed for your NVIDIA graphics card.  To check whether you have the NVIDIA drivers installed, you can run the following command.
+Depending on how you installed Ubuntu, you may not have the drivers installed for your NVIDIA graphics card.  To check whether you have the NVIDIA drivers installed, you can run the following command in a ```terminal``` window.
 
+{% include codeHeader.html %}
 ```bash
-$ nvidia-smi
+nvidia-smi
 ```
 
 If you have the drivers installed, you should see output similar to the following.
@@ -64,83 +63,95 @@ Wed Sep 16 13:53:41 2020
 
 If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux) to install it.
 
-## Install ROS Noetic
+## Install ROS Foxy
 
-Follow [this tutorial](http://wiki.ros.org/noetic/Installation) (make sure to complete the steps for ``Ubuntu`` and ``ros-noetic-desktop-full``).
+Follow [this tutorial](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-foxy-desktop`` rather than ``ros-foxy-base``).
 
-> If you are installing ROS Melodic, follow [this tutorial](http://wiki.ros.org/melodic/Installation/Ubuntu).
-> Once you are done, complete the instructions at the end of this document under <a href="#melodic-python-3-support">Melodic Python 3 Support</a>. 
+In addition to the ``ros-foxy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the TurtleBot3 simulator.
 
-## Setup your Catkin Workspace
-
-For more context on what is going on here, see [this ROS tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
-
+{% include codeHeader.html %}
 ```bash
-$ source /opt/ros/noetic/setup.bash
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws
-$ catkin_make
+sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
+	ros-foxy-turtlebot3-msgs \
+	ros-foxy-turtlebot3 \
+	ros-foxy-dynamixel-sdk \
+	ros-foxy-nav2-bringup \
+	ros-foxy-navigation2 \
+	ros-foxy-cartographer-ros \
+	ros-foxy-cartographer \
+	libgstreamer1.0-0 \
+	gstreamer1.0-plugins-base \
+	gstreamer1.0-plugins-good \
+	gstreamer1.0-plugins-bad \
+	gstreamer1.0-plugins-ugly \
+	gstreamer1.0-libav gstreamer1.0-tools \
+	gstreamer1.0-x \
+	gstreamer1.0-alsa \
+	gstreamer1.0-gl \
+	gstreamer1.0-gtk3 \
+	gstreamer1.0-qt5 \
+	gstreamer1.0-pulseaudio \
+	libgstreamer-plugins-base1.0-dev \
+	python3-pip \
+	hping3
 ```
 
-Edit your ``~/.bashrc`` file so that the file ``catkin_ws/devel/setup.bash`` is sourced.
+## Setup your Workspace with the Neato Packages
 
+Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+
+{% include codeHeader.html %}
 ```bash
-$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source /opt/ros/foxy/setup.bash
+mkdir -p /root/ros2_ws/src
+cd /root/ros2_ws/src
+git clone https://github.com/comprobo22/neato_packages
+git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+git clone https://github.com/clydemcqueen/gscam2
+git clone https://github.com/ptrmu/ros2_shared.git -b master
+cd /root/ros2_ws
+colcon build --symlink-install
+source /opt/ros/foxy/setup.bash
 ```
 
-**You must perform the rest of the setup in a new terminal window.**  To make sure you have done the previous steps correctly, type ``$ roscd``.  You should be in the directory ``~/catkin_ws/devel``.
+Edit your ``~/.bashrc`` file so that the your workspace is correctly loaded whenever you start a new terminal (note: if you are using a different shell, you may have to adjust this).
 
-## Setup Your CompRobo GitHub Repository
-
-First create a fork of <a-no-proxy href="https://github.com/comprobo20/comprobo20">the base CompRobo repository</a-no-proxy>.  If you don't know how to create a fork of a repository, check out [the GitHub documentation for forking a repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).  Next, clone your forked repository inside your catkin workspace.  You will also be performing the step of adding the CompRobo repository as a remote.
-
+{% include codeHeader.html %}
 ```bash
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/your-user-name-here/comprobo20.git
-$ cd comprobo20
-$ git remote add upstream https://github.com/comprobo20/comprobo20.git
-$ cd ~/catkin_ws
-$ catkin_make
+echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 ```
 
-If ``catkin_make`` exits with no error messages, then your laptop is ready to use with the simulated Neato!  You may to close your current terminal as we have found that ``sourcing ~/catkin_ws/devel/setup.bash`` again seems to be required for everything to function properly.
+You'll also set your TurtleBot3 model so you can use the simulator.
 
-## Melodic Python 3 Support
-
-> Note: this is not needed if you are using ROS Noetic
-
-Our goal will be to support both ROS Noetic and ROS Melodic *in Python 3*.  This means that in order to use Melodic, you should be setting your system up to work with Python 3 ROS code (Python 2.7 is the default in Melodic).
-
-### Installing the ROS Client Packages for Python 3
-
-Run the following commands to install the ROS Python client packages for Python 3.
-
+{% include codeHeader.html %}
 ```bash
-$ sudo apt-get install python3-catkin-pkg-modules
-$ sudo apt-get install python3-rospkg-modules
+echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 ```
 
-### Installing OpenCV
+### Set your ROS_DOMAIN_ID
 
-Make sure you have installed ``pip3``
+ROS2 uses the environment variable ``ROS_DOMAIN_ID`` as a way to isolate various ROS2 environments.  Each student will have their own ROS_DOMAIN_ID assigned to them so there is no cross talk between computers.  Check on Canvas for your domain ID and add it to your ``.bashrc`` file using the following command.
 
+{% include codeHeader.html %}
 ```bash
-$ sudo apt-get install python3-pip
+echo "export ROS_DOMAIN_ID=put-your-domain-id-here" >> ~/.bashrc
 ```
 
-Install ``Sckit-Build`` and ``OpenCV`` (we specify 4.2.0.34 to try to match the version that comes with Noetic)
+### Installing OpenCV and Streaming Support
 
+Make sure you have installed ``pip3`` (this can be done through ``apt-get`` as shown earlier).
+
+Install ``Sckit-Build`` and ``OpenCV``.
+
+{% include codeHeader.html %}
 ```bash
-$ pip3 install scikit-build
-$ pip3 install opencv-python==4.2.0.34
+pip3 install scikit-build
+pip3 install opencv-python
 ```
 
-## Setup on Zoom
-
-In order to get Zoom working, perform the following steps.
-
+Make sure ``hping3`` is setup so you can stream video from the robot.
+{% include codeHeader.html %}
 ```bash
-$ sudo apt-get install wget
-$ wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom_amd64.deb
-$ sudo apt install ./zoom_amd64.deb
-``` 
+sudo setcap cap_net_raw+ep /usr/sbin/hping3
+```
+
