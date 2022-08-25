@@ -98,20 +98,20 @@ sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
 
 ## Setup your Workspace with the Neato Packages
 
-Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
 
 {% include codeHeader.html %}
 ```bash
 source /opt/ros/foxy/setup.bash
-mkdir -p /root/ros2_ws/src
-cd /root/ros2_ws/src
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
 git clone https://github.com/comprobo22/neato_packages
 git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 git clone https://github.com/clydemcqueen/gscam2
 git clone https://github.com/ptrmu/ros2_shared.git -b master
-cd /root/ros2_ws
+cd ~/ros2_ws
 colcon build --symlink-install
-source /opt/ros/foxy/setup.bash
+source ~/ros2_ws/install/setup.bash
 ```
 
 Edit your ``~/.bashrc`` file so that the your workspace is correctly loaded whenever you start a new terminal (note: if you are using a different shell, you may have to adjust this).
