@@ -1,11 +1,27 @@
 ---
-title: "Run the Neato Simulator"
+title: "Using the Neatos"
 toc_sticky: true
 ---
 
-## Purpose of this How-to
+# Purpose of this How-to
 
-This document will help you run the Neato simulator.  Before going through these instructions, make sure that you have already <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a-no-proxy>.
+This document will help use the Neato robots and use a simulated Neato (really a [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)).  Before going through these instructions, make sure that you have already <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a-no-proxy>.
+
+
+# Connecting to the Physical Neatos
+
+This semester marks the triumphant return of the physical Neatos to CompRobo!  The last time we used these was Fall 2018.  I've spent a lot of time getting these old trusty bots ready for the semester, but please be patient while we work out any remaining kinks.  We'll also be getting a [TurtleBot4 Lite](https://www.robotshop.com/en/clearpath-robotics-turtlebot-4-lite-mobile-robot.html) in the first couple of weeks of the semester if you'd like to play around with that.
+
+
+## Normal Usage
+
+### Step 1: Find a Neato!
+
+The Neatos will be stored in or just outside the classroom (MAC126).  There are two types of Neatos: the [Botvac series](https://neatorobotics.cn/wp-content/themes/neato-2015/assets/images/robot-vacuums/botvac-d75/botvac-d75_medium.jpg) and the [XV series](https://c1.neweggimages.com/ProductImage/96-399-007-13.jpg). There is really no difference between the two, so feel free to grab either type of robots.
+
+# Running the Simulator
+
+Here are the instructions for using the robot simulator.  The current plan is to use the simulator for in-class activities.  This decision is based on the amount of chaos that would ensue in such a large class if every group had their own robot.  If we get to the point where the physical robots are working well, we can revisit this idea.
 
 ## What is a Robot Simulator?
 
