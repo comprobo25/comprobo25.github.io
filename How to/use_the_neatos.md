@@ -279,7 +279,11 @@ $ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
 
-<img alt="The turtlebot3 in a house-like environment" src="https://emanual.robotis.com/assets/images/platform/turtlebot3/simulation/turtlebot3_house.png"/>
+<p align="center">
+<img alt="The turtlebot3 in a house-like environment" src="../website_graphics/neato_in_house.png" width="50%"/>
+</p>
+
+> Note: If your turtlebot doesn't show up, try restarting the simulator or insert the turtlebot manually by clicking on the ``insert`` tab and then ``Turtlebot3(Waffle_Pi)``
 
 <p>If you want to create your own world, you can put the Turtlebot in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">populating your own world</a>.</p>
 
@@ -305,57 +309,17 @@ If you want to know more about a message you see in the output of ``ros2 topic i
 $ ros2 interfaces show msg_package_name/msg/MessageName
 ```
 
-### ``accel``
-
-This is the linear acceleration of the Neato in meters per second squared along each axis of the Neato.  This same information is included in the ``imu`` topic (although there it is nested further).
-
 ### ``camera/image_raw``
 
-These are the images coming from the Raspberry Pi camera.
-
-### ``bump``
-
-This topic contains four binary outputs corresponding to each of the Neato's four bump sensors.  In the simulator, all bump sensors are either on or off (no differentiation is made between the bump sensors).
-
-### ``bumper``
-
-This is an internal topic to Gazebo.  If you are curiouts, you can look at the output as you run into something, but you don't need to worry about it in this class.
+These are the images coming from the simulated camera.
 
 ### ``clock``
 
-This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rospy`` (see the [ROS tutorials page](http://wiki.ros.org/rospy/Overview/Time) for details).
+This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rclpy``.
 
 ### ``cmd_vel``
 
 You publish to this topic to set the robot's velocity.  The ``linear.x`` direction sets forward velocity and ``angular.z`` sets the angular velocity.
-
-### ``encoders``
-
-These tell you the linear travel of each wheel (left is the first element of the array and right is the second) since the simulation started.  You do not have to subscribe to this directly, but instead you can use the ``odom`` topic or the ``tf`` module if you are you are just interested in knowing an estimate of where the robot is relative to where it started.
-
-### ``gazebo/link_states``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
-
-### ``gazebo/model_states``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
-
-### ``gazebo/parameter_descriptions``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
-
-### ``gazebo/parameter_updates``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
-
-### ``gazebo/set_link_state``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
-
-### ``gazebo/set_model_state``
-
-This is a Gazebo specific topic (see the [Gazebo docs on ROS communication](http://gazebosim.org/tutorials/?tut=ros_comm)). 
 
 ### ``imu``
 
@@ -369,78 +333,33 @@ These tell you the total rotation (in radians) of each wheel.  Note that this is
 
 This tells you the robot's position relative to its starting location as estimated by wheel encoders.  You can get this inforation more flexibly through the ROS tf module, but this is a relatively easy way to get started.
 
-### ``projected_stable_scan``
-
-This provides the LIDAR measusrements (think of these as detected obstsacles or objects from the environment).  In contrast to the ``scan`` topics, these measurements are in the odometry frame (rather than relative to the robot) and are in Caretesian rather than polar coordinates.  There is no need to use this topic, but for some applications it is nice to have.
-
-### ``raw_vel``
-
-you publish to this topic set the left and right wheel velocities independently (rather than setting linear and angular velocities).  You can use this is ``cmd_vel`` for controlling the robot, whichever is easier.
-
 ### ``rosout``
 
-This is a topic provided by ROS.  See the [ROS docs on ``rosout``](http://wiki.ros.org/rosout)for more information.
-
-### ``rosout_agg``
-
-This is a topic provided by ROS.  See the [ROS docs on ``rosout``](http://wiki.ros.org/rosout)for more information.
+This is a topic provided by ROS.
 
 ### ``scan``
 
-These are the measurements of the Neato's LIDAR.  This diagram should help you with the project. It shows the angles for the laser range data coming from the Neato and how it maps onto the Neato's physical layout.
-
-<p align="center">
-<img alt="A Diagram of the Neato's Lidar" src="../website_graphics/lidar.png"/>
-</p>
-
-The LaserScan message consists of a number of attributes:
-
-```bash
-$ rosmsg show sensor_msgs/LaserScan
-std_msgs/Header header
-  uint32 seq
-  time stamp
-  string frame_id
-float32 angle_min
-float32 angle_max
-float32 angle_increment
-float32 time_increment
-float32 scan_time
-float32 range_min
-float32 range_max
-float32[] ranges
-float32[] intensities
-```
-
-Most of these attributes you can ignore for the purposes of this assignment. The one that you will really need to dig into is ranges. The ranges attribute provides 361 numbers where each number corresponds to the distance to the closest obstacle as detected by the laser scan at various angles relative to the robot. Each measurement is spaced exactly 1 degree apart. The first measurement corresponds to 0 degrees in the image of the Neato above. As the degrees in the image go up, so to does the index in the ranges array. Where does 361 come from? The last measurement (index 360) is the same as the first (index 0). Why do we do this craziness?!? We have to do this to adhere to some ROS conventions around LaserScan data that will be important later in the class. For now, you can safely ignore the last measurement (index 360).
-
-### ``stable_scan``
-
-This gives the same data as ``scan`` except the timestamp is automatically adjusted to keep the detected points stable in the odometry frame.  This topic is really only need with the physical Neato robot where the precise timing of the LIDAR is not available due to hardware limitations.
+These are the measurements of the Turtlebot's LIDAR.  See the documentation for the physical Neato for more details.
 
 ### ``tf``
 
-This is provided by the [ROS tf2 module](http://wiki.ros.org/tf2) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
+This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
 
 ### ``tf_static``
 
-This is provided by the [ROS tf2 module](http://wiki.ros.org/tf2) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
+This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
 
 ## Using Rviz with the Simulator
 
 Once the simulator is running, to start rviz, run the following command.
 
 ```bash
-$ rosrun rviz rviz
+$ ros2 launch turtlebot3_bringup rviz2.launch.py
 ```
 
-Once you get to rviz, the warmup project has some good instructionns for how to see the robot and its LIDAR.
+If you'd like, you can change the visualizations that are set by default, e.g., adding the camera feed (by accessing it through the ``insert`` menu).
 
-1. Set the base_frame to ``odom``
-2. Add a visualization of the Neato's stabilized laser scan (topic ``scan``).  This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them easily).
-3. Add a visualization of the Neato itself (this can be done by selecting "Robot Model" from the insert menu")
-4. Add a visualization of the Neato's camera feed (topic ``camera/image_raw``) (this only applies if you launched the simulation with ``load_camera:=true``)
-
+<!--
 ## Populating the Simulated World
 
 In order to populate the simulated world, you can use the "insert" menu in Gazebo.  This will bring up a list of 3D models that can be inserted into Gazebo.
@@ -472,19 +391,7 @@ $ roslaunch neato_gazebo neato_world_no_spawn.launch neato_world:=a_whole_new_wo
 ### Video Walkthrough
 
 ![A walkthrough of saving a world using the Gazebo simulator](../website_graphics/gazebo_populate.gif)
-
-
-## Some Cool Stuff About Simulators
-
-While real robots are undoubtedly cool, there are some really awesome things you can do with as simulator.
-
-### Move Your Robot Around
-
-Using the "move" tool in Gazebo, you can select your robot and move it around (so much easier than getting up and having to move your robot with your hands, right???).  You can also set the location of your robot by using the rosservice ``gazebo/set_model_state`` (e.g., if you want to set the robot's position in code).  More detail on how to use the "move" tool is available on the [Gazebo user guide](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2).
-
-### Reading the Robot State
-
-Oftentimes you may be trying to get your robot to execute a certain behavior.  With a physical robot, you will usually assess success by observing its behavior visually.  In a simulator, you can actually "cheat" and read the robot's true state right from ROS.  For example, if you were trying to get your robot to drive a square, you could compare the intended square to the actual square by reading the robot's state.  The robot's state is available on the ROS topic ``gazebo/model_states``.
+-->
 
 ## Shutting Down the Simulator
 
