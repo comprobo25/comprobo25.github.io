@@ -357,7 +357,7 @@ Once the simulator is running, to start rviz, run the following command.
 $ ros2 launch turtlebot3_bringup rviz2.launch.py
 ```
 
-If you'd like, you can change the visualizations that are set by default, e.g., adding the camera feed (by accessing it through the ``insert`` menu).
+If you'd like, you can change the visualizations that are set by default, e.g., adding the camera feed (by accessing it through the ``insert`` menu).  If you do add the camera feed and you don't see the images show up, expand the ``topic`` menu and change the ``reliability policy`` to ``best effort``.
 
 <!--
 ## Populating the Simulated World
