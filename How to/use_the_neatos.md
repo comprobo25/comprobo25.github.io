@@ -141,6 +141,108 @@ Likely cause: The Pi has connected to an access point that is not the closest on
 Solution: Assuming the Pi display is at the screen showing the IP address, press right to enter the network setup menu.  OLIN-ROBOTICS should be highlighted with an asterisk.  Press right again to reconnect the Pi to the Wifi.  If it doesn't work the first time, try one more time.  If it doesn't work then, switch to a new robot.
 
 
+## Neato ROS Topics
+
+This documentation gives the high-level purpose of each topic.  To explore more, you can use the following command to get more information.
+
+```bash
+$ ros2 topic info topic-name
+```
+
+If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command (note that the ``-r`` flag can be ommitted if you want to the mesasges nested within the top-level message to be expanded).
+
+```bash
+$ ros2 interface show msg_package_name/msg/MessageName
+```
+
+### ``accel``
+
+This is the linear acceleration of the Neato in units of earth's gravities.
+ 
+### ``bump``
+
+This topic contains four binary outputs corresponding to each of the Neato's four bump sensors.  The individual fields are:
+
+* ``left_front``
+* ``left_side``
+* ``right_front``
+* ``right_side``
+
+### ``cmd_vel``
+
+You publish to this topic to set the robot's velocity.  The ``linear.x`` direction sets forward velocity and ``angular.z`` sets the angular velocity.
+
+### ``odom``
+
+This tells you the robot's position relative to its starting location as estimated by wheel encoders.  You can get this inforation more flexibly through the ROS ``tf2`` module, but this is a relatively easy way to get started.
+
+### ``projected_stable_scan``
+
+This provides the LIDAR measurements (think of these as detected obstsacles or objects from the environment).  In contrast to the ``scan`` topics, these measurements are in the odometry frame (rather than relative to the robot) and are in Caretesian rather than polar coordinates.  There is no need to use this topic, but for some applications it is nice to have.
+
+### ``scan``
+
+These are the measurements of the Neato's LIDAR.  This diagram should help you with the project. It shows the angles for the laser range data coming from the Neato and how it maps onto the Neato's physical layout.
+
+<p align="center">
+<img alt="A Diagram of the Neato's Lidar" src="../website_graphics/lidar.png"/>
+</p>
+
+The LaserScan message consists of a number of attributes:
+
+```bash
+$ ros2 interface show sensor_msgs/msg/LaserScan
+# Single scan from a planar laser range-finder #
+# If you have another ranging device with different behavior (e.g. a sonar
+# array), please find or create a different message, since applications
+# will make fairly laser-specific assumptions about this data
+
+std_msgs/Header header # timestamp in the header is the acquisition time of
+	builtin_interfaces/Time stamp
+		int32 sec
+		uint32 nanosec
+	string frame_id
+                             # the first ray in the scan.
+                             #
+                             # in frame frame_id, angles are measured around
+                             # the positive Z axis (counterclockwise, if Z is up)
+                             # with zero angle being forward along the x axis
+
+float32 angle_min            # start angle of the scan [rad]
+float32 angle_max            # end angle of the scan [rad]
+float32 angle_increment      # angular distance between measurements [rad]
+
+float32 time_increment       # time between measurements [seconds] - if your scanner
+                             # is moving, this will be used in interpolating position
+                             # of 3d points
+float32 scan_time            # time between scans [seconds]
+
+float32 range_min            # minimum range value [m]
+float32 range_max            # maximum range value [m]
+
+float32[] ranges             # range data [m]
+                             # (Note: values < range_min or > range_max should be discarded)
+float32[] intensities        # intensity data [device-specific units].  If your
+                             # device does not provide intensities, please leave
+                             # the array empty.
+```
+
+Most of these attributes you can ignore for the purposes of this assignment. The one that you will really need to dig into is ranges. The ranges attribute provides 361 numbers where each number corresponds to the distance to the closest obstacle as detected by the laser scan at various angles relative to the robot. Each measurement is spaced exactly 1 degree apart. The first measurement corresponds to 0 degrees in the image of the Neato above. As the degrees in the image go up, so to does the index in the ranges array. Where does 361 come from? The last measurement (index 360) is the same as the first (index 0). Why do we do this craziness?!? We have to do this to adhere to some ROS conventions around LaserScan data that will be important later in the class. For now, you can safely ignore the last measurement (index 360).
+
+### ``stable_scan``
+
+This gives the same data as ``scan`` except the timestamp is automatically adjusted to keep the detected points stable in the odometry frame.  This topic is really only need with the physical Neato robot where the precise timing of the LIDAR is not available due to hardware limitations.
+
+### ``tf``
+
+This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
+
+### ``tf_static``
+
+This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html) to update the relationhsip between various coordinate systems.  Typically you don't subscribe to it directly but instead use the Python tf module.
+
+
+
 # Running the Simulator
 
 Here are the instructions for using the robot simulator.  The current plan is to use the simulator for in-class activities.  This decision is based on the amount of chaos that would ensue in such a large class if every group had their own robot.  If we get to the point where the physical robots are working well, we can revisit this idea.
@@ -264,6 +366,10 @@ $ rosmsg show msg_package_name/MessageName -r
 ### ``accel``
 
 This is the linear acceleration of the Neato in meters per second squared along each axis of the Neato.  This same information is included in the ``imu`` topic (although there it is nested further).
+
+### ``camera/image_raw``
+
+These are the images coming from the Raspberry Pi camera.
 
 ### ``bump``
 
