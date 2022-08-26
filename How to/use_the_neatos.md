@@ -149,7 +149,7 @@ This documentation gives the high-level purpose of each topic.  To explore more,
 $ ros2 topic info topic-name
 ```
 
-If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command (note that the ``-r`` flag can be ommitted if you want to the mesasges nested within the top-level message to be expanded).
+If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command.
 
 ```bash
 $ ros2 interface show msg_package_name/msg/MessageName
@@ -245,7 +245,7 @@ This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/
 
 # Running the Simulator
 
-Here are the instructions for using the robot simulator.  The current plan is to use the simulator for in-class activities.  This decision is based on the amount of chaos that would ensue in such a large class if every group had their own robot.  If we get to the point where the physical robots are working well, we can revisit this idea.
+Here are the instructions for using the robot simulator.  The current plan is to use the simulator for in-class activities.  This decision is based on the amount of chaos that would ensue in such a large class if every group had their own robot.  If we get to the point where the physical robots are working super smoothly, we can revisit this idea.
 
 ## What is a Robot Simulator?
 
@@ -263,104 +263,46 @@ One nice thing about ROS is that the usage of a publish and subscribe structure 
 
 Oftentimes students will be confused as to what the difference is between RViz and a robot simulator.  RViz allows you to visualize a robot's sensor data.  As such, RViz has a graphical interface that can look a lot like the graphical interface of the robot simulator.  In contrast, RViz does not have any means to execute a simulated motor command or generate simulated sensor data: it can only display the data that it receives.
 
-## The Neato Simulator
+## The TurtleBot3 Simulator
 
-<p align="center">
-<img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
-</p>
+In the past, I've used my own custom Neato simulator.  There were some nice simulated worlds that were available there that I may try to port over, but with the move to ROS2 it felt like it was time to use a more standard simulation package.  I have decided to use the [TurtleBot3 simulator](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation).
 
 We will be using the popular Gazebo software for robot simulation.  Gazebo is a very powerful and customizable simulator that will be especially useful in this online (virtual) version of the course.
 
 ## Starting the Simulator
 
-<ol>
-<li>Start <tt>roscore</tt>
-
-<p>Got to a terminal and run the following command.</p>
+You can launch your robot in many different simulated worlds.  To start your robot in a house environment, run the following command.
 
 {% highlight console %}
-$ roscore
-{% endhighlight %}
-<p>You should see output that look like the following.</p>
-
-{% highlight console %}
-... logging to /home/pruvolo/.ros/log/5e5e9c82-e17e-11ea-bd40-4997ac5b185e/roslaunch-ubuntu-114522.log
-Checking log directory for disk usage. This may take a while.
-Press Ctrl-C to interrupt
-Done checking log file disk usage. Usage is <1GB.
-
-started roslaunch server http://ubuntu:40119/
-ros_comm version 1.15.8
-
-
-SUMMARY
-========
-
-PARAMETERS
- * /rosdistro: noetic
- * /rosversion: 1.15.8
-
-NODES
-
-auto-starting new master
-process[master]: started with pid [114559]
-ROS_MASTER_URI=http://ubuntu:11311/
-
-setting /run_id to 5e5e9c82-e17e-11ea-bd40-4997ac5b185e
-process[rosout-1]: started with pid [114576]
-started core service [/rosout]
-{% endhighlight %}
-</li>
-<li>Launch Gazebo
-<p>You can launch your robot in many different simulated worlds.  For instance, to launch your robot in a simulated obstacle course, <b><i>in a new terminal</i></b>, run the following command.</p>
-
-{% highlight console %}
-$ roslaunch neato_gazebo neato_gauntlet_world.launch
+$ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 {% endhighlight %}
 
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
 
-<img alt="screenshot of a Neato in the simulated obstacle course" src="../website_graphics/gauntlet_gazebo.png"/>
+<img alt="The turtlebot3 in a house-like environment" src="https://emanual.robotis.com/assets/images/platform/turtlebot3/simulation/turtlebot3_house.png"/>
 
-<p>Instead if you want to run your Neato around the Olin dining hall, try the following command.</p>
-
-{% highlight console %}
-$ roslaunch neato_gazebo neato_dh.launch
-{% endhighlight %}
-
-<p>If you want to create your own world, you can put the Neato in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">populating your own world</a>.</p>
+<p>If you want to create your own world, you can put the Turtlebot in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">populating your own world</a>.</p>
 
 {% highlight console %}
-$ roslaunch neato_gazebo neato_empty_world.launch
+$ ros2 launch turtlebot3_gazebo empty_world.launch.py
 {% endhighlight %}
-
-<p><i>Optional:</i> Loading the camera module. If you want to load a simulated video camera on your Neato, you can modify the instructions in the previous step.</p>
-
-{% highlight console %}
-$ roslaunch neato_gazebo neato_dh.launch load_camera:=true
-{% endhighlight %}
-
-<p>This will result in a white box appearing over your Neato (the simulated camera).   You can look at the images using, e.g., <tt>rqt_gui</tt></p>
-
-</li>
-</ol>
 
 ## Using the Gazebo Graphical Interface
 
 The Gazebo website has a [guide on using Gazebo's graphical interface](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2).
 
-## Available Topics
+## Turtlebot3 Simulator Topics
 
 This documentation gives the high-level purpose of each topic.  To explore more, you can use the following command to get more information.
 
 ```bash
-$ rostopic info topic-name
+$ ros2 topic info topic-name
 ```
 
-If you want to know more about a message you see in the output of ``rostopic`` you can use the following command (note that the ``-r`` flag can be ommitted if you want to the mesasges nested within the top-level message to be expanded).
+If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command.
 
 ```bash
-$ rosmsg show msg_package_name/MessageName -r
+$ ros2 interfaces show msg_package_name/msg/MessageName
 ```
 
 ### ``accel``
