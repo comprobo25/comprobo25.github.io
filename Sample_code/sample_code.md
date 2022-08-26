@@ -4,6 +4,4 @@ title: "Sample Code for CompRobo"
 
 ## Solutions for In-Class Activities
 
-* [Day 2 Coding Exercise Solutions](day02_solutions)
-* [Day 5 Coding Exercise Solutions](day05_solutions)
-* [Port of ROS Docs for visualization_msgs to Python](marker_sample)
+Coming soon! (typically within a day of seeing the activity in class)

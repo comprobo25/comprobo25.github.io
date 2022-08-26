@@ -46,7 +46,7 @@ This deliverable be assessed in a binary fashion (did you do the above or not).
 
 ### Your Code and Bag Files (Due 10-21)
 
-Your code should be forked from <a-no-proxy href="https://github.com/comprobo20/robot_localization">this repo</a-no-proxy>.  Please push your code to your fork in order to turn it in.
+Your code should be forked from <a href="https://github.com/comprobo20/robot_localization">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You must include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
 
@@ -65,10 +65,10 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Sample Writeups
 
-* <a-no-proxy href="https://github.com/anilpatel38/robot_localization/blob/master/robot_localizer/Anil_Cedric_Localiztion_Report.pdf">Anil Patel and Cedric Kim</a-no-proxy>
-* <a-no-proxy href="https://github.com/shootingd/robot_localization">Katya Soltan and Charlie Weiss</a-no-proxy>
-* <a-no-proxy href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a-no-proxy>
-* <a-no-proxy href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a-no-proxy>
+* <a href="https://github.com/anilpatel38/robot_localization/blob/master/robot_localizer/Anil_Cedric_Localiztion_Report.pdf">Anil Patel and Cedric Kim</a>
+* <a href="https://github.com/shootingd/robot_localization">Katya Soltan and Charlie Weiss</a>
+* <a href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a>
+* <a href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a>
 
 ## Robot Localization and the Particle Filter
 
@@ -96,7 +96,7 @@ $ git pull upstream master
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of your fork of the <a-no-proxy href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a-no-proxy>.  Before you can run the starter code, you must install scikit learn.
+The starter code will be in a package called ``robot_localizer`` inside of your fork of the <a href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a>.  Before you can run the starter code, you must install scikit learn.
 
 ### Installing Supporting Packages: Noetic
 
@@ -238,7 +238,7 @@ Return to the terminal where the rosbag is playing and click space bar.  Return 
 
 ## Testing the Particle Filter with the Robot Simulator
 
-In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in <a-no-proxy data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">running the neato simulator</a-no-proxy>).  We have added a world file for a maze environment (original source: <a-no-proxy href="https://github.com/fsuarez6/labrob">https://github.com/fsuarez6/labrob</a-no-proxy>).
+In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in <a data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">running the neato simulator</a>).  We have added a world file for a maze environment (original source: <a href="https://github.com/fsuarez6/labrob">https://github.com/fsuarez6/labrob</a>).
 
 To make a map, first connect to the robot simulator.  If you'd like to use the maze world referenced above, run the following command.
 
@@ -383,8 +383,8 @@ Here is some advice from the Fall 2018 class that they wrote up after they compl
 
 ## Resources
 
-* <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">Video Explaining Particle Filter without Equations</a-no-proxy>
-* <a-no-proxy href="https://www.youtube.com/watch?v=sz7cJuMgKFg">An Example of a Particle Filter that Might Give More Intuition</a-no-proxy>
-* <a-no-proxy href="https://www.youtube.com/watch?v=eAqAFSrTGGY">Very Mathy / Theoretical Treatment of Particle Filter</a-no-proxy> (not for the faint of heart, but we can help you through it)
-* A good high-level overview with some great visualizations: <a-no-proxy href="https://www.youtube.com/watch?v=NrzmH_yerBU">Autonomous Navigation: Understanding the Particle Filter</a-no-proxy>
+* <a href="https://www.youtube.com/watch?v=aUkBa1zMKv4">Video Explaining Particle Filter without Equations</a>
+* <a href="https://www.youtube.com/watch?v=sz7cJuMgKFg">An Example of a Particle Filter that Might Give More Intuition</a>
+* <a href="https://www.youtube.com/watch?v=eAqAFSrTGGY">Very Mathy / Theoretical Treatment of Particle Filter</a> (not for the faint of heart, but we can help you through it)
+* A good high-level overview with some great visualizations: <a href="https://www.youtube.com/watch?v=NrzmH_yerBU">Autonomous Navigation: Understanding the Particle Filter</a>
 

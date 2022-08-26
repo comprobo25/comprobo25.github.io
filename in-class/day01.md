@@ -3,6 +3,8 @@ title: "Day 1: Welcome and Braitenberg Vehicles"
 toc_sticky: true
 ---
 
+> NOTE: this hasn't been updated for this year yet
+
 ## Today
 * Intro to the teaching team!
 * Intro to CompRobo! (<a-no-proxy href="https://drive.google.com/file/d/1kIdBG8QJD5rUnM37uYxWR1XH_zFMPhxo/view?usp=sharing">slides</a-no-proxy>)
