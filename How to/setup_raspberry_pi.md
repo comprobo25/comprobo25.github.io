@@ -28,4 +28,4 @@ $ shutdown -h now
 
 ## Operating Instructions
 
-Once you've created the image, use one of the micro USB cables to connect the Neato to the Raspberry Pi.  Use the other micro USB cable to connect the USB battery pack to the power input port of the the Pi.  If you have a Raspberry Pi Cam module, you can connect that as well (currently, only rev 1.3 will work).  All other operating instructions are given in [the student-facing guide on operating the robots](meet_your_neato).
+Once you've created the image, use one of the micro USB cables to connect the Neato to the Raspberry Pi.  Use the other micro USB cable to connect the USB battery pack to the power input port of the the Pi.  If you have a Raspberry Pi Cam module, you can connect that as well (currently, only rev 1.3 will work).  All other operating instructions are given in [the student-facing guide on operating the robots](use_the_neatos).

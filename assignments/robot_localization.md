@@ -4,6 +4,8 @@ toc_sticky: true
 toc_h_max: 3
 ---
 
+> NOTE: This has not been updated for this year (and in particular for ROS2). Currently, this is purely for informational purposes.
+
 ## Abstract
 
 So far, you have successfully programmed robot (simulators) using reactive control strategies. You have also combined these reactive control strategies together using finite state control. Next, you will build on these skills as you continue to explore the field of mobile robotics. In this project you will tackle a fundamental problem in mobile robotics: robot localization.

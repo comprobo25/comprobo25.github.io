@@ -8,7 +8,7 @@ toc_h_max: 3
 
 ---
 
-
+> NOTE: This has not been updated for this year (and in particular for ROS2). Currently, this is purely for informational purposes.
 
 ## Abstract
 

@@ -3,6 +3,8 @@ title: "Robots and Society - Discussions Assignment"
 toc_sticky: true
 ---
 
+> NOTE: This has not been updated for this year. Currently, this is purely for informational purposes.
+
 NOTE: The due date posted on canvas is the due date for the lesson plan. The presentation date is the following class (see <a-no-proxy href="https://docs.google.com/spreadsheets/d/1VuVWl0FXGH8GClKSoJb52mcvaJhRlQhN7utXucGMoyY/edit#gid"> Team Assignments</a-no-proxy>)
 
 ## Assignment Details
