@@ -74,6 +74,7 @@ In addition to the ``ros-galactic-desktop`` package, you should install these ad
 sudo apt-get update && sudo apt-get install -y ros-galactic-gazebo-ros-pkgs \
 	ros-galactic-turtlebot3-msgs \
 	ros-galactic-turtlebot3 \
+	ros-galactic-turtlebot3-gazebo \
 	ros-galactic-dynamixel-sdk \
 	ros-galactic-nav2-bringup \
 	ros-galactic-navigation2 \
@@ -104,7 +105,6 @@ source /opt/ros/galactic/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/comprobo22/neato_packages
-git clone -b galactic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/ros2_ws
 colcon build --symlink-install
 source ~/ros2_ws/install/setup.bash
