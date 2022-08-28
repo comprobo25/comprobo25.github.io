@@ -6,7 +6,9 @@ toc_h_max: 3
 
 ## Project Overview
 
-Your goal in this project will be to program the Neato to execute a number of behaviors. In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment. If you want to substitute another behavior for one of the following, just let us know! For each of these behaviors, there is a straightforward way to implement the behavior and a more sophisticated way. See the going beyond section for some more information on these more sophisticated approaches. You should be spending about fifteen hours on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! The flip side is that if you find that you are stuck or having a difficult time making progress, please annotate this document (as long as you are viewing this through Canvas), post a note on the <a-no-proxy href="https://comproboworkspace.slack.com">course Slack</a-no-proxy>, or send an [e-mail to the teaching team](mailto:comprobofaculty@olin.edu).  Even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers.
+Your goal in this project will be to program the Neato to execute a number of behaviors. In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment. If you want to substitute another behavior for one of the following, just let us know! For each of these behaviors, there is a straightforward way to implement the behavior and a more sophisticated way. See the going beyond section for some more information on these more sophisticated approaches.
+
+You should be spending about fifteen hours on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! The is that if you find that you are stuck or having a difficult time making progress, consider the following actions.  Send an [e-mail to the teaching team](mailto:pruvolo@olin.edu) or come to office hours.  Post a discussion on the course Canvas site (even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers).  Hang out around MAC126 (which you will need to do when working with the robots) as this will be the epicenter of all things CompRobo.
 
 ### Learning Goals
 
@@ -19,11 +21,11 @@ Your goal in this project will be to program the Neato to execute a number of be
 
 ### Project Showcase
 
-If you want to show off something you did, add it to <a-no-proxy href="https://docs.google.com/presentation/d/1zzH9M_wSm1ftLnQ8QTqLexShPNP53qnhGYGBRByu3pM/edit?usp=sharing">this shared Google Slides presentation</a-no-proxy>.
+If you want to show off something you did, add it to <a href="https://docs.google.com/presentation/d/1_SABLdSkRCSIiGdeSzA1GLxTibsrnH17f7yEim6r5jg/edit?usp=sharing">this shared Google Slides presentation</a>.
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. To help us track your assignment, please fork <a-no-proxy href="https://github.com/comprobo20/warmup_project">this repo as a starting point</a-no-proxy> for your project.   Even if you are working alone, make sure to let us know where your Github repository for this project lives using <a-no-proxy href="https://docs.google.com/spreadsheets/d/1LMsM67Wx9Ebv8KrBNRlx02XLvbyZUwTtmz1Bdlk3kMI/edit?usp=sharing">this Google sheet</a-no-proxy>.
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. Make sure to let us know where your Github repository for this project lives using <a href="https://docs.google.com/spreadsheets/d/1YPOrE5YQifSyyLDvNjOASzr1Vz8OuhaP2H9WKN5Y27s/edit?usp=sharing">this Google sheet</a>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
@@ -57,12 +59,23 @@ warmup_project/bags/obstacle_avoider_demo.bag
 warmup_project/bags/person_follower_demo.bag
 warmup_project/bags/test_drive.bag
 warmup_project/bags/wall_follower_demo.bag
-warmup_project/scripts/teleop.py
-warmup_project/scripts/drive_square.py
-warmup_project/scripts/obstacle_avoider.py
-warmup_project/scripts/finite_state_controller.py
-warmup_project/scripts/person_follower.py
-warmup_project/scripts/wall_follower.py
+warmup_project/resource
+warmup_project/resource/warmup_project
+warmup_project/setup.py
+warmup_project/setup.cfg
+warmup_project/test
+warmup_project/test/test_copyright.py
+warmup_project/test/test_flake8.py
+warmup_project/test/test_pep257.py
+warmup_project/package.xml
+warmup_project/warmup_project
+warmup_project/warmup_project/__init__.py
+warmup_project/warmup_project/teleop.py
+warmup_project/warmup_project/drive_square.py
+warmup_project/warmup_project/finite_state_controller.py
+warmup_project/warmup_project/obstacle_avoider.py
+warmup_project/warmup_project/person_follower.py
+warmup_project/warmup_project/wall_follower.py
 warmup_project/README.md
 ```
 
@@ -80,37 +93,31 @@ In your github repository, create a markdown file called ``README.md`` to serve 
 #### Sample Writeups
 
 Here are some writeups that are particularly solid.  We hope that these might get you excited about putting in the effort to document your work.
-* <a-no-proxy href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a-no-proxy>
-* <a-no-proxy href="https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf">Mary Keenan</a-no-proxy>
-* <a-no-proxy href="https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf">Cedric Kim</a-no-proxy>
-* <a-no-proxy href="https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project">Jamie Cho</a-no-proxy> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
+* <a href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a>
+* <a href="https://github.com/mary-keenan/comprobo_warmup_project/blob/master/warmup_project/writeup.pdf">Mary Keenan</a>
+* <a href="https://github.com/therealcedz/comprobo_warmup_project/blob/master/warmup_project_ckim/Writeup/Warm_Up_Project_Report_CKim.pdf">Cedric Kim</a>
+* <a href="https://github.com/yycho0108/comprobo_warmup_project/tree/master/warmup_project">Jamie Cho</a> does a great job documenting his work.  Some of the approaches he uses are very advanced (due to prior robotics experience that he had before taking the course).
 
-## Robot Simulation
+## Robot Operations
 
-We will be using the Gazebo simulator for much of this course.  For the warmup project we will be using a simulation of a robotic vacuum cleaner from Neato Robotics.
-
-<p align="center">
-<img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
-</p>
-
-The documentation on how to run the simulator, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a-no-proxy data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">how to run the simulator page</a-no-proxy>.
+You can use a combination of the simulated Turtlebot3 and real Neato during your development cycle, however, before the end of the project you should ensure that your code works on the physical Neato. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a>.
 
 ## Robot Debugging Tools
 
 ### RViz
 
-Probably the most important tool for debugging in this class will be [rviz](http://wiki.ros.org/rviz/UserGuide).  You can think of rviz as a specially tuned debugger for robots.  Consider the case of debugging a typical program by instrumenting your program with print statements.  These print statements may give you useful information as to the state (e.g. values of variables) of your program and, ultimately, help you find errors in your code.  This approach becomes infeasible when you work on robots with high bandwidth sensors (like the Neato).  The Neato sensory data consists of hundreds of thousands of numbers generated each second.  Visualizing all these numbers using print statements is infeasible.
+Probably the most important tool for debugging in this class will be [rviz2](https://turtlebot.github.io/turtlebot4-user-manual/software/rviz.html).  You can think of rviz (we'll usually leave off the ``2`` and just call it ``rviz``) as a specially tuned debugger for robots.  Consider the case of debugging a typical program by instrumenting your program with print statements.  These print statements may give you useful information as to the state (e.g. values of variables) of your program and, ultimately, help you find errors in your code.  This approach becomes infeasible when you work on robots with high bandwidth sensors (like the Neato).  The Neato sensory data consists of hundreds of thousands of numbers generated each second.  Visualizing all these numbers using print statements is infeasible.
 
 Rviz contains visualization tools for common sensory data.  Further, there are some general purpose visualization messages that you can customize for your purposes. In this portion of the assignment, you will get familiar with using rviz with the Neato, and write a simple program to visualize arbitrary geometric shapes.
 
 #### Part 1
 
-For part 1 you will be using rviz to visualize the data from the simulated Neatos. Start the Neato simulator. Read through the documentation for rviz and perform the following steps:
+For part 1 you will be using rviz to visualize the data from the simulated Neatos. Connect to the Neato. Read through the documentation for rviz and perform the following steps:
 
 1. Set the ``fixed_frame`` to ``odom``
-2. Add a visualization of the Neato's laser scan (topic /scan).  This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them).
-3. Add a visualization of the Neato itself (this can be done by selecting "Robot Model" from the insert menu")
-4. If you start the simulator with the ``load_camera:=true`` option, you can also add a visualization of the Neato's camera feed (topic camera/image_raw).
+2. Add a visualization of the Neato's laser scan (topic ``/scan``).  This is most easily found by using the "By topic" tab.  Make sure to turn off the ``covariance`` option and change the ``keep`` parameter to 1.
+3. Add a visualization of the Neato's position (topic ``/odom``).   This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them).
+4. If you are using a Neato with a camera (or using the simulator), you can also add a visualization of the camera feed (topic camera/image_raw).
 
 Save your rviz configuration so you can use it later (you can simply make it the default configuration by overwriting default.rviz or save it as a different file if you want to maintain the current default rviz behavior).
 
@@ -118,12 +125,14 @@ You do not have to turn in anything for this part.
 
 #### Part 2
 
-Write a ROS node that, 10 times a second, publishes a message of type ``visualization_msgs/Marker``. The marker message you publish should specify to rviz to create a sphere at position x=1m and y=2m in the Neato's odometry coordinate system (odom). It is up to you how large and what color to make the sphere. Information on the visualization_msgs/Marker message can be found [here](http://wiki.ros.org/rviz/DisplayTypes/Marker) (unfortunately the official document only has C++ code as an example.  We have [ported the example to Python](../Sample_code/marker_sample)). Place your screenshot in a subdirectory called **screenshots**.  Try changing the coordinate frame for your sphere to **base_link**.  How does the behavior of the visualization change?  Try changing the coordinate frame for your sphere to a different coordinate system (e.g.,  **wheel_left_link**). How does the behavior of the visualization change?
-
+Write a ROS node that, 10 times a second, publishes a message of type ``visualization_msgs/Marker``. The marker message you publish should specify to rviz to create a sphere at position x=1m and y=2m in the Neato's odometry coordinate system (odom). It is up to you how large and what color to make the sphere. Information on the ``visualization_msgs/msg/Marker`` message can be found on the [visualization_msgs Wiki](http://wiki.ros.org/visualization_msgs) (unfortunately the official documents haven't been updated for ROS2, so for our benefit we have [created an example in Python with ROS2](../Sample_code/marker_sample)). Place your screenshot in a subdirectory called **screenshots**.  Try changing the coordinate frame for your sphere to **base_link**.  How does the behavior of the visualization change?  Try changing the coordinate frame for your sphere to a different coordinate system (e.g.,  **base_laser_link**). How does the behavior of the visualization change?
 
 You do not have to turn in anything for this part.
 
 ### rosbag
+
+> TODO: start editing from here down.
+
 
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
@@ -256,7 +265,7 @@ Using the rosbag instructions from earlier, record a demo of your person followe
 
 For this part you should program the Neato to move forward while reactively avoiding obstacles that block its path. A simple approach to the problem is to have the robot turn 90 degrees when it encounters an obstacle, and then turn back toward its preferred direction of motion once the obstacle is gone.
 
-A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or <a-no-proxy href="http://ijr.sagepub.com/content/5/1/90.short">the original paper</a-no-proxy>). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
+A more advanced approach to the problem is to use the concept of potential fields (see [this tutorial](http://phoenix.goucher.edu/~jillz/cs325_robotics/goodrich_potential_fields.pdf), or <a href="http://ijr.sagepub.com/content/5/1/90.short">the original paper</a>). Think of a force constantly pulling the robot forward while nearby obstacles (as detected by the laser range finder) exert repellant forces on the robot. The magnitude of the repellant force should increase as the robot gets closer to the obstacle.
 
 <p align="center">
 <img alt="A Neato in a potential field for robot motion planing." src="../website_graphics/obstacleavoidance.png"/>
@@ -300,6 +309,6 @@ Using the rosbag instructions from earlier, record a demo of your finite-state c
 
 ## Tips, Tricks, and Words of (Pseudo?) Wisdom
 
-* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a-no-proxy href="https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing">a Google doc that we can use for collecting useful tips for this assignment</a-no-proxy>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
+* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a href="https://docs.google.com/document/d/1qKx8a1RNRpeyYIiZdDyUJzNqXsaaCSz8rG0UKaqvYIo/edit?usp=sharing">a Google doc that we can use for collecting useful tips for this assignment</a>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
 * When programming robots you have to get used to the idea that your code is never "bug free" in the same way that an implementation of a sorting algorithm can be bug free (there is always more work to do to make your robot code more robust to various scenarios).
 * When your robot is not doing what you expect it to, you are often faced with the decision of spending time tweaking your code to get it to work or spending time writing code to visualize / understand what your code is doing.  Students often are comfortable with the former (tweaking) and hesitant to pursue the latter (visualizing).  We advise you to push yourself to work on visualization and other means to understand what your code is doing.  You will find that for robotics programming, these visualizations will prove invaluable for rooting out bugs and finding ways to improve your code. 
