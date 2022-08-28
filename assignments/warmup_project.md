@@ -29,6 +29,10 @@ We have included several extensions to the basic project that we hope will keep 
 
 You may find the [resources page](../useful_resources) useful for completing this assignment.
 
+## Using the Turtlebot4
+
+If you are interested in trying out the Turtlebot4, send Paul a note.  We will be compiling documentation on the [How to Use the Turtlebot4 page](../How to/use_the_turtlebot4).
+
 ## Intermediate checkpoint
 
 Halfway through the project you should have the following parts of the project done.
