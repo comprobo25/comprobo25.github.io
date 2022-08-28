@@ -3,9 +3,9 @@ title: "Setup Your Computing Environment"
 toc_sticky: true
 ---
 
-The teaching team will be using ROS2 Galactic with Ubuntu 20.04 and we recommend you do the same.  If you are very brave and have a very good reason to try it, come talk to us about Ubuntu 22.04 ROS2 Humble (we have had some limited success).
+The teaching team will be using ROS2 Foxy with Ubuntu 20.04 and we recommend you do the same.  We have also tested the instructions below on the following platforms: Ubuntu 20.04 with ROS2 Galactic (after replacing each instance of ``foxy`` with ``galactic`` in the instructions) and Ubuntu 22.04 with ROS2 Humble (after replacing each instance of ``foxy`` with ``humble`` in the instructions).  If you have a good reason to use either of these two alternate configurations, you will probably be safe to do so, but we won't be testing these alternate configurations thoroughly.
 
-> While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
+> While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS1), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
 
 
 ## Setting up a Dual Boot
@@ -63,24 +63,24 @@ Wed Sep 16 13:53:41 2020
 
 If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux) to install it.
 
-## Install ROS Galactic
+## Install ROS Foxy
 
-Follow [this tutorial](https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-galactic-desktop`` rather than ``ros-galactic-ros-base``).
+Follow [this tutorial](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-foxy-desktop`` rather than ``ros-foxy-ros-base``).
 
-In addition to the ``ros-galactic-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the TurtleBot3 simulator.
+In addition to the ``ros-foxy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the TurtleBot3 simulator.
 
 {% include codeHeader.html %}
 ```bash
-sudo apt-get update && sudo apt-get install -y ros-galactic-gazebo-ros-pkgs \
-	ros-galactic-turtlebot3-msgs \
-	ros-galactic-turtlebot3 \
-	ros-galactic-turtlebot3-gazebo \
-	ros-galactic-dynamixel-sdk \
-	ros-galactic-nav2-bringup \
-	ros-galactic-navigation2 \
-	ros-galactic-cartographer-ros \
-	ros-galactic-cartographer \
-	ros-galactic-gscam \
+sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
+	ros-foxy-turtlebot3-msgs \
+	ros-foxy-turtlebot3 \
+	ros-foxy-turtlebot3-gazebo \
+	ros-foxy-dynamixel-sdk \
+	ros-foxy-nav2-bringup \
+	ros-foxy-navigation2 \
+	ros-foxy-cartographer-ros \
+	ros-foxy-cartographer \
+	ros-foxy-gscam \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
 	gstreamer1.0-plugins-ugly \
@@ -97,11 +97,11 @@ sudo apt-get update && sudo apt-get install -y ros-galactic-gazebo-ros-pkgs \
 
 ## Setup your Workspace with the Neato Packages
 
-Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/galactic/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
+Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
 
 {% include codeHeader.html %}
 ```bash
-source /opt/ros/galactic/setup.bash
+source /opt/ros/foxy/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/comprobo22/neato_packages
