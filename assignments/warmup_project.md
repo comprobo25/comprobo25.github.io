@@ -131,18 +131,15 @@ You do not have to turn in anything for this part.
 
 ### rosbag
 
-> TODO: start editing from here down.
-
-
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
-[Create a bag file](http://wiki.ros.org/rosbag/Tutorials/Recording%20and%20playing%20back%20data) of you driving the Neato around.  You can do this by using the ``rosbag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (don't worry as this command won't exclude any necessary topics from the bag file).
+[Create a bag file](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html) of you driving the Neato or the simulated TurtleBot3 around.  You can do this by using the ``ros2 bag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (don't worry as this command won't exclude any necessary topics from the bag file).
 
 ```bash
-$ rosbag record -j -a -x ".*image_raw$|/gazebo/.*" -o bag-file-name
+$ ros2 bag record -j -a -x ".*image_raw$|/gazebo/.*" -o bag-file-name
 ```
 
-> Note: these instructions result in an almost 50x reduction in file size when compared to the previous instructions!
+> Note: these instructions result in an almost 50x reduction in file size when compared to capturing all topics
 
 Where **bag-file-name** is where you'd like to store the recorded messages (``rosbag`` will add a time stamp to your bag file name automatically).
 
