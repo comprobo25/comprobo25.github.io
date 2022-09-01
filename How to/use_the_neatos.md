@@ -366,39 +366,7 @@ This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/
 ## Using Rviz with the Simulator
 
 Once the simulator is running, you can setup ``rviz2`` the same way you would for the physical Neato.
-<!--
-## Populating the Simulated World
 
-In order to populate the simulated world, you can use the "insert" menu in Gazebo.  This will bring up a list of 3D models that can be inserted into Gazebo.
-
-<p align="center">
-<img alt="the insert menu of the Gazebo simulator" src="../website_graphics/gazebo_insert.png"/>
-</p>
-
-Click on one of these models and you should be able to drag it onto the Gazebo world.
-
-### Saving the World
-
-After you've built the world, you can save it using "file -> save world" from within Gazebo.  You should save the world into the directory ``~/catkin_ws/src/comprobo20/neato_gazebo/worlds`` as shown below.
-
-> Note: you must save your world to the directory specified above.  Also, be sure that your world ends with the ``.world`` extension.
-
-<p align="center">
-<img alt="saving the Gazebo world" src="../website_graphics/saving_world.png"/>
-</p>
-
-### Loading the World
-
-Assuming you performed the steps above to save the world, if you want to reload your world (e.g., you've shutdown Gazebo), you can load your world by running the following command (you should replace "a_whole_new_world" with whatever you named your world when you saved it.  Also note that we omit the file extension ``.world`` in the command below).
-
-```bash
-$ roslaunch neato_gazebo neato_world_no_spawn.launch neato_world:=a_whole_new_world
-```
-
-### Video Walkthrough
-
-![A walkthrough of saving a world using the Gazebo simulator](../website_graphics/gazebo_populate.gif)
--->
 ## Shutting Down the Simulator
 
 Go to the terminal where you executed **step 2** (launch Gazebo) and hit control-c.
