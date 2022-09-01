@@ -67,7 +67,7 @@ If you see a message that ``nvidia-smi`` is not installed, you can use [these in
 
 Follow [this tutorial](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-foxy-desktop`` rather than ``ros-foxy-ros-base``).
 
-In addition to the ``ros-foxy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the TurtleBot3 simulator.
+In addition to the ``ros-foxy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
 
 {% include codeHeader.html %}
 ```bash
@@ -115,13 +115,6 @@ Edit your ``~/.bashrc`` file so that the your workspace is correctly loaded when
 {% include codeHeader.html %}
 ```bash
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
-```
-
-You'll also set your TurtleBot3 model so you can use the simulator.
-
-{% include codeHeader.html %}
-```bash
-echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 ```
 
 ### Set your ROS_DOMAIN_ID
