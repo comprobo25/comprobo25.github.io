@@ -72,12 +72,9 @@ In addition to the ``ros-foxy-desktop`` package, you should install these additi
 {% include codeHeader.html %}
 ```bash
 sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
-	ros-foxy-turtlebot3-msgs \
-	ros-foxy-turtlebot3 \
-	ros-foxy-turtlebot3-gazebo \
-	ros-foxy-dynamixel-sdk \
 	ros-foxy-nav2-bringup \
 	ros-foxy-navigation2 \
+	ros-foxy-camera-info-manager \
 	ros-foxy-cartographer-ros \
 	ros-foxy-cartographer \
 	ros-foxy-gscam \
