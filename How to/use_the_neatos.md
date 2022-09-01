@@ -3,7 +3,7 @@ title: "Using the Neatos"
 toc_sticky: true
 ---
 
-This document will help use the Neato robots and use a simulated Neato (really a [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)).  Before going through these instructions, make sure that you have already <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a-no-proxy>.
+This document will help use the physical Neato as well as its simulated counterpart.  Before going through these instructions, make sure that you have already <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a-no-proxy>.
 
 
 # Connecting to the Physical Neatos
@@ -78,68 +78,6 @@ $ rqt
 ```
 
 From the "plugins" menu, select the "visualization" submenu, and then choose "image view".  In the drop down list, select the image topic ``camera/image_raw``.
-
-### ROS Topics Available
-
-
-## Putting the Neato Away
-
-### Step 1: Turn Raspberry Pi Off
-
-To do this, use the buttons on the Raspberry Pi.  First, press down until you see the text "Press select to Shutdown".  Next, press select to shut the Pi down.  Note: the button press detection code is a bit finicky, be persistent!
-
-
-### Step 2: Wait for the Pi to completely power off, and then disconnect the battery.
-
-This is really important.  If you pull the power to the Pi to soon, the SD card can become corrupted.    As the Pi shutsdown you will see the green light flash as the red light stays on persistently.  At some point you will see the green light flash on and off at regular intervals (about once a second).  Once these flashes are over and you see no more activity for the green LED, the Pi is completely off.  At this point it is safe to pull the USB cable from the battery (do not remove the end of the cable attached to the Pi).
-
-### Step 3: Put Away Your Toys
-
-Place the Neato back in it's charging dock.  Connect the USB battery pack up to the charger.  There are two types of charging docs depending on whether you are using a BotVac or an XV.
-
-
-
-<p align="center">
-<img alt="a picture of the Botvac's charger" src="../website_graphics/neato_botvac_charger.jpg" width="40%"/>
-</p>
-<p align="center">
-<i>The BotVac charger (notice the lip on the bottom)</i>
-</p>
-
-
-<p align="center">
-<img alt="a picture of the XV's charger" src="../website_graphics/neato_xv_charger.jpg" width="40%"/>
-</p>
-<p align="center">
-<i>The XV charger (no lip on the bottom)</i>
-</p>
-
-Checklist:
-
-1. Make sure the two metal connectors on the back of the Neato have made contact with the charging station.
-2. Make sure the USB battery is charging (the lights on the battery should turn on momentarily when you plug it in).
-
-## Troubleshooting
-
-### Symptom: Both the red and green LEDs on the raspberry pi are illuminated and not flashing.
-
-Likely cause: the Pi was unable to boot from its SD card.
-
-* Solution 1: the first thing to check is that the Raspberry Pi's SD card is fully inserted into the Raspberry Pi.  See the image below for the location of the SD card.  You will know it is fully inserted if you push on the card and it clicks into place.
-* Solution 2: if the card is fully inserted, the SD card may have become corrupted (possibly because some people didn't properly shut down the Raspberry Pi!).  To remedy this, grab an SD card from the green container located in the plastic drawers in AC112.  Put the old SD card in the red container in the same plastic drawer.
-
-### Symptom: the raspberry Pi display's backlight is flashing on and off.
-
-Likely cause: the Pi cannot connect to the robot via the USB cable.
-
-Solution: sometimes the Neato will turn off due to inactivity.  Press the large button near the Neato display to wake it up.  If that doesn't work try unplugging and replugging the USB cable from the raspberry Pi (DO NOT unplug the USB cable from the side connected to the Neato).  If that doesn't work, shutdown and then reboot the Pi.  If none of this works, the robot battery might be dead.  Try recharging the robot.  While the robot is recharging, switch to another robot.
-
-### Symptom: the Wifi signal strength indicator on the Raspberry Pi is below 40 even though you are right near an access point.
-
-Likely cause: The Pi has connected to an access point that is not the closest one (this will sometimes happen).
-
-Solution: Assuming the Pi display is at the screen showing the IP address, press right to enter the network setup menu.  OLIN-ROBOTICS should be highlighted with an asterisk.  Press right again to reconnect the Pi to the Wifi.  If it doesn't work the first time, try one more time.  If it doesn't work then, switch to a new robot.
-
 
 ## Neato ROS Topics
 
@@ -243,7 +181,72 @@ This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/
 
 
 
+
+## Putting the Neato Away
+
+### Step 1: Turn Raspberry Pi Off
+
+To do this, use the buttons on the Raspberry Pi.  First, press down until you see the text "Press select to Shutdown".  Next, press select to shut the Pi down.  Note: the button press detection code is a bit finicky, be persistent!
+
+
+### Step 2: Wait for the Pi to completely power off, and then disconnect the battery.
+
+This is really important.  If you pull the power to the Pi to soon, the SD card can become corrupted.    As the Pi shutsdown you will see the green light flash as the red light stays on persistently.  At some point you will see the green light flash on and off at regular intervals (about once a second).  Once these flashes are over and you see no more activity for the green LED, the Pi is completely off.  At this point it is safe to pull the USB cable from the battery (do not remove the end of the cable attached to the Pi).
+
+### Step 3: Put Away Your Toys
+
+Place the Neato back in it's charging dock.  Connect the USB battery pack up to the charger.  There are two types of charging docs depending on whether you are using a BotVac or an XV.
+
+
+
+<p align="center">
+<img alt="a picture of the Botvac's charger" src="../website_graphics/neato_botvac_charger.jpg" width="40%"/>
+</p>
+<p align="center">
+<i>The BotVac charger (notice the lip on the bottom)</i>
+</p>
+
+
+<p align="center">
+<img alt="a picture of the XV's charger" src="../website_graphics/neato_xv_charger.jpg" width="40%"/>
+</p>
+<p align="center">
+<i>The XV charger (no lip on the bottom)</i>
+</p>
+
+Checklist:
+
+1. Make sure the two metal connectors on the back of the Neato have made contact with the charging station.
+2. Make sure the USB battery is charging (the lights on the battery should turn on momentarily when you plug it in).
+
+## Troubleshooting
+
+### Symptom: Both the red and green LEDs on the raspberry pi are illuminated and not flashing.
+
+Likely cause: the Pi was unable to boot from its SD card.
+
+* Solution 1: the first thing to check is that the Raspberry Pi's SD card is fully inserted into the Raspberry Pi.  See the image below for the location of the SD card.  You will know it is fully inserted if you push on the card and it clicks into place.
+* Solution 2: if the card is fully inserted, the SD card may have become corrupted (possibly because some people didn't properly shut down the Raspberry Pi!).  To remedy this, grab an SD card from the green container located in the plastic drawers in AC112.  Put the old SD card in the red container in the same plastic drawer.
+
+### Symptom: the raspberry Pi display's backlight is flashing on and off.
+
+Likely cause: the Pi cannot connect to the robot via the USB cable.
+
+Solution: sometimes the Neato will turn off due to inactivity.  Press the large button near the Neato display to wake it up.  If that doesn't work try unplugging and replugging the USB cable from the raspberry Pi (DO NOT unplug the USB cable from the side connected to the Neato).  If that doesn't work, shutdown and then reboot the Pi.  If none of this works, the robot battery might be dead.  Try recharging the robot.  While the robot is recharging, switch to another robot.
+
+### Symptom: the Wifi signal strength indicator on the Raspberry Pi is below 40 even though you are right near an access point.
+
+Likely cause: The Pi has connected to an access point that is not the closest one (this will sometimes happen).
+
+Solution: Assuming the Pi display is at the screen showing the IP address, press right to enter the network setup menu.  OLIN-ROBOTICS should be highlighted with an asterisk.  Press right again to reconnect the Pi to the Wifi.  If it doesn't work the first time, try one more time.  If it doesn't work then, switch to a new robot.
+
+
+
 # Running the Simulator
+
+<p align="center">
+<img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
+</p>
 
 Here are the instructions for using the robot simulator.  The current plan is to use the simulator for in-class activities.  This decision is based on the amount of chaos that would ensue in such a large class if every group had their own robot.  If we get to the point where the physical robots are working super smoothly, we can revisit this idea.
 
@@ -263,39 +266,29 @@ One nice thing about ROS is that the usage of a publish and subscribe structure 
 
 Oftentimes students will be confused as to what the difference is between RViz and a robot simulator.  RViz allows you to visualize a robot's sensor data.  As such, RViz has a graphical interface that can look a lot like the graphical interface of the robot simulator.  In contrast, RViz does not have any means to execute a simulated motor command or generate simulated sensor data: it can only display the data that it receives.
 
-## The TurtleBot3 Simulator
-
-In the past, I've used my own custom Neato simulator.  There were some nice simulated worlds that were available there that I may try to port over, but with the move to ROS2 it felt like it was time to use a more standard simulation package.  I have decided to use the [TurtleBot3 simulator](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation).
-
 We will be using the popular Gazebo software for robot simulation.  Gazebo is a very powerful and customizable simulator that will be especially useful in this online (virtual) version of the course.
 
 ## Starting the Simulator
 
-You can launch your robot in many different simulated worlds.  To start your robot in a house environment, run the following command.
+You can launch your robot in many different simulated worlds.  To start your robot in an obstacle course environment, run the following command (this will probably look familiar).
 
 {% highlight console %}
-$ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+$ ros2 launch neato2_gazebo neato_gauntlet_world.py
 {% endhighlight %}
 
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
 
 <p align="center">
-<img alt="The turtlebot3 in a house-like environment" src="../website_graphics/neato_in_house.png" width="50%"/>
+<img alt="screenshot of a Neato in the simulated obstacle course" src="../website_graphics/gauntlet_gazebo.png"/>
 </p>
 
-> Note: If your turtlebot doesn't show up, try restarting the simulator or insert the turtlebot manually by clicking on the ``insert`` tab and then ``Turtlebot3(Waffle_Pi)``
-
 <p>If you want to create your own world, you can put the Turtlebot in an empty world and then follow our instructions for <a href="#populating-the-simulated-world">populating your own world</a>.</p>
-
-{% highlight console %}
-$ ros2 launch turtlebot3_gazebo empty_world.launch.py
-{% endhighlight %}
 
 ## Using the Gazebo Graphical Interface
 
 The Gazebo website has a [guide on using Gazebo's graphical interface](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2).
 
-## Turtlebot3 Simulator Topics
+## Available Topics
 
 This documentation gives the high-level purpose of each topic.  To explore more, you can use the following command to get more information.
 
@@ -303,11 +296,23 @@ This documentation gives the high-level purpose of each topic.  To explore more,
 $ ros2 topic info topic-name
 ```
 
-If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command.
+If you want to know more about a message you see in the output of ``rostopic`` you can use the following command (note that the ``-r`` flag can be ommitted if you want to the mesasges nested within the top-level message to be expanded).
 
 ```bash
 $ ros2 interfaces show msg_package_name/msg/MessageName
 ```
+
+### ``accel``
+
+This is the linear acceleration of the Neato in meters per second squared along each axis of the Neato.  This same information is included in the ``imu`` topic (although there it is nested further).
+
+### ``bump``
+
+This topic contains four binary outputs corresponding to each of the Neato's four bump sensors.  In the simulator, all bump sensors are either on or off (no differentiation is made between the bump sensors).
+
+### ``bumper``
+
+This is an internal topic to Gazebo.  If you are curiouts, you can look at the output as you run into something, but you don't need to worry about it in this class.
 
 ### ``camera/image_raw``
 
@@ -315,7 +320,7 @@ These are the images coming from the simulated camera.
 
 ### ``clock``
 
-This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rclpy``.
+This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rospy`` (see the [ROS tutorials page](http://wiki.ros.org/rospy/Overview/Time) for details).
 
 ### ``cmd_vel``
 
@@ -333,13 +338,22 @@ These tell you the total rotation (in radians) of each wheel.  Note that this is
 
 This tells you the robot's position relative to its starting location as estimated by wheel encoders.  You can get this inforation more flexibly through the ROS tf module, but this is a relatively easy way to get started.
 
+### ``projected_stable_scan``
+
+This provides the LIDAR measusrements (think of these as detected obstsacles or objects from the environment).  In contrast to the ``scan`` topics, these measurements are in the odometry frame (rather than relative to the robot) and are in Caretesian rather than polar coordinates.  There is no need to use this topic, but for some applications it is nice to have.
+
 ### ``rosout``
 
-This is a topic provided by ROS.
+This is a topic provided by ROS.  See the [ROS docs on ``rosout``](http://wiki.ros.org/rosout)for more information.
 
 ### ``scan``
 
-These are the measurements of the Turtlebot's LIDAR.  See the documentation for the physical Neato for more details.
+These are the measurements of the Neato's LIDAR.  See the documentation for the physical Neato for more details.
+
+
+### ``stable_scan``
+
+These are the measurements of the Neato's LIDAR.  For the physical Neato, this will have a different time stamp than ``scan``, but for the simulated Neato it is identical to the ``scan`` topic.  See the documentation for the physical Neato for more details.
 
 ### ``tf``
 
@@ -351,47 +365,7 @@ This is provided by the [tf2 module](https://docs.ros.org/en/galactic/Tutorials/
 
 ## Using Rviz with the Simulator
 
-Once the simulator is running, to start rviz, run the following command.
-
-```bash
-$ ros2 launch turtlebot3_bringup rviz2.launch.py
-```
-
-If you'd like, you can change the visualizations that are set by default, e.g., adding the camera feed (by accessing it through the ``insert`` menu).  If you do add the camera feed and you don't see the images show up, expand the ``topic`` menu and change the ``reliability policy`` to ``best effort``.
-
-<!--
-## Populating the Simulated World
-
-In order to populate the simulated world, you can use the "insert" menu in Gazebo.  This will bring up a list of 3D models that can be inserted into Gazebo.
-
-<p align="center">
-<img alt="the insert menu of the Gazebo simulator" src="../website_graphics/gazebo_insert.png"/>
-</p>
-
-Click on one of these models and you should be able to drag it onto the Gazebo world.
-
-### Saving the World
-
-After you've built the world, you can save it using "file -> save world" from within Gazebo.  You should save the world into the directory ``~/catkin_ws/src/comprobo20/neato_gazebo/worlds`` as shown below.
-
-> Note: you must save your world to the directory specified above.  Also, be sure that your world ends with the ``.world`` extension.
-
-<p align="center">
-<img alt="saving the Gazebo world" src="../website_graphics/saving_world.png"/>
-</p>
-
-### Loading the World
-
-Assuming you performed the steps above to save the world, if you want to reload your world (e.g., you've shutdown Gazebo), you can load your world by running the following command (you should replace "a_whole_new_world" with whatever you named your world when you saved it.  Also note that we omit the file extension ``.world`` in the command below).
-
-```bash
-$ roslaunch neato_gazebo neato_world_no_spawn.launch neato_world:=a_whole_new_world
-```
-
-### Video Walkthrough
-
-![A walkthrough of saving a world using the Gazebo simulator](../website_graphics/gazebo_populate.gif)
--->
+Once the simulator is running, you can setup ``rviz2`` the same way you would for the physical Neato.
 
 ## Shutting Down the Simulator
 

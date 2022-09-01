@@ -100,7 +100,7 @@ Here are some writeups that are particularly solid.  We hope that these might ge
 
 ## Robot Operations
 
-You can use a combination of the simulated Turtlebot3 and real Neato during your development cycle, however, before the end of the project you should ensure that your code works on the physical Neato. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a>.
+You can use a combination of the simulated Neato and real Neato during your development cycle, however, before the end of the project you should ensure that your code works on the physical Neato. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a>.
 
 ## Robot Debugging Tools
 
@@ -133,7 +133,7 @@ You do not have to turn in anything for this part.
 
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
-[Create a bag file](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html) of you driving the Neato or the simulated TurtleBot3 around.  You can do this by using the ``ros2 bag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (you can adjust this as needed for other robots).
+[Create a bag file](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html) of you driving the Neato or the simulated Neato.  You can do this by using the ``ros2 bag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (you can adjust this as needed for other robots).
 
 ```bash
 $ ros2 bag record /accel /bump /odom /cmd_vel /scan /stable_scan /projected_stable_scan /tf /tf_static -o bag-file-name
