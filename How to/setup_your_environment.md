@@ -10,7 +10,11 @@ The teaching team will be using ROS2 Foxy with Ubuntu 20.04 and we recommend you
 
 ## Setting up a Dual Boot
 
-In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 20.04 on it.  Itzgeek has [a nice walkthrough of how to do this](https://www.itzgeek.com/post/how-to-install-ubuntu-20-04-alongside-with-windows-10-in-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have some of these thumb drives available for you to use, so look for them in MAC126.
+In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 20.04 on it.  Itzgeek has [a nice walkthrough of how to do this](https://www.itzgeek.com/post/how-to-install-ubuntu-20-04-alongside-with-windows-10-in-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have some of these thumb drives available for you to use, so look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
+
+<p align="center">
+<img width="60%" src="../website_graphics/usb_sticks.jpg" alt="a photo of a rack of robots with an arrow pointing to the USB thumb drives"/>
+</p>
 
 A few quick notes:
 * If you have Ubuntu 18.04, you can upgrade it 20.04 using [these instructions](https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today).
