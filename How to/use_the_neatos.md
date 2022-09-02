@@ -49,7 +49,7 @@ Checklist before performing this step:
 1. Raspberry pi display backlight is illuminated and not flashing on and off (see troubleshooting section for what to do if this is not the case)
 2. Raspberry pi display shows that the Neato is connected to the OLIN-ROBOTICS network and has an IP address asssigned to it
 3. Raspberry pi display shows that the signal strength of the Neato's connection is at least 45 (the max is 99 for the wifi adapters with attached antennas and 70 for the ones without).   If the signal strength is very low see troubleshooting section for information on what to do.
-4. Your laptop is connected to the OLIN-ROBOTICS.  A good sanity check is to make sure you can ping the robot.  You can run ping from the Ubuntu terminal by typing ping IP_ADDRESS_OF_YOUR_ROBOT (if the connection is working you will see the time for each packet to round trip back to your computer).
+4. Your laptop is connected to the OLIN-ROBOTICS (the password for the network is available at [this Canvas page](https://olin.instructure.com/courses/460/pages/olin-robotics-wifi-password)).  A good sanity check is to make sure you can ping the robot.  You can run ping from the Ubuntu terminal by typing ping IP_ADDRESS_OF_YOUR_ROBOT (if the connection is working you will see the time for each packet to round trip back to your computer).
 
 In a new terminal, connect to the robot:
 
