@@ -3,22 +3,26 @@ title: "Day 1: Welcome and Braitenberg Vehicles"
 toc_sticky: true
 ---
 
-> NOTE: this hasn't been updated for this year yet
-
 ## Today
+
 * Intro to the teaching team!
-* Intro to CompRobo! (<a-no-proxy href="https://drive.google.com/file/d/1kIdBG8QJD5rUnM37uYxWR1XH_zFMPhxo/view?usp=sharing">slides</a-no-proxy>)
-* Robot Tortoises and Braitenberg Vehicles
+* Intro to CompRobo! (<a href="https://docs.google.com/presentation/d/19B0FtOo1qZqo8MxAklRULqWMokjUoezlMTHTjRkoUYE/edit#slide=id.p9">slides</a>)
+* Robots in the World
 
 ## For Next Time
-* Fill out <a-no-proxy href="https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform">the course entrance survey</a-no-proxy>
-* <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">Get your environment setup</a-no-proxy>
-* Read Ch. 1 and 2 of ["A Gentle Introduction to ROS" (AGIR)](https://www.cse.sc.edu/~jokane/agitr/).  The first chapter has some good background on the motivation behind ROS and what it is and is not.  The beginning of Chapter 2 through 2.2 you can skip (it has outdated installation instructions).  The rest of chapter 2 is a really nice intro to the basics of topics and nodes.
-* Once you have read chapter 2 of AGIR, [startup the Neato simulator](../How to/run_the_neato_simulator).  What topics are published?  Which nodes are running?  Which nodes subscribe to which topics?  Come to class with questions about the Neato simulator's architecture (e.g. do you want to know more about any of the topics?, what are all the nodes for?, etc.).
-* Start working on <a-no-proxy href="../assignments/warmup_project" data-canvas="https://olin.instructure.com/courses/143/assignments/440">the Warmup Project</a-no-proxy>
+
+* Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform">the course entrance survey</a>
+* <a href="../How to/setup_your_environment">Get your environment setup</a>
+* Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html), [Understanding services](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html)
+
+* [Connect a Neato and run the Neato simulator](../How to/use_the_neatos).  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
+* (probably won't have time for this before next class) Start working on <a href="../assignments/warmup_project">the Warmup Project</a>
+
+## Robots in the World
 
 
-## Sensory-Motor Loops
+
+## Sensory-Motor Loops (legacy material if you are interested)
 
 In our view, at their very core robots are about sensory-motor loops.  We can visualize this relationship in the following way.
 
@@ -44,7 +48,7 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-## Base Robot
+### Base Robot
 
 The robots in the video are quite simple.
 
@@ -96,7 +100,7 @@ In your breakout rooms, work through generating robot programs to realize the be
 1. Depending on some of the assumptions you make about how the motor system works, one of the behaviors cannot be reproduced without some form of memory.  Which behaviors are these?  How can you tell? 
 2. In what interesting ways could the light sensor and the whisker sensor be combined in a single video?  What would the resultant behavior of this vehicle be?  What would you call your new vehicle?
 
-## Braitenberg Vehicle Simulations
+### Braitenberg Vehicle Simulations
 
 In this next part of the assignment, we'll be using a [simulator for Braitenberg vehicles](http://www.harmendeweerd.nl/braitenberg-vehicles/) to build a more quantitative understanding of sensory-motor loops.  In order to use the simulator, you can navigate to the linked page and perform the steps shown in the video below.  This example shows how to load the "love" Braitenberg vehicle.
 
@@ -128,7 +132,7 @@ At this point, you can feel free to come up with your desired behavior and see i
 5. Can you think of a behavior that *could not* be realized in the simulator (i.e., there is no possible way to configure the vehicle to achieve the behavior)?
 6. Come up with an interesting behavior and see if you can replicate it in the simulator. 
 
-## Additional resources
+### Additional resources
 
 * [Braitenberg creatures](https://cosmo.nyu.edu/hogg/lego/braitenberg_vehicles.pdf) (this paper describes the LEGO robot in the video embedded above).
 * [Social Integration of Robots into Groups of Cockroaches to Control Self-organized Choices](https://science.sciencemag.org/content/318/5853/1155) cool paper showing robots influencing actual cockroach collective behavior!
