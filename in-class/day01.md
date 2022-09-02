@@ -20,6 +20,18 @@ toc_sticky: true
 
 ## Robots in the World
 
+Robots have already transformed our society, and their impact seems likely to only increase over time.  One thing we will do this semester is read about the effects of robots on our world and discuss potential implications as a class.
+
+To get your wheels turning, we have some activities for you to engage with.  There are various levels at which we might consider the implications of robots for our world.  With a group of 3, we'd like you to work through the following exercises.  We'll have a shareout with the class where you can present your response to one of the exercises.
+
+
+1. Suppose you were working on one of the robotics projects you just heard about (it will probably help for you to have a specific one in mind).  How should you as an engineer approach your work to maximize the benefits of the technology you develop and minimize harm?  What are the issues you might consider?  What is one burning question you currently feel unequipped to resolve (this might be an opportunity for us to learn together as a group).
+
+2. Suppose you were one of the decision-makers at a robotics company that had developed some incredible new technology (you can pick a specific piece of tech or think about this in a more general sense).  How would you decide who to license your technology to?  What factors would you consider?  What safeguards (if any) might you need to put in place when licensing this technology?  What is one burning question you currently feel unequipped to resolve (this might be an opportunity for us to learn together as a group).
+
+3. Suppose you are the president of the world.  What considerations would you way in determining your policies and laws regarding robotics?  What regulations or laws if any would you put in place around the use of robots and robotics technology?  
+
+4. What do you think is the most beneficial application of robotics technology?  Why?
 
 
 ## Sensory-Motor Loops (legacy material if you are interested)
