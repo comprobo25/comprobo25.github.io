@@ -4,17 +4,17 @@ toc_sticky: true
 ---
 
 ## Today
+* [More Course Details](https://www.tingleyelectric.com/areas-we-serve/electrician-wellesley-ma/)
 * Coordinate frames and coordinate transformations
 * Questions / clarifications on basic ROS concepts
 * Writing our first ROS node
-* (if time) Work on the Warmup Project
 
 ## For Next Time
 * Find a partner for the Warmup Project and get started (there is an intermediate deliverable due on class 4).
-* Read <a-no-proxy href="https://thehustle.co/when-robots-kill/">this article on robots and liability</a-no-proxy>
 
 
 ## What is a Robot Anyway?
+
 While Neatos, Spot and manufacturing robotic arms seem to clearly be "robots", the line is not always so clear - e.g. when we talk about things like washing machines, Alexa, RC cars. We like to think about robots as something that has a "brain" (processor), one or more sensors, and one or more actuators. By this definition, yes, machine machines and Alexa, are in fact robots. However, <a-no-proxy href="https://roboticsandautomationnews.com/2020/05/11/opinion-what-is-a-robot-and-how-does-it-differ-from-a-machine/32192/">there are also (less academic) definitions</a-no-proxy> and shades of gray when what exactly is a robot. 
 
 ## Coordinate Frames and Coordinate Transforms in Robotics
@@ -73,30 +73,55 @@ Before Starting
 
 ### Creating a ROS package
 
-Let's write our code today in a package called in_class_day02 (Note: to avoid merge conflicts, I'll be checking in a sample solution under in_class_day02_solution).  To create the package run the following commands:
+Let's write our code today in a package called in_class_day02::
 
 ```bash
-$ cd ~/catkin_ws/src/comprobo20
-$ catkin_create_pkg in_class_day02 rospy std_msgs geometry_msgs sensor_msgs
+$ cd ~/ros2_ws/src
+$ ros2 pkg create in_class_day02 --build-type ament_python --node-name test_message --dependencies rclpy std_msgs geometry_msgs sensor_msgs
 ```
+
+This command will create the package for you and also a node called ``test_message`` that should be located in the following location:
+
+```bash
+~/ros2_ws/src/in_class_day02/in_class_day02/test_message.py
+```
+
+By default it will look like this:
+
+```python
+def main():
+    print('Hi from in_class_day02.')
+
+
+if __name__ == '__main__':
+    main()
+````
 
 ### Creating ROS Messages in a Python Program (walkthrough in main room)
 
-ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/catkin_ws/src/in_class_day02/scripts/test_message.py`` and add the following line to our Python script.
+ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/in_class_day02/in_class_day02/test_message.py`` and add the following line to our Python script.
 
 ```python
-#!/usr/bin/env python3
 """ This script explores publishing ROS messages in ROS using Python """
 from geometry_msgs.msg import PointStamped
 ```
 
-> Note: the first line tells the shell how to execute your script.
-
 Now we will want to create a message of type PointStamped.  In order to do this, we must determine what attributes the PointStamped object contains.  In order to do this, run
 
 ```bash
-$ rosmsg show geometry_msgs/PointStamped
-Which will generate the output:
+$ ros2 interface show geometry_msgs/msg/PointStamped
+# This represents a Point with reference coordinate frame and timestamp
+
+std_msgs/Header header
+	builtin_interfaces/Time stamp
+		int32 sec
+		uint32 nanosec
+	string frame_id
+Point point
+	float64 x
+	float64 y
+	float64 z
+
 std_msgs/Header header
   uint32 seq
   time stamp
@@ -107,19 +132,18 @@ geometry_msgs/Point point
   float64 z
 ```
 
-If we look at the lines that are unindented (aligned all the way to the left), we will see the attributes that comprise a ``PointStamped`` object.  These attributes are header (which is of type ``std_msgs/Header``) and point (which is of type ``geometry_msgs/Point``).  The indented lines define the definition of the ``std_msgs/Header`` and ``geometry_msgs/Point`` messages.  To see this, try doing running ``$ rosmsg show`` for both ``std_msgs/Header`` and ``geometry_msgs/Point``.
+If we look at the lines that are unindented (aligned all the way to the left), we will see the attributes that comprise a ``PointStamped`` object.  These attributes are header (which is of type ``std_msgs/msg/Header``) and point (which is of type ``geometry_msgs/msg/Point``).  The indented lines define the definition of the ``std_msgs/msg/Header`` and ``geometry_msgs/msg/Point`` messages.  To see this, try doing running ``$ ros2 interface show`` for both ``std_msgs/msg/Header`` and ``geometry_msgs/msg/Point``.
 
-> **Cool trick:** if you run ``$ rosmsg show -r geometry_msgs/PointStamped`` you will see any comments that were included in the original ROS message file (this can help to understand what each field means).
-
-In order to create the PointStamped object, we will have to specify both a ``std_msgs/Header`` and a ``geometry_msgs/Point``.  Based on the definitions of these two types given by ``$ rosmsg show`` (output omitted, but you can see it in a slightly different form above), we know that for the ``std_msgs/Header`` message we need to specify seq, stamp, and frame_id. It will turn out that we don't have to worry about the ``seq`` (it will automatically be filled out by the ROS runtime when we publish our message), the stamp field is a ROS time object (see this tutorial), and the ``frame_id`` field is simply the name of the coordinate frame (more on coordinate frames later) in which the point is defined.  Likewise, the ``geometry_msgs/Point`` object needs three floating point values representing the $$x$$, $$y$$, and $$z$$ coordinates of a point.  We can create these two messages using the standard method of creating objects in Python.  In this example we will be using the keyword arguments form of calling a Python function which will make your code a bit more robust and a lot more readable.  First, we add the relevant import statements:
+In order to create the PointStamped object, we will have to specify both a ``std_msgs/msg/Header`` and a ``geometry_msgs/msg/Point``.  Based on the definitions of these two types given by ``$ ros2 interface show`` (output omitted, but you can see it in a slightly different form above), we know that for the ``std_msgs/msg/Header`` message we need to specify seq, stamp, and frame_id. It will turn out that we don't have to worry about the ``seq`` (it will automatically be filled out by the ROS runtime when we publish our message), the stamp field is a ROS time object (see this tutorial), and the ``frame_id`` field is simply the name of the coordinate frame (more on coordinate frames later) in which the point is defined.  Likewise, the ``geometry_msgs/msg/Point`` object needs three floating point values representing the $$x$$, $$y$$, and $$z$$ coordinates of a point.  We can create these two messages using the standard method of creating objects in Python.  In this example we will be using the keyword arguments form of calling a Python function which will make your code a bit more robust and a lot more readable.  First, we add the relevant import statements:
 
 ```python
 from std_msgs.msg import Header
 from geometry_msgs.msg import Point
-import rospy
 ```
 
 Now we can define the header and point that will eventually makeup our PointStamped message.
+
+> TODO: start here
 
 ```python
 rospy.init_node('test_message')    # initialize ourselves with roscore
