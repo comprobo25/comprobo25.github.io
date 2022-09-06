@@ -27,10 +27,12 @@ Before we begin, let's standardize our notation.
 $$\begin{eqnarray}
 \mathbf{p}_{/W} &\triangleq& \mbox{a point, p, expressed in coordinate system W} \\
 \mathbf{p}_{/N} &\triangleq& \mbox{a point, p, expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N, expressed in coordinate system N} \\
-\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N, expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N/W} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N, expressed in coordinate system W} \\
-\hat{\mathbf{j}}_{N/W} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N, expressed in coordinate system W}\end{eqnarray}$$
+\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N} \\
+\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N} \\
+\hat{\mathbf{r}}_{W\rightarrow N} &\triangleq& \mbox{a vector pointing from the origin of W to the origin of N} \\
+\mathbf{r}_{W \rightarrow N / W} &\triangleq& \hat{\mathbf{r}}_{W\rightarrow N}\mbox{ expressed in coordinate system W} \\
+\hat{\mathbf{i}}_{N/W} &\triangleq& \hat{\mathbf{i}}_{N}\mbox{ expressed in coordinate system W} \\
+\hat{\mathbf{j}}_{N/W} &\triangleq& \hat{\mathbf{j}}_{N}\mbox{ expressed in coordinate system W}\end{eqnarray}$$
 
 Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw a picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).
 
