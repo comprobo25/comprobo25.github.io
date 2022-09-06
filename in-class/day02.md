@@ -21,17 +21,24 @@ While Neatos, Spot and manufacturing robotic arms seem to clearly be "robots", t
 
 > Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
 
-If it's helpful, here's a video to refresh your memory.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wGIhzgmOlRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Before we begin, let's standardize our notation.
 
-Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).
+$$\begin{eqnarray}
+\mathbf{p}_{/W} &\triangleq& \mbox{a point, p, expressed in coordinate system W} \\
+\mathbf{p}_{/N} &\triangleq& \mbox{a point, p, expressed in coordinate system N} \\
+\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N, expressed in coordinate system N} \\
+\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N, expressed in coordinate system N} \\
+\hat{\mathbf{i}}_{N/W} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N, expressed in coordinate system W} \\
+\hat{\mathbf{j}}_{N/W} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N, expressed in coordinate system W}\end{eqnarray}$$
+
+Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw a picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).
 
 In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system ``world``, in many situations this will be cumbersome.
 
 **Exercise:** Taking the Neato as an example, make a list of the coordinate systems that you feel would be convenient to define.  For each coordinate system, define its origin and give a few examples of entities that would be natural to express in the coordinate system. 
 
-### base_link
+### ``base_link``
 
 Next, we'll define ``base_link``, which will serve as our robot-centric coordinate system.  The origin of this coordinate system will be at the midpoint of the line connecting the robot's wheels.  The x-axis will point forwards, the y-axis will point to the left, and the z-axis will point up.  Update your drawing to indicate the position of the ``base_link`` coordinate axes (again, don't worry about the z-axis).
 
