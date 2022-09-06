@@ -82,6 +82,7 @@ sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
 	ros-foxy-cartographer-ros \
 	ros-foxy-cartographer \
 	ros-foxy-gscam \
+	python3-colcon-common-extensions \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
 	gstreamer1.0-plugins-ugly \
