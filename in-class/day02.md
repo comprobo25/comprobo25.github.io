@@ -69,21 +69,21 @@ Before Starting
 
 ## Coding Exercises
 
-> Note: Use the following link to find [sample Solutions for these coding exercises](../Sample_code/day02_solutions).  You can also find this code in your `comprobo20` repository.  If you don't see it, try ``$ git pull upstream``.
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo22/class_activities_and_resources).
 
 ### Creating a ROS package
 
-Let's write our code today in a package called in_class_day02::
+Let's write our code today in a package called ``in_class_day02``
 
 ```bash
 $ cd ~/ros2_ws/src
-$ ros2 pkg create in_class_day02 --build-type ament_python --node-name test_message --dependencies rclpy std_msgs geometry_msgs sensor_msgs
+$ ros2 pkg create in_class_day02 --build-type ament_python --node-name send_message --dependencies rclpy std_msgs geometry_msgs sensor_msgs
 ```
 
-This command will create the package for you and also a node called ``test_message`` that should be located in the following location:
+This command will create the package for you and also a node called ``send_message`` that should be located in the following location:
 
 ```bash
-~/ros2_ws/src/in_class_day02/in_class_day02/test_message.py
+~/ros2_ws/src/in_class_day02/in_class_day02/send_message.py
 ```
 
 By default it will look like this:
@@ -97,12 +97,72 @@ if __name__ == '__main__':
     main()
 ````
 
-### Creating ROS Messages in a Python Program (walkthrough in main room)
+### Building and Running your Node
 
-ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/in_class_day02/in_class_day02/test_message.py`` and add the following line to our Python script.
+You can build your node by running:
+
+```bash
+$ cd ~/ros2_ws
+$ colcon build --symlink-install
+```
+
+What does this mysterious ``--symlink-install`` do?  Well, a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) is a special type of file that points to another file.  In this case we will have a special file in our ``install`` directory that points to our Python script in our ``src`` directory.  In this way, we can modify the Python script ``send_message.py`` and run the modified ROS node without constantly running ``colcon build``.  To see the symlink run the following command.
+
+```bash
+$ ls -l ~/ros2_ws/build/in_class_day02/in_class_day02
+
+lrwxrwxrwx 1 parallels parallels 108 Sep  5 20:14 /home/parallels/ros2_ws/build/in_class_day02/in_class_day02 -> /home/parallels/ros2_ws/src/class_activities_and_resources/in_class_day02/in_class_day02
+```
+Notice how the ``->`` sign indicates a pointer (symlink) from the ``build`` directory back to the ``src`` directory.
+
+In order to run the node, first source the ``install.bash`` script and then use ``ros2 run`` (Hint: try using tab completion when typing in the package and node names)
+```bash
+$ source ~/ros2_ws/install/setup.bash
+$ ros2 run in_class_day02 send_message
+```
+
+### Creating a Skeleton ROS Node
+
+In order for your Python program to interface with ROS, you have to call the appropriate functions.  The easiest way to do this is by creating a subclass of the ``rclpy.node.Node`` class.  If you are a bit rusty on your Python object-oriented concepts, take a look back at your notes from SoftDes (also let us know if you have a favorite resource for this).  Taking the code that was automatically created in the ``ros2 pkg`` step and converting it into a ROS node, would look like this.
 
 ```python
 """ This script explores publishing ROS messages in ROS using Python """
+import rclpy
+from rclpy.node import Node
+
+class SendMessageNode(Node):
+    def __init__(self):
+        super().__init__('send_message_node')
+        # Create a timer that fires ten times per second
+        timer_period = 0.1
+        self.timer = self.create_timer(timer_period, self.run_loop)
+
+    def run_loop(self):
+        print('Hi from in_class_day02.')
+
+def main(args=None):
+    rclpy.init(args=args)      # Initialize communication with ROS
+    node = SendMessageNode()   # Create our Node
+    rclpy.spin(node)           # Run the Node until ready to shutdown
+    rclpy.shutdown()           # cleanup
+
+if __name__ == '__main__':
+    main()
+```
+
+As before, you can run the node using ``ros2 run``
+
+```bash
+$ ros2 run in_class_day02 send_message
+```
+
+You will now have to use ``ctrl-c`` to stop execution of your node.  You should see the string ``Hi from in_class_day02`` print repeatedly onto the console.
+
+### Creating ROS Messages in a Python Program (walkthrough in MAC126)
+
+ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/in_class_day02/in_class_day02/send_message.py`` and add the following line to the top of our ``send_message.py`` script.
+
+```python
 from geometry_msgs.msg import PointStamped
 ```
 
@@ -141,14 +201,11 @@ from std_msgs.msg import Header
 from geometry_msgs.msg import Point
 ```
 
-Now we can define the header and point that will eventually makeup our PointStamped message.
-
-> TODO: start here
+Now we can define the header and point that will eventually compose our ``PointStamped`` message.  Let's put this code in the ``run_loop`` function so we can publish the message each time ``run_loop`` is called.
 
 ```python
-rospy.init_node('test_message')    # initialize ourselves with roscore
-my_header = Header(stamp=rospy.Time.now(), frame_id="odom")
-my_point = Point(1.0, 2.0, 0.0)
+my_header = Header(stamp=self.get_clock().now().to_msg(), frame_id="odom")
+my_point = Point(x=1.0, y=2.0, z=0.0)
 ```
 
 Now that we have the two fields required for our PointStamped message, we can go ahead and create it.
@@ -166,108 +223,108 @@ print(my_point_stamped)
 This will produce the output:
 
 ```bash
-header: 
-  seq: 0
-  stamp: 
-    secs: 1441500244
-    nsecs: 244467020
-  frame_id: odom
-point: 
-  x: 1.0
-  y: 2.0
-  z: 0.0
+geometry_msgs.msg.PointStamped(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=1662424018, nanosec=755100091), frame_id='odom'), point=geometry_msgs.msg.Point(x=1.0, y=2.0, z=0.0))
 ```
 
 > Note that instead of creating the two attributes of PointStamped in separate lines, we can do everything in one line as:
 ```python
-my_point_stamped = PointStamped(header=Header(stamp=rospy.Time.now(),
+my_point_stamped = PointStamped(header=Header(stamp=self.get_clock().now().to_msg(),
                                               frame_id="odom"),
-                                point=Point(1.0, 2.0, 0.0))
+                                point=Point(x=1.0, y=2.0, z=0.0))
 ```
 
 In order to do something interesting, let's publish our message to a topic called ``/my_point``
 
+First, we create the publisher in our ``__init__`` method by adding the following line to the end of that function.
 ```python
-publisher = rospy.Publisher('/my_point', PointStamped, queue_size=10)
-# rospy.Rate specifies the rate of the loop (in this case 2 Hz)
-r = rospy.Rate(2)
-while not rospy.is_shutdown():
-    my_point_stamped.header.stamp = rospy.Time.now()    # update timestamp
-    publisher.publish(my_point_stamped)
-    r.sleep()
-```
-Try running your code!  Before, you run your code using rosrun, you need to make your code executable:
-
-```bash
-$ chmod u+x ~/catkin_ws/src/in_class_day02/scripts/test_message.py
+self.publisher = self.create_publisher(PointStamped, 'my_point', 10)
 ```
 
-Run your code:
-```bash
-$ rosrun in_class_day02 test_message.py
+You can publish ``my_point_stamped`` by adding the following code to the end of your ``run_loop`` function
+
+```python
+self.publisher.publish(my_point_stamped)
 ```
+
+Try running your code!
 
 How can you be sure whether it is working or not?  Try visualizing the results in rviz.  What steps are needed to make this work?
 
 
 ### Callbacks (walkthrough in main room)
 
-[Callback functions](https://en.wikipedia.org/wiki/Callback_(computer_programming)) are a fundamental concept in ROS.  Specifically, they are used to process incoming messages inside a ROS node once we have subscribed to a particular topic.  Let's write some code to listen to the message we created in the previous step.
+[Callback functions](https://en.wikipedia.org/wiki/Callback_(computer_programming)) are a fundamental concept in ROS (and we just used them to create our timer whether we knew it or not).  Specifically, they are used to process incoming messages inside a ROS node once we have subscribed to a particular topic.  Let's write some code to listen to the message we created in the previous step.
 
-First, let's create a new ROS node in a file called ``receive_message.py`` in the directory ``~/catkin_ws/src/in_class_day02/scripts``.  We'll start out with the standard first line as well as a header comment, import the correct message type, and initialize our ROS node:
+First, let's create a new ROS node in a file called ``receive_message.py`` in the directory ``~/ros2_ws/src/in_class_day02/in_class_day02``.  We'll start out with the standard first line as well as a header comment, import the correct message type, and initialize our ROS node:
 
 ```python
-#!/usr/bin/env python3
 """ Investigate receiving a message using a callback function """
+import rclpy
+from rclpy.node import Node
 from geometry_msgs.msg import PointStamped
-import rospy
 
-rospy.init_node('receive_message')
+class ReceiveMessageNode(Node):
+    def __init__(self):
+        super().__init__('receive_message_node')
+
+def main(args=None):
+    rclpy.init(args=args)         # Initialize communication with ROS
+    node = ReceiveMessageNode()   # Create our Node
+    rclpy.spin(node)              # Run the Node until ready to shutdown
+    rclpy.shutdown()              # cleanup
+
+if __name__ == '__main__':
+    main()
 ```
 
-Next, we will define our callback function.  Our callback function takes as input a single parameter which will be a Python object of the type that is being published on the topic that we subscribe to.  Eventually we will be subscribing to the topic /my_point which means that we will be writing a callback function that handles objects of type ``geometry_msgs/PointStamped``.  As a test, let's make our callback function simply print out the header attribute of the PointStamped message.
+In order to run the node, we have to add it to our ``setup.py`` file, which is located in ``~/ros2_ws/src/in_class_day02/setup.py``.  We can modify the file as follows.
 
 ```python
-def process_point(msg):
+    entry_points={
+        'console_scripts': [
+            'send_message = in_class_day02_solutions.send_message:main',
+            'receive_message = in_class_day02_solutions.receive_message:main'
+        ],
+    },
+```
+
+Once you've modified ``setup.py``, you'll need to do another ``colcon build``.
+
+```bash
+$ cd ~/ros2_ws
+$ colcon build --symlink-install
+```
+
+You can now run your node using the command:
+```bash
+$ ros2 run in_class_day02 receive_message
+```
+
+As of now, it won't do anything.
+
+Next, we will define our callback function.  Our callback function takes as input a single parameter which will be a Python object of the type that is being published on the topic that we subscribe to.  Eventually we will be subscribing to the topic ``/my_point`` which means that we will be writing a callback function that handles objects of type ``geometry_msgs/PointStamped``.  As a test, let's make our callback function simply print out the header attribute of the PointStamped message.  This function should be added as a method of our ``ReceiveMessageNode`` class.
+
+```python
+def process_point(self, msg):
     print(msg.header)
 ```
 
-Next, we must subscribe to the appropriate topic.
+Next, we must subscribe to the appropriate topic by adding this line to the ``__init__`` method.
 
 ```python
-rospy.Subscriber("/my_point", PointStamped, process_point)
+self.sub = self.create_subscription(PointStamped, 'my_point', self.process_point, 10)
 ```
 
-The ROS runtime will take care of calling our process_point function whenever a new message is ready!  There is nothing more we have to do to make this happen!  Since ROS handles calling our callback function on a separate thread, we have to make sure to enter an infinite loop so that our main Python thread doesn't terminate (which would cause our node to exit).  To do this we'll use the rospy.spin function.
+The ROS runtime will take care of calling our ``process_point`` function whenever a new message is ready!  There is nothing more we have to do to make this happen!rospy.spin()
 
-```python
-rospy.spin()
-```
-
-After making your code executable (using ``chmod`` as shown earlier), try running it.  Make sure that the node we created in the first part is also running.
-
-### Making Your Code Object-Oriented
-
-While what we did in the previous section is a great way to gently introduce ourselves to ROS, I like to minimize the time we will practice the bad habit of not using object-oriented techniques to structure our code.
-
-> Object-oriented programming uses the concept of objects, which are data types that contain attributes as well as methods that operate on those attributes.  As a class, let's see make a list of reasons why object-oriented principles are useful in general and why they might be useful in the context of robots specifically.
-
-### Make Your Nodes Object-Oriented (walkthrough in main room)
-
-Modify the code you wrote previously (``test_message.py`` and ``receive_message.py``) to be object-oriented.  There's certainly not just one way to map your code into an object-oriented structure, however, the basic principles I follow when doing this are summarized below (if you have a different way you like to do it, that's great, I'd be excited to hear about your design and the reasons you prefer it).
-
-* Create a class that represents the node you are creating.
-* The attributes of the class should represent the state of the node in question.  For instance, any value you'd like to track over the lifetime of your node can be stored as an attribute.
-* The ``__init__`` method of this node should do the basic setup of the node itself (including calling ``rospy.init_node``) , creating any publishers and subscribers, and initializing any attributes.
-* Callback functions should be methods of your class.  You can refer to them when setting up a Subscriber object using ``self.my_callback`` function.
-* If your node has a run loop (e.g., ``test_message.py``), encapsulate that functionality in a run method of your class.
+Go ahead and run your ROS node ``receive_message`` and see what happens!  (make sure your ``send_message`` node is also running)
 
 ### Viewing the Results in RViz
 
 We can open up rviz and visualize the message.  First, open rviz.
 
 ```bash
-$ rosrun rviz rviz
+$ rviz2
 ```
 
 Next, click ``add``, ``by topic``, and select your marker message.  Make sure to set the ``fixed frame`` appropriately.
