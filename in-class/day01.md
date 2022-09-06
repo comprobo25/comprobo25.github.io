@@ -6,7 +6,7 @@ toc_sticky: true
 ## Today
 
 * Intro to the teaching team!
-* Intro to CompRobo! (<a href="https://docs.google.com/presentation/d/19B0FtOo1qZqo8MxAklRULqWMokjUoezlMTHTjRkoUYE/edit#slide=id.p9">slides</a>)
+* Intro to CompRobo! (<a href="https://docs.google.com/presentation/d/19B0FtOo1qZqo8MxAklRULqWMokjUoezlMTHTjRkoUYE/edit?usp=sharing">slides</a>)
 * Robots in the World
 
 ## For Next Time

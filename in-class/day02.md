@@ -4,7 +4,7 @@ toc_sticky: true
 ---
 
 ## Today
-* [More Course Details](https://www.tingleyelectric.com/areas-we-serve/electrician-wellesley-ma/)
+* [More Course Details](https://docs.google.com/presentation/d/19B0FtOo1qZqo8MxAklRULqWMokjUoezlMTHTjRkoUYE/edit?usp=sharing)
 * Coordinate frames and coordinate transformations
 * Questions / clarifications on basic ROS concepts
 * Writing our first ROS node
