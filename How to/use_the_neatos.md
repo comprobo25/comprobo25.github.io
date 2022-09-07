@@ -15,14 +15,11 @@ This semester marks the triumphant return of the physical Neatos to CompRobo!  T
 
 ### Step 1: Find a Neato!
 
-The Neatos will be stored in or just outside the classroom (MAC126).  There are two types of Neatos: the [Botvac series](https://neatorobotics.cn/wp-content/themes/neato-2015/assets/images/robot-vacuums/botvac-d75/botvac-d75_medium.jpg) and the [XV series](https://c1.neweggimages.com/ProductImage/96-399-007-13.jpg). There is really no difference between the two, so feel free to grab either type of robots.
-
-Note: Both of these types of robots are pretty much identical, however, please be careful when putting your robot away as there are two different types of charging docks for these robots.   Before choosing your robot check its battery level.
+The Neatos will be stored in or just outside the classroom (MAC126).  This semester we are using the [Botvac series](https://neatorobotics.cn/wp-content/themes/neato-2015/assets/images/robot-vacuums/botvac-d75/botvac-d75_medium.jpg) Neatos.
 
 Checklist:
 
-1. Make sure the Neato's batteries are charged.  To test this, pull the Neato away from it's charging station and hit the big button next to the Neato's display (the button looks different on the XV versus the BotVac).  The display should turn on and stay on revealing a battery capacity indicator.  Make sure the capacity is close to full.  Sometimes the battery will show low even though it is really charged (I'm still looking into this), so if you can only find one with low charge, consider giving it a shot.
-
+1. Make sure the Neato's batteries are charged.  To test this, pull the Neato away from it's charging station and hit the big button next to the Neato's display.  The display should turn on and stay on revealing a battery capacity indicator (if the robot complains about the dirtbin being out, just press on the little button where the dirtbin would normally be).  Make sure the capacity is close to full.
 ### Step 2: Get a Battery USB Battery Pack for the Raspberry Pi
 
 The batteries are all stored on the racks in the classroom.
@@ -195,7 +192,7 @@ This is really important.  If you pull the power to the Pi to soon, the SD card 
 
 ### Step 3: Put Away Your Toys
 
-Place the Neato back in it's charging dock.  Connect the USB battery pack up to the charger.  There are two types of charging docs depending on whether you are using a BotVac or an XV.
+Place the Neato back in it's charging dock.  Connect the USB battery pack up to the charger.
 
 
 
@@ -204,14 +201,6 @@ Place the Neato back in it's charging dock.  Connect the USB battery pack up to 
 </p>
 <p align="center">
 <i>The BotVac charger (notice the lip on the bottom)</i>
-</p>
-
-
-<p align="center">
-<img alt="a picture of the XV's charger" src="../website_graphics/neato_xv_charger.jpg" width="40%"/>
-</p>
-<p align="center">
-<i>The XV charger (no lip on the bottom)</i>
 </p>
 
 Checklist:
