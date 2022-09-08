@@ -358,4 +358,4 @@ Once the simulator is running, you can setup ``rviz2`` the same way you would fo
 
 ## Shutting Down the Simulator
 
-Go to the terminal where you executed **step 2** (launch Gazebo) and hit control-c.
+Go to the terminal where you launched Gazebo and hit control-c.
