@@ -116,7 +116,7 @@ For part 1 you will be using rviz to visualize the data from the simulated Neato
 
 1. Set the ``fixed_frame`` to ``odom``
 2. Add a visualization of the Neato's laser scan (topic ``/scan``).     This is most easily found by using the "By topic" tab.  Make sure to adjust the size of the markers so you can see them).
-3. Add a visualization of the Neato's position by adding the ``Robot Model`` visualization, expanding the generated visualization in the tree in the ``Displays`` section, changing ``Description Source`` to ``file``, and finally choosing the file ``neato.urdf`` from the ``~/ros2_ws/src/neato_packages/neato_node2/urdf`` directory.
+3. Add a visualization of the Neato's position by adding the ``Robot Model`` visualization, expanding the generated visualization in the tree in the ``Displays`` section and typing ``robot_description`` into the ``Description Topic`` field.
 4. If you are using a Neato with a camera (or using the simulator), you can also add a visualization of the camera feed (topic camera/image_raw).
 
 Save your rviz configuration so you can use it later (you can simply make it the default configuration by overwriting default.rviz or save it as a different file if you want to maintain the current default rviz behavior).
