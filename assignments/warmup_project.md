@@ -48,7 +48,7 @@ Halfway through the project you should have the following parts of the project d
 
 ### Code Structure
 
-Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS tutorial on creating a catkin package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage).
+Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
 
 Here are the files you will likely generate as part of this assignment.
 
