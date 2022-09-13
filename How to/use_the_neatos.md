@@ -309,7 +309,7 @@ These are the images coming from the simulated camera.
 
 ### ``clock``
 
-This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, you can access the time through ``rospy`` (see the [ROS tutorials page](http://wiki.ros.org/rospy/Overview/Time) for details).
+This is the simulator clock.  This is useful for executing commands based on elapsed time.  It is preferable to use this clock rather than the wall clock (your computer's system clock) since the simulation might not run at the same rate as realtime.  You don't typically want to subscribe to this topic directly.  Instead, if you have a ``rclpy.node.Node`` subclass (common), you can grab the current time through ``self.get_clock().now()``.
 
 ### ``cmd_vel``
 
