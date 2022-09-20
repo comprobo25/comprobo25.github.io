@@ -7,57 +7,62 @@
 ## For Next Time
 
 * Complete this assignment on basic probability <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1317">basic probability</a-no-proxy>. Submit your work on canvas. 
-* Read over the description of the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>
-* Check out your topics and team assignments for the  <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1314"> Discussion Assignment </a-no-proxy>
+* Read over the description of the [Robot Localization project](../assignments/robot_localization) (there are a few modifications we still need to make, but nothing that will really impact an initial readthrough).
 * For more reinforcement of the concepts behind the particle filter, watch this <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a-no-proxy>.
 
-## Conceptual Introduction to the Particle Filter
-The particle filter as <a-no-proxy href="https://docs.google.com/presentation/d/1viXb11AmVX3hI53HkJfYveJRdm6aJJhD6JaNkc1xQNk/edit#slide=id.p">zoom art</a-no-proxy>. Find the lost robot at Olin. 
+## Warmup Project Debrief
 
+* Let's go through the [slide deck to share what you've done](https://docs.google.com/presentation/d/1_SABLdSkRCSIiGdeSzA1GLxTibsrnH17f7yEim6r5jg/edit?usp=sharing).  Successes as well as hard-won lessons are equally welcome. 
+
+## Conceptual Introduction to the Particle Filter
+
+We'll be doing an activity to introduce our next major topic in the class: robot localization.  This is supposed to be a fun activity to get you thinking about the basic concepts.
 
 
 ## We're all living in a 1D world!
+
+Before diving into this on your own, I want to show you some basic ideas in front of the class.  The instructions for running thing are summarized below.
+
 To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use
 
-```
+```bash
 $ pip3 show matplotlib scipy
 ```
 
- If these are not installed, try the following (if you are using Python 2.7, replace the first line with python-tk). For Melinda, matplotlib was installed, but not scipy. 
-
-```
-$ sudo apt install python3-tk
-$ pip3 install matplotlib
-$ python3 -m pip install scipy 
+```bash
+$ pip3 install matplotlib scipy
 ```
 
-Additionally, make sure to pull the latest changes from the upstream comprobo repository.
+Additionally, if you haven't done so yet, clone [the class activities are resources repo](https://github.com/comprobo22/class_activities_and_resources) into your ``ros2_ws/src`` folder.  If you've already cloned it, make sure to do a ``git pull origin main``.
 
-```
-$ cd ~/catkin_ws/src/comprobo20
-$ git pull upstream master
+Next, make sure to build your workspace and source your ``install/setup.bash`` file.
+
+```bash
+$ cd ~/ros2_ws
+$ colcon build --symlink-install
+$ source install/setup.bash
 ```
 
 To try things out, let's first startup a 1d simulation of the world. 
 
-```
-$ rosrun simple_filter simple_filter_world.py _walls:=[0.0,3.0]
+```bash
+$ ros2 run simple_filter simple_filter_world.py --ros-args -p walls:=[0.0,3.0]
 ```
 
 Take a look at the topics that are being published.  What types of messages are there?  What topics correspond to which messages?  Take a moment with your partner and make a list of topics and what they might encode.
 
 Next, we will experiment with our first particle filter:
 
-```
-$ rosrun  simple_filter simple_particle_filter.py _walls:=[0.0,3.0] _nparticles:=100 _realrobot:=False
+```bash
+$ ros2 run simple_filter simple_particle_filter.py --ros-args -p walls:=[0.0,3.0] -p nparticles:=100
 ```
 
 A visualization should come up.  The visualization shows the position of all the particles, the particle weights, and the true position.  Additionally, a histogram is generated that shows the belief about where the robot is.
 
 You can move your robot around using the following ROS node.  To use this node make sure the window that pops up has focus, and use the arrow keys to move around left to right.
 
-```
-$ rosrun simple_filter simple_controller.py
+```bash
+$ ros2 run simple_filter simple_controller.py
 ```
 
 What happens over time to your visualization?
@@ -66,10 +71,6 @@ Try different wall configurations to see what happens.  What happens as you chan
 
 Construct a scenario where there is an inherent ambiguity in determining where the robot is.  How do you do this?  What happens when you run your particle filter.
 
-### Check out the Code
-Next, drill down into the code make sure you take a good look at SensorModel.get_likelihood and SensorModel.sample_prediction.    The first function is determining the probability of a sensor measurement for a particular hypothesized robot pose.  What does this likelihood function look like? Draw lots of pictures.  What assumptions in this function would be violated with the actual Neato.
-
-The second function samples a potential next state based on a measured change via the odometry.  What assumptions are encoded in this function.  Again, draw lots of pictures.
-
 ## Team Formation
+
 We'll have some time for informal team formation at the end of class.  Everyone must fill out this form to indicate your teammate, or if you don't have one yet, you should provide me with some information to help match you.
