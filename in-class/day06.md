@@ -29,6 +29,8 @@ To get the code for today you will need to make sure your environment is setup w
 $ pip3 show matplotlib scipy
 ```
 
+If you get any warnings about package(s) not found, you can install them with ``pip3``.  For example, if I didn't have either package, you can use the following command to install the necessary libraries.
+
 ```bash
 $ pip3 install matplotlib scipy
 ```
@@ -59,7 +61,7 @@ $ ros2 run simple_filter simple_particle_filter.py --ros-args -p walls:=[0.0,3.0
 
 A visualization should come up.  The visualization shows the position of all the particles, the particle weights, and the true position.  Additionally, a histogram is generated that shows the belief about where the robot is.
 
-You can move your robot around using the following ROS node.  To use this node make sure the window that pops up has focus, and use the arrow keys to move around left to right.
+You can move your robot around using the following ROS node.  To use this node make sure the window that pops up has focus, and use the ``a`` key and the ``d`` keys to move around left to right, respectively (sorry, I used to use the arrow keys, but I was finding that it didn't work reliably,)
 
 ```bash
 $ ros2 run simple_filter simple_controller.py

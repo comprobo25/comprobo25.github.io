@@ -4,8 +4,6 @@ toc_sticky: true
 toc_h_max: 3
 ---
 
-> NOTE: This has not been updated for this year (and in particular for ROS2). Currently, this is purely for informational purposes.
-
 ## Abstract
 
 So far, you have successfully programmed robot (simulators) using reactive control strategies. You have also combined these reactive control strategies together using finite state control. Next, you will build on these skills as you continue to explore the field of mobile robotics. In this project you will tackle a fundamental problem in mobile robotics: robot localization.
@@ -20,15 +18,13 @@ So far, you have successfully programmed robot (simulators) using reactive contr
 
 ## Teaming
 
-For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
+For this project, you should work with one other student.
 
 ## Deliverables
 
-### Topdown Exploration of the Particle Filter (Due 9-30)
+### Implementation Plan (Due 9-27)
 
-For this part of the assignment you should go through the steps outlined in [Starter Code](#starter-code) and the [A View of the Finish Line Section](#a-view-of-the-finish-line-and-getting-set-with-rviz).
-
-### Implementation Plan (Due 10-5)
+> Note: this is still being finalized soon.  At the latest it will be ready by class on Friday.
 
 You should come to class with a plan for how you will implement this project.
 
@@ -38,21 +34,20 @@ You should come to class with a plan for how you will implement this project.
 
 It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
-
-### In-class Presentation / Demo (Due 10-21)
+### In-class Presentation / Demo (Due 10-12)
 
 Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc.  In addition, you should show a demo of your system in action.
 
 This deliverable be assessed in a binary fashion (did you do the above or not).
 
 
-### Your Code and Bag Files (Due 10-21)
+### Your Code and Bag Files (Due 10-12)
 
-Your code should be forked from <a href="https://github.com/comprobo20/robot_localization">this repo</a>.  Please push your code to your fork in order to turn it in.
+Your code should be forked from <a href="https://github.com/comprobo22/robot_localization">this repo</a>.  Please push your code to your fork in order to turn it in.
 
-You must include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
+You should include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
 
-### Writeup (Due 10-21)
+### Writeup (Due 10-12)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
@@ -88,77 +83,17 @@ The particle filter involves the following steps
 
 ## Starter Code
 
-### Refresh your ``comprobo20`` repository
-
-In a terminal, Go to your fork of the ``comprobo20`` repository and run the following command.
-
-```bash
-$ git pull upstream master
-```
-
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localizer`` inside of your fork of the <a href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a>.  Before you can run the starter code, you must install scikit learn.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a>  you forked is already setup as an appropriate package.
 
-### Installing Supporting Packages: Noetic
-
-You will need some additional ROS packages that we haven't used thus far.
-
-```bash
-$ sudo apt install ros-noetic-map-server ros-noetic-amcl ros-noetic-openslam-gmapping
-```
-
-You will also need scikit learn.
-
-```bash
-$ pip3 install sklearn
-```
-
-Finally, you will have to build the SLAM gmapping package from source (the binary version is not available in Noetic yet).
-
-```bash
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/ros-perception/slam_gmapping
-$ cd ..
-$ catkin_make
-```
-
-### Installing Supporting Packages: Melodic
+### Installing Supporting Packages
 
 You will need some additional ROS packages that we haven't used thus far.
 
 ```bash
-$ sudo apt install ros-melodic-map-server ros-melodic-amcl ros-melodic-slam-gmapping
-```
-
-You will also need to build the tf2 package for Python3.
-
-```bash
-$ sudo apt install python3-catkin-pkg-modules python3-rospkg-modules python3-empy python-rosdep python3-wstool
-$ sudo rosdep init
-$ rosdep update
-$ wstool init
-$ wstool set -y src/geometry2 --git https://github.com/ros/geometry2 -v 0.6.5
-$ wstool up
-$ rosdep install --from-paths src --ignore-src -y -r
-$ catkin_make --cmake-args \
-            -DCMAKE_BUILD_TYPE=Release \
-            -DPYTHON_EXECUTABLE=/usr/bin/python3 \
-            -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m \
-            -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so
-```
-
-Make sure your ``.bashrc`` has the following two lines in exactly this order.  To edit / view your ``.bashrc`` file, use a text editor (e.g., a simple one is ``nano``).
-
-```bash
-source /opt/ros/melodic/setup.bash
-source ~/catkin_ws/devel/setup.bash
-```
-
-You will also need scikit learn.
-
-```bash
 $ pip3 install sklearn
+$ sudo apt install ros-foxy-nav2-map-server ros-foxy-nav2-amcl ros-foxy-slam-toolbox
 ```
 
 ### Key Contents of Starter Code
@@ -185,6 +120,8 @@ This file implements something called an occupancy field (also called a likeliho
 You can find an explanation of the likelihood field model in [Pieter Abbeel's slides](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa12/slides/ScanMatching.pdf) (start at page 11).
 
 ## A View of the Finish Line and Getting Set with RViz
+
+> TODO: this is not finished yet
 
 Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be testing ROS's built-in particle filter on a bag file and map that I collected last year during CompRobo.  To get started, run the following command.
 
