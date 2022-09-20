@@ -123,26 +123,36 @@ You can find an explanation of the likelihood field model in [Pieter Abbeel's sl
 
 > TODO: this is not finished yet
 
-Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be testing ROS's built-in particle filter on a bag file and map that I collected last year during CompRobo.  To get started, run the following command.
+Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be creating a map using ROS's built-in mapping system (which you will not be reimplementing) and testing ROS's built-in particle filter (which you will be reimplementing) on the data you collect.  To get started, run the following command.
 
-> * Note: before starting this, start roscore in a separate terminal.
-> * Note: you should not have Gazebo running as you will be using recorded data from a real robot.
-
-```bash
-$ roslaunch robot_localizer test_bagfile_no_rviz.launch map_name:=ac109_1 use_builtin:=true
-```
-If all went well you will streaming text that says
+> * Note: we recommend running this with the simulator, but you can try on the real robot.  I have yet to actually give that a shot!
 
 ```bash
-Hit space to toggle paused, or 's' to step.
-[PAUSED ]  Bag Time: 1486503133.050752   Duration: 0.000000 / 124.930935
-[PAUSED ]  Bag Time: 1486503133.050752   Duration: 0.000000 / 124.930935
-[PAUSED ]  Bag Time: 1486503133.050752   Duration: 0.000000 / 124.930935
-[PAUSED ]  Bag Time: 1486503133.050752   Duration: 0.000000 / 124.930935
-[PAUSED ]  Bag Time: 1486503133.050752   Duration: 0.000000 / 124.930935
+$ ros2 launch neato2_gazebo neato_gauntlet_world.py
 ```
 
-You'll likely recognize this as the output of ROS bag.  To start the bag file you would hit the space bar, however, first we'll get thing setup in rviz.
+Next, start the mapping program.
+
+```bash
+$ ros2 launch slam_toolbox online_sync_launch.py
+```
+
+Startup ``rviz2``.  You should see all the typical things, but now add a visualization of the ``map`` topic by clicking ``add`` going to the ``by topic`` dialogue and selecting ``map``.
+
+If all went well you will see something like the following.
+
+TODO add screenshot.
+
+Drive around for a while until you get a map of the whole environment.  You can now save the map using the following command (replace ``map_name`` with whatever you want to call the map).
+
+```
+ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
+  data: 'map_name'"
+```
+
+### Running AMCL
+
+TODO
 
 ### Getting Set with RViz
 
