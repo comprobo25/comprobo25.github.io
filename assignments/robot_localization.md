@@ -168,7 +168,7 @@ Before you start this step here are a few things to do.
 To start ``AMCL``, run the following launch file.
 
 ```bash
-$ ros2 launch robot_localization test_live map_yaml:=path-to-your-yaml-file
+$ ros2 launch robot_localization test_amcl.py map_yaml:=path-to-your-yaml-file
 ```
 
 Make sure to replace ``path-to-your-yaml-file`` with the path you determined in step (3) of the checklist above.
@@ -233,83 +233,52 @@ Next, set an initial location for the particle filter using the ``2D Pose Estima
 
 ![A video showing setup of amcl for the simulated Neato](../website_graphics/amcl.gif)
 
-### Testing with a bag file
-
-If you'd like to test with a bag file instead of live, you can modify the instructions a bit.  In order for this to work you'll need to have a bag file collected of your robot moving around in a world that you've already mapped.  Before starting this, make sure to quit Gazebo or shutdown your connection to the physical Neato (remember, the bag file itself will be supplying the sensor data).
-
 ### Localizing a Robot
 
 Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on the arrow shown by the ``map_pose`` topic.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
 
 ## Running your own Particle Filter
 
+The instructions for running your particle filter are identical except for you need to use a different launch file to startup your code.  Note that this launch file starts ``pf.py``, so if you are building on ``pf_static.py`` you should probably overwrite ``pf.py`` with your code.
 
+```bash
+$ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
+```
 
-## Validation with Bag Files
+## Localization with Bag Files
 
 We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.
 
-```bash
-robot_localizer/bags/ac109_1.bag
-robot_localizer/bags/ac109_2.bag
-robot_localizer/bags/ac109_3.bag
-robot_localizer/bags/ac109_4.bag
-```
-
-Each has an corresponding map file.
-```bash
-robot_localizer/maps/ac109_1.yaml
-robot_localizer/maps/ac109_2.yaml
-robot_localizer/maps/ac109_3.yaml
-robot_localizer/maps/ac109_4.yaml
-```
-
-In order to see what these bags contain, use the ``rosbag info`` command (here we are running this from the ``robot_localization`` directory).
+(TODO: need to make sure ``robot_description`` works as expected and need to post this bag file)
 
 ```bash
-$ rosbag info robot_localizer/bags/ac109_1.bag
-path:        robot_localizer/bags/ac109_1.bag
-version:     2.0
-duration:    2:04s (124s)
-start:       Feb 07 2017 16:32:13.05 (1486503133.05)
-end:         Feb 07 2017 16:34:17.98 (1486503257.98)
-size:        32.7 MB
-messages:    19365
-compression: none [24/24 chunks]
-types:       geometry_msgs/PoseStamped [d3812c3cbc69362b77dc0b19b345f8f5]
-             geometry_msgs/Twist       [9f195f881246fdfa2798d1d3eebca84a]
-             nav_msgs/OccupancyGrid    [3381f2d731d4076ec5c71b0759edbe4e]
-             nav_msgs/Odometry         [cd5e73d190d741a2f92e81eda573aca7]
-             neato_node/Accel          [207a3851a50869ae8ce637885057d51b]
-             neato_node/Bump           [459d87767ce0f2ebdc162046e9ad2c13]
-             rosgraph_msgs/Log         [acffd30cd6b6de30f120938c17c593fb]
-             sensor_msgs/LaserScan     [90c7ef2dc6895d81024acba2ac42f369]
-             sensor_msgs/PointCloud    [d8e9c3f5afbdd8a130fd1d2763945fca]
-             tf2_msgs/TFMessage        [94810edda583a504dfda3829e70d7eec]
-topics:      accel                   2504 msgs    : neato_node/Accel         
-             bump                    2502 msgs    : neato_node/Bump          
-             cmd_vel                   54 msgs    : geometry_msgs/Twist      
-             map_pose                 801 msgs    : geometry_msgs/PoseStamped
-             map_pose_continuous     2478 msgs    : geometry_msgs/PoseStamped
-             odom                    2499 msgs    : nav_msgs/Odometry        
-             projected_stable_scan    895 msgs    : sensor_msgs/PointCloud   
-             rosout                    23 msgs    : rosgraph_msgs/Log        
-             rosout_agg                11 msgs    : rosgraph_msgs/Log        
-             scan                     895 msgs    : sensor_msgs/LaserScan    
-             stable_scan              895 msgs    : sensor_msgs/LaserScan    
-             tf                      5785 msgs    : tf2_msgs/TFMessage       
-             transformed_map           23 msgs    : nav_msgs/OccupancyGrid
+robot_localization/bags/test_1.bag
 ```
 
-This bag file has all of the topics you are accustomed to seeing with the addition of two new topics: ``map_pose`` and ``map_pose_continuous``.  These topics each encode the position of the robot in the map frame as determined from  ceiling mounted April tag markers (where the map is defined by the map stored in the maps subdirectory).  The two topics are slightly different in that the ``map_pose`` topic is only published when a marker can be seen by the camera, and the ``map_pose_continuous`` topic is updated with the odometry from the robot even when the robot can't seen one of the markers.  For the purposes of the bag files we have provided, you can use ``map_pose`` for your validation.  ``map_pose_continuous`` may come in handy for working with maps where the robot moves out of range of the markers.
+Each bag file corresponds to the map.
+```bash
+robot_localization/maps/mac_1st_floor_final.yaml
+```
 
-In order to test your code with the bag file, you will want to use a different launch file that will automatically start your particle filter, load the map, and play the bag file.  The instructions below provide a different launch file that will automatically start rviz for you.  If you don't want to start rviz automatically, you can use the instructions in the [Getting Set with RViz section](#getting-set-with-rviz).
+In order to test the built-in particle filter (AMCL) or your particle filter (``pf.py``) with a bag file, you can start up the particle filter as explained earlier in this document and then start the bag file using the following command.
+
+> Note: before doing this, make sure Gazebo is shutdown and you are not connected to a physical robot (remember, the bag file will be supplying the sensor data)
 
 ```bash
-$ roslaunch robot_localizer test_bagfile.launch map_name:=ac109_1
+$ ros2 bag play path-to-your-bag-file
 ```
 
-As the bag plays you will see the robot move around in the map.  If all is well, the icon of the robot should line up with the red arrow.  The difference between the two tells you the magnitude of the error of the particle filter.  This can, in theory, be used to automatically tune a particle filter (although doing this might be out of the scope of this project).
+As with testing live, you will need to set an initial pose with the ``2D Pose Estimate`` in rviz.  As the bag plays you will see the robot move around in the map in rviz.  If your particle filter has localized your robot properly, the laser scans will line up with the features of the map.
+
+When the bag is finished playing, you will probably want to restart your particle filter as well as restart the bag file.  It is possible to automate this process a bit more using launch files, so let me know if you want to look into that.
+
+#### Recording your own bag files
+
+You can make your own bag files either with the physical robot or the simulator.  When recording a bag file of the Neato, you'll want to modify your recording command a bit from what you did in the warmup project.
+
+```bash
+ros2 bag record /accel /bump /odom /cmd_vel /scan /robot_description /stable_scan /projected_stable_scan /clock /tf /tf_static -o bag-file-name-here
+```
 
 ## Project Advice
 
