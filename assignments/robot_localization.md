@@ -125,7 +125,7 @@ You can find an explanation of the likelihood field model in [Pieter Abbeel's sl
 
 Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be creating a map using ROS's built-in mapping system (which you will not be reimplementing) and testing ROS's built-in particle filter (which you will be reimplementing) on the data you collect.  To get started, run the following command.
 
-> * Note: we recommend running this with the simulator, but you can try on the real robot.  I have yet to actually give that a shot!
+> Note: we recommend running this with the simulator, but you can try on the real robot.  I have yet to actually give that a shot!
 
 ```bash
 $ ros2 launch neato2_gazebo neato_gauntlet_world.py
@@ -141,9 +141,13 @@ Startup ``rviz2``.  You should see all the typical things, but now add a visuali
 
 If all went well you will see something like the following.
 
-TODO add screenshot.
+![An occupancy grid map](../website_graphics/rviz_mapping.png)
 
-Drive around for a while until you get a map of the whole environment.  You can now save the map using the following command (replace ``map_name`` with whatever you want to call the map).
+The representation of the map you see above is called an occupancy grid. The light gray spaces are mapped free space (no obstacle), the black squraes are mapped obstacles, and the dark gray space is unknown.  Drive around for a while until you are able to fill in the dark gray regions.
+
+![An occupancy grid map that has been completely explored](../website_graphics/rviz_mapping_complete.png)
+
+You can now save the map using the following command (replace ``map_name`` with whatever you want to call the map).
 
 ```
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
@@ -153,6 +157,9 @@ ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
 ### Running AMCL
 
 TODO
+* may have to use set ``use_sim_time`` when setting 2d pose
+* Map doesn't always show up if rviz is not running when map server starts
+* particle cloud requires ``best_effort`` to be set for qos
 
 ### Getting Set with RViz
 
