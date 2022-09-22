@@ -154,94 +154,96 @@ ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_name'"
 ```
 
+Keep rviz running as you'll want it for the next part.  You may also want to save the configuration so you don't have to add the visualizations again the next time you start rviz.
+
 ### Running AMCL
 
-TODO
-* may have to use set ``use_sim_time`` when setting 2d pose
-* Map doesn't always show up if rviz is not running when map server starts
-* particle cloud requires ``best_effort`` to be set for qos
+Now that you have a map, you will use the built-in particle filter package called AMCL (adaptive monte carlo localization).
 
-### Getting Set with RViz
+Before you start this step here are a few things to do.
+1.  Stop the ``slam_toolbox`` nodes you were running from before.  Find the terminal where you ran the ``slam_toolbox online_sync_launch.py`` command and hit ``control-c``.
+2.  Make sure ``rviz`` is running and you have added a visualization of the ``map`` topic.
+3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Somewhat counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/pruvolo``.
 
-In rviz, add the displays for the following topics (use the ``By Topic`` tab after clicking on the add button).
-
-* ``/particlecloud``
-* ``/map_pose``
-* ``/map``
-* ``/scan`` 
-
-You should also add a visualization for ``Robot Model`` by clicking ``Add`` and then looking on the ``By Display Type`` tab.
-
-Also, change the fixed frame to ``map``.
-
-Using the ``2D Pose Estimate Widget`` (it should be at the top of the rviz bar), click and drag an estimate of for the robot's pose in the map (don't worry about where it is).
-
-Here is a video showing the process in action (note: we forgot to add the ``/scan`` topic in the video, but that should be straightforward..
-
-![A walkthrough of running the particle filter on a bag file](../website_graphics/viewofthefinishline.gif)
-
-#### Troubleshooting
-
-If you see some red text fly by right after unpausing the bag file, the built-in particle filter might have crashed.  This crash is due to a buffer overflow problem that has been fixed in the latest version of ROS Noetic.  To get the updated version of the particle filter that fixes this bug, you can run the following command.
+To start ``AMCL``, run the following launch file.
 
 ```bash
-$ sudo apt-get dist-upgrade
+$ ros2 launch robot_localization test_live map_yaml:=path-to-your-yaml-file
 ```
+
+Make sure to replace ``path-to-your-yaml-file`` with the path you determined in step (3) of the checklist above.
+
+Once you execute this step, if everything went well you should see output like the following.
+
+```
+[INFO] [launch]: All log files can be found below /home/pruvolo/.ros/log/2022-09-22-09-39-47-435007-pruvolo-Precision-3551-77054
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [lifecycle_manager-3]: process started with pid [77060]
+[INFO] [map_server-1]: process started with pid [77056]
+[INFO] [amcl-2]: process started with pid [77058]
+[lifecycle_manager-3] [INFO] [1663853987.576642611] [lifecycle_manager]: Creating
+[lifecycle_manager-3] [INFO] [1663853987.583821848] [lifecycle_manager]: Creating and initializing lifecycle service clients
+[lifecycle_manager-3] [INFO] [1663853987.587494816] [lifecycle_manager]: Starting managed nodes bringup...
+[lifecycle_manager-3] [INFO] [1663853987.587568598] [lifecycle_manager]: Configuring map_server
+[map_server-1] [INFO] [1663853987.592560333] [map_server]: 
+[map_server-1] 	map_server lifecycle node launched. 
+[map_server-1] 	Waiting on external lifecycle transitions to activate
+[map_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-1] [INFO] [1663853987.592774423] [map_server]: Creating
+[map_server-1] [INFO] [1663853987.593316845] [map_server]: Configuring
+[map_server-1] [INFO] [map_io]: Loading yaml file: /home/pruvolo/ros2_ws/src/robot_localization/maps/gauntlet.yaml
+[map_server-1] [DEBUG] [map_io]: resolution: 0.05
+[map_server-1] [DEBUG] [map_io]: origin[0]: -1.29
+[map_server-1] [DEBUG] [map_io]: origin[1]: -3.07
+[map_server-1] [DEBUG] [map_io]: origin[2]: 0
+[map_server-1] [DEBUG] [map_io]: free_thresh: 0.25
+[map_server-1] [DEBUG] [map_io]: occupied_thresh: 0.65
+[map_server-1] [DEBUG] [map_io]: mode: trinary
+[map_server-1] [DEBUG] [map_io]: negate: 0
+[map_server-1] [INFO] [map_io]: Loading image_file: /home/pruvolo/ros2_ws/src/robot_localization/maps/gauntlet.pgm
+[map_server-1] [DEBUG] [map_io]: Read map /home/pruvolo/ros2_ws/src/robot_localization/maps/gauntlet.pgm: 70 X 76 map @ 0.05 m/cell
+[amcl-2] [INFO] [1663853987.598347033] [amcl]: 
+[amcl-2] 	amcl lifecycle node launched. 
+[amcl-2] 	Waiting on external lifecycle transitions to activate
+[amcl-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-3] [INFO] [1663853987.598362596] [lifecycle_manager]: Configuring amcl
+[amcl-2] [INFO] [1663853987.598468168] [amcl]: Creating
+[amcl-2] [INFO] [1663853987.601084411] [amcl]: Configuring
+[amcl-2] [INFO] [1663853987.601158005] [amcl]: initTransforms
+[amcl-2] [INFO] [1663853987.607943895] [amcl]: initPubSub
+[amcl-2] [INFO] [1663853987.611039253] [amcl]: Subscribed to map topic.
+[lifecycle_manager-3] [INFO] [1663853987.613411596] [lifecycle_manager]: Activating map_server
+[map_server-1] [INFO] [1663853987.613516990] [map_server]: Activating
+[amcl-2] [INFO] [1663853987.613694605] [amcl]: Received a 70 X 76 map @ 0.050 m/pix
+[lifecycle_manager-3] [INFO] [1663853987.613789388] [lifecycle_manager]: Activating amcl
+[amcl-2] [INFO] [1663853987.613883938] [amcl]: Activating
+[amcl-2] [WARN] [1663853987.613896432] [amcl]: Publishing the particle cloud as geometry_msgs/PoseArray msg is deprecated, will be published as nav2_msgs/ParticleCloud in the future
+[lifecycle_manager-3] [INFO] [1663853987.614092632] [lifecycle_manager]: Managed nodes are active
+[amcl-2] [INFO] [1663853987.751946277] [amcl]: createLaserObject
+[amcl-2] [WARN] [1663853989.757340775] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
+[amcl-2] [WARN] [1663853991.764180749] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
+```
+
+The last line where ``AMCL`` is complaining about wanting an initial pose, brings us to our next step.
+
+Go to rviz (where you'll set the initial pose).  First set your ``Fixed Frame`` to ``map``.  Next, add a visualization of the ``particlecloud`` topic (you can use ``add`` and then ``by topic`` to find this). Once the visualization has been added, expand the details for the topic in the left panel of rviz2.  Expand the ``Topic`` sub menu.  Change the ``Reliability Policy`` to ``Best Effort``.  You'll also want to add a visualization of the ``/map`` topic if you haven't yet.  You can most easliy do this through the ``add`` and the ``by topic`` menus.  It is crucial that you set the properties of the topic so that the ``Durability Policy`` is set to ``Transient Local``.  You should probably save your configuration to avoid doing this again later.
+
+
+Next, set an initial location for the particle filter using the ``2D Pose Estimate Widget``.  Double check that your ``Fixed Frame`` is set to ``map``.  Once you change your fixed frame, some of your other visualizations will disappear.  Clock the location in the map where you think the robot is and draft in the direction you think the robot is facing.   Once you release the mouse, the visualizations of your robot and your LIDAR should return.  You should also see a bunch of red arrows indicating the particle locations.  Drive around for a while and see if the AMCL is able to converge to the correct robot pose.  How do you know if it is correct or not?  Here is an example of how it might look (note: despite my best efforts, I picked a bad initial position for AMCL.  Despite this, it was able to eventually figure out where the robot was).
+
+![A video showing setup of amcl for the simulated Neato](../website_graphics/amcl.gif)
+
+### Testing with a bag file
+
+If you'd like to test with a bag file instead of live, you can modify the instructions a bit.  In order for this to work you'll need to have a bag file collected of your robot moving around in a world that you've already mapped.  Before starting this, make sure to quit Gazebo or shutdown your connection to the physical Neato (remember, the bag file itself will be supplying the sensor data).
 
 ### Localizing a Robot
 
 Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on the arrow shown by the ``map_pose`` topic.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
 
-## Testing the Particle Filter with the Robot Simulator
+## Running your own Particle Filter
 
-In order to code the particle filter, you will need to create a map of the environment you'll be testing with.  You can use any world you'd like (even make one yourself using the instructions in <a data-canvas="https://olin.instructure.com/courses/143/modules/items/1305" href="../How to/run_the_neato_simulator">running the neato simulator</a>).  We have added a world file for a maze environment (original source: <a href="https://github.com/fsuarez6/labrob">https://github.com/fsuarez6/labrob</a>).
 
-To make a map, first connect to the robot simulator.  If you'd like to use the maze world referenced above, run the following command.
-
-```bash
-$ roslaunch neato_gazebo neato_maze_world.launch
-```
-
-Next, run:
-
-```bash
-$ roslaunch neato_2dnav gmapping_demo.launch
-```
-
-This will start the SLAM code and launch rviz with the appropriate settings.
-
-Pilot the robot around for a while.  The easiest way to do that is to use the following command.
-
-```bash
-$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-```
-
-Once you are satisfied with your map, save it by running the following command.
-
-```bash
-$ rosrun map_server map_saver -f ~/mymap
-```
-
-This will save your map to your home directory as two files (``mymap.pgm`` and ``mymap.yaml``).
-
-You are now done!  You should hit control-c in the terminal window in which you launched ``gmapping_demo.launch``.
-
-In order to test out your map with the built-in particle filter you can run.
-
-```bash
-$ roslaunch robot_localizer test_live.launch map_file:=/home/pruvolo/mymap.yaml use_builtin:=true
-```
-
-When you start to implement your own particle filter, you can run it using.
-
-```bash
-$ roslaunch robot_localizer test_live.launch map_file:=/home/pruvolo/mymap.yaml
-```
-
-> * Note: You need to put a full path to the map file (relative paths or using the "~" for your home directory will not work)
-> * Note: the launch file ``test_live.launch`` will take care of starting ``rviz`` for you.
-
-Next, drive the robot around.  If you had a good initial guess, hopefully the robot will be able to localize itself in the environment.
 
 ## Validation with Bag Files
 
