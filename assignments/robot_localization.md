@@ -42,6 +42,8 @@ This deliverable be assessed in a binary fashion (did you do the above or not).
 
 ### Your Code and Bag Files (Due 10-12)
 
+> You might want to wait on creating your fork until Saturday morning 9/24.  I want to do a little bit more testing.
+
 Your code should be forked from <a href="https://github.com/comprobo22/robot_localization">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You should include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
