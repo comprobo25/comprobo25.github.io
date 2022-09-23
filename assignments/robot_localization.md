@@ -22,15 +22,14 @@ For this project, you should work with one other student.
 
 ## Deliverables
 
-### Implementation Plan (Due 9-27)
-
-> Note: this is still being finalized soon.  At the latest it will be ready by class on Friday.
+### Implementation Plan
 
 You should come to class with a plan for how you will implement this project.
 
 * Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
-* Propose a testing and implementation plan for your particle filter.  Your plan should cover the order in which you will implement the key steps of the particle filter and how you would test to see whether each of them is working.
-* Decide whether you will build your code on ``pf.py``, ``pf_scaffold.py``, or create your code from scratch.
+* Map how the key steps show up in the starter code file ``pf.py``.  You should be able to follow the logic in the ``scan_received`` function and understand what's going on there (or have identified questions).
+* Propose a testing and implementation plan for your particle filter.  If you are still fuzzy on the details, at least try to map out your first step.
+* Decide if you want to use the starter code as is or if you want to reimplement any of it.
 
 It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
@@ -85,7 +84,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo20/robot_localization"><tt>robot_localization</tt> Github repo</a>  you forked is already setup as an appropriate package.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo22/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.
 
 ### Installing Supporting Packages
 
@@ -100,14 +99,9 @@ $ sudo apt install ros-foxy-nav2-map-server ros-foxy-nav2-amcl ros-foxy-slam-too
 
 #### ``pf.py``
 
-This file has a basic skeleton of your particle filter (you don't have to build on this if you don't want to).  Check the comments in the file for more details.  You'll probably also want to ask questions as you go through it if something doesn't make sense.  If you want more scaffolding, you can build your code on ``pf_scaffold.py`` instead (see below).
+This file has skeleton of your particle filter (you don't have to build on this if you don't want to).  Check the comments in the file for more details.  This file has pretty much all of the interactions with ROS handled.  You should choose this option if you want to focus on implementing the particle filter algorithm  while minimizing wrangling with ROS infrastructure (you will still have some wrangling no doubt).
 
-
-#### ``pf_scaffold.py``
-
-> Note: you will want to either use ``pf.py`` or ``pf_scaffold.py`` (not both)
-
-This file has pretty much all of the interactions with ROS handled.  If you use this as your starting point for your code, you will probably want to overwrite ``pf.py`` with this file (so all of the launch files work as expected).  You should choose this option if you want to focus on implementing the particle filter algorithm and you don't care so much about learning the ins-and-outs of how the particle filter interacts with ROS.
+> You can also reimplement ``pf.py`` from scratch (or maybe using the starter code as a guide)
 
 #### ``helper_functions.py``
 
@@ -120,8 +114,6 @@ This file implements something called an occupancy field (also called a likeliho
 You can find an explanation of the likelihood field model in [Pieter Abbeel's slides](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa12/slides/ScanMatching.pdf) (start at page 11).
 
 ## A View of the Finish Line and Getting Set with RViz
-
-> TODO: this is not finished yet
 
 Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be creating a map using ROS's built-in mapping system (which you will not be reimplementing) and testing ROS's built-in particle filter (which you will be reimplementing) on the data you collect.  To get started, run the following command.
 
@@ -239,7 +231,7 @@ Return to the terminal where the rosbag is playing and click space bar.  Return 
 
 ## Running your own Particle Filter
 
-The instructions for running your particle filter are identical except for you need to use a different launch file to startup your code.  Note that this launch file starts ``pf.py``, so if you are building on ``pf_static.py`` you should probably overwrite ``pf.py`` with your code.
+The instructions for running your particle filter are identical except for you need to use a different launch file to startup your code.
 
 ```bash
 $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
@@ -247,9 +239,12 @@ $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 
 ## Localization with Bag Files
 
+> My apologies, but I don't have the bag files up yet.  I will have those very soon.
+
+> TODO: need to make sure ``robot_description`` works as expected and need to post this bag file)
+
 We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.
 
-(TODO: need to make sure ``robot_description`` works as expected and need to post this bag file)
 
 ```bash
 robot_localization/bags/test_1.bag
