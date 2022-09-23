@@ -93,7 +93,7 @@ You will need some additional ROS packages that we haven't used thus far.
 
 ```bash
 $ pip3 install sklearn
-$ sudo apt install ros-foxy-nav2-map-server ros-foxy-nav2-amcl ros-foxy-slam-toolbox
+$ sudo apt install ros-foxy-nav2-map-server ros-foxy-nav2-amcl ros-foxy-slam-toolbox python3-pykdl
 ```
 
 ### Key Contents of Starter Code
