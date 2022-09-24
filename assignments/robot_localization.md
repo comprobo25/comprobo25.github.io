@@ -260,7 +260,7 @@ robot_localization/maps/mac_1st_floor_final.yaml
 $ ros2 bag play path-to-your-bag-file
 ```
 
-In order to test the built-in particle filter (AMCL) or your particle filter (``pf.py``) with a bag file, you can start up the particle filter with a slightly modified command.
+In order to test your particle filter (``pf.py``) with a bag file, you can start up the particle filter with a slightly modified command.
 
 ```bash
 $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
@@ -269,9 +269,21 @@ $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use
 > Note 1: You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
 > Note 2: Currently, I am not able to make the bag files work with the built-in particle filter.  This is not a big deal since we are coding our own, but it's worth noting.
 
+The setup for rviz is pretty involved, so we have provided a configuraion file for you.  Once rviz is open, you can click ``File`` then ``Open Config`` and the select ``~/ros2_ws/src/robot_localization/rviz/turtlebot_bag_files.rviz``.
+
+Alernatively, you can launch ``rviz2`` and pass the configuration file on the command line.
+
+```bash
+$ rviz2 -d ~/ros2_ws/src/robot_localization/rviz/turtlebot_bag_files.rviz
+```
+
 As with testing live, you will need to set an initial pose with the ``2D Pose Estimate`` in rviz.  As the bag plays you will see the robot move around in the map in rviz.  If your particle filter has localized your robot properly, the laser scans will line up with the features of the map.
 
-When the bag is finished playing, you will probably want to restart your particle filter as well as restart the bag file.  It is possible to automate this process a bit more using launch files, so let me know if you want to look into that.
+When the bag is finished playing, you will probably want to perform the following steps to try another run of the particle filter.
+
+1.  Reset rviz by clicking the ``reset`` button.
+2.  Restart your particle filter by launching ``test_pf.py``.
+3.  Restart the bag file via ``ros2 bag play``.
 
 #### Recording your own bag files
 
