@@ -266,7 +266,8 @@ In order to test the built-in particle filter (AMCL) or your particle filter (``
 $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
 ```
 
-> You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
+> Note 1: You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
+> Note 2: Currently, I am not able to make the bag files work with the built-in particle filter.  This is not a big deal since we are coding our own, but it's worth noting.
 
 As with testing live, you will need to set an initial pose with the ``2D Pose Estimate`` in rviz.  As the bag plays you will see the robot move around in the map in rviz.  If your particle filter has localized your robot properly, the laser scans will line up with the features of the map.
 
