@@ -241,15 +241,12 @@ $ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 
 ## Localization with Bag Files
 
-> My apologies, but I don't have the bag files up yet.  I will have those very soon.
-
-> TODO: need to make sure ``robot_description`` works as expected and need to post this bag file)
-
-We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.
+We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.  These bag files have been collected from the [Turtlebot4](https://clearpathrobotics.com/turtlebot-4/).
 
 
 ```bash
-robot_localization/bags/test_1.bag
+robot_localization/bags/macfirst_floor_take_1
+robot_localization/bags/macfirst_floor_take_2
 ```
 
 Each bag file corresponds to the map.
@@ -257,13 +254,19 @@ Each bag file corresponds to the map.
 robot_localization/maps/mac_1st_floor_final.yaml
 ```
 
-In order to test the built-in particle filter (AMCL) or your particle filter (``pf.py``) with a bag file, you can start up the particle filter as explained earlier in this document and then start the bag file using the following command.
-
 > Note: before doing this, make sure Gazebo is shutdown and you are not connected to a physical robot (remember, the bag file will be supplying the sensor data)
 
 ```bash
 $ ros2 bag play path-to-your-bag-file
 ```
+
+In order to test the built-in particle filter (AMCL) or your particle filter (``pf.py``) with a bag file, you can start up the particle filter with a slightly modified command.
+
+```bash
+$ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
+```
+
+> You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
 
 As with testing live, you will need to set an initial pose with the ``2D Pose Estimate`` in rviz.  As the bag plays you will see the robot move around in the map in rviz.  If your particle filter has localized your robot properly, the laser scans will line up with the features of the map.
 
