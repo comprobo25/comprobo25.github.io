@@ -22,12 +22,13 @@ For this project, you should work with one other student.
 
 ## Deliverables
 
-### Implementation Plan
+### Implementation Plan (Due 9-27)
 
 You should come to class with a plan for how you will implement this project.
 
 * Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
-* Map how the key steps show up in the starter code file ``pf.py``.  You should be able to follow the logic in the ``scan_received`` function and understand what's going on there (or have identified questions).
+* Map how the key steps show up in the starter code file ``pf.py``.  You should be able to follow the logic in the ``run_loop`` function and understand what's going on there (or have identified questions).
+* If you have time, try to write some pseudocode for each of the parts of ``pf.py`` marked ``TODO``.
 * Propose a testing and implementation plan for your particle filter.  If you are still fuzzy on the details, at least try to map out your first step.
 * Decide if you want to use the starter code as is or if you want to reimplement any of it.
 
