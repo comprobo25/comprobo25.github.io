@@ -14,7 +14,7 @@
 
 ## Wrap-up on Particle Filter Theory Lecture
 
-[Notes from today on Particle Filter and the map->odom->base_link coordinate chain](day08_notes.pdf).
+[Notes from today on Particle Filter and the map->odom->base_footprint coordinate chain](day08_notes.pdf) (note: in these notes we use ``base_link`` instead of ``base_footprint`` --- you can think of them as the same thing)..
 
 ## The Particle Filter and Coordinate Frames
 
@@ -30,21 +30,21 @@ When we think of robot localization, there are usually two ways that robots esti
 
 When implementing our particle filter we'd like to get the best of both words: the fast and always available updates of odometry and the ability to cancel out accumulated motion estimation error using landmarks.  We can use the concept of coordinate frames in ROS as a way to accomplish this.
 
-### The map->odom->base_link chain
+### The map->odom->base_footprint chain
 
-In the warmup project we met the coordinate frames ``odom`` and ``base_link``.  Recall that ``base_link`` is a coordinate system that rides around with the Neato.  Also recall that ``odom`` is a coordinate system that initially starts aligned with ``base_link`` (meaning the robot starts at the origin of ``odom``) and the relationship between ``odom`` and ``base_link`` is constantly updated to encode the robot's estimate of its position relative to its starting location using its odometry. 
+In the warmup project we met the coordinate frames ``odom`` and ``base_footprint``.  Recall that ``base_footprint`` is a coordinate system that rides around with the Neato.  Also recall that ``odom`` is a coordinate system that initially starts aligned with ``base_footprint`` (meaning the robot starts at the origin of ``odom``) and the relationship between ``odom`` and ``base_footprint`` is constantly updated to encode the robot's estimate of its position relative to its starting location using its odometry. 
 
-In the particle filter project we are introducing an additional coordinate frame called ``map``.  The ``map`` frame is defined in terms of a map that our particle filter code is given.  Just as the transform between ``base_link`` and ``odom`` encodes the robot's position according to its odometry, we can think of our robot's position in the map as being encoded by the transform between ``base_link`` and ``map``.  Rather than thinking of two independent transforms: one from ``base_link`` to ``map`` and one from ``base_link`` to ``odom``, we will instead think of a chain of transforms that lead us from ``map`` to ``odom`` to ``base_link``.
+In the particle filter project we are introducing an additional coordinate frame called ``map``.  The ``map`` frame is defined in terms of a map that our particle filter code is given.  Just as the transform between ``base_footprint`` and ``odom`` encodes the robot's position according to its odometry, we can think of our robot's position in the map as being encoded by the transform between ``base_footprint`` and ``map``.  Rather than thinking of two independent transforms: one from ``base_footprint`` to ``map`` and one from ``base_footprint`` to ``odom``, we will instead think of a chain of transforms that lead us from ``map`` to ``odom`` and then to ``base_footprint``.
 
-By considering a chain of transforms, the transform from ``base_link`` to ``map`` can be computed by first applying the transform from ``base_link`` to ``odom`` and then applying the transform from ``odom`` to ``map``.  In this way, the position of the robot in the map is affected by our wheel odometry (which is good since it is fast and always available), but we can also affect the position by changing the ``map`` to ``odom`` transform.  Changing the map to ``odom`` transform is exactly what we are going to do with our particle filters! 
+By considering a chain of transforms, the transform from ``base_footprint`` to ``map`` can be computed by first applying the transform from ``base_footprint`` to ``odom`` and then applying the transform from ``odom`` to ``map``.  In this way, the position of the robot in the map is affected by our wheel odometry (which is good since it is fast and always available), but we can also affect the position by changing the ``map`` to ``odom`` transform.  Changing the map to ``odom`` transform is exactly what we are going to do with our particle filters! 
 
 ### Computing the ``map`` to ``odom`` transform
 
 In computing the ``map`` to ``odom`` transform, you will start with two things.
- 1. The pose of the robot in the ``odom`` frame (think of this as the ``base_link`` to ``odom`` transform) let's call this transform $$T_{base\_link \rightarrow odom}$$.
- 2. The pose of the robot in the ``map`` frame (e.g., as calculated by your particle filter).  We can think of the pose of the robot in the ``map`` frame as encoding the ``base_link`` to ``map`` transform, which we can call $$T_{base\_link \rightarrow map}$$.
+ 1. The pose of the robot in the ``odom`` frame (think of this as the ``base_footprint`` to ``odom`` transform) let's call this transform $$T_{base\_link \rightarrow odom}$$.
+ 2. The pose of the robot in the ``map`` frame (e.g., as calculated by your particle filter).  We can think of the pose of the robot in the ``map`` frame as encoding the ``base_footprint`` to ``map`` transform, which we can call $$T_{base\_link \rightarrow map}$$.
 
-If we think of these transforms as matrices (e.g., [homogeneous transformation matrices](http://planning.cs.uiuc.edu/node99.html) as we saw in [our second meeting](day02)), then the following must hold.
+If we think of these transforms as matrices (e.g., [homogeneous transformation matrices](https://www.mecharithm.com/homogenous-transformation-matrices-configurations-in-robotics/) as we saw in [our second meeting](day02)), then the following must hold.
 
 $$\begin{align}T_{odom \rightarrow map} T_{base\_link \rightarrow odom} &= T_{base\_link \rightarrow map} \\
 T_{odom \rightarrow map} &= T_{base\_link \rightarrow map}T_{base\_link \rightarrow odom}^{-1} \\
@@ -81,15 +81,6 @@ In a new terminal, run the code for today.
 $ rosrun in_class_day08 relative_motion.py
 ```
 
-## Some Additional Advice
-
-* Don't update your particles too often:  Typically you only want to update your particle set when the robot has moved a little bit or rotated a little bit.  This will prevent your filter from too aggressively incorporating sensor measurements from the current moment in time.
-* Start with the easier case: try to track your robot given that you have accurate knowledge of its initial position.  You should not be trying to localize a robot when you have no idea where it is in the map right off the bat (and it's okay if you never solve this case!).
-* **Visualizations:** Consider publishing weighted arrows to communicate the weights of the particles before resampling.
-
 ## Particle Filter Implementation Plan
 
 Join up with another team and compare your implementation plans.  Try to identify parts of these plans that are fuzzy.  This would be a great time to ask clarifying questions of the teaching team.
-
-## Discussion on Legal Issues in Robotics
-* Link to <a-no-proxy href="https://docs.google.com/presentation/d/1TLTV-q67P7cgTb09ho6nzXvyprFYKCk9ozQm4j6gHRU/edit#slide=id.g9dea26f006_1_5">Robots - Legal Landscape</a-no-proxy> slides. 
