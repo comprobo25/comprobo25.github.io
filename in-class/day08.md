@@ -1,20 +1,16 @@
 ## Coordinate Frames and Robot Localization
 
+* Special guest Eric Miller
 * Wrap-up on last week's lecture
-* Practical considerations for particle filters
 * Debrief on implementation plans for particle filter
-* Discussion on Legal Issues in Robotics
 
 ## For Next Time
-* Work on the <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1325">Robot Localization project</a-no-proxy>.
-* Discussion Readings: 
-  * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
-  * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
-  * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
+* We will be having our first Robots and Society discussion.  Please do this [assgnment in Canvas](https://olin.instructure.com/courses/460/assignments/7599).
+* Work on the <a-no-proxy href="../assignments/robot_localization">Robot Localization project</a-no-proxy>.
 
-## Wrap-up on Particle Filter Theory Lecture
+## The particle filter and Bayes'
 
-[Notes from today on Particle Filter and the map->odom->base_footprint coordinate chain](day08_notes.pdf) (note: in these notes we use ``base_link`` instead of ``base_footprint`` --- you can think of them as the same thing)..
+We'll do some quick connecting of dots between the material we went through last time on Bayes' theorem and the particle filter itself.
 
 ## The Particle Filter and Coordinate Frames
 
@@ -41,45 +37,27 @@ By considering a chain of transforms, the transform from ``base_footprint`` to `
 ### Computing the ``map`` to ``odom`` transform
 
 In computing the ``map`` to ``odom`` transform, you will start with two things.
- 1. The pose of the robot in the ``odom`` frame (think of this as the ``base_footprint`` to ``odom`` transform) let's call this transform $$T_{base\_link \rightarrow odom}$$.
- 2. The pose of the robot in the ``map`` frame (e.g., as calculated by your particle filter).  We can think of the pose of the robot in the ``map`` frame as encoding the ``base_footprint`` to ``map`` transform, which we can call $$T_{base\_link \rightarrow map}$$.
+ 1. The pose of the robot in the ``odom`` frame (think of this as the ``base_footprint`` to ``odom`` transform) let's call this transform $$T_{base\_footprint \rightarrow odom}$$.
+ 2. The pose of the robot in the ``map`` frame (e.g., as calculated by your particle filter).  We can think of the pose of the robot in the ``map`` frame as encoding the ``base_footprint`` to ``map`` transform, which we can call $$T_{base\_footprint \rightarrow map}$$.
 
 If we think of these transforms as matrices (e.g., [homogeneous transformation matrices](https://www.mecharithm.com/homogenous-transformation-matrices-configurations-in-robotics/) as we saw in [our second meeting](day02)), then the following must hold.
 
-$$\begin{align}T_{odom \rightarrow map} T_{base\_link \rightarrow odom} &= T_{base\_link \rightarrow map} \\
-T_{odom \rightarrow map} &= T_{base\_link \rightarrow map}T_{base\_link \rightarrow odom}^{-1} \\
-T_{odom \rightarrow map}^{-1} &= \left(T_{base\_link \rightarrow map}T_{base\_link \rightarrow odom}^{-1} \right)^{-1} \\
-T_{map \rightarrow odom} &= T_{base\_link \rightarrow odom} T_{base\_link \rightarrow map}^{-1}
+$$\begin{align}T_{odom \rightarrow map} T_{base\_footprint \rightarrow odom} &= T_{base\_footprint \rightarrow map} \\
+T_{odom \rightarrow map} &= T_{base\_footprint \rightarrow map}T_{base\_footprint \rightarrow odom}^{-1} \\
+T_{odom \rightarrow map}^{-1} &= \left(T_{base\_footprint \rightarrow map}T_{base\_footprint \rightarrow odom}^{-1} \right)^{-1} \\
+T_{map \rightarrow odom} &= T_{base\_footprint \rightarrow odom} T_{base\_footprint \rightarrow map}^{-1}
 \end{align}$$
 
 In this way we have shown how to take the pose of the robot in the odom and the map frame and use it to compute the ``map`` to ``odom`` transform.  Note that this is a computation that is available in ``helper_functions.py``, but we wanted to give you a sense of what's going on in the function ``fix_map_to_odom_transform`` in ``helper_functions.py``.
 
 Once the ``map`` to ``odom`` transform is computed, your particle filter should publish it repeatedly in your run loop in-case another node is waiting on the transform to become available.
 
-## Estimating Robot Motion Using ``tf2``
+## Particle Filter and Computing Relative Motion
+
+One part of your particle filter will involve [estimating the relative motion of your robot between two points in time as given by the robot's odometry](https://github.com/comprobo22/robot_localization/blob/47899d1d1745b56adace25fdff1d08a6bf253a8b/robot_localization/pf.py#L228).  Suppose you are given the robot's pose at time $$t_1$$ as a homogeneous transformation matrix (a 2x2 rotation matrix and a 2 dimensional translation vector) along with the robot's pose at time $$t_2$$, how might you compute your robot's change in pose between these two time points?  Think carefully about what coordinate system you want to work in and if you have time, provide an equation to comput the change in pose. 
 
 
-In the warmup project some of you used the ``/odom`` topic as a way to figure out the position of your robot (according to its odometry).  By now we know that the for our particle filter we'll need to apply our motor model to update our particles.  One way to imagine doing would be to listen to the ``cmd_vel`` to see what velocities are sent to the robot.  Instead of doing this we can use our robot's odometry as a baseline to apply our motor model update.
-
-In order to use our odometry to do our motor model update, we have two choices.  First, we could listen to the ``odom`` topic and try to track how much the position and orientation has changed since the last time we did an update.  Second, we can use ROS's ``tf2`` module as a way to compute how much the robot has moved between the last time we did an update and the current time.
-
-> Let's quickly discuss what some advantages might be of the using the ``tf`` module.
-
-We have put together some code to demonstrate how ``tf2`` can be used to estimate the relative motion of the robot between two points in time.  We'll leave it to you to decide when / if to go through the example.  To run the code, run the following command (make sure to do a ``git pull upstream master`` in the ``comprobo20`` directory to make sure you have this code).
-
-```bash
-$ roslaunch neato_gazebo neato_empty_world.launch
-```
-
-In a new terminal, run the following command and start the robot driving around (e.g., in a straight line by pressing ``i`` or in a donut by pressing ``u``).
-```bash
-$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-```
-
-In a new terminal, run the code for today.
-```bash
-$ rosrun in_class_day08 relative_motion.py
-```
+> Note: while probably not needed for dealing with 2D rotation and translation, I have found the ``PyKDL`` library to be a great way to convert between various representations of orientation and transformations (e.g., see [this section of the starter code](https://github.com/comprobo22/robot_localization/blob/47899d1d1745b56adace25fdff1d08a6bf253a8b/robot_localization/helper_functions.py#L121)).
 
 ## Particle Filter Implementation Plan
 
