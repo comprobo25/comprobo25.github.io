@@ -5,7 +5,7 @@
 * Debrief on implementation plans for particle filter
 
 ## For Next Time
-* We will be having our first Robots and Society discussion.  Please do this [assgnment in Canvas](https://olin.instructure.com/courses/460/assignments/7599).
+* We will be having our first Robots and Society discussion.  Please do this [assignment in Canvas](https://olin.instructure.com/courses/460/assignments/7599).
 * Work on the <a-no-proxy href="../assignments/robot_localization">Robot Localization project</a-no-proxy>.
 
 ## The particle filter and Bayes'
