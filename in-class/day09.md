@@ -1,8 +1,7 @@
 ## Laser Scan Likelihood Functions
 
 * Laser scan likelihood functions
-* Fair Access to Robotics Discussion
-* Project work time
+* Discussion on Robotics and Labor
 
 ## For Next Time
 
@@ -20,16 +19,27 @@ In order to make sense of the preceding equation, we will need some idea of how 
 
 ### General approach
 
+(we covered this last time, but I want to make sure this is crystal clear for everyone)
+
 For a particular laser scan, each particle prescribes a different mapping from the robot-centric coordinate of the laser scan to the coordinate system of the map.
 
 ![A visualization of a laser scan consisting of a corner-like feature being mapped to two particles.](day09images/scan_mapping.svg)
 
+> Exercise:
+>
+> Consider a particle at position $$(p_x, p_y)$$ and orientation $$p_{\theta}$$ in the map frame.  Suppose your receive a bunch of LIDAR data in polar coordinates: $$(r_1, \theta_1), (r_2, \theta_2), \ldots, (r_m, \theta_m)$$.  Considering, one of these measurements $$(r, \theta)$$, compute the coordinates of the detected obstacle in the map frame if you assume that the robot is at the position and orientation given by your particle.
+>
+
 From the figure above we can intuit that the laser scan data we received would probably be more likely if we were at particle 2's position than at particle 1's position, but how do we assign a number to this intuition?
 
 The typical approach to the problem is to think about the various causes that could explain a particular laser scan measurement.  Returning to the figure above, let's say that the scan distance returned for the reading directly in front of the robot is $$2$$ meters.  Here are some possible causes that could explain this observation.
+
 1. The laser scanner intersected an obstacle from our map (this is the ideal scenario as it would provide great information to help us localize the robot).  Probably there is some measurement noise as well.
+
 2. The laser scanner intersected an object that we didn't have have in our map (this is likely to confuse our attempts to localize).
+
 3. The laser scanner didn't return any data at a particular angle
+
 4. The laser scanner returned some sort of random measurement (it's hallucinating).
 
 When we determining the probability of our laser scan measurement we might consider what the probability of the data would be under each of these cases.  The overall likelihood could then be constructed as a weighted average of each of the probabilities.
@@ -64,10 +74,9 @@ You might imagine other things that would make sense (e.g., averaging the probab
 
 In [reality](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293)... there are some very ad hoc ways of combining measurements (we'll talk about why this makes some sense, but if someone can find a more principled justification, it would be great to hear it).  Also see this [pull request](https://github.com/ros-planning/navigation/pull/462) for some interesting discussion.
 
-## Fair Access to Robotics
+Update: in ROS2, it seems they still have the [old method](https://github.com/ros-planning/navigation2/blob/7be609e67c5b8f7e54b3bc2bcd53d41e652c494e/nav2_amcl/src/sensors/laser/likelihood_field_model.cpp#L124) but there is [another method](https://github.com/ros-planning/navigation2/blob/main/nav2_amcl/src/sensors/laser/likelihood_field_model_prob.cpp) that seems more principled (but may perform worse?).
 
-* Slides: <a-no-proxy href="https://docs.google.com/presentation/d/1dE-yPRNsVzmszORohqEZeSojh2N8vvCuAHm5JYNYIyY/edit#slide=id.p"> here </a-no-proxy>
-* As a reminder, these were our discussion readings: 
-  * <a-no-proxy href="https://obamawhitehouse.archives.gov/blog/2015/05/08/ensuring-students-have-equal-access-stem-courses"> Equal access to STEM</a-no-proxy>
-  * <a-no-proxy href="https://medium.com/@furhatrobotics/a-robot-in-every-classroom-furhats-vision-for-education-5b0ca8d56e0e"> Robots in classrooms </a-no-proxy>
-  * <a-no-proxy href="https://new.abb.com/news/detail/4431/abb-and-the-economist-launch-automation-readiness-index-global-ranking-for-robotics-and-artificial-intelligence"> Automation globally </a-no-proxy>
+## Robotics and Labor Discussion
+
+We'll use [these slides to guide our activities](https://docs.google.com/presentation/d/1MRGc64k5CNHl-VacvGJOwE7JFSw3APzHh6GmbJj0Dog/edit?usp=sharing).
+
