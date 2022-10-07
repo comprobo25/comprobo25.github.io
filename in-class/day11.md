@@ -76,6 +76,10 @@ Ben will show us how he is using the point cloud visualizer in rviz to debug his
 
 Charlie will show us how to use matplotlib to rapidly visualize the particle filter's weights.
 
+## What does the math we did have to do with the code we are writing???
+
+We'll go over this on the board.
+
 ## Extensions to the Particle Filter
 
 Based on your survey results the following extensions were most popular.
