@@ -8,39 +8,20 @@ toc_h_max: 3
 
 ---
 
-> NOTE: This has not been updated for this year (and in particular for ROS2). Currently, this is purely for informational purposes.
-
 ## Abstract
 
-
-
-So far, you have successfully programmed robot (simulators) using reactive control strategies and taken a deep dive into the robot localization problem. Next, you will be learning about computer vision and the role it plays in robotics.  In contrast to previous project, this time you will have a great deal of freedom to shape your project towards your interests and learning goals.
-
-
-
-
+So far, you have successfully programmed robots using reactive control strategies and taken a deep dive into the robot localization problem. Next, you will be learning about computer vision and the role it plays in robotics.  In contrast to previous project, this time you will have a great deal of freedom to shape your project towards your interests and learning goals.
 
 ## Learning Objectives
 
-
-
 * Self-directed learning of a new robotics algorithm.
-
 * Implementing a robotics system with minimal scaffolding.
-
-
 
 ## Teaming
 
+For this project, you can work with one other student.  If you want to have a team of three, please talk to me beforehand.
 
-
-For this project, you should work with one other student. Since we have an odd number of students in the class, one team of three will be allowed.
-
-
-
-Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/13o6yErKLus7AsdG2PzH4Fh0Jno3YeTf1mArE_2uPMQM/edit?usp=sharing">this Google Sheet</a-no-proxy> when you have a project team and Github repo.
-
-
+Please fill out <a href="https://docs.google.com/spreadsheets/d/1X5wElqAaHjzyouaRNKqrfrEibs92soRFYjgK3SHoywU/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
 
 ## Project Topic
 
@@ -80,9 +61,7 @@ Potential Algorithm Topics
 
 
 
-* One option is to continue to work with the Neato simulator in Gazebo, and use the simulated world for your computer vision project. You will probably want to build a more complex world (see instructions for doing that in the how-tos for the <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1305"> Neato Simulator </a-no-proxy>. While we've mostly been using simple shapes in previous projects, there are a lot of built-in models that you can use to build a world. 
-
-* We've been working with the Neato simulator, but there are many other simulators out there, which you're welcome to use in this project. You can find some of them here: <a-no-proxy href="https://olin.instructure.com/courses/143/modules/items/1306"> Other Robot Simulators</a-no-proxy>.
+* One option is to continue to work with the Neato.  In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
 
 * You may want to use an external dataset for your project. Here are some possible starting points. 
 
@@ -106,87 +85,48 @@ There are four deliverables for this project.
 
 
 
-### Project Proposal (due 10/26)
+### Project Proposal (due 10/14)
 
 
 
 At a minimum, please include the answers to the following questions.  You should include enough detail for us to be able to give you useful feedback.
 
-
-
 * Who is on your team?
-
 * What is the main idea of your project?
-
 * What are your learning goals for this project?
-
 * What algorithms or computer vision areas will you be exploring?
-
 * What components of the algorithm will you implement yourself, which will you use built-in code for?  Why?
-
 * What is your MVP?
-
 * What is a stretch goal?
-
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
-
 * What might you need from the teaching team for you to be successful on this project?
 
-
-
-### In-class Presentation / Demo (11/9)
-
-
+### In-class Presentation / Demo (10/28)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
 * Explain the goal of your project
-
 * At a high-level explain how your system works
-
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
-
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-
-
-
-
-### Code (Due 11-9)
-
-
+### Code (Due 10/28)
 
 * You should turn in your code and writeup via Github.  Please fork your repo from this one.
 
-
-
-### Writeup (Due 11-9)
-
-
+### Writeup (Due 10/28)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
-
-
-
-
 * What was the goal of your project?  Since everyone is doing a different project, you will have to spend some time setting this context.
-
 * How did you solve the problem (i.e., what methods / algorithms did you use and how do they work)?  As above, since not everyone will be familiar with the algorithms you have chosen, you will need to spend some time explaining what you did and how everything works.
-
 * Describe a design decision you had to make when working on your project and what you ultimately did (and why)? These design decisions could be particular choices for how you implemented some part of an algorithm or perhaps a decision regarding which of two external packages to use in your project.
-
 * What if any challenges did you face along the way?
-
 * What would you do to improve your project if you had more time?
-
 * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
 
 
-
 ## Resources and Potential Project Directions
-
-
 
 ### Resources
 
@@ -196,6 +136,8 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
   - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyocndyTDI2U2I1M1k/view?usp=sharing">Image Filtering</a-no-proxy>
   - <a-no-proxy href="https://sites.google.com/site/comprobofall14/home/labs/day-18?authuser=0">Object Recognition</a-no-proxy> (the instructions on running the code are out of date, but the ideas might help).
 * <a-no-proxy href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">Convert ROS image messages to OpenCV using CvBridge</a-no-proxy>
+
+* <a-no-proxy href="https://vision.in.tum.de/teaching/ss2013/visnav2013">Visual Navigation for Flying Robots</a-no-proxy> is a course on said topic.  The linked page includes lectures and even some bag files.
 
 * <a-no-proxy href="https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/">Connecting a webcam to ROS and OpenCV</a-no-proxy>
 
@@ -230,12 +172,8 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * <a-no-proxy href="https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html">Numpy Examples List</a-no-proxy>
 
 
+### Past projects to draw from
 
-### Previous Student Projects to Draw From
-
-
-
-* <a-no-proxy href="https://vision.in.tum.de/teaching/ss2013/visnav2013">Visual Navigation for Flying Robots</a-no-proxy> is a course on said topic.  The linked page includes lectures and even some bag files.
 
 * <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">Robot Learning Report out 2018</a-no-proxy>
 
