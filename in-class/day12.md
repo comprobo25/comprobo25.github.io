@@ -11,6 +11,11 @@ toc_sticky: true
 
 * [Computer Vision Project Proposal](../assignments/computer_vision_project#project-proposal-due-1014) Due
 
+## Localization Project Wrapup
+* Shareout (see link above)
+* Pluses and Deltas (with a few other teams around you)
+
+
 ## Computer Vision Project Kickoff
 
 The prompts for this are located in [this Google Slide Deck](https://docs.google.com/presentation/d/1wZTL5VmW8KZZDnkZo9OtoqIchtXmtfkR17pxO-VwTJc/edit?usp=sharing).
