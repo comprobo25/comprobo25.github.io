@@ -6,86 +6,42 @@ toc_sticky: true
 ## Today
 
 * Robots and society discussion
-* Meet with an instructor regarding your project proposal (one of us will drop into your breakout room)
+* Meet with an instructor regarding your project proposal (we'll be meeting with students throughout class)
 * Neato soccer
 
 ## For Next Time
 
 * Keep on working on the computer vision project
-* Reading materials for discussion on environmental impact of robotics:
-   * <a-no-proxy href="https://theconversation.com/if-robots-take-our-jobs-what-will-it-mean-for-climate-change-123507"> Reading #1: If robots take our jobs what will it mean for climate change? </a-no-proxy>
-   * <a-no-proxy href="https://www.iisd.org/articles/automation-environment"> Reading #2: What Effect Will Automation Have on the Environment? </a-no-proxy>
-   * Optional (but cool) readings: 
-      * <a-no-proxy href="https://time.com/4476614/self-driving-cars-environment/"> Self-Driving Cars </a-no-proxy> 
-      * <a-no-proxy href="https://exchange.telstra.com.au/skygrow-muru-d-climate-change/"> Tree Planting Robots </a-no-proxy> 
-      * <a-no-proxy href="https://www.youtube.com/watch?v=CVdPhUPO5YU"> Robots to Fighting Pollution </a-no-proxy>
+* Reading materials for discussion on robotics and bias:
 
-## Robots and Society Discussion
+## Neato Soccer
 
-James will be leading us through this. <a-no-proxy href="https://pasteapp.com/p/AeIAWd3HpVx?view=fhmWGJbzAMo"> Slides available here </a-no-proxy>.
+The starter code is in In the [``class_activities_and_resources`` repository](https://github.com/comprobo22/class_activities_and_resources).  If you've already cloned this repository, you will need to update it by doing a ``git pull`` (or the appropriate command if you forked the repo).
 
-## Neato Soccer (or maybe Neato Hockey)
-
-In the ``comprobo20`` repository, run ``$ git pull upstream master`` to get the starter code for today.
-
-The starter code for today will be in ``~/catkin_ws/src/comprobo20/neato_soccer/ball_tracker.py``.
-
-The starter code currently subscribes to an image topic, and then uses the ``cv_bridge`` package to convert from a ROS message to an OpenCV image.
+The starter code for Neato soccer is in the ``neato_soccer`` package in a node called ``ball_tracker.py``. The starter code currently subscribes to an image topic, and then uses the ``cv_bridge`` package to convert from a ROS message to an OpenCV image.
 
 An OpenCV image is just a numpy array.  If you are not familiar with numpy, you may want to check out these tutorials: numpy quickstart, numpy for matlab users.
 
-Before running the starter code, you'll have to startup the Neato simulator.  Since we are going to be using computer vision for tracking the ball, you'll want to make sure that you start the simulator with the camera option.
+Before running the starter code, you'll have to connect to the Neato.  Make sure you pick one of the Neatos with a camera attachment on it.
 
 ```bash
-$ roslaunch neato_gazebo neato_empty_world.launch load_camera:=true
+$ ros2 launch neato_node2 bringup.py host:=ip-of-your-neato
 ```
 
-You can visualize the images coming from the camera using ``rqt_gui``.  First launch ``rqt_gui``.
+You can visualize the images coming from the camera using ``rqt``.  First launch ``rqt``.
 
 ```bash
-$ rosrun rqt_gui rqt_gui
+$ rqt
 ```
 
 Next, go to ``Plugins``, then ``Visualization``, and then select ``Image View``.  Select ``/camera/image_raw`` from the drop down menu. If you did this properly you should see the following on your screen.
 
+TODO: replace
 ![Rqt_gui showing the Neato's simualated camera feed](day13images/rqtguiimage.png)
 
-
-Once you've started the simulator, you'll need to create some sort of ball or puck for your robot to kick around.  We've found that this will probably work a bit better as neato hockey than neato soccer, so we suggest you perform the following steps.
-
-<ol>
-<li>Start model editor by clicking <tt>edit</tt> and then <tt>model editor</tt>
-
-<img src="day13images/model_editor.png"/>
-</li>
-<li>Insrt a cylinder into the scene by clicking on the cylinder shape on the left menu.
-
-<img src="day13images/insert_cylinder.png"/>
-</li>
-<li>Start the link editor by right clicking on the cylinder and selecting <tt>link editor</tt>.</li>
-<li>Change the color by selecting a different material (<a href="http://wiki.ros.org/simulator_gazebo/Tutorials/ListOfMaterials">materials list</a>).
-
-<img src="day13images/change_color.png"/>
-</li>
-<li>
-Change the coefficient of friction (this will make it slide more like a hockey puck.
-<img src="day13images/change_friction.png"/>
-</li>
-
-<li>
-Save the model by first exiting the model editor, clicking <tt>save and exit</tt>, and then giving the model a name (it doesn't matter so much what it is).
-
-<img src="day13images/save.png"/>
-</li> 
-
-<li>Unpause the simulation to make sure you can still drive the robot around and you are getting new images.</li>
-</ol>
-
-Run the starter code and you'll see the dimensionality of the resultant ``numpy`` array as printed out in ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 600x600 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
+Run the starter code and you'll see the dimensionality of the resultant ``numpy`` array as printed out in ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 1024x768 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
 
 If all went well, you should see an image that looks like this pop up on the screen.
-
-![A visualization of a red cylinder as seen through a simulated camera sensor on a Neato robot](day13images/redcylinder.png)
 
 > Note: a very easy bug to introduce into your opencv code is to omit the call to the function ``cv2.waitKey(5)``.  This function gives the OpenCV GUI time to process some basic events (such as handling mouse clicks and showing windows).  If you remove this function from the code above, check out what happens.
 
