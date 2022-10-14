@@ -54,7 +54,7 @@ The color filtering image is produced sing the ``cv2.inRange`` function to creat
 
 This code could be placed inside of the ``process_image`` function at any point after the creation of ``self.cv_image``.  Notice that there are three pairs lower and upper bounds.  Each pair specifies the desired range for one of the color channels (remember, the order is blue, green, red).  If you are unfamiliar with the concept of a colorspaces, you might want to do some reading about them on Wikipedia.  Here is the link to the RGB color space (notice the different order of the color channels from OpenCV's BGR).  Another website that might be useful is this color picker widget that lets you see the connection between specific colors and their RGB values.
 
-Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``threshold_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
+Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``binary_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
 
 > Super, super, super important: any interaction with opencv's GUI functios (e.g., ``cv2.namedWindow`` or ``cv2.imshow``) should only be done inside of ``loop_wrapper`` or ``run_loop`` functions (this is because you want to interact with the UI of OpenCV from the same thread).
 
@@ -85,12 +85,12 @@ We then added the following mouse callback function.
 
 A second debugging tip is to use sliders to set your lower and upper bounds interactively.  In this page, I'll walk you through adding these using OpenCV, but you could also use ``dynamic_reconfigure`` (e.g., see this example from [Day 4 of class](https://github.com/comprobo22/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py)).
 
-To get started I'll walk you through making the lower bound for the red channel configurable using a slider.  First, add these lines of code to your ``__init__`` function.  This code will create a class attribute to hold the lower bound for the red channel, create the thresholded window, and add a slider bar that can be used to adjust the value for the lower bound of the red channel.
+To get started I'll walk you through making the lower bound for the red channel configurable using a slider.  First, add these lines of code to your ``loop_wrapper`` function.  This code will create a class attribute to hold the lower bound for the red channel, create the thresholded window, and add a slider bar that can be used to adjust the value for the lower bound of the red channel.
 
 ```python
-        cv2.namedWindow('threshold_image')
+        cv2.namedWindow('binary_image')
         self.red_lower_bound = 0
-        cv2.createTrackbar('red lower bound', 'threshold_image', self.red_lower_bound, 255, self.set_red_lower_bound)
+        cv2.createTrackbar('red lower bound', 'binary_window', self.red_lower_bound, 255, self.set_red_lower_bound)
 ```
 
 The last line of code registers a callback function to handle changes in the value of the slider (this is very similar to handling new messages from a ROS topic).  To create the call back, use the following code:
