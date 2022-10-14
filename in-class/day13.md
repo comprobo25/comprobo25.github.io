@@ -36,18 +36,18 @@ $ rqt
 
 Next, go to ``Plugins``, then ``Visualization``, and then select ``Image View``.  Select ``/camera/image_raw`` from the drop down menu. If you did this properly you should see the following on your screen.
 
-TODO: replace
+(Note: this is a screenshot from a simuated Neato.  For this year, you will see an actual image!)
 ![Rqt_gui showing the Neato's simualated camera feed](day13images/rqtguiimage.png)
 
 Run the starter code and you'll see the dimensionality of the resultant ``numpy`` array as printed out in ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 1024x768 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
 
-If all went well, you should see an image that looks like this pop up on the screen.
+If all went well, you should see an image pop up on the screen that shows both the raw camera feed as well as a color filtered version of the image.
 
 > Note: a very easy bug to introduce into your opencv code is to omit the call to the function ``cv2.waitKey(5)``.  This function gives the OpenCV GUI time to process some basic events (such as handling mouse clicks and showing windows).  If you remove this function from the code above, check out what happens.
 
 ### Do some filtering based on color
 
-Our first step towards finding the ball in the field of view of the camera (which will ultimately allow us to track it), is to filter the image based on the color values of the pixels.  We will be using the ``cv2.inRange`` function to create a binarized version of the image (meaning all pixels are either black or white) depending on whether they fall into the specified range.  As an example, here is some code that would create a binary image where white pixels would correspond to brighter pixels in the original image, and black pixels would correspond to darker ones
+The color filtering image is produced sing the ``cv2.inRange`` function to create a binarized version of the image (meaning all pixels are either black or white) depending on whether they fall into the specified range.  As an example, here is the code that creates a binary image where white pixels would correspond to brighter pixels in the original image, and black pixels would correspond to darker ones
 
 ```python
         self.binary_image = cv2.inRange(self.cv_image, (128,128,128), (255,255,255))
@@ -57,19 +57,19 @@ This code could be placed inside of the ``process_image`` function at any point 
 
 Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``threshold_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
 
-> Super, super, super important: don't put the ``cv2.namedWindow`` or ``cv2.imshow`` inside the ``process_image`` function.  You can only call OpenCV functions that display graphical objects from your main thread (follow the template of what's already there). 
+> Super, super, super important: any interaction with opencv's GUI functios (e.g., ``cv2.namedWindow`` or ``cv2.imshow``) should only be done inside of ``loop_wrapper`` or ``run_loop`` functions (this is because you want to interact with the UI of OpenCV from the same thread).
 
 > Also important: white pixels will correspond to pixels that are in the specified range and black pixels will correspond to pixels that are not in the range (it's easy to convince yourself that it is the other way around, so be careful).
 
 #### Debugging Tips
 
-The first thing that might be useful is to display the color values for a particular pixel in the image as you hover your mouse over it.  To accomplish this, add the following line to your ``__init__`` function.  This lines will register a callback function to handle mouse events (the callback function will be inserted next, see below).
+We have added some code so that when you hover over a particular pixel in the image we display the r, g, b values.  If you are curious, we do that using the following line of code.
 
 ```python
         cv2.setMouseCallback('video_window', self.process_mouse_event)
 ```
 
-Then add the callback function to process mouse events, use this code:
+We then added the following mouse callback function.
 
 ```python
     def process_mouse_event(self, event, x,y,flags,param):
@@ -82,19 +82,16 @@ Then add the callback function to process mouse events, use this code:
                     cv2.FONT_HERSHEY_SIMPLEX,
                     1,
                     (0,0,0))
-
-        cv2.imshow('image_info', image_info_window)
-        cv2.waitKey(5)
 ```
 
-A second debugging tip is to use sliders to set your lower and upper bounds interactively.  In this page, I'll walk you through adding these using OpenCV, but you could also use ``dynamic_reconfigure`` as well.
+A second debugging tip is to use sliders to set your lower and upper bounds interactively.  In this page, I'll walk you through adding these using OpenCV, but you could also use ``dynamic_reconfigure`` (e.g., see this example from [Day 4 of class](https://github.com/comprobo22/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py)).
 
 To get started I'll walk you through making the lower bound for the red channel configurable using a slider.  First, add these lines of code to your ``__init__`` function.  This code will create a class attribute to hold the lower bound for the red channel, create the thresholded window, and add a slider bar that can be used to adjust the value for the lower bound of the red channel.
 
 ```python
         cv2.namedWindow('threshold_image')
         self.red_lower_bound = 0
-        cv2.createTrackbar('red lower bound', 'threshold_image', 0, 255, self.set_red_lower_bound)
+        cv2.createTrackbar('red lower bound', 'threshold_image', self.red_lower_bound, 255, self.set_red_lower_bound)
 ```
 
 The last line of code registers a callback function to handle changes in the value of the slider (this is very similar to handling new messages from a ROS topic).  To create the call back, use the following code:
