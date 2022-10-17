@@ -11,15 +11,11 @@ toc_sticky: true
 ## For Next Time
 
 * Keep on working on the computer vision project
-* Readings for next Robots and Society discussion
-   * <a-no-proxy href="https://time.com/5876604/machines-jobs-coronavirus/"> Job Loss and Replacement </a-no-proxy>
-
-## Robots and Society Discussion
-* Environmental Impact of Robotics: <a-no-proxy href="https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/edit?usp=sharing">Slides here </a-no-proxy>
+* Readings for our class discussion Friday on [Ethical Issues in Computer Vision](https://olin.instructure.com/courses/460/assignments/7725).
 
 ## Keypoints, Descriptors, and Keypoint Matching
 
-The slides for today on keypoints and descriptors are available [here](https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/view).
+Use this link access the [slides for today on keypoints and descriptors](https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/view).
 
 We have included two scripts to help you get a better sense of how these things work in practice.  Try running the following demos (make sure you have pulled from upstream first).
 
