@@ -5,14 +5,12 @@ toc_sticky: true
 
 ## Today
 
-* Robots and society discussion
 * Meet with an instructor regarding your project proposal (we'll be meeting with students throughout class)
 * Neato soccer
 
 ## For Next Time
 
 * Keep on working on the computer vision project
-* Reading materials for discussion on robotics and bias:
 
 ## Neato Soccer
 
