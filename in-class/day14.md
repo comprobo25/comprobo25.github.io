@@ -15,9 +15,11 @@ toc_sticky: true
 
 ## Keypoints, Descriptors, and Keypoint Matching
 
-Use this link access the [slides for today on keypoints and descriptors](https://docs.google.com/presentation/d/1gbDIunTkPLSk01Maq3cgX6IXZmVbTU7qcbXtWda3TwM/view).
+Use this link access the [slides for today on keypoints and descriptors](https://docs.google.com/presentation/d/1s0RBcPkNVilFvJ-kNjx9kvbEtTkonfxrG7mqxaxuzok/edit?usp=sharing).
 
-We have included two scripts to help you get a better sense of how these things work in practice.  Try running the following demos (make sure you have pulled from upstream first).
+We have included three scripts to help you get a better sense of how these things work in practice.  Try running the following demos (make sure you have pulled from upstream first).
+
+TODO: tracker
 
 ```bash
 rosrun computer_vision_examples match_keypoints.py
