@@ -101,7 +101,7 @@ At a minimum, please include the answers to the following questions.  You should
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
 * What might you need from the teaching team for you to be successful on this project?
 
-### In-class Presentation / Demo (10/28)
+### In-class Presentation / Demo (11/1)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
@@ -110,11 +110,11 @@ We'd like each team to spend about 10 minutes presenting what they did for this 
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-### Code (Due 10/28)
+### Code (Due 11/1)
 
 * You should turn in your code and writeup via Github.  Please fork your repo from this one.
 
-### Writeup (Due 10/28)
+### Writeup (Due 11/1)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
