@@ -12,12 +12,9 @@ toc_sticky: true
 
 * Keep on working on the computer vision project
 
-## Robots and Society Discussion
-* Privacy: <a-no-proxy href="https://docs.google.com/presentation/d/1CL0kqJPcm2B2fiJgnZUSY_n4KXUTVVO3sLs50RWVQAg/edit#">Slides here </a-no-proxy>
-
 ## Pinhole Camera Model 
 
-The slides for today are available <a-no-proxy href="https://docs.google.com/presentation/d/183hd5G-3i9NTpyTNFtQoUngpGFm1sggn/edit#slide=id.p19)"> here </a-no-proxy>.  I won't be lecturing on these, but please go through them on your own if you'd like (and I'm here to answer questions).
+The slides for today are available [here](https://docs.google.com/presentation/d/183hd5G-3i9NTpyTNFtQoUngpGFm1sggn/edit?usp=sharing&ouid=111620635148858770174&rtpof=true&sd=true).  I won't be lecturing on these, but please go through them on your own if you'd like (and I'm here to answer questions).
 
 ## Camera Calibration Resources
 
