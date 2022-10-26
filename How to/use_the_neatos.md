@@ -359,3 +359,85 @@ Once the simulator is running, you can setup ``rviz2`` the same way you would fo
 ## Shutting Down the Simulator
 
 Go to the terminal where you launched Gazebo and hit control-c.
+
+## Support for Multiple Neatos (beta)
+
+We now have beta support for connecting to two (or more) Neatos simultaneously.  There are a few rough edges right now, but all of the functionality is available.  To get started, you'll have to switch your ``neato_packages`` branch over to ``multiagent_support`` and then rebuild ``ros2_ws`` (eventually we will merge the ``multiagent_support`` branch into ``main``).
+
+```bash
+$ cd ~/ros2_ws/src/neato_packages
+$ git pull
+$ git checkout multiagent_support
+$ cd ~/ros2_ws
+$ colcon build --symlink-install
+$ source install/setup.bash
+```
+
+You can now connect to the Neatos using the following commands (making these shorter is one of the rough edges we are hoping to smooth out).  
+
+Launch the first Neato.
+
+```bash
+$ ros2 launch neato_node2 bringup_multi.py host:=neato1-ip-address-here robot_name:=robot1 udp_video_port:=5002 udp_sensor_port:=7777 gscam_config:='udpsrc port=5002 ! application/x-rtp, payload=96 ! rtpjitterbuffer ! rtph264depay ! avdec_h264  ! videoconvert'
+```
+
+Launch the second Neato (if you are interested in generalizing this to more than 2 Neatos, take note of the things that change between the invocations other than the Neato IP addresses, e.g., the port numbers).
+
+Launch the second Neato.
+
+```bash
+$ ros2 launch neato_node2 bringup_multi.py host:=neato2-ip-address-here robot_name:=robot2 udp_video_port:=5003 udp_sensor_port:=7778 gscam_config:='udpsrc port=5003 ! application/x-rtp, payload=96 ! rtpjitterbuffer ! rtph264depay ! avdec_h264  ! videoconvert'
+```
+
+If all goes well, you should see the following topics.
+
+```bash
+$ ros2 topic list
+/robot1/accel
+/robot1/bump
+/robot1/camera/camera_info
+/robot1/camera/image_raw
+/robot1/camera/image_raw/compressed
+/robot1/camera/image_raw/compressedDepth
+/robot1/camera/image_raw/theora
+/robot1/cmd_vel
+/robot1/joint_states
+/robot1/odom
+/robot1/projected_stable_scan
+/robot1/robot_description
+/robot1/scan
+/robot1/stable_scan
+/robot2/accel
+/robot2/bump
+/robot2/camera/camera_info
+/robot2/camera/image_raw
+/robot2/camera/image_raw/compressed
+/robot2/camera/image_raw/compressedDepth
+/robot2/camera/image_raw/theora
+/robot2/cmd_vel
+/robot2/joint_states
+/robot2/odom
+/robot2/projected_stable_scan
+/robot2/robot_description
+/robot2/scan
+/robot2/stable_scan
+/rosout
+/tf
+/tf_static
+```
+
+Notice how the topics are now nested underneath the namespace ``robot1`` and ``robot2``.
+
+To test this out, you can launch the teleop node with a remapping rule to have it control either the first or second robot.
+
+Control the first robot:
+```bash
+$  ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot1/cmd_vel
+```
+
+Control the second robot:
+```bash
+$  ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot2/cmd_vel
+```
+
+The coordinate frames have also been modified.  For example, ``odom`` becomes ``robot1odom`` or ``robot2odom`` depending on which robot you are working with.
