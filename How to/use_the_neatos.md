@@ -441,3 +441,7 @@ $  ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot2/cmd_vel
 ```
 
 The coordinate frames have also been modified.  For example, ``odom`` becomes ``robot1odom`` or ``robot2odom`` depending on which robot you are working with.
+
+A simple test to do with multiple Neatos is to drive them in unison!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nVWZCXykC80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
