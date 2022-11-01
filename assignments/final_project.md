@@ -6,9 +6,6 @@ toc_h_max: 2
 
 ---
 
-> NOTE: This has not been updated for this year (and in particular for ROS2). Currently, this is purely for informational purposes.
-
-
 ## Abstract
 
 For the remainder of the course you will be working on an open-ended robotics project.  The playing field is wide open.  This is your chance to be creative and ambitious, and we are very excited to see what you all will be able to accomplish!
@@ -28,7 +25,7 @@ For the remainder of the course you will be working on an open-ended robotics pr
 
 For this project, group size is mostly up to you, but groups should be <= 4 people. 
 
-Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/1lrsnWct_XSDgMKvif8hor67Z10y-owDm22yY90TEFrM/edit#gid=0">this Google Sheet</a-no-proxy> when you have a project team and Github repo.
+Please fill out <a href="https://docs.google.com/spreadsheets/d/1KUn8TDJL1vfsOg6cTW8TSMfl-qX-T58PW-M6P4u52U8/edit?usp=sharing">this Google Sheet</a-no-proxy> when you have a project team and Github repo.
 
 
 ## Project Topic Considerations
@@ -37,22 +34,23 @@ Please fill out <a-no-proxy href="https://docs.google.com/spreadsheets/d/1lrsnWc
 
 * Your project must involve a robot or a plausible applications to robotics!  While this seems obvious, one place where things get fuzzy is if your project is primarily about developing a system that has multiple uses (one of which is for robotics).  In this case, you will be expected to either deploy your module on a robot or at least discuss the suitability of your module for us on a robot.
 * The project should involve (in part) learning about a robotics algorithm.  This is not only about creating a great demo, you must structure your project so that you learn about a robotics algorithm in a project-based manner.
-* The project work should primarily be computational. We expect that, given the virtual nature of the class, projects will be in simulation. Please talk to us ASAP if you want to do things in hardware (e.g. on a physical NEATO, or on another robot)
+* The project work should primarily be computationally focused (i.e., not involve a majority of work in the electrical or mechanical domain).  That said, there are opportunities to bring in new hardware (as some teams did for the CV project)
+* Your project should lend itself to a discussion of the potential societal implications of the work as well as a statement of about responsible use of your technology (see later in the document)..
 
 ### Opportunities
 
-* You may consider utilizing additional hardware (likely simulated) above and beyond the standard Neato platform. This could come in the form of multiple robots, a new sensor (e.g., Gazebo allows you to add-on additional sensors to a robot), a new actuator (e.g. a (simulated) robotic arm), or a new robot simulator (the <a-no-proxy href="../How to/simulators">simulators page</a-no-proxy> on the website has information on some choices here).
-* This might be a good chance to go into depth with Gazebo.  You might be interested in learning what it would take to go from a physical model of a robot (e.g., in SolidWorks) to an actual 3D simulation with sensors and actuators in Gazebo.
+* You may consider utilizing additional hardware above and beyond the standard Neato platform. This could come in the form of multiple robots (we now have support for multiple Neatos), a new sensor (e.g., the Oak-D lite from the Turtlebot or an iPhone-based ARKit setup), or a new actuator (e.g. some students added a pen to a Neato a few years ago).
 * You might explore computer vision more broadly, e.g. explore new algorithms or look at computer vision with a focus on learning.  There is a good amount of content from previous CompRobo classes to scaffold this.
 * You can take a deep dive into a particular class of algorithms. You might also be able to release your own ROS package for an algorithm that currently does not have a widely available open source implementation.
 
 ### Challenges
+
 * With more ambitious projects comes more risk. You should have contingency plans in place if your initial plan proves infeasible.
 * Longer projects are tougher to undertake from a scheduling / project management standpoint. You will have to be diligent about continually making progress on the project despite the longer duration of the assignment.
 
 ### Past Projects
 
-* Previous <a-no-proxy href="https://docs.google.com/spreadsheets/d/1XjON7LWyQjXAk7IBdTdnCo1j_3hpqZbktN03I10F2Lc/edit?usp=sharing">project repositories</a-no-proxy> can be found in this Google Sheet.
+* Previous <a-no-proxy href="https://docs.google.com/spreadsheets/d/1XjON7LWyQjXAk7IBdTdnCo1j_3hpqZbktN03I10F2Lc/edit?usp=sharing">project repositories</a-no-proxy> can be found in this Google Sheet (sorry, I didn't update this from 2020).
 
 ## Deliverables Overview and Assessment Breakdown
 
@@ -61,14 +59,16 @@ Your deliverables should be turned findable through your Github repository (even
 * Project Proposal (5%)
 * Poster / demo (5%)
 * Code (functionality, design, documentation) (30%)
-* Website.  Includes project stories (or blog) and project documentation.  (10% for blog entry 1, 10% for blog entry 2, 10% for the final project documentation).
-* YOGA (30%)
+* Website.  Includes project stories (or blog) and project documentation.  (7.5% for blog entry 1, 7.5% for blog entry 2, 10% for the final project documentation).
+* Ethics and Responsible Use Statement (15%)
+* YOGA (20%)
 
-## Project Proposal (due 9 am on Monday 11/16).
+## Project Proposal (due 1pm am on Tuesday 11/8).
 
 * Who is on the team?
 * What is the main idea of the project?
 * Provide some motivation for your project. Why does your team want to pursue this? What possible applications does the project have? Given our discussions in class, are there possible implications for society? (Note: We're not expecting a lengthy analysis, but some ideas and consideration.)
+* How are you planning to engage with the Ethics and Responsible Use Statement part of the project?
 * What topics will you explore and what will you generate?  What frameworks / algorithms are you planning to explore (do your best to answer this even if things are still fuzzy)?  What is your MVP?  What are your stretch goals?
 * Outline a rough timeline for the major milestones of your project.  This will mainly be useful to refer back to as we move through the project.
 * What do you view as the biggest risks to you being successful on this project?
@@ -81,6 +81,12 @@ On Thursday, December 17th from 2-5pm, we will have our final event.  You should
 ## Code (functionality, design, documentation)
 
 This is pretty self-explanatory.  We will be using the same rubric as for the other assignments.
+
+## Ethics Statement and Responsbile Use
+
+Please prepare a Statement of Potential Negative Societal Impacts based on [the framing from CVPR](https://cvpr2022.thecvf.com/ethics-guidelines).  We expect that Section 3 won't apply to everyone, but if it does, please address that as well.
+
+Please prepare a statement of principles of responsible use of the technique or system you create.  What sorts of contexts or applications would license your work to be used within?  What guidelines or restrictions would you place on its use in these situations?
 
 ## Website and Blog
 
@@ -98,24 +104,24 @@ Project story 1 will be due by class on Monday 11/23. Submit <a-no-proxy href="h
 
 Project story 2 will be due by class on Wednesday 12/9. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1671" > here </a-no-proxy>.
 
-## Project Documentation (Due at the final event Thurs Dec 17th)
+## Project Documentation (Due at the end of finals period Thurs Dec 19th)
 
 At the end of the project your website should include the following information:
 
 * Show it off:  Describe the main idea of your project.  What does your system do?  Why would you want to do this? What are the major components to your system and how do they fit together?  Hopefully you will have some cool videos to put in the website by this point. 
 * System architecture: In detail describe each component of your project.  Make sure to touch upon both code structure as well as algorithms.  
 
-Submit your website link on canvas <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1672" > here </a-no-proxy>
+Submit your website link on canvas.
 
 ## YOGA
 
-### Phase 0 (identification of learning goals) Due Monday 11/16
+### Phase 0 (identification of learning goals) Due Monday 11/8
 
 As you finalize your project topic and proposal, you will write up a list of three goals that you wish to achieve during the final project. Your goals can take any form as long as they represent your own interests and learning objectives for the project. Since you know, generally, what project you will be working on, these goals should be reasonably well-aligned with your choice of project.  You may consider building on the course learning objectives, or you can strike out in a new direction. Make sure that each goal is written in a clear manner: the goal should be something that you can achieve, and you need to be able to know if/when/how well you have achieved it.
 
-The phase 0 submission should be a list of three goals, each one about a paragraph (3­-4 sentences).  To make things easier later on, please use a Google doc to write down your goals.  Explain what you hope to do or learn, how you will achieve it, and (briefly!) why it is important.  Please submit to canvas <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1669" > here </a-no-proxy>. We recommend using a google doc and providing the link. You will be engaging with your assignment during class, so make sure to have it with you.
+The phase 0 submission should be a list of three goals, each one about a paragraph (3­-4 sentences).  To make things easier later on, please use a Google doc to write down your goals.  Explain what you hope to do or learn, how you will achieve it, and (briefly!) why it is important.  Please submit to canvas.  You will engage with these learning goals in-class on 11/8, so please have them with you at that time.
 
-### Phase 1 (mid-project revision and assessment plan) Due Monday Nov 30.
+### Phase 1 (mid-project revision and assessment plan) Due Friday 11/18.
 
 Now that you are a little more than halfway through the project, you may wish to revise your goals. This is your chance to change your goals for whatever reason, or perhaps to clarify them. If you are happy with the goals that you identified, then you can leave them unchanged. 
 
@@ -124,8 +130,9 @@ Whether you revise them or not, at this time you should add an assessment plan f
 
 To turn in this assignment you should include all of the content from you phase 0 goals, any revisions to your goals, and your assessment plan. Please submit your assignment <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1670" > here </a-no-proxy>.
 
-### Phase 2 (reflection and assessment) Due by final event Thursday 12/17
-At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send us a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end.  
+### Phase 2 (reflection and assessment) Due by end of finals 12/17
+
+At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send us a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end. 
 
 For phase 2, please turn in a document that has a section devoted to each learning goal. Submit your document <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1671" > here </a-no-proxy>. The section should have the following subsections:
 
