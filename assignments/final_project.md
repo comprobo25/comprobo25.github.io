@@ -25,7 +25,7 @@ For the remainder of the course you will be working on an open-ended robotics pr
 
 For this project, group size is mostly up to you, but groups should be <= 4 people. 
 
-Please fill out <a href="https://docs.google.com/spreadsheets/d/1KUn8TDJL1vfsOg6cTW8TSMfl-qX-T58PW-M6P4u52U8/edit?usp=sharing">this Google Sheet</a-no-proxy> when you have a project team and Github repo.
+Please fill out <a href="https://docs.google.com/spreadsheets/d/1KUn8TDJL1vfsOg6cTW8TSMfl-qX-T58PW-M6P4u52U8/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
 
 
 ## Project Topic Considerations
@@ -76,7 +76,7 @@ Your deliverables should be turned findable through your Github repository (even
 
 ## Teaser Slide / Demo [TODO: we will update with more logistics]
 
-On Thursday, December 17th from 2-5pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out in your breakout room and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive poster and participate in the final event.
+On Wednesday, December 14th from 4-6pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out in your breakout room and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive poster and participate in the final event.
 
 ## Code (functionality, design, documentation)
 
@@ -100,11 +100,11 @@ Twice during the project you will be writing a blog entry that tells a story abo
 * We had a particularly nasty bug.  We tried lots of methods to debug the problem.  Finally we figured it out!  We learned lessons for the future.  Hurray!  (fill in with a detailed description of what the bug was and what methods you tried).
 * We have implemented a key feature.  It works really well!  Here's how we did it.  Hurray!
 
-Project story 1 will be due by class on Monday 11/23. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1673" > here </a-no-proxy>.
+Project story 1 will be due by class on Tuesday 11/23. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1673" > here </a-no-proxy>.
 
 Project story 2 will be due by class on Wednesday 12/9. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1671" > here </a-no-proxy>.
 
-## Project Documentation (Due at the end of finals period Thurs Dec 19th)
+## Project Documentation (Due at the end of finals period Monday Dec 19th)
 
 At the end of the project your website should include the following information:
 
@@ -115,7 +115,7 @@ Submit your website link on canvas.
 
 ## YOGA
 
-### Phase 0 (identification of learning goals) Due Monday 11/8
+### Phase 0 (identification of learning goals) Due Tuesday 11/8
 
 As you finalize your project topic and proposal, you will write up a list of three goals that you wish to achieve during the final project. Your goals can take any form as long as they represent your own interests and learning objectives for the project. Since you know, generally, what project you will be working on, these goals should be reasonably well-aligned with your choice of project.  You may consider building on the course learning objectives, or you can strike out in a new direction. Make sure that each goal is written in a clear manner: the goal should be something that you can achieve, and you need to be able to know if/when/how well you have achieved it.
 
@@ -128,9 +128,9 @@ Now that you are a little more than halfway through the project, you may wish to
 Whether you revise them or not, at this time you should add an assessment plan for each goal. How will you (and we) know that you achieved each goal, and how will we know how well you achieved it? The assessment plan does not need to be a tangible assignment; you are welcome to propose a reflection or any other strategy.  
 
 
-To turn in this assignment you should include all of the content from you phase 0 goals, any revisions to your goals, and your assessment plan. Please submit your assignment <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1670" > here </a-no-proxy>.
+To turn in this assignment you should include all of the content from you phase 0 goals, any revisions to your goals, and your assessment plan. Please submit your assignment on Canvas.
 
-### Phase 2 (reflection and assessment) Due by end of finals 12/17
+### Phase 2 (reflection and assessment) Due by the end of finals period 12/19
 
 At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send us a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end. 
 
