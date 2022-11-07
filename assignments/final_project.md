@@ -100,10 +100,9 @@ Twice during the project you will be writing a blog entry that tells a story abo
 * We had a particularly nasty bug.  We tried lots of methods to debug the problem.  Finally we figured it out!  We learned lessons for the future.  Hurray!  (fill in with a detailed description of what the bug was and what methods you tried).
 * We have implemented a key feature.  It works really well!  Here's how we did it.  Hurray!
 
-Project story 1 will be due by class on Tuesday 11/23. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1673" > here </a-no-proxy>.
+Project story 1 will be due by class on Tuesday 11/29. Submit on Canvas.
 
-Project story 2 will be due by class on Wednesday 12/9. Submit <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1671" > here </a-no-proxy>.
-
+Project story 2 will be due by class on Friday 12/9. Submit on Canvas.
 ## Project Documentation (Due at the end of finals period Monday Dec 19th)
 
 At the end of the project your website should include the following information:
