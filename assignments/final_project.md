@@ -120,7 +120,7 @@ As you finalize your project topic and proposal, you will write up a list of thr
 
 The phase 0 submission should be a list of three goals, each one about a paragraph (3­-4 sentences).  To make things easier later on, please use a Google doc to write down your goals.  Explain what you hope to do or learn, how you will achieve it, and (briefly!) why it is important.  Please submit to canvas.  You will engage with these learning goals in-class on 11/8, so please have them with you at that time.
 
-### Phase 1 (mid-project revision and assessment plan) Due Friday 11/18.
+### Phase 1 (mid-project revision and assessment plan) Due Friday 12/2.
 
 Now that you are a little more than halfway through the project, you may wish to revise your goals. This is your chance to change your goals for whatever reason, or perhaps to clarify them. If you are happy with the goals that you identified, then you can leave them unchanged. 
 
