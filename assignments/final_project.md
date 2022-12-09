@@ -76,7 +76,7 @@ Your deliverables should be turned findable through your Github repository (even
 
 ## Teaser Slide / Demo [TODO: we will update with more logistics]
 
-On Wednesday, December 14th from 4-6pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out in your breakout room and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive poster and participate in the final event.
+On Wednesday, December 14th from 4-6pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out by your teaser slide (either displayed on a laptop or printed as a poster) and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive teaser slide and participate in the final event.
 
 ## Code (functionality, design, documentation)
 
@@ -133,7 +133,7 @@ To turn in this assignment you should include all of the content from you phase 
 
 At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send us a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end. 
 
-For phase 2, please turn in a document that has a section devoted to each learning goal. Submit your document <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1671" > here </a-no-proxy>. The section should have the following subsections:
+For phase 2, please turn in a document that has a section devoted to each learning goal. Submit your document on Canvas. The section should have the following subsections:
 
 * What is the goal? [This should already be there from previous phases]
 * What is the assessment plan? [This should already be there from previous phases]
