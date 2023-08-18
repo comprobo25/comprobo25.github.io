@@ -3,28 +3,27 @@ title: "Setup Your Computing Environment"
 toc_sticky: true
 ---
 
-The teaching team will be using ROS2 Foxy with Ubuntu 20.04 and we recommend you do the same.  We have also tested the instructions below on the following platforms: Ubuntu 20.04 with ROS2 Galactic (after replacing each instance of ``foxy`` with ``galactic`` in the instructions) and Ubuntu 22.04 with ROS2 Humble (after replacing each instance of ``foxy`` with ``humble`` in the instructions).  If you have a good reason to use either of these two alternate configurations, you will probably be safe to do so, but we won't be testing these alternate configurations thoroughly.
+The teaching team will be using ROS2 Humble with Ubuntu 22.04 and we recommend you do the same.  We have not yet tested against the latest ROS2 release, Iron.
 
 > While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS1), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
 
 
 ## Setting up a Dual Boot
 
-In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 20.04 on it.  Itzgeek has [a nice walkthrough of how to do this](https://www.itzgeek.com/post/how-to-install-ubuntu-20-04-alongside-with-windows-10-in-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have some of these thumb drives available for you to use, so look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
+In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 22.04 on it.  How2Shout has [a nice walkthrough of how to do this](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have some of these thumb drives available for you to use, so look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
 
 <p align="center">
 <img width="60%" src="../website_graphics/usb_sticks.jpg" alt="a photo of a rack of robots with an arrow pointing to the USB thumb drives"/>
 </p>
 
 A few quick notes:
-* If you have Ubuntu 18.04, you can upgrade it 20.04 using [these instructions](https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today).
-* When going through the Itzgeek tutorial, we recommend following the instructions under "Create a bootable USB disk".
+* If you have an older version of Ubuntu, you may be able to upgrade it.  That said, I have seen cases where this upgrade process has yielded a broken installation.  Here are some [instructions on upgrading](https://ubuntu.com/server/docs/upgrade-introduction) from the Ubuntu website.
 * When installing Ubuntu you will likely need to **shrink your Windows patition** to make room for Ubuntu.  The Itzgeek instructions show how you can use the Disk Management utility in Windows to accomplish this.  Unfortunately, sometimes you will not be able to shrink your volume in this way.  If this happens to you, we recommend using the Ubuntu installer to shrink your Windows partition.  If you continue to have issues, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html).  If that still doesn't work, send us an e-mail (see below).
 * You should probably reserve about 50 GB of space for Ubuntu.
 * When installing Ubuntu, you should select the options to **Download updates** and **Install third-party software**.
 
 
-*Once you have a freshly installed copy of Ubuntu 20.04, perform the following steps.*
+*Once you have a freshly installed copy of Ubuntu 22.04, perform the following steps.*
 
 ### Troubleshooting
 
@@ -65,23 +64,23 @@ Wed Sep 16 13:53:41 2020
 +-----------------------------------------------------------------------------+
 ```
 
-If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux) to install it.
+If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04) to install it.
 
-## Install ROS Foxy
+## Install ROS Humble
 
-Follow [this tutorial](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-foxy-desktop`` rather than ``ros-foxy-ros-base``).
+Follow [this tutorial](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-humble-desktop`` rather than ``ros-humble-ros-base``).
 
-In addition to the ``ros-foxy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
+In addition to the ``ros-humble-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
 
 {% include codeHeader.html %}
 ```bash
-sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
-	ros-foxy-nav2-bringup \
-	ros-foxy-navigation2 \
-	ros-foxy-camera-info-manager \
-	ros-foxy-cartographer-ros \
-	ros-foxy-cartographer \
-	ros-foxy-gscam \
+sudo apt-get update && sudo apt-get install -y ros-humble-gazebo-ros-pkgs \
+	ros-humble-nav2-bringup \
+	ros-humble-navigation2 \
+	ros-humble-camera-info-manager \
+	ros-humble-cartographer-ros \
+	ros-humble-cartographer \
+	ros-humble-gscam \
 	python3-colcon-common-extensions \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
@@ -99,18 +98,28 @@ sudo apt-get update && sudo apt-get install -y ros-foxy-gazebo-ros-pkgs \
 
 ## Setup your Workspace with the Neato Packages
 
-Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
+Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
 
 {% include codeHeader.html %}
 ```bash
-source /opt/ros/foxy/setup.bash
+source /opt/ros/humble/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/comprobo22/neato_packages
+git clone https://github.com/comprobo23/neato_packages
 cd ~/ros2_ws
 colcon build --symlink-install
 source ~/ros2_ws/install/setup.bash
 ```
+
+You will probably get a warning when you execute this build that looks like this.
+```bash
+--- stderr: neato_node2                   
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+```
+
+This warning is benign and is [know to the ROS2 developers](https://github.com/ros2/ros2/issues/1362).
 
 Edit your ``~/.bashrc`` file so that the your workspace is correctly loaded whenever you start a new terminal (note: if you are using a different shell, you may have to adjust this).
 
