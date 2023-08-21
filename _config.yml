@@ -1,7 +1,7 @@
 remote_theme: qeacourse/minimal-mistakes@copybutton
 logo: "https://qeacourse.github.io/RoboNinjaWarrior/website_graphics/olinlogo.png"
 title: "CompRobo at Olin College"
-repository: comprobo20/comprobo20.github.io
+repository: comprobo23/comprobo23.github.io
 highlighter: rouge
 
 plugins:
