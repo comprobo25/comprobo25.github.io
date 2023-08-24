@@ -13,19 +13,13 @@ Once you've purchased [the relevant hardware](shopping_list) and completed the s
 
 Starting with a MicroSD card 8GB in size, perform the following steps.
 
-1. Flash the SD card with the [Raspbian 2015-05-07 Wheezy image](https://downloads.raspberrypi.org/raspbian/images/raspbian-2015-05-07/2015-05-05-raspbian-wheezy.zip).  For instructions on how to do this, consult the [Raspberry Pi documentation](https://www.raspberrypi.org/documentation/installation/installing-images/).  Please note that we are using an old version of Raspbian due to dependencies on older hardware (this is not optimal as this version of Raspbian is no longer supported).  If you get this working with a newer version of Raspbian, we'd like to hear about it.
-2. Startup the Pi and login (e.g., by attaching a keyboard, monitor, and a power supply).  If you haven't used a Pi before, the default user name is "pi" and password is "raspberry".
-3. With the Pi connected to the Internet (the Ethernet works best for this as it requires minimal configuration in most network setups), run the following commands and follow the instructions given in the prompts.  This sequence of commands will also setup your Wifi.  The script assumes that you purchased the Wifi adapter we suggested in the shopping list and that your Wifi network can be joined with a WPA key.
-
+1. Flash the SD card with the latest version of Raspberry Pi OS Lite (the lite version will make sure you don't have a desktop environment installed).  The [Raspberry Pi Imager](https://www.raspberrypi.com/software/) software makes doing this a breeze.
+2. Startup the Pi and go through the initial configuration.  You'll configure your keyboad and setup your login.  To use our software unmodified, choose pi as your login.
+3. Login to your raspberry pi and execute the following commands.
 {% highlight console %}
-$ cd ~
-$ git clone https://github.com/qeacourse/RoboNinjaWarriorRaspberryPi
-$ cd RoboNinjaWarriorRaspberryPi
-$ sudo su
-$ ./setup.sh
-$ shutdown -h now
+$ source <(curl http://occam.olin.edu/install_pi)
 {% endhighlight %}
 
 ## Operating Instructions
 
-Once you've created the image, use one of the micro USB cables to connect the Neato to the Raspberry Pi.  Use the other micro USB cable to connect the USB battery pack to the power input port of the the Pi.  If you have a Raspberry Pi Cam module, you can connect that as well (currently, only rev 1.3 will work).  All other operating instructions are given in [the student-facing guide on operating the robots](use_the_neatos).
+Once you've created the image, use one of the micro USB cables to connect the Neato to the Raspberry Pi.  Use the other micro USB cable to connect the USB battery pack to the power input port of the the Pi.  If you have a Raspberry Pi Cam module, you can connect that as well (currently, we dont' support the new rev 3 camera).  All other operating instructions are given in [the student-facing guide on operating the robots](use_the_neatos).

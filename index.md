@@ -127,23 +127,6 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 ## In-class Activities
 
 * [Day 1](in-class/day01)
-* [Day 2](in-class/day02)
-* [Day 3](in-class/day03)
-* [Day 4](in-class/day04)
-* [Day 5](in-class/day05)
-* [Day 6](in-class/day06)
-* [Day 7](in-class/day07)
-* [Day 8](in-class/day08)
-* [Day 9](in-class/day09)
-* [Day 10](in-class/day10)
-* [Day 11](in-class/day11)
-* [Day 12](in-class/day12)
-* [Day 13](in-class/day13)
-* [Day 14](in-class/day14)
-* [Day 15](in-class/day15)
-* [Day 16](in-class/day16)
-* [Day 17](in-class/day17)
-* [Day 20](in-class/day20)
 
 ## Conclusion and Learning More
 

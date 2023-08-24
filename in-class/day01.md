@@ -1,5 +1,5 @@
 ---
-title: "Day 1: Welcome and Braitenberg Vehicles"
+title: "Day 1: Welcome!!!"
 toc_sticky: true
 ---
 
