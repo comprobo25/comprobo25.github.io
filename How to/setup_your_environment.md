@@ -10,10 +10,10 @@ The teaching team will be using ROS2 Humble with Ubuntu 22.04 and we recommend y
 
 ## Setting up a Dual Boot
 
-In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 22.04 on it.  How2Shout has [a nice walkthrough of how to do this](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We will have one of these thumb drives available for you to use, so look for it just outside of MAC126.  Here is a photo that shows the location of the thumb drive!
+In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 22.04 on it.  How2Shout has [a nice walkthrough of how to do this](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We have several of these thumb drives available for you to use, so look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
 
 <p align="center">
-<img width="60%" src="../website_graphics/usb_sticks.jpg" alt="a photo of a rack of robots with an arrow pointing to the USB thumb drive"/>
+<img width="60%" src="../website_graphics/usb_sticks.jpg" alt="a photo of a rack of robots with an arrow pointing to the USB thumb drives"/>
 </p>
 
 A few quick notes:
@@ -68,7 +68,7 @@ If you see a message that ``nvidia-smi`` is not installed, you can use [these in
 
 ## Install ROS Humble
 
-Follow [this tutorial](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-humble-desktop`` rather than ``ros-humble-ros-base``).
+Follow [this tutorial](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) (make sure to install ``ros-humble-desktop`` rather than ``ros-humble-ros-base``).  Once you get to the section ``Environment Setup'', you can come back to this document (don't follow those instructions in the tutorial).
 
 In addition to the ``ros-humble-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
 
@@ -81,6 +81,7 @@ sudo apt-get update && sudo apt-get install -y ros-humble-gazebo-ros-pkgs \
 	ros-humble-cartographer-ros \
 	ros-humble-cartographer \
 	ros-humble-gscam \
+	git \
 	python3-colcon-common-extensions \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
@@ -155,3 +156,8 @@ Make sure ``hping3`` is setup so you can stream video from the robot.
 sudo setcap cap_net_raw+ep /usr/sbin/hping3
 ```
 
+## Working with VSCode (Optional)
+
+I'll be using VSCode when doing demonstrations in class.  If you'd like to use VSCode, you use the [VSCode Ubuntu install instructions](https://code.visualstudio.com/docs/setup/linux) and then go through the steps in [Configure VS Code for ROS2](https://www.youtube.com/watch?v=hf76VY0a5Fk).
+
+There is documentation on running [ROS code in the debugger under VSCode](https://github.com/ms-iot/vscode-ros/blob/master/doc/debug-support.md), but you might have better luck using the default Python debugging profile.
