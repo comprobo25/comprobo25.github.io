@@ -21,11 +21,11 @@ You should be spending about fifteen hours on this assignment, so if you find yo
 
 ### Project Showcase
 
-If you want to show off something you did, add it to <a href="https://docs.google.com/presentation/d/1_SABLdSkRCSIiGdeSzA1GLxTibsrnH17f7yEim6r5jg/edit?usp=sharing">this shared Google Slides presentation</a>.
+If you want to show off something you did, add it to <a href="https://docs.google.com/presentation/d/1zDFkOsO9zwGbvW_Cppq5NwiwWXBKT_F3Vgvbxg6CJjE/edit?usp=sharing">this shared Google Slides presentation</a>.
 
 ### Logistics
 
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. Make sure to let us know where your Github repository for this project lives using <a href="https://docs.google.com/spreadsheets/d/1YPOrE5YQifSyyLDvNjOASzr1Vz8OuhaP2H9WKN5Y27s/edit?usp=sharing">this Google sheet</a>.
+You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via Github. Make sure to let us know where your Github repository for this project lives using <a href="https://docs.google.com/spreadsheets/d/1GVQKuUmJcSNnrZbc2xpuwmqKCz8v0Xqtb_0Q_jVPxh0/edit?usp=sharing">this Google sheet</a>.
 
 We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.  
 
@@ -48,7 +48,7 @@ Halfway through the project you should have the following parts of the project d
 
 ### Code Structure
 
-Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
+Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
 
 Here are the files you will likely generate as part of this assignment.
 
@@ -133,7 +133,7 @@ You do not have to turn in anything for this part.
 
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
-[Create a bag file](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html) of you driving the Neato or the simulated Neato.  You can do this by using the ``ros2 bag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (you can adjust this as needed for other robots).
+[Create a bag file](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html) of you driving the Neato or the simulated Neato.  You can do this by using the ``ros2 bag record`` command.  Be careful not to record the ``/camera/image_raw`` topic or the topics under ``/gazebo/`` (as they will make your bag file get large very fast). In order to avoid recording these high data rate topics, you can use the following command (you can adjust this as needed for other robots).
 
 ```bash
 $ ros2 bag record /accel /bump /odom /cmd_vel /scan /stable_scan /projected_stable_scan /tf /tf_static -o bag-file-name
@@ -318,7 +318,7 @@ Using the rosbag instructions from earlier, record a demo of your finite-state c
 
 ### Use the ROS Actions Framework
 
-The ROS actions framework is a great tool for managing behaviors like the ones you implemented in this project.  Consider reading [the actions documentation](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html), and incorporating it into your code.
+The ROS actions framework is a great tool for managing behaviors like the ones you implemented in this project.  Consider reading [the actions documentation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html), and incorporating it into your code.
 
 ### Improve the Odometry
 

@@ -11,11 +11,11 @@ Once you've purchased [the relevant hardware](shopping_list) and completed the s
 
 ## Configuring the Raspberry Pi Image
 
-Starting with a MicroSD card 8GB in size, perform the following steps.
+Starting with a MicroSD card with at least 8GB capacity, perform the following steps.
 
 1. Flash the SD card with the latest version of Raspberry Pi OS Lite (the lite version will make sure you don't have a desktop environment installed).  The [Raspberry Pi Imager](https://www.raspberrypi.com/software/) software makes doing this a breeze.
-2. Startup the Pi and go through the initial configuration.  You'll configure your keyboad and setup your login.  To use our software unmodified, choose pi as your login.
-3. Login to your raspberry pi and execute the following commands.
+2. Startup the Pi and go through the initial configuration.  You'll configure your keyboad and setup your login.  To use our software unmodified, choose ``pi`` as your login.
+3. Login to your raspberry pi and execute the following command.  You'll be prompted to enter your Wifi SSID and password.
 {% highlight console %}
 $ source <(curl http://occam.olin.edu/install_pi)
 {% endhighlight %}

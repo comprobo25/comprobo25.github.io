@@ -131,7 +131,7 @@ echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 
 ### Set your ROS_DOMAIN_ID
 
-ROS2 uses the environment variable ``ROS_DOMAIN_ID`` as a way to isolate various ROS2 environments.  Each student will have their own ROS_DOMAIN_ID assigned to them so there is no cross talk between computers.  [Check on Canvas for your domain ID](https://olin.instructure.com/courses/460/pages/ros2-domain-ids) and add it to your ``.bashrc`` file using the following command.
+ROS2 uses the environment variable ``ROS_DOMAIN_ID`` as a way to isolate various ROS2 environments.  Each student will have their own ROS_DOMAIN_ID assigned to them so there is no cross talk between computers.  [Check on Canvas for your domain ID](https://olin.instructure.com/courses/592/pages/ros2-domain-ids) and add it to your ``.bashrc`` file using the following command.
 
 {% include codeHeader.html %}
 ```bash
