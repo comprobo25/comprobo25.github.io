@@ -4,7 +4,7 @@ title: "Sample Code for CompRobo"
 
 ## Solutions for In-Class Activities
 
-Coming soon! (typically within a day of seeing the activity in class)
+These will be pushed to the [Github repo for in-class activities](https://github.com/comprobo23/class_activities_and_resources).
 
 ## Miscellaneous Sample Code
 
