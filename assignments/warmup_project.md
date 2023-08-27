@@ -13,7 +13,7 @@ You should be spending about fifteen hours on this assignment, so if you find yo
 ### Learning Goals
 
 * Gain familiarity with ROS
-* Brush up on Python
+* Brush up on Python (or, if you are interested, [learn some C++](#working-in-c))
 * Learn strategies for debugging robotics programs
 * Learn about processing data from the laser range finder and bump sensors
 * Learn to program robot behaviors using reactive control strategies
@@ -48,7 +48,7 @@ Halfway through the project you should have the following parts of the project d
 
 ### Code Structure
 
-Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
+Your code should be placed in a ROS package called *warmup_project*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating a package](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).  If you are working purely in Python (the vast majority of the class), follow the instructions for ``Python``.  If you are working entirely in C++ or a combination of C++ and Python, follow the instructions for ``CMake``.  To mix C++ and Python, you will have to jump through a few hoops.  See this [guide on combining C++ and Python in one ROS2 Package](https://roboticsbackend.com/ros2-package-for-both-python-and-cpp-nodes/).
 
 Here are the files you will likely generate as part of this assignment.
 
@@ -315,6 +315,10 @@ Using the rosbag instructions from earlier, record a demo of your finite-state c
 
 
 ## Other Ideas for Going Beyond
+
+### Working in C++
+
+If you are interested in learning C++ through this course, you can do so in this assignment.  If you choose to work in this fashion, please come talk to me beforehand so we can discuss how we might change the assignment requirements to accommodate your learning of this new material.  Please be aware that the C++ pathway is very much a work in progress, and you will be blazing the trail (with my help and with help from other classmates working in this way).  To get started, I have started [a page to serve as a place where we can put useful resources for learning C++ in general and using it for ROS2 in particular](../How to/learn_cpp).
 
 ### Use the ROS Actions Framework
 
