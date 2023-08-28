@@ -10,7 +10,7 @@ The teaching team will be using ROS2 Humble with Ubuntu 22.04 and we recommend y
 
 ## Setting up a Dual Boot
 
-In order to setup your computer for dual boot, you need to create a bootable USB thumb drive with Ubuntu 22.04 on it.  How2Shout has [a nice walkthrough of how to do this](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/) that will allow you to take an existing USB thumb drive and convert it into a bootable installer.  We have several of these thumb drives available for you to use, so look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
+How2Shout has [a nice walkthrough of setting up your computer to dual boot](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/).  Before doing this you'll want to have a Ubuntu 22.04 installer handy.  You can get an installer using the [How2Shout guide on creating a bootable installer](https://linux.how2shout.com/how-to-create-ubuntu-22-04-bootable-usb-drive-on-windows) or by using one of the thumb drives we have created for you to use.  Look for them just outside of MAC126.  Here is a photo that shows the location of the thumb drives!
 
 <p align="center">
 <img width="60%" src="../website_graphics/usb_sticks.jpg" alt="a photo of a rack of robots with an arrow pointing to the USB thumb drives"/>
