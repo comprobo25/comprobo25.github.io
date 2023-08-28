@@ -11,9 +11,10 @@ toc_sticky: true
 
 ## For Next Time
 
-* Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSei4PVd0RimqK2WrQOY3KJDUqfZ6dPUnpHqptM6EG2wJYdrBw/viewform">the course entrance survey</a>
+* Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvv16auLVEDHHwtvIBheFtiSybpBdqN55cRrUSBAQu_p-HRA/viewform">the course entrance survey</a>
 * <a href="../How to/setup_your_environment">Get your environment setup</a>
-* Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html), [Understanding services](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html))
+* Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html))
+* Start thinking about [course learning goals](https://olin.instructure.com/courses/592/assignments/10137)
 
 * [Connect a Neato and run the Neato simulator](../How to/use_the_neatos).  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
 * (probably won't have time for this before next class) Start working on <a href="../assignments/warmup_project">the Warmup Project</a>
