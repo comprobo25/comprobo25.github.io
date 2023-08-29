@@ -18,7 +18,7 @@ How2Shout has [a nice walkthrough of setting up your computer to dual boot](http
 
 A few quick notes:
 * If you have an older version of Ubuntu, you may be able to upgrade it.  That said, I have seen cases where this upgrade process has yielded a broken installation.  Here are some [instructions on upgrading](https://ubuntu.com/server/docs/upgrade-introduction) from the Ubuntu website.
-* When installing Ubuntu you will likely need to **shrink your Windows patition** to make room for Ubuntu.  The Itzgeek instructions show how you can use the Disk Management utility in Windows to accomplish this.  Unfortunately, sometimes you will not be able to shrink your volume in this way.  If this happens to you, we recommend using the Ubuntu installer to shrink your Windows partition.  If you continue to have issues, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html).  If that still doesn't work, send us an e-mail (see below).
+* When installing Ubuntu you will likely need to **shrink your Windows patition** to make room for Ubuntu.  Sometimes this can be accomplished through the Ubuntu installer, if you are not able to shring your partition in this way, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html).  If that still doesn't work, send us an e-mail (see below).
 * You should probably reserve about 50 GB of space for Ubuntu.
 * When installing Ubuntu, you should select the options to **Download updates** and **Install third-party software**.
 
