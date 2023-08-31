@@ -4,18 +4,14 @@ toc_sticky: true
 ---
 
 ## Today
-* [More Course Details](https://docs.google.com/presentation/d/19B0FtOo1qZqo8MxAklRULqWMokjUoezlMTHTjRkoUYE/edit?usp=sharing)
+* [More Course Details](https://docs.google.com/presentation/d/1GNKZft9K8El-Fa7mfzyOZ7l036KAhCNJzNK4WZGQ_x4/edit?usp=sharing)
 * Coordinate frames and coordinate transformations
 * Questions / clarifications on basic ROS concepts
 * Writing our first ROS node
 
 ## For Next Time
-* Find a partner for the Warmup Project and get started (there is an intermediate deliverable due on class 4).
+* Find a partner for the Warmup Project and get started (there is an intermediate deliverable that we would like you to aim for by class 4).
 
-
-## What is a Robot Anyway?
-
-While Neatos, Spot and manufacturing robotic arms seem to clearly be "robots", the line is not always so clear - e.g. when we talk about things like washing machines, Alexa, RC cars. We like to think about robots as something that has a "brain" (processor), one or more sensors, and one or more actuators. By this definition, yes, machine machines and Alexa, are in fact robots. However, <a-no-proxy href="https://roboticsandautomationnews.com/2020/05/11/opinion-what-is-a-robot-and-how-does-it-differ-from-a-machine/32192/">there are also (less academic) definitions</a-no-proxy> and shades of gray when what exactly is a robot. 
 
 ## Coordinate Frames and Coordinate Transforms in Robotics
 
@@ -78,7 +74,7 @@ Before Starting
 
 ## Coding Exercises
 
-Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo22/class_activities_and_resources).
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo22/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you create one now to hold the various ROS packages you will be creating.  Alternatively, you can fork the repo ``class_activities_and_resources``.
 
 ### Creating a ROS package
 
