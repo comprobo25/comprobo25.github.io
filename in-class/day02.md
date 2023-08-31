@@ -153,7 +153,7 @@ my_header = Header(stamp=self.get_clock().now().to_msg(), frame_id="odom")
 my_point = Point(x=1.0, y=2.0, z=0.0)
 ```
 
-Now that we have the two fields required for our PointStamped message, we can go ahead and create it.
+Now that we have the two fields required for our PointStamped message, we can create it.
 
 ```python
 my_point_stamped = PointStamped(header=my_header, point=my_point)
