@@ -74,7 +74,7 @@ Before Starting
 
 ## Coding Exercises
 
-Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo22/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you create one now to hold the various ROS packages you will be creating.  Alternatively, you can fork the repo ``class_activities_and_resources``.
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo23/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you create one now to hold the various ROS packages you will be creating.  Alternatively, you can fork the repo ``class_activities_and_resources``.
 
 ### Creating a ROS package
 
