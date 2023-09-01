@@ -12,6 +12,10 @@ toc_sticky: true
 * Find a partner for the Warmup Project and get started (there is an intermediate deliverable that we would like you to aim for by class 4).
 
 
+## Thinking about learning goals
+
+I'll go over the YOGA assignment and give you all a chance to think through some of your learning goals for this course.  Once you've taken about 5 minutes to think on your own, get together with 3-4 people around you and share your initial thoughts about learning goals.
+
 ## Coding Exercises
 
 Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo23/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you fork the repo ``class_activities_and_resources``.
@@ -105,7 +109,7 @@ You will now have to use ``ctrl-c`` to stop execution of your node.  You should 
 
 ### Creating ROS Messages in a Python Program (walkthrough in MAC126)
 
-ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/in_class_day02/in_class_day02/send_message.py`` and add the following line to the top of our ``send_message.py`` script.
+ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/class_activities_and_resources/in_class_day02/in_class_day02/send_message.py`` and add the following line to the top of our ``send_message.py`` script.
 
 ```python
 from geometry_msgs.msg import PointStamped
@@ -196,11 +200,11 @@ Try running your code!
 How can you be sure whether it is working or not?  Try visualizing the results in rviz.  What steps are needed to make this work?
 
 
-### Callbacks (walkthrough in main room)
+### Callbacks
 
 [Callback functions](https://en.wikipedia.org/wiki/Callback_(computer_programming)) are a fundamental concept in ROS (and we just used them to create our timer whether we knew it or not).  Specifically, they are used to process incoming messages inside a ROS node once we have subscribed to a particular topic.  Let's write some code to listen to the message we created in the previous step.
 
-First, let's create a new ROS node in a file called ``receive_message.py`` in the directory ``~/ros2_ws/src/in_class_day02/in_class_day02``.  We'll start out with the standard first line as well as a header comment, import the correct message type, and initialize our ROS node:
+First, let's create a new ROS node in a file called ``receive_message.py`` in the directory ``~/ros2_ws/src/class_activities_and_resources/in_class_day02/in_class_day02``.  We'll start out with the standard first line as well as a header comment, import the correct message type, and initialize our ROS node:
 
 ```python
 """ Investigate receiving a message using a callback function """
@@ -222,13 +226,13 @@ if __name__ == '__main__':
     main()
 ```
 
-In order to run the node, we have to add it to our ``setup.py`` file, which is located in ``~/ros2_ws/src/in_class_day02/setup.py``.  We can modify the file as follows.
+In order to run the node, we have to add it to our ``setup.py`` file, which is located in ``~/ros2_ws/src/class_activities_and_resources/in_class_day02/setup.py``.  We can modify the file as follows.
 
 ```python
     entry_points={
         'console_scripts': [
             'send_message = in_class_day02_solutions.send_message:main',
-            'receive_message = in_class_day02_solutions.receive_message:main'
+            'receive_message = in_class_day02_solutions.receive_message:main',
         ],
     },
 ```
