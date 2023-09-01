@@ -14,21 +14,21 @@ toc_sticky: true
 
 ## Coding Exercises
 
-Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo23/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you create one now to hold the various ROS packages you will be creating.  Alternatively, you can fork the repo ``class_activities_and_resources``.
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo23/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you fork the repo ``class_activities_and_resources``.
 
 ### Creating a ROS package
 
 Let's write our code today in a package called ``in_class_day02``
 
 ```bash
-$ cd ~/ros2_ws/src
+$ cd ~/ros2_ws/src/class_acitivities_and_resources
 $ ros2 pkg create in_class_day02 --build-type ament_python --node-name send_message --dependencies rclpy std_msgs geometry_msgs sensor_msgs
 ```
 
 This command will create the package for you and also a node called ``send_message`` that should be located in the following location:
 
 ```bash
-~/ros2_ws/src/in_class_day02/in_class_day02/send_message.py
+~/ros2_ws/src/class_activities_and_resources/in_class_day02/in_class_day02/send_message.py
 ```
 
 By default it will look like this:
