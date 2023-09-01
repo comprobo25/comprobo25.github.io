@@ -21,7 +21,7 @@ Sample solutions for these exercises can be found in the [class_activities_and_r
 Let's write our code today in a package called ``in_class_day02``
 
 ```bash
-$ cd ~/ros2_ws/src/class_acitivities_and_resources
+$ cd ~/ros2_ws/src/class_activities_and_resources
 $ ros2 pkg create in_class_day02 --build-type ament_python --node-name send_message --dependencies rclpy std_msgs geometry_msgs sensor_msgs
 ```
 
