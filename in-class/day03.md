@@ -16,18 +16,6 @@ toc_sticky: true
 > Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
 
 
-Before we begin, let's standardize our notation.
-
-$$\begin{eqnarray}
-\mathbf{p}_{/W} &\triangleq& \mbox{a point, p, expressed in coordinate system W} \\
-\mathbf{p}_{/N} &\triangleq& \mbox{a point, p, expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N} \\
-\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N} \\
-\hat{\mathbf{r}}_{W\rightarrow N} &\triangleq& \mbox{a vector pointing from the origin of W to the origin of N} \\
-\mathbf{r}_{W \rightarrow N / N} &\triangleq& \hat{\mathbf{r}}_{W\rightarrow N}\mbox{ expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N/W} &\triangleq& \hat{\mathbf{i}}_{N}\mbox{ expressed in coordinate system W} \\
-\hat{\mathbf{j}}_{N/W} &\triangleq& \hat{\mathbf{j}}_{N}\mbox{ expressed in coordinate system W}\end{eqnarray}$$
-
 Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw a picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).
 
 In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system ``world``, in many situations this will be cumbersome.
@@ -61,6 +49,21 @@ There are multiple ways to tackle this one.  We think it's easiest to do algebra
 
 **Exercise:**  Determine the coordinates of a point located at (x, y) in the ``world`` coordinate system in the ``base_link`` coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
 
+### Possible Notation
+
+Sometimes, it can be helpful to lead with notation.  Other times, it can obfuscate and confuse.  Here is some notation that I have used to reason about and deifne coordinate systems.  If this is useful to you, please go for it!
+
+$$\begin{eqnarray}
+\mathbf{p}_{/W} &\triangleq& \mbox{a point, p, expressed in coordinate system W} \\
+\mathbf{p}_{/N} &\triangleq& \mbox{a point, p, expressed in coordinate system N} \\
+\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N} \\
+\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N} \\
+\hat{\mathbf{r}}_{W\rightarrow N} &\triangleq& \mbox{a vector pointing from the origin of W to the origin of N} \\
+\mathbf{r}_{W \rightarrow N / N} &\triangleq& \hat{\mathbf{r}}_{W\rightarrow N}\mbox{ expressed in coordinate system N} \\
+\hat{\mathbf{i}}_{N/W} &\triangleq& \hat{\mathbf{i}}_{N}\mbox{ expressed in coordinate system W} \\
+\hat{\mathbf{j}}_{N/W} &\triangleq& \hat{\mathbf{j}}_{N}\mbox{ expressed in coordinate system W}\end{eqnarray}$$
+
+
 
 ### Static Versus Dynamic Coordinate Transformations
 
@@ -82,7 +85,7 @@ Today, we will be building on the basic ROS nodes we wrote last time to create a
 
 ### Creating our First Sensory Motor Loop
 
-> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo22/class_activities_and_resources) repository under ``in_class_day_03_solutions``.
+> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo23/class_activities_and_resources) repository under ``in_class_day_03_solutions``.
 
 Find another person in the class to work with.  If you're paired up for the warmup project, consider working with that person.  In pairs, you will begin to explore the idea of a sensory-motor loop on the Neatos.
 
