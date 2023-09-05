@@ -81,7 +81,7 @@ From the "plugins" menu, select the "visualization" submenu, and then choose "im
 This documentation gives the high-level purpose of each topic.  To explore more, you can use the following command to get more information.
 
 ```bash
-$ ros2 topic info topic-name
+$ ros2 topic info /topic-name
 ```
 
 If you want to know more about a message you see in the output of ``ros2 topic info`` you can use the following command.
@@ -282,13 +282,13 @@ The Gazebo website has a [guide on using Gazebo's graphical interface](http://ga
 This documentation gives the high-level purpose of each topic.  To explore more, you can use the following command to get more information.
 
 ```bash
-$ ros2 topic info topic-name
+$ ros2 topic info /topic-name
 ```
 
 If you want to know more about a message you see in the output of ``rostopic`` you can use the following command (note that the ``-r`` flag can be ommitted if you want to the mesasges nested within the top-level message to be expanded).
 
 ```bash
-$ ros2 interfaces show msg_package_name/msg/MessageName
+$ ros2 interface show msg_package_name/msg/MessageName
 ```
 
 ### ``accel``
