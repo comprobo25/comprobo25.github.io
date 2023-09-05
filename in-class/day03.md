@@ -11,6 +11,21 @@ toc_sticky: true
 ## For Next Time
 * Work on the <a-no-proxy href="../assignments/warmup_project">the Warmup Project</a-no-proxy>.  There is an intermediate checkpoint due on Tuesday (class meeting 4).
 
+## Follow-up From Last Time
+
+### Uniqueness of Node Names
+
+ROS2 Nodes should have unique names.  There is support for changing the node name when launching a node (or specifying a unique name in the launch file).  If you start two nodes with the same name, the system will allow you to do it, but you will get a warning that things might go bad (ominous!).  For example, I can set the name of the teleop node as follows.
+
+```bash
+$ ros2 run teleop_twist_keyboard teleop_twist_keyboard __name:=my_name
+```
+
+Youc an verify this worked, by running the following command.
+```bash
+$ ros2 node list
+```
+
 ## Coordinate Frames and Coordinate Transforms in Robotics
 
 > Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
@@ -85,14 +100,14 @@ Today, we will be building on the basic ROS nodes we wrote last time to create a
 
 ### Creating our First Sensory Motor Loop
 
-> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo23/class_activities_and_resources) repository under ``in_class_day_03_solutions``.
+> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo23/class_activities_and_resources) repository under ``in_class_day03_solutions``. (if you are looking for the C++ solutions, look in the directory ``in_class_day03_cpp_solutions``).
 
 Find another person in the class to work with.  If you're paired up for the warmup project, consider working with that person.  In pairs, you will begin to explore the idea of a sensory-motor loop on the Neatos.
 
 In order to get started, create a package for the code that you will be writing today.  As with all ROS packages in your workspace, it must be inside of your ``ros2_ws/src `` folder.  Besides this requirement, you are free to put the package anywhere.
 
 ```bash
-$ cd ~/ros2_ws/src
+$ cd ~/ros2_ws/src/class_activities_and_resources
 $ ros2 pkg create in_class_day03 --build-type ament_python --node-name emergency_stop --dependencies rclpy std_msgs geometry_msgs sensor_msgs neato2_interfaces
 ```
 
@@ -102,7 +117,7 @@ Hints:
 
 * You will need some way to share data between the callback functions that process the Neato's sensory data and your main robot program.  Assuming you are using classes to define your ROS nodes, you can create a class attribute to share this data between class methods..
 
-If you execute the ``ros2 pkg create`` command given above, there should already be a file called ``emergency_stop.py`` created for you.  If you placed your package in ``ros2_ws/src`` it will be located at: ``~/ros2_ws/src/in_class_day03/in_class_day03/emergency_stop.py``.
+If you execute the ``ros2 pkg create`` command given above, there should already be a file called ``emergency_stop.py`` created for you.  If you placed your package in ``ros2_ws/src`` it will be located at: ``~/ros2_ws/src/class_activities_and_resources/in_class_day03/in_class_day03/emergency_stop.py``.
 
 ### Using the Laser Range Finder
 
