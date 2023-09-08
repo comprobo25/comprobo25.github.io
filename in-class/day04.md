@@ -34,6 +34,13 @@ So far we've programmed robots to choose between a small set of motor commands (
 
 To get the idea, program the Neato to adjust its position so that it is a specified (target) distance away from the wall immediately in front of it.  The Neato's forward velocity should be proportional to the error between the target distance and its current distance.  Note: it's tricky to get the sign correct, run through a few mental simulations to make sure the robot will move in the right direction.
 
+> Note: if you haven't done this yet, you should add an upstream remote to the ``comprobo23/class_activities_and_resources`` repo.
+```bash
+$ cd ~/ros2_ws/src/class_activities_and_resources
+$ git remote add upstream https://github.com/comprobo23/class_activities_and_resources
+$ git pull upstream main
+```
+
 To get started, create a package somewhere in your ``ros2_ws/src`` directory for your work.  In this example, I'm going to put the package directly in ``ros2_ws/src/class_activities_and_resources`` directory
 
 ```bash
