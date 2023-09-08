@@ -44,7 +44,7 @@ $ source ~/ros2_ws/install/setup.bash
 
 You may have noticed at this point that ROS requires a certain amount of [boiler-plate code](https://en.wikipedia.org/wiki/Boilerplate_code) to get going.  If you are having trouble with this, or would rather skip ahead to the proportional control part, you can grab some starter code for [``wall_approach.py``](../Sample_code/wall_approach_starter).
 
-A helpful tool for visualizing the results of your program is to use the <a-no-proxy href="https://docs.ros.org/en/foxy/Concepts/About-RQt.html">rqt</a-no-proxy>.  First, start up the GUI:
+A helpful tool for visualizing the results of your program is to use the <a-no-proxy href="https://docs.ros.org/en/humble/Concepts/About-RQt.html">rqt</a-no-proxy>.  First, start up the GUI:
 
 ```bash
 $ rqt
@@ -54,9 +54,11 @@ Next, go to ``plugins -> visualization -> plot``.
 
 Type ``/scan/ranges[0]`` (if that is in fact what you used to calculate forward distance) into the topic field and then hit +.  You can use this link to find [a sample solution to this task](https://github.com/comprobo23/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach.py).
 
+> Tip: to change the zoom in the plot, hold down the right mouse button and drag up or down on the body of the plot (it's pretty finicky, but it does work).
+
 ### Getting Fancy
 
-To make your node more configurable, use (see the [ros param command line tools documentation](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html) for more information) and [code for accessing parameters in Python documentation from The Robotics BackEnd](https://roboticsbackend.com/rclpy-params-tutorial-get-set-ros2-params-with-python/) (I actually like this doc better than the [official one](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html)). For instance, if you follow the documentation you can create a node similar to our [sample solution](https://github.com/comprobo23/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py) that supports the following customization via the command line.
+To make your node more configurable, use (see the [ros param command line tools documentation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html) for more information) and [code for accessing parameters in Python documentation from The Robotics BackEnd](https://roboticsbackend.com/rclpy-params-tutorial-get-set-ros2-params-with-python/) (I actually like this doc better than the [official one](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html)). For instance, if you follow the documentation you can create a node similar to our [sample solution](https://github.com/comprobo23/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py) that supports the following customization via the command line.
 
 ```bash
 $ ros2 run in_class_day04 wall_approach_fancy --ros-args -p target_distance:=1.5 -p Kp:=0.5
