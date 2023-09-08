@@ -21,6 +21,13 @@ Here are some areas to consider in the debugging / development lifecycle:
 2.  How do you test your approach to see if it performs the task effectively (e.g., follows a person)?
 3.  How might you tune the parameters of your approach to make it perform as best possible?
 
+## ROS and threading
+
+We'll go over some points regarding how ROS2 deals with different threads of execution.  In order to structure our work, we're going to be looking at two pieces of sample code:
+
+* [Drive Square Sample 1](../Sample_code/drive_square_sample_1)
+* [Drive Square Sample 2](../Sample_code/drive_square_sample_3)
+
 ## Proportional Control
 
 So far we've programmed robots to choose between a small set of motor commands (move forward, stop, etc.) based on sensor readings.  Today, we will be experimenting with setting the the motor command  proportional to the error between the robot's current position and the desired position.
