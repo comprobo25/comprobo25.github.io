@@ -5,6 +5,7 @@ toc_sticky: true
 
 ## Today
 * Robot debugging strategies
+* ROS and threading
 * Proportional Control and ROS Parameters
 * Studio Time
 
