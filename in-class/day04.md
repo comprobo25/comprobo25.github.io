@@ -31,7 +31,7 @@ To get started, create a package somewhere in your ``ros2_ws/src`` directory for
 
 ```bash
 $ cd ~/ros2_ws/src/class_activities_and_resources
-$ ros2 pkg create in_class_day04_solutions --build-type ament_python --node-name wall_approach --dependencies rclpy std_msgs geometry_msgs sensor_msgs neato2_interfaces
+$ ros2 pkg create in_class_day04 --build-type ament_python --node-name wall_approach --dependencies rclpy std_msgs geometry_msgs sensor_msgs neato2_interfaces
 ```
 
 This has been confusing in the past, but whenever you add a new ROS package (or a new ROS node), you'll want to build using ``colcon`` and source the ``setup.bash`` file from your workspace.
