@@ -50,8 +50,9 @@ Checklist before performing this step:
 
 In a new terminal, connect to the robot:
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch neato_node2 bringup.py host:=IP_ADDRESS_OF_YOUR_ROBOT
+ros2 launch neato_node2 bringup.py host:=IP_OF_ROBOT
 ```
 
 Where IP_ADDRESS_OF_YOUR_ROBOT is the IP address displayed on the raspberry Pi.  To verify that everything is working properly, try the following steps.
@@ -60,6 +61,7 @@ Where IP_ADDRESS_OF_YOUR_ROBOT is the IP address displayed on the raspberry Pi. 
 
 Open the teleop keyboard node.  Instructions on sending various velocity commands are given when by the on-screen terminal output.  The maximum speed of the neato is $$0.3 \frac{m}{s}$$.
 
+{% include codeHeader.html %}
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
@@ -70,8 +72,9 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 Startup ```rqt```.
 
+{% include codeHeader.html %}
 ```bash
-$ rqt
+rqt
 ```
 
 From the "plugins" menu, select the "visualization" submenu, and then choose "image view".  In the drop down list, select the image topic ``camera/image_raw``.
@@ -241,7 +244,7 @@ Here are the instructions for using the robot simulator.  The current plan is to
 
 ## What is a Robot Simulator?
 
-Without getting into too much detail, a robot simulator that simulates a robot interacting with some sort of environment.  As such, a simulator will typically provide the following major functionality.
+Without getting into too much detail, a robot simulator is software that simulates a robot interacting with some sort of environment.  As such, a simulator will typically provide the following major functionality.
 
 * It will provide a means to specify the physical layout of the robot's environment (e.g., the location of obstacles, the physical properties of various surfaces).
 * It will provide a means to specify a robot model (e.g., the robot's sensors, actuators, mass, inertia, etc.).
@@ -261,9 +264,10 @@ We will be using the popular Gazebo software for robot simulation.  Gazebo is a 
 
 You can launch your robot in many different simulated worlds.  To start your robot in an obstacle course environment, run the following command (this will probably look familiar).
 
-{% highlight console %}
-$ ros2 launch neato2_gazebo neato_gauntlet_world.py
-{% endhighlight %}
+{% include codeHeader.html %}
+```bash
+ros2 launch neato2_gazebo neato_gauntlet_world.py
+```
 
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
 
