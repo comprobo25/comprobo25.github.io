@@ -116,7 +116,7 @@ This tells you the robot's position relative to its starting location as estimat
 
 ### ``projected_stable_scan``
 
-This provides the LIDAR measurements (think of these as detected obstsacles or objects from the environment).  In contrast to the ``scan`` topics, these measurements are in the odometry frame (rather than relative to the robot) and are in Caretesian rather than polar coordinates.  There is no need to use this topic, but for some applications it is nice to have.
+This provides the LIDAR measurements (think of these as detected obstsacles or objects from the environment).  In contrast to the ``scan`` topics, these measurements are in the odometry frame (rather than relative to the robot) and are in Cartesian rather than polar coordinates.  There is no need to use this topic, but for some applications it is nice to have.
 
 ### ``scan``
 
