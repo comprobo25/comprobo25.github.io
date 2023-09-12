@@ -30,7 +30,7 @@ feature_row_TODO:
 
 feature_row_robot:
   - image_path: website_graphics/neato_overview.jpeg
-    alt: "A picture of a Neato robotic vacuum cleaner with a custom remote control interface based on Raspberry Pi"
+    alt: "A picture of a Neato robotic vacuum with a custom remote control interface based on Raspberry Pi"
     excerpt: "The documentation describes both how to connect to the the physical robot or a simulator and how to build your own customized Neato.
 
     ### Student Facing Documentation\n
