@@ -6,13 +6,12 @@
 
 ## For Next Time
 
-* Complete this assignment on basic probability <a-no-proxy href="https://olin.instructure.com/courses/143/assignments/1317">basic probability</a-no-proxy>. Submit your work on canvas. 
 * Read over the description of the [Robot Localization project](../assignments/robot_localization) (there are a few modifications we still need to make, but nothing that will really impact an initial readthrough).
 * For more reinforcement of the concepts behind the particle filter, watch this <a-no-proxy href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a-no-proxy>.
 
 ## Warmup Project Debrief
 
-* Let's go through the [slide deck to share what you've done](https://docs.google.com/presentation/d/1_SABLdSkRCSIiGdeSzA1GLxTibsrnH17f7yEim6r5jg/edit?usp=sharing).  Successes as well as hard-won lessons are equally welcome. 
+* Let's go through the [slide deck to share what you've done](https://docs.google.com/presentation/d/1zDFkOsO9zwGbvW_Cppq5NwiwWXBKT_F3Vgvbxg6CJjE/edit?usp=sharing).  Successes as well as hard-won lessons are equally welcome. 
 
 ## Conceptual Introduction to the Particle Filter
 
