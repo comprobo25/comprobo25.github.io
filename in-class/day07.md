@@ -26,6 +26,26 @@ Let's take a few minutes to think about what these are doing.
 
 When we look at the particle filter code, we also see randomness but it appears in a bit different way.
 
+```python
+for i in range(self.n_particles):
+    self.pf.add_particle(Particle(position=randn()+1.5,
+				  weight=1/float(self.n_particles),
+				  sensor_model=sensor_model))
+```
+
+```python
+def sample_prediction(self, predicted_position):
+    """ Sample a potential next state based on a predicted position
+        based off of the Odometry """
+    return predicted_position + randn()*self.odom_noise_rate
+```
+
+```python
+return norm(0, self.model_noise_rate).pdf(abs(position - closest) - observation)
+```
+
+Let's take a few minutes to think about what these are doing.
+
 ## Bayesian Filtering and the Particle Filter
 
 * [Notes from Today on Bayes' filter](bayes_filter.pdf)
