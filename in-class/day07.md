@@ -6,6 +6,26 @@
 
 * Work on the [Robot Localization project](../assignments/robot_localization). For the next class you should have done the part of the "Implementation Plan" part of the assignment.
 
+## Randomness and the 1D Particle Filter
+
+At this point it's useful to think a bit about how the concept of randomness and the role it plays in the particle filter example.  There seems to be randomness in a few different dimensions.  The world itself has some randomness (the scans have some noise and so does the movement) and the particle filter itself has some concept of noise as well.  In the simulator, you'll see a lot of code that looks something like the following examples.
+
+```python
+self.position = randn()*0.2+1.5
+```
+
+```python
+north_laser_reading = (closest_north - self.position) + self.noise_rate*randn() 
+```
+
+```python
+self.odom_position += velocity*self.dt + self.odom_noise_rate*randn()
+```
+
+Let's take a few minutes to think about what these are doing.
+
+When we look at the particle filter code, we also see randomness but it appears in a bit different way.
+
 ## Bayesian Filtering and the Particle Filter
 
 * [Notes from Today on Bayes' filter](bayes_filter.pdf)
