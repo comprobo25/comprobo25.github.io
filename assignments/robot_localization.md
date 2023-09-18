@@ -92,7 +92,7 @@ You will need some additional ROS packages that we haven't used thus far.
 
 {% include codeHeader.html %}
 ```bash
-pip3 install sklearn && sudo apt install -y ros-humble-nav2-map-server \
+pip3 install scikit-learn && sudo apt install -y ros-humble-nav2-map-server \
 	ros-humble-nav2-amcl \
 	ros-humble-slam-toolbox \
 	python3-pykdl
@@ -120,7 +120,7 @@ You can find an explanation of the likelihood field model in [Pieter Abbeel's sl
 
 Before diving into this project, it helps to have a sense of how a successful implementation of the particle filter functions.  You will be creating a map using ROS's built-in mapping system (which you will not be reimplementing) and testing ROS's built-in particle filter (which you will be reimplementing) on the data you collect.  To get started, run the following command.
 
-> Note: we recommend running this with the simulator, but you can try on the real robot.  I have yet to actually give that a shot!
+> Note: we recommend running this with the simulator, but you can try on the real robot.  To do so, you would need to change the part where you start the simulator with connecting to an actual Neato.
 
 {% include codeHeader.html %}
 ```bash
@@ -152,7 +152,7 @@ ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_name'"
 ```
 
-Keep rviz running as you'll want it for the next part.  You may also want to save the configuration so you don't have to add the visualizations again the next time you start rviz.
+Make sure you can find the ``.yaml`` file that was saved in the previous step.  Counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.
 
 ### Running AMCL
 
@@ -160,8 +160,8 @@ Now that you have a map, you will use the built-in particle filter package calle
 
 Before you start this step here are a few things to do.
 1.  Stop the ``slam_toolbox`` nodes you were running from before.  Find the terminal where you ran the ``slam_toolbox online_sync_launch.py`` command and hit ``control-c``.
-2.  Make sure ``rviz`` is running and you have added a visualization of the ``map`` topic.
-3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Somewhat counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/pruvolo``.
+2.  Make sure ``rviz`` is running and load the configuration under ``robot_localization/rviz/amcl.rviz`` (this will greatly simplify the visualization of the topics).
+3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/pruvolo``.
 
 To start ``AMCL``, run the following launch file.
 
@@ -223,12 +223,7 @@ Once you execute this step, if everything went well you should see output like t
 [amcl-2] [WARN] [1663853991.764180749] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
 ```
 
-The last line where ``AMCL`` is complaining about wanting an initial pose, brings us to our next step.
-
-Go to rviz (where you'll set the initial pose).  First set your ``Fixed Frame`` to ``map``.  Next, add a visualization of the ``particlecloud`` topic (you can use ``add`` and then ``by topic`` to find this). Once the visualization has been added, expand the details for the topic in the left panel of rviz2.  Expand the ``Topic`` sub menu.  Change the ``Reliability Policy`` to ``Best Effort``.  You'll also want to add a visualization of the ``/map`` topic if you haven't yet.  You can most easliy do this through the ``add`` and the ``by topic`` menus.  It is crucial that you set the properties of the topic so that the ``Durability Policy`` is set to ``Transient Local``.  You should probably save your configuration to avoid doing this again later.
-
-
-Next, set an initial location for the particle filter using the ``2D Pose Estimate Widget``.  Double check that your ``Fixed Frame`` is set to ``map``.  Once you change your fixed frame, some of your other visualizations will disappear.  Clock the location in the map where you think the robot is and draft in the direction you think the robot is facing.   Once you release the mouse, the visualizations of your robot and your LIDAR should return.  You should also see a bunch of red arrows indicating the particle locations.  Drive around for a while and see if the AMCL is able to converge to the correct robot pose.  How do you know if it is correct or not?  Here is an example of how it might look (note: despite my best efforts, I picked a bad initial position for AMCL.  Despite this, it was able to eventually figure out where the robot was).
+The last line where ``AMCL`` is complaining about wanting an initial pose, brings us to our next step.  Go to ``rviz2`` (make sure you loading the ``.rviz`` configuration specified above) and set an initial location for the particle filter using the ``2D Pose Estimate Widget``.  Click the location in the map where you think the robot is and drag in the direction you think the robot is facing.   Once you release the mouse, the visualizations of your robot and your LIDAR should return.  You should also see a bunch of red arrows indicating the particle locations.  Drive around for a while and see if the AMCL is able to converge to the correct robot pose.  How do you know if it is correct or not?  Here is an example of how it might look (note: despite my best efforts, I picked a bad initial position for AMCL.  Despite this, it was able to eventually figure out where the robot was).
 
 ![A video showing setup of amcl for the simulated Neato](../website_graphics/amcl.gif)
 
