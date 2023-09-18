@@ -90,9 +90,12 @@ The starter code will be in a package called ``robot_localization``.  The <a hre
 
 You will need some additional ROS packages that we haven't used thus far.
 
+{% include codeHeader.html %}
 ```bash
-$ pip3 install sklearn
-$ sudo apt install ros-humble-nav2-map-server ros-humble-nav2-amcl ros-humble-slam-toolbox python3-pykdl
+pip3 install sklearn && sudo apt install -y ros-humble-nav2-map-server \
+	ros-humble-nav2-amcl \
+	ros-humble-slam-toolbox \
+	python3-pykdl
 ```
 
 ### Key Contents of Starter Code
@@ -119,14 +122,16 @@ Before diving into this project, it helps to have a sense of how a successful im
 
 > Note: we recommend running this with the simulator, but you can try on the real robot.  I have yet to actually give that a shot!
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch neato2_gazebo neato_gauntlet_world.py
+ros2 launch neato2_gazebo neato_gauntlet_world.py
 ```
 
 Next, start the mapping program.
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch slam_toolbox online_sync_launch.py
+ros2 launch slam_toolbox online_sync_launch.py
 ```
 
 Startup ``rviz2``.  You should see all the typical things, but now add a visualization of the ``map`` topic by clicking ``add`` going to the ``by topic`` dialogue and selecting ``map``.
@@ -141,6 +146,7 @@ The representation of the map you see above is called an occupancy grid. The lig
 
 You can now save the map using the following command (replace ``map_name`` with whatever you want to call the map).
 
+{% include codeHeader.html %}
 ```
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_name'"
@@ -159,8 +165,9 @@ Before you start this step here are a few things to do.
 
 To start ``AMCL``, run the following launch file.
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch robot_localization test_amcl.py map_yaml:=path-to-your-yaml-file
+ros2 launch robot_localization test_amcl.py map_yaml:=path-to-your-yaml-file
 ```
 
 Make sure to replace ``path-to-your-yaml-file`` with the path you determined in step (3) of the checklist above.
@@ -233,8 +240,9 @@ Return to the terminal where the rosbag is playing and click space bar.  Return 
 
 The instructions for running your particle filter are identical except for you need to use a different launch file to startup your code.
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
+ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 ```
 
 ## Localization with Bag Files
@@ -254,14 +262,16 @@ robot_localization/maps/mac_1st_floor_final.yaml
 
 > Note: before doing this, make sure Gazebo is shutdown and you are not connected to a physical robot (remember, the bag file will be supplying the sensor data)
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 bag play path-to-your-bag-file
+ros2 bag play path-to-your-bag-file
 ```
 
 In order to test your particle filter (``pf.py``) with a bag file, you can start up the particle filter with a slightly modified command.
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
+ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
 ```
 
 > Note 1: You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
@@ -271,8 +281,9 @@ The setup for rviz is pretty involved, so we have provided a configuraion file f
 
 Alernatively, you can launch ``rviz2`` and pass the configuration file on the command line.
 
+{% include codeHeader.html %}
 ```bash
-$ rviz2 -d ~/ros2_ws/src/robot_localization/rviz/turtlebot_bag_files.rviz
+rviz2 -d ~/ros2_ws/src/robot_localization/rviz/turtlebot_bag_files.rviz
 ```
 
 As with testing live, you will need to set an initial pose with the ``2D Pose Estimate`` in rviz.  As the bag plays you will see the robot move around in the map in rviz.  If your particle filter has localized your robot properly, the laser scans will line up with the features of the map.
@@ -287,6 +298,7 @@ When the bag is finished playing, you will probably want to perform the followin
 
 You can make your own bag files either with the physical robot or the simulator.  When recording a bag file of the Neato, you'll want to modify your recording command a bit from what you did in the warmup project.
 
+{% include codeHeader.html %}
 ```bash
 ros2 bag record /accel /bump /odom /cmd_vel /scan /robot_description /stable_scan /projected_stable_scan /clock /tf /tf_static -o bag-file-name-here
 ```
