@@ -4,6 +4,9 @@ We'll be going over the main steps of how to implement a particle filter.  The g
 
 ## For Next Time
 
+* [Particle Filter Conceptual Overview](../assignments/robot_localization#conceptual-overview-due-9-22)
+* [Get the starter code](../assignments/robot_localization#getting-the-robot-localizer-starter-code)
+* [A view of the finish line](../assignments/robot_localization#a-view-of-the-finish-line-and-getting-set-with-rviz)
 * Work on the <a-no-proxy href="../assignments/robot_localization">Robot Localization project</a-no-proxy>.
 
 ## The Particle Filter Algorithm
