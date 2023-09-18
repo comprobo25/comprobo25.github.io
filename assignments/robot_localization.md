@@ -160,7 +160,7 @@ Now that you have a map, you will use the built-in particle filter package calle
 
 Before you start this step here are a few things to do.
 1.  Stop the ``slam_toolbox`` nodes you were running from before.  Find the terminal where you ran the ``slam_toolbox online_sync_launch.py`` command and hit ``control-c``.
-2.  Make sure ``rviz`` is running and load the configuration under ``robot_localization/rviz/amcl.rviz`` (this will greatly simplify the visualization of the topics).
+2.  Make sure ``rviz`` is running and load the configuration under ``robot_localization/rviz/amcl.rviz`` (this will greatly simplify the visualization of the topics).  You can use the following shortcut to make sure the configuration is loaded (note: you would have to modify this a bit if your repo is in a different location).  ``rviz2 -d ~/ros2_ws/src/robot_localization/rviz/amcl.rviz``
 3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/pruvolo``.
 
 To start ``AMCL``, run the following launch file.
