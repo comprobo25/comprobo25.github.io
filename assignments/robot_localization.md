@@ -259,14 +259,14 @@ robot_localization/maps/mac_1st_floor_final.yaml
 
 {% include codeHeader.html %}
 ```bash
-ros2 bag play path-to-your-bag-file
+ros2 bag play --clock path-to-your-bag-file
 ```
 
-In order to test your particle filter (``pf.py``) with a bag file, you can start up the particle filter with a slightly modified command.
+In order to test your particle filter (``pf.py``) with a bag file, you can start up the particle filter as before.
 
 {% include codeHeader.html %}
 ```bash
-ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file use_sim_time:=false
+ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 ```
 
 > Note 1: You'll see that we are instructing our code to avoid using the simulator time (since this data is from a real robot).
