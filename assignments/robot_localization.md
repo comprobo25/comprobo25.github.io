@@ -84,7 +84,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo23/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo23/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build`` and source ``install.bash``.
 
 ### Installing Supporting Packages
 
