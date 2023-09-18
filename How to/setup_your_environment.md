@@ -126,6 +126,7 @@ Edit your ``~/.bashrc`` file so that the your workspace is correctly loaded when
 
 {% include codeHeader.html %}
 ```bash
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 ```
 
