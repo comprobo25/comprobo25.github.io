@@ -22,7 +22,7 @@ For this project, you should work with one other student.
 
 ## Deliverables
 
-### Implementation Plan (Due 9-27)
+### Conceptual Overview (Due 9-22)
 
 You should come to class with a plan for how you will implement this project.
 
@@ -34,22 +34,20 @@ You should come to class with a plan for how you will implement this project.
 
 It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
 
-### In-class Presentation / Demo (Due 10-12)
+### In-class Presentation / Demo (Due 10-13)
 
 Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc.  In addition, you should show a demo of your system in action.
 
 This deliverable be assessed in a binary fashion (did you do the above or not).
 
 
-### Your Code and Bag Files (Due 10-12)
+### Your Code and Bag Files (Due 10-13)
 
-> You might want to wait on creating your fork until Saturday morning 9/24.  I want to do a little bit more testing.
-
-Your code should be forked from <a href="https://github.com/comprobo22/robot_localization">this repo</a>.  Please push your code to your fork in order to turn it in.
+If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo23/robot_localization">this repo</a>.  If you are using C++), you should fork <a href="https://github.com/comprobo23/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You should include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
 
-### Writeup (Due 10-12)
+### Writeup (Due 10-13)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
@@ -60,7 +58,6 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * What if any challenges did you face along the way?
 * What would you do to improve your project if you had more time?
 * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
-
 
 ### Sample Writeups
 
@@ -87,7 +84,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo22/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo23/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.
 
 ### Installing Supporting Packages
 
@@ -95,7 +92,7 @@ You will need some additional ROS packages that we haven't used thus far.
 
 ```bash
 $ pip3 install sklearn
-$ sudo apt install ros-foxy-nav2-map-server ros-foxy-nav2-amcl ros-foxy-slam-toolbox python3-pykdl
+$ sudo apt install ros-humble-nav2-map-server ros-humble-nav2-amcl ros-humble-slam-toolbox python3-pykdl
 ```
 
 ### Key Contents of Starter Code

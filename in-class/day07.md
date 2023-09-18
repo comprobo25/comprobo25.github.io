@@ -57,6 +57,6 @@ One part of your particle filter will involve [estimating the relative motion of
 
 > Note: while probably not needed for dealing with 2D rotation and translation, I have found the ``PyKDL`` library to be a great way to convert between various representations of orientation and transformations (e.g., see [this section of the starter code](https://github.com/comprobo22/robot_localization/blob/47899d1d1745b56adace25fdff1d08a6bf253a8b/robot_localization/helper_functions.py#L121)).
 
-## Particle Filter Implementation Plan
+## C++ Option
 
-Join up with another team and compare your implementation plans.  Try to identify parts of these plans that are fuzzy.  This would be a great time to ask clarifying questions of the teaching team.
+If you are interested in doing your robot localiation project in C++, you can put your name in [this Google sheet](https://docs.google.com/spreadsheets/d/1otiTHnTcRF86xMpGXRr7LC6BBAM2rOIRNFW75xpKt58/edit?usp=sharing).  This will help you find a partner, or if you already have one, connect up with other people who are taking this option.
