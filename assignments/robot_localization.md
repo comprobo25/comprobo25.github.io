@@ -34,14 +34,13 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 3. Given an initial $$x, y, \theta$$ tuple, how will you generate a set of particles?
 
-4. Given two odometry poses (each represented as $$x, y, \theta$$ tuples), how will youpdate each of your particles?
+4. Given two odometry poses sampled at two time points (each represented as $$x, y, \theta$$ tuples), how will you update each of your particles? (make sure to keep in mind what coordinate frame you are working in)
 
 5. Given a laser scan, how will you determine the weight (or confidence) value of each particle?
 
-6. Given a weighted set of particles, how can you determine the robot's pose?
+6. Given a weighted set of particles, how will you determine the robot's pose?
 
-7. Given a weighted set of particles, how will you sample a new set?
- 
+7. Given a weighted set of particles, how will you sample a new set of particles?
 
 ### In-class Presentation / Demo (Due 10-13)
 
