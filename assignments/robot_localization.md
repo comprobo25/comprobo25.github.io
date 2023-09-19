@@ -24,15 +24,19 @@ For this project, you should work with one other student.
 
 ### Conceptual Overview (Due 9-22)
 
-You should come to class with a plan for how you will implement this project.
+Using a combination of diagrams and text, describe the major steps of the particle filter at a level of detail sufficient for creating your particle filter implementation.
 
-* Map out the key steps of the particle filter.  You should be able to clearly describe using a combination of words and diagrams each step of the algorithm.  If there are parts that are still a bit fuzzy, make sure you take note of them.
-* Map how the key steps show up in the starter code file ``pf.py``.  You should be able to follow the logic in the ``run_loop`` function and understand what's going on there (or have identified questions).
-* If you have time, try to write some pseudocode for each of the parts of ``pf.py`` marked ``TODO``.
-* Propose a testing and implementation plan for your particle filter.  If you are still fuzzy on the details, at least try to map out your first step.
-* Decide if you want to use the starter code as is or if you want to reimplement any of it.
+As you write your conceptual overview, if there is a gap in your understanding that is fine, but be sure to note it so you can get help in class (or during office hours).
 
-It's possible that you will not be able to nail this down in complete detail by this deadline, but you should at least have thought about these issues and made your best attempt.  We will provide feedback on your plan soon after you submit it.
+1. What topics will your particle filter subscribe to?  Which topics will it publish?  You can include the specific topic names and types or just indicate generally what the role of each topic will be in the functioning of your particle filter.
+
+2. What transform will be published by your partilce filter?
+
+3. Given an initial $$x, y, \theta$$ tuple, how will you generate a set of particles?
+
+4. Given two odometry poses (each represented as $$x, y, \theta$$ tuples), how will youpdate each of your particles?
+
+5. Given a laser scan, how will you determine the weight (or confidence) value of each particle?
 
 ### In-class Presentation / Demo (Due 10-13)
 
