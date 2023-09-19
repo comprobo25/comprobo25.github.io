@@ -30,13 +30,18 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 1. What topics will your particle filter subscribe to?  Which topics will it publish?  You can include the specific topic names and types or just indicate generally what the role of each topic will be in the functioning of your particle filter.
 
-2. What transform will be published by your partilce filter?
+2. Your code will be responsible for computing a robot pose, what coordinate frame is the pose expressed in?
 
 3. Given an initial $$x, y, \theta$$ tuple, how will you generate a set of particles?
 
 4. Given two odometry poses (each represented as $$x, y, \theta$$ tuples), how will youpdate each of your particles?
 
 5. Given a laser scan, how will you determine the weight (or confidence) value of each particle?
+
+6. Given a weighted set of particles, how can you determine the robot's pose?
+
+7. Given a weighted set of particles, how will you sample a new set?
+ 
 
 ### In-class Presentation / Demo (Due 10-13)
 
