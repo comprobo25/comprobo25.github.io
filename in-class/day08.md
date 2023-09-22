@@ -1,6 +1,4 @@
-## Today
-
-* Bayesian filtering and the particle filter
+## Robot State Estimation and Bayes
 
 ## For Next Time
 
