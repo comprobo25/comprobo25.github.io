@@ -267,7 +267,7 @@ robot_localization/maps/mac_1st_floor_final.yaml
 
 {% include codeHeader.html %}
 ```bash
-ros2 bag play --clock path-to-your-bag-file
+ros2 bag play path-to-your-bag-file --clock 
 ```
 
 In order to test your particle filter (``pf.py``) with a bag file, you can start up the particle filter as before.
