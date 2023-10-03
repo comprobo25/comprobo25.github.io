@@ -1,12 +1,13 @@
-## Studio Day
+## Studio Day (and visit from Eric Miller)
 
 * Particle Filter Debugging Strategies
 * Extensions to the particle filter
 * You will be working on your robot localization projects.
+* We will have a brief visit from Eric Miller of Skydio to talk about what some of the themes of CompRobo look like in industry. 
 
 ## For Next Time
 
-* Robot localization project is due
+* Soft launch of computer vision project (Robot localization project will be due on Friday the 13th).
 
 ## Particle Filter Debugging Techinques
 
@@ -14,15 +15,7 @@
 
 In order to use ``pdb`` you'll want to change your workflow a little bit.  Instead of launching your particle filter and the map server through the ``test_pf.py`` launch file, you will be starting the map server separately and then launching your particle filter through your Python IDE (e.g., VSCode).
 
-There is a new launch file for you to use that starts up the ``map_server`` without starting your particle filter code.  You can [find it in the starter code repository]().  Once you have the new launch file in your ``robot_localization`` directory, you will need to rebuild your ``ros2_ws`` directory.
-
-```bash
-$ cd ~/ros2_ws
-$ colcon_build --symlink-install
-$ source install/setup.bash
-```
-
-Now you can start the ``map_server`` using the following command:
+You can start the ``map_server`` using the following command:
 
 ```bash
 $ ros2 launch robot_localization launch_map_server.py map_yaml:=path-to-map-yaml 
@@ -63,22 +56,10 @@ If all went well, you will see the following output.
 
 Now that the ``map_server`` is running, you can start the debugger through ``VSCode`` (as an example) by selecting ``Run`` and then ``Start with Debugging``.  Next, choose ``Python`` as your debugging configuration.  Make sure you have set the focus of ``VSCode`` to your ``pf.py`` script before doing this.  You can now set breakpoints or inspect your program's state in the event of a crash.
 
-
-### Help: My Map Keeps Disappearing
-
-In Rviz, if you click the checkbox next to the ``map`` visual to disable it and then click it again to reenable, the map should reappear.
-
-### Debugging Using Point Clouds
-
-Ben will show us how he is using the point cloud visualizer in rviz to debug his code.
-
 ### Debugging Using Matplotlib
 
-Charlie will show us how to use matplotlib to rapidly visualize the particle filter's weights.
+Sometimes it's easier to get a quick and dirty visualization going using a familiar tool like matplotlib.  You could consider using this for things like plotting particle weights or motion updates.
 
-## What does the math we did have to do with the code we are writing???
-
-We'll go over this on the board.
 
 ## Extensions to the Particle Filter
 
