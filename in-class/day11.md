@@ -17,8 +17,9 @@ In order to use ``pdb`` you'll want to change your workflow a little bit.  Inste
 
 You can start the ``map_server`` using the following command:
 
+{% include codeHeader.html %}
 ```bash
-$ ros2 launch robot_localization launch_map_server.py map_yaml:=path-to-map-yaml 
+ros2 launch robot_localization launch_map_server.py map_yaml:=path-to-map-yaml 
 ```
 
 If all went well, you will see the following output.
@@ -60,10 +61,7 @@ Now that the ``map_server`` is running, you can start the debugger through ``VSC
 
 Sometimes it's easier to get a quick and dirty visualization going using a familiar tool like matplotlib.  You could consider using this for things like plotting particle weights or motion updates.
 
-
 ## Extensions to the Particle Filter
-
-Based on your survey results the following extensions were most popular.
 
 ### Make your particle filter more efficient computationally
 
