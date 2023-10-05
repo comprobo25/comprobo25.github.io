@@ -1,4 +1,17 @@
-## The Particle Filter for Robot Localiation
+---
+title: "The Particle Filter for Robot Localiation"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day07/#today
+  - title: For Next Time
+    link: in-class/day07/#for-next-time
+  - title: The Particle Filter Algorithm
+    link: in-class/day07/#the-particle-filter-algorithm
+  - title: C++ Option
+    link: in-class/day07/#c-option
+---
+## Today 
 
 We'll be going over the main steps of how to implement a particle filter.  The goal will be to implement the particle filter at a whiteboard, and use this as the basis for your implementation.
 

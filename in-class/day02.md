@@ -1,6 +1,15 @@
 ---
 title: "Coordinate Frames and Basic ROS Concepts"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day02/#today
+  - title: For Next Time
+    link: in-class/day02/#for-next-time
+  - title: Thinking about learning goals
+    link: in-class/day02/#thinking-about-learning-goals
+  - title: Coding Exercises
+    link: in-class/day02/#coding-exercises
 ---
 
 ## Today

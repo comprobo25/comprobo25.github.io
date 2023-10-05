@@ -1,4 +1,19 @@
-## Robot State Estimation and Bayes
+---
+title: "Robot State Estimation and Bayes"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day08/#today
+  - title: For Next Time
+    link: in-class/day08/#for-next-time
+  - title: Bayesian Filtering and the Particle Filter
+    link: in-class/day08/#bayesian-filtering-and-the-particle-filter
+  - title: A video of this lecture from 2020 (if needed)
+    link: in-class/day08/#a-video-of-this-lecture-from-2020-if-needed
+---
+## Today
+
+We'll be talking about the theory of the Bayesian filter and how it relates to the particle filter algorithm.
 
 ## For Next Time
 

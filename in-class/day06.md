@@ -1,5 +1,19 @@
-## Conceptual Introduction and Simple 1D Particle Filter
-
+---
+title: "Conceptual Introduction and Simple 1D Particle Filter"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day06/#today
+  - title: For Next Time
+    link: in-class/day06/#for-next-time
+  - title: Warmup Project Debrief
+    link: in-class/day06/#warmup-project-debrief
+  - title: Conceptual Introduction to the Particle Filter
+    link: in-class/day06/#conceptual-introduction-to-the-particle-filter
+  - title: We’re all living in a 1D world!
+    link: in-class/day06/#were-all-living-in-a-1d-world
+---
+## Today
 * Warm-Up Project Debrief
 * Conceptual introduction to the particle filter
 * We're all living in a 1D world! (a simple particle filter example)

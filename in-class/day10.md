@@ -1,5 +1,22 @@
-## Gauss, Likelihood Fields, and the Particle Filter
+---
+title: "Gauss, Likelihood Fields, and the Particle Filter"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day10/#today
+  - title: For Next Time
+    link: in-class/day10/#for-next-time
+  - title: Gaussian Distributions
+    link: in-class/day10/#gaussian-distributions
+  - title: update_particles_with_laser
+    link: in-class/day10/#update_particles_with_laser
+  - title: Possible Extensions
+    link: in-class/day10/#possible-extensions
+---
 
+## Today
+We'll discuss the concept of Gaussian distributions and how they apply to particle filters.
+ 
 ## For Next Time
 
 * Continue to work on your particle filter project.  Note that the project is due 10/14.

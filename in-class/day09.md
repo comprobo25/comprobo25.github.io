@@ -1,4 +1,15 @@
-## Discussions on Robotics and Labor and Computing Relative Motion
+---
+title: "Discussions on Robotics and Labor and Computing Relative Motion"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day09/#today
+  - title: Robotics and Labor Discussion
+    link: in-class/day09/#robotics-and-labor-discussion
+  - title: Particle Filter and Computing Relative Motion
+    link: in-class/day09/#particle-filter-and-computing-relative-motion
+---
+## Today
 
 * Discussion on Robotics and Labor
 * Particle Filter and Computing Relative Motion

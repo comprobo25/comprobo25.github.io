@@ -126,6 +126,8 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 ## In-class Activities
 
+Note: see [Site-wide TOC for an easy to navigate outline of each day's activities](toc)
+
 * [Day 1: Welcome!!!](in-class/day01)
 * [Day 2: Coordinate Frames and Basic ROS Concepts](in-class/day02)
 * [Day 3: Writing sensory-motor loops in ROS](in-class/day03)

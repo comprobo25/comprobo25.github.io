@@ -1,6 +1,15 @@
 ---
 title: "Day 1: Welcome!!!"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day01/#today
+  - title: For Next Time
+    link: in-class/day01/#for-next-time
+  - title: Robots in the World
+    link: in-class/day01/#robots-in-the-world
+  - title: Sensory-Motor Loops
+    link: in-class/day01/#sensory-motor-loops-legacy-material-if-you-are-interested
 ---
 
 ## Today

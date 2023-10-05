@@ -1,6 +1,15 @@
 ---
 title: "Wall Bumping and Finite-State Control"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day05/#today
+  - title: For Next Time
+    link: in-class/day05/#for-next-time
+  - title: Finite-State Control
+    link: in-class/day05/#finite-state-control
+  - title: Implementation in ROS2
+    link: in-class/day05/#implementation-in-ros2
 ---
 
 ## Today

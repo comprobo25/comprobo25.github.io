@@ -1,4 +1,18 @@
-## Particle Filter Debugging Strategies, Extensions, and Studio Day
+---
+title: "Particle Filter Debugging Strategies, Extensions, and Studio Day"
+toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day11/#today
+  - title: For Next Time
+    link: in-class/day11/#for-next-time
+  - title: Particle Filter Debugging Techinques
+    link: in-class/day11/#particle-filter-debugging-techinques
+  - title: Extensions to the Particle Filter
+    link: in-class/day11/#extensions-to-the-particle-filter
+---
+
+## Today
 
 * Particle Filter Debugging Strategies
 * Extensions to the particle filter

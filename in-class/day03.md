@@ -1,6 +1,17 @@
 ---
 title: "Writing sensory-motor loops in ROS"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day03/#today
+  - title: For Next Time
+    link: in-class/day03/#for-next-time
+  - title: Uniqueness of Node Names
+    link: in-class/day03/#follow-up-from-last-time
+  - title: Coordinate Frames and Coordinate Transforms in Robotics
+    link: in-class/day03/#coordinate-frames-and-coordinate-transforms-in-robotics
+  - title: Sensory Motor Loops
+    link: in-class/day03/#sensory-motor-loops
 ---
 
 ## Today

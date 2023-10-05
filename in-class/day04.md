@@ -1,6 +1,17 @@
 ---
 title: "Debugging, Proportional Control, and ROS Parameters"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day04/#today
+  - title: For Next Time
+    link: in-class/day04/#for-next-time
+  - title: Brainstorming Robot Debugging Strategies
+    link: in-class/day04/#brainstorming-robot-debugging-strategies
+  - title: ROS and threading
+    link: in-class/day04/#ros-and-threading
+  - title: Proportional Control
+    link: in-class/day04/#proportional-control
 ---
 
 ## Today
