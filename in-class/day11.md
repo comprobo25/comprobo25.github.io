@@ -1,4 +1,4 @@
-## Studio Day (and visit from Eric Miller)
+## Particle Filter Debugging Strategies, Extensions, and Studio Day
 
 * Particle Filter Debugging Strategies
 * Extensions to the particle filter

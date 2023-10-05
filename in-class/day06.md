@@ -1,4 +1,4 @@
-## Today
+## Conceptual Introduction and Simple 1D Particle Filter
 
 * Warm-Up Project Debrief
 * Conceptual introduction to the particle filter

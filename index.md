@@ -126,17 +126,17 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 ## In-class Activities
 
-* [Day 1](in-class/day01)
-* [Day 2](in-class/day02)
-* [Day 3](in-class/day03)
-* [Day 4](in-class/day04)
-* [Day 5](in-class/day05)
-* [Day 6](in-class/day06)
-* [Day 7](in-class/day07)
-* [Day 8](in-class/day08)
-* [Day 9](in-class/day09)
-* [Day 10](in-class/day10)
-* [Day 11](in-class/day11)
+* [Day 1: Welcome!!!](in-class/day01)
+* [Day 2: Coordinate Frames and Basic ROS Concepts](in-class/day02)
+* [Day 3: Writing sensory-motor loops in ROS](in-class/day03)
+* [Day 4: Debugging, Proportional Control, and ROS Parameters](in-class/day04)
+* [Day 5: Wall Bumping and Finite-State Control](in-class/day05)
+* [Day 6: Conceptual Introduction and Simple 1D Particle Filter](in-class/day06)
+* [Day 7: The Particle Filter for Robot Localiation](in-class/day07)
+* [Day 8: Robot State Estimation and Bayes](in-class/day08)
+* [Day 9: Discussions on Robotics and Labor and Computing Relative Motion](in-class/day09)
+* [Day 10: Gauss, Likelihood Fields, and the Particle Filter](in-class/day10)
+* [Day 11: Particle Filter Debugging Strategies, Extensions, and Studio Day](in-class/day11)
 
 ## Conclusion and Learning More
 
