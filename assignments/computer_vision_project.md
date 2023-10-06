@@ -52,7 +52,7 @@ Potential Algorithm Topics
 
 There are four deliverables for this project.
 
-### Project Proposal (due 10/13)
+### Project Proposal (due 10/17)
 
 At a minimum, please include the answers to the following questions.  You should include enough detail for us to be able to give you useful feedback.
 
