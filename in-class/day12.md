@@ -1,22 +1,18 @@
 ---
-title: "Computer Vision Project Kickoff"
+title: "Studio Day and Computer Vision Project Kickoff"
 toc_sticky: true
 ---
 
 ## Today
 
-* Shareout of Robot Localization Projects (put stuff in the [Google Slide Deck](https://docs.google.com/presentation/d/1Hw12OJLTHiSFiM5jQiF3SGbulnGIhaaPvlIMBZCvAqA/edit?usp=sharing))
+* Kickoff for Computer Vision Project
+* Worktime to finish up robot localization project
 
 ## For Next Time
 
-* [Computer Vision Project Proposal](../assignments/computer_vision_project#project-proposal-due-1014) Due
-
-## Localization Project Wrapup
-* Shareout (see link above)
-* Pluses and Deltas (with a few other teams around you)
-
+* Finish robot localization project
+* [Computer Vision Project Proposal](../assignments/computer_vision_project#project-proposal-due-1013) Due
 
 ## Computer Vision Project Kickoff
 
-The prompts for this are located in [this Google Slide Deck](https://docs.google.com/presentation/d/1wZTL5VmW8KZZDnkZo9OtoqIchtXmtfkR17pxO-VwTJc/edit?usp=sharing).
-
+The prompts for this are located in [this Google Slide Deck](https://docs.google.com/presentation/d/1-0f50LG-OLCs0kwN-xgjumzJaUhi_0peREVHhvbdOhk/edit?usp=sharing).

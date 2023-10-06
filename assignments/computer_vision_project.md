@@ -1,11 +1,8 @@
 ---
 
 title: "Computer Vision Project"
-
 toc_sticky: true
-
 toc_h_max: 3
-
 ---
 
 ## Abstract
@@ -25,69 +22,37 @@ Please fill out <a href="https://docs.google.com/spreadsheets/d/1X5wElqAaHjzyoua
 
 ## Project Topic
 
-
-
-Your project should be about computer vision and its intersection with robotics.  In our simulated robot reality of the pandemic, this means that you should choose a computer vision topic that has some plausible application in robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, or some combination of both.
-
+Your project should be about computer vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, or some combination.
 
 
 In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simualted Neatos (or another robot) to do something interesting).  You have substantial lattitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms).  That said, we expect that you will do some exploration of algorithms as part of this project (which could could include implementation or perhaps subsantial learning about an algorithm or class of algorithms).
 
-
-
 Potential Algorithm Topics
 
 * Object tracking
-
 * Image segmentation
-
 * Object detection
-
 * Text recognition
-
 * Fiducial tracking
-
 * Visual odometry
-
 * Structure from motion
-
-
 
 (Note: there are some resources for these topics later in the document)
 
-
-
 ## Robot Platform
 
-
-
 * One option is to continue to work with the Neato.  In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
-
 * You may want to use an external dataset for your project. Here are some possible starting points. 
-
     * <a-no-proxy href="https://www.visualdata.io/discovery">Visual Data</a-no-proxy> has a nice collection of computer vision datasets and projects.
-
     * If you want a huge (but very cool) dataset for self-driving vehicles, consider usign Waymo's <a-no-proxy href="https://waymo.com/open/">Open Dataset</a-no-proxy>
-
-    * <a-no-proxy href="https://lionbridge.ai/datasets/17-best-robotics-datasets-for-machine-learning/">Here's another list of datasets specifically for robotics (not all are about computer vision)</a-no-proxy>
-
     * If you're interested in machine learning for robot control, you might consider building off some of <a-no-proxy href="https://github.com/comprobo18/robot_learning/network/members">the datasets (and code) from the 2018 Robot Learning project</a-no-proxy> You also might want to check out <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">the Google Slides presentation summarizing their results</a-no-proxy>.
-
     * A lof these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets.  That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
-
-
 
 ## Deliverables
 
-
-
 There are four deliverables for this project.
 
-
-
-### Project Proposal (due 10/14)
-
-
+### Project Proposal (due 10/13)
 
 At a minimum, please include the answers to the following questions.  You should include enough detail for us to be able to give you useful feedback.
 
@@ -101,7 +66,7 @@ At a minimum, please include the answers to the following questions.  You should
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
 * What might you need from the teaching team for you to be successful on this project?
 
-### In-class Presentation / Demo (11/1)
+### In-class Presentation / Demo (11/7)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
@@ -110,11 +75,11 @@ We'd like each team to spend about 10 minutes presenting what they did for this 
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-### Code (Due 11/1)
+### Code (Due 11/7)
 
 * You should turn in your code and writeup via Github.  Please fork your repo from this one.
 
-### Writeup (Due 11/1)
+### Writeup (Due 11/7)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
@@ -136,66 +101,47 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
   - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyocndyTDI2U2I1M1k/view?usp=sharing">Image Filtering</a-no-proxy>
   - <a-no-proxy href="https://sites.google.com/site/comprobofall14/home/labs/day-18?authuser=0">Object Recognition</a-no-proxy> (the instructions on running the code are out of date, but the ideas might help).
 * <a-no-proxy href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">Convert ROS image messages to OpenCV using CvBridge</a-no-proxy>
-
 * <a-no-proxy href="https://vision.in.tum.de/teaching/ss2013/visnav2013">Visual Navigation for Flying Robots</a-no-proxy> is a course on said topic.  The linked page includes lectures and even some bag files.
-
 * <a-no-proxy href="https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/">Connecting a webcam to ROS and OpenCV</a-no-proxy>
-
 * <a-no-proxy href="https://www.crcv.ucf.edu/papers/Object%20Tracking.pdf">An overview of methods for object tracking</a-no-proxy>
-
 * <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit?usp=sharing">Slides from the CompRobo Learning Project 2018 Class Report Out</a-no-proxy>
-
 * <a-no-proxy href="https://www.cs.ccu.edu.tw/~damon/photo/,OpenCV/,Mastering_OpenCV.pdf">Mastering OpenCV with Practical Computer Vision Projects</a-no-proxy>
-
 * Visual odometry resources (<a-no-proxy href="http://www.cvlibs.net/software/libviso/">one example</a-no-proxy>)
-
 * <a-no-proxy href="https://docs.opencv.org/master/da/d22/tutorial_py_canny.html">Canny edge detection</a-no-proxy>
-
-* <a-no-proxy href="https://docs.opencv.org/master/d4/d73/tutorial_py_contours_begin.html">Contours</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html">Template matching</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html">Hough line transform</a-no-proxy>
-
 * <a-no-proxy href="https://docs.opencv.org/master/d1/db7/tutorial_py_histogram_begins.html">Basics of histograms</a-no-proxy> and <a-no-proxy href="https://docs.opencv.org/3.4/d4/d1b/tutorial_histogram_equalization.html">histogram equalization</a-no-proxy>
-
 * <a-no-proxy href="https://scipy.github.io/old-wiki/pages/Tentative_NumPy_Tutorial">Basic Numpy tutorials</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_table_of_contents_gui/py_table_of_contents_gui.html">GUI Features in OpenCV</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_core/py_basic_ops/py_basic_ops.html#basic-ops">Basic Operations on Images</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_core/py_image_arithmetics/py_image_arithmetics.html#image-arithmetics">Arithmetic Operations on Images</a-no-proxy>
-
 * <a-no-proxy href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html">Corner Detection</a-no-proxy>
-
 * <a-no-proxy href="https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html">Numpy Examples List</a-no-proxy>
-
 
 ### Past projects to draw from
 
-
+* Computer Vision Projects from Fall 2022
+   * [https://github.com/jonaskaz/plant-vision](Plant Vision)
+   * [https://github.com/jackiezeng01/comprobo-computervisionproject](Visual Odometry)
+   * [https://github.com/hnvakil/soccer_computer_vision](Robot Soccer)
+   * [https://github.com/gabbyblake/computer_vision](Self-guided Robot Nerf Turret Shooter)
+   * [https://github.com/TigeyJewellAlibhai/uav-control/tree/main](Controlling a Drone)
+   * [https://github.com/jerWenger/Visual_Based_Odometry](Visual Odometry)
+   * [https://github.com/ayushchakra/neato-fetch](Neato Fetch)
+   * [https://github.com/SeunguLyu/NeatoFollowingNeato](Neato Following Another Neato)
+   * [https://github.com/kviiim/fiducial_tracking](Fiducial Tracking)
+   * [https://github.com/MetaKor/comprobo_fiducial](Fiducial Tracking)
+   * [https://github.com/krish-suresh/comprobo_cv_project](Stereo Vision)
+   * [https://github.com/AlexisWu-01/compRobo22_computer_vision](Hand Gesture Recognition)
+ 
 * <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">Robot Learning Report out 2018</a-no-proxy>
-
 * Computer Vision Project Writeups from 2017
-
    * <a-no-proxy href="https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md">Self Driving Neato</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf">Computer Vision Emotion Detection</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/HALtheWise/comprobo-fast-localizer/blob/master/final_report.pdf">Visual Localization</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/shanek21/cv_motion_prediction">Predicting Paths of Tracked Objects</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/krusellp/neato_keeper/blob/master/Neato_Keeper.pdf">Neato Keeper</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/kzhang8850/lane_follower">Lane Follower</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/CompRoboMealVision/meal_recognition">Meal Recognition</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/jsutker/computer_vision_2017/blob/master/pacneato/scripts/Pacneato_Writeup.md">Pac Neato</a-no-proxy>
-
    * <a-no-proxy href="https://github.com/jovanduy/computer_vision_2017">Neato Augmented Reality Parking</a-no-proxy>
-
-
-
