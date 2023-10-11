@@ -46,7 +46,7 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc.  In addition, you should show a demo of your system in action.
 
-This deliverable be assessed in a binary fashion (did you do the above or not).
+This deliverable be assessed in a binary fashion (did you do the above or not).  Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1Rg270ZZeTSYCZGqluGyyrMO_ETwXKgMK9BshvEyAqoM/edit?usp=sharing).
 
 
 ### Your Code and Bag Files (Due 10-13)
