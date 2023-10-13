@@ -95,6 +95,14 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Resources
 
+* Krishna's picks (good starting points for machine learning flavored computer vision projects)
+  - [UZH FPV Drone Racing Dataset](https://fpv.ifi.uzh.ch/datasets/):  Get OpenVins or GTSAM running to do some pose estimation.  Try to implement or compute the optical flow between image frames.
+  - [KITTI Autonomous Car Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark).  Implement or use YOLO or other CNN to do 2D object detection for AV environment (e.g., [this tutorial](https://github.com/windowsub0406/KITTI_Tutorial)). Some form of 360 video to BEV model similar to [this tutorial](https://jamycheung.github.io/360BEV.html).
+  - Some Foundation Model (e.g., [Segment Anything](https://github.com/facebookresearch/segment-anything)).  Try to run and use the SAM model for some structured navigation task with the neatos (e.g., detect stop signs...)
+  - Try to run [VINT](https://visualnav-transformer.github.io/) on the Neato
+
+It feels kinda hard to find good ML CV tutorial problems for robotics without assuming a ton of extra work. It feels more practical to maybe collect more cool visual foundation models or vision models to do some type of higher level task 
+
 * In-Class Activities from Past CompRobo Offerings
   - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoZnBSZ0FiSjZGRDA/view?usp=sharing">Object Tracking</a-no-proxy>
   - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoTTBHLWl1c3FqRnM/view?usp=sharing">3D Structure from Motion</a-no-proxy>

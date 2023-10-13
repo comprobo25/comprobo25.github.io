@@ -140,6 +140,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 10: Gauss, Likelihood Fields, and the Particle Filter](in-class/day10)
 * [Day 11: Particle Filter Debugging Strategies, Extensions, and Studio Day](in-class/day11)
 * [Day 12: Studio Day and Introduction to Computer Vision Project](in-class/day12)
+* [Day 13: Robot Localizaiton Shareout and Computer Vision Project Ideation and Team Formation](in-class/day13)
 
 ## Conclusion and Learning More
 
