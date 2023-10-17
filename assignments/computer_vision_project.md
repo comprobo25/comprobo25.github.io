@@ -129,18 +129,18 @@ It feels kinda hard to find good ML CV tutorial problems for robotics without as
 ### Past projects to draw from
 
 * Computer Vision Projects from Fall 2022
-   * [https://github.com/jonaskaz/plant-vision](Plant Vision)
-   * [https://github.com/jackiezeng01/comprobo-computervisionproject](Visual Odometry)
-   * [https://github.com/hnvakil/soccer_computer_vision](Robot Soccer)
-   * [https://github.com/gabbyblake/computer_vision](Self-guided Robot Nerf Turret Shooter)
-   * [https://github.com/TigeyJewellAlibhai/uav-control/tree/main](Controlling a Drone)
-   * [https://github.com/jerWenger/Visual_Based_Odometry](Visual Odometry)
-   * [https://github.com/ayushchakra/neato-fetch](Neato Fetch)
-   * [https://github.com/SeunguLyu/NeatoFollowingNeato](Neato Following Another Neato)
-   * [https://github.com/kviiim/fiducial_tracking](Fiducial Tracking)
-   * [https://github.com/MetaKor/comprobo_fiducial](Fiducial Tracking)
-   * [https://github.com/krish-suresh/comprobo_cv_project](Stereo Vision)
-   * [https://github.com/AlexisWu-01/compRobo22_computer_vision](Hand Gesture Recognition)
+   * [Plant Vision](https://github.com/jonaskaz/plant-vision)
+   * [Visual Odometry](https://github.com/jackiezeng01/comprobo-computervisionproject)
+   * [Robot Soccer](https://github.com/hnvakil/soccer_computer_vision)
+   * [Self-guided Robot Nerf Turret Shooter](https://github.com/gabbyblake/computer_vision)
+   * [Controlling a Drone](https://github.com/TigeyJewellAlibhai/uav-control/tree/main)
+   * [Visual Odometry](https://github.com/jerWenger/Visual_Based_Odometry)
+   * [Neato Fetch](https://github.com/ayushchakra/neato-fetch)
+   * [Neato Following Another Neato](https://github.com/SeunguLyu/NeatoFollowingNeato)
+   * [Fiducial Tracking](https://github.com/kviiim/fiducial_tracking)
+   * [Fiducial Tracking](https://github.com/MetaKor/comprobo_fiducial)
+   * [Stereo Vision](https://github.com/krish-suresh/comprobo_cv_project)
+   * [Hand Gesture Recognition](https://github.com/AlexisWu-01/compRobo22_computer_vision)
  
 * <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">Robot Learning Report out 2018</a-no-proxy>
 * Computer Vision Project Writeups from 2017
