@@ -142,6 +142,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 12: Studio Day and Introduction to Computer Vision Project](in-class/day12)
 * [Day 13: Robot Localizaiton Shareout and Computer Vision Project Ideation and Team Formation](in-class/day13)
 * [Day 14: Neato Soccer and Discuss Project Proposals](in-class/day14)
+* [Day 15: Keypoint Matching and Descriptors](in-class/day15)
 
 ## Conclusion and Learning More
 
