@@ -1,5 +1,5 @@
 ---
-title: "Pinhole Camera Model and Camera Calibration"
+title: "Computer Vision Ethics Discussion and Project Work Time"
 toc_sticky: true
 ---
 
