@@ -144,6 +144,8 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 14: Neato Soccer and Discuss Project Proposals](in-class/day14)
 * [Day 15: Keypoint Matching and Descriptors](in-class/day15)
 * [Day 16: Computer Vision Ethics Discussion and Project Work Time](in-class/day16)
+* [Day 17: Project Work Time](in-class/day17)
+* [Day 17: Project Work Time](in-class/day18)
 
 ## Conclusion and Learning More
 
