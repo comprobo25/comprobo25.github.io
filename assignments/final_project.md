@@ -58,10 +58,9 @@ Your deliverables should be turned findable through your Github repository (even
 
 * Project Proposal (5%)
 * Poster / demo (5%)
-* Code (functionality, design, documentation) (30%)
+* Code (functionality, design, documentation) (50%)
 * Website.  Includes project stories (or blog) and project documentation.  (10% for milestone entry 1, 10% for milestone entry 2, 10% for the final project documentation).
 * Ethics and Responsible Use Statement (10%)
-* YOGA (20%)
 
 ## Project Proposal (due 1pm am on Tuesday 11/8).
 
