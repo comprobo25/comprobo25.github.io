@@ -12,9 +12,9 @@ For the remainder of the course you will be working on an open-ended robotics pr
 
 ### Deltas from Previous Projects
 
-* A bit longer in duration - about 5 weeks (not including the Thanksgiving break) versus 2.5-3 weeks for the longest projects we've done thus far.
+* A bit longer in duration - about 4 weeks (not including the Thanksgiving break) versus 2.5-3 weeks for the longest projects we've done thus far.
 * There will be more opportunities to create compelling visuals and text that can become a part of your professional portfolio (see Website / Blog section).
-* You will set your own learning goals and craft a suitable assessment plan (see the [YOGA](#yoga) section).
+* You will have more control over the topic of the project and thus be able to address your learning goals (YOGA) more directly.
 
 ## Learning Objectives
 
@@ -59,8 +59,8 @@ Your deliverables should be turned findable through your Github repository (even
 * Project Proposal (5%)
 * Poster / demo (5%)
 * Code (functionality, design, documentation) (30%)
-* Website.  Includes project stories (or blog) and project documentation.  (7.5% for blog entry 1, 7.5% for blog entry 2, 10% for the final project documentation).
-* Ethics and Responsible Use Statement (15%)
+* Website.  Includes project stories (or blog) and project documentation.  (10% for milestone entry 1, 10% for milestone entry 2, 10% for the final project documentation).
+* Ethics and Responsible Use Statement (10%)
 * YOGA (20%)
 
 ## Project Proposal (due 1pm am on Tuesday 11/8).
@@ -70,13 +70,13 @@ Your deliverables should be turned findable through your Github repository (even
 * Provide some motivation for your project. Why does your team want to pursue this? What possible applications does the project have? Given our discussions in class, are there possible implications for society? (Note: We're not expecting a lengthy analysis, but some ideas and consideration.)
 * How are you planning to engage with the Ethics and Responsible Use Statement part of the project?
 * What topics will you explore and what will you generate?  What frameworks / algorithms are you planning to explore (do your best to answer this even if things are still fuzzy)?  What is your MVP?  What are your stretch goals?
-* Outline a rough timeline for the major milestones of your project.  This will mainly be useful to refer back to as we move through the project.
-* What do you view as the biggest risks to you being successful on this project?
-* [This section will be completed in class on 11/9] Given each of your YOGAs, in what ways is this project well-aligned with these goals, and in what ways is it misaligned?  If there are ways in which it is not well-aligned, please provide a potential strategy for bringing the project and your learning goals into better alignment.  There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
+* Outline, in detail, what you intend to have accomplished by each of the milestones.
+* Conduct a [pre-mortem](performing_a_project_premortem.pdf) on your project.  Write at least 5 risks to the success of your project (where success could be in relation to your learning or the final project output)
+* [This section will be completed in class on 11/10] Given each of your YOGAs, in what ways is this project well-aligned with these goals, and in what ways is it misaligned?  If there are ways in which it is not well-aligned, please provide a potential strategy for bringing the project and your learning goals into better alignment.  There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
 
-## Teaser Slide / Demo [TODO: we will update with more logistics]
+## Teaser Slide / Demo (Due Wednesday 12/3)
 
-On Wednesday, December 14th from 4-6pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out by your teaser slide (either displayed on a laptop or printed as a poster) and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive teaser slide and participate in the final event.
+On Wednesday, December 13th from 1-3pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out by your teaser slide (either displayed on a laptop or printed as a poster) and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive teaser slide and participate in the final event.
 
 ## Code (functionality, design, documentation)
 
@@ -92,18 +92,15 @@ Please prepare a statement of principles of responsible use of the technique or 
 
 You should create a project website.  The project website will serve two purposes: to explain how your system works and to document the story of how you arrived at your final product.  You should create these deliverables for multiple audiences: general readers interested in your project, potential employers, other students in the course, and the CompRobo teaching staff (course assistants and faculty).
 
-### Project Stories (blog)
+### Project Milestones
 
-Twice during the project you will be writing a blog entry that tells a story about some phase of your project.  Possible templates for these stories are:
+Twice during the project you will be writing up your progress on your project thus far.  You should include these milestones as part of your project website, so try to keep the writing suitable for a general audience (e.g., someone who doesn't have much context about the class).  You will be coming up with your best guess as to how far you will be by each of the project milestones as part of your project proposal.
 
-* We tried a method or an algorithm to solve a problem.  The method didn't work.  We though of a new method.  We implemented it.  It worked!  Hurray!  (fill in with lots of good descriptive text, code snippets, and visuals).
-* We had a particularly nasty bug.  We tried lots of methods to debug the problem.  Finally we figured it out!  We learned lessons for the future.  Hurray!  (fill in with a detailed description of what the bug was and what methods you tried).
-* We have implemented a key feature.  It works really well!  Here's how we did it.  Hurray!
+Project milestone 1 will be due by class on Friday 11/17. Submit on Canvas.
 
-Project story 1 will be due by class on Tuesday 11/29. Submit on Canvas.
+Project milestone 2 will be due by class on Tuesday 12/5. Submit on Canvas.
 
-Project story 2 will be due by class on Friday 12/9. Submit on Canvas.
-## Project Documentation (Due at the end of finals period Monday Dec 19th)
+## Project Documentation (Due at the end of finals period Friday 12/15)
 
 At the end of the project your website should include the following information:
 
@@ -114,29 +111,4 @@ Submit your website link on canvas.
 
 ## YOGA
 
-### Phase 0 (identification of learning goals) Due Tuesday 11/8
-
-As you finalize your project topic and proposal, you will write up a list of three goals that you wish to achieve during the final project. Your goals can take any form as long as they represent your own interests and learning objectives for the project. Since you know, generally, what project you will be working on, these goals should be reasonably well-aligned with your choice of project.  You may consider building on the course learning objectives, or you can strike out in a new direction. Make sure that each goal is written in a clear manner: the goal should be something that you can achieve, and you need to be able to know if/when/how well you have achieved it.
-
-The phase 0 submission should be a list of three goals, each one about a paragraph (3­-4 sentences).  To make things easier later on, please use a Google doc to write down your goals.  Explain what you hope to do or learn, how you will achieve it, and (briefly!) why it is important.  Please submit to canvas.  You will engage with these learning goals in-class on 11/8, so please have them with you at that time.
-
-### Phase 1 (mid-project revision and assessment plan) Due Friday 12/2.
-
-Now that you are a little more than halfway through the project, you may wish to revise your goals. This is your chance to change your goals for whatever reason, or perhaps to clarify them. If you are happy with the goals that you identified, then you can leave them unchanged. 
-
-Whether you revise them or not, at this time you should add an assessment plan for each goal. How will you (and we) know that you achieved each goal, and how will we know how well you achieved it? The assessment plan does not need to be a tangible assignment; you are welcome to propose a reflection or any other strategy.  
-
-
-To turn in this assignment you should include all of the content from you phase 0 goals, any revisions to your goals, and your assessment plan. Please submit your assignment on Canvas.
-
-### Phase 2 (reflection and assessment) Due by the end of finals period 12/19
-
-At the end of the project you will assign yourself a grade that indicates how well you think you achieved your goals.  Along with your grade, you will send us a 2­-3 page narrative reflection that explains your progress towards these goals. This reflection should again build upon the document you submitted earlier: include the unmodified phase 1 assignment and add your concluding thoughts at the end. 
-
-For phase 2, please turn in a document that has a section devoted to each learning goal. Submit your document on Canvas. The section should have the following subsections:
-
-* What is the goal? [This should already be there from previous phases]
-* What is the assessment plan? [This should already be there from previous phases]
-* Evidence.  Provide evidence (or pointers to evidence) that are useful in assessing the learning goal.  This could be samples of code from your repo, a link to a video, a description of an activity you did.
-* Interpretation of the evidence.  In your words, how does the evidence link with your assessment plan?
-* Your grade for this goal. This does not need additional justification beyond what was stated in the first four points.  We will do some calibration of these among different students, so don't worry too much about knowing what other students are putting for these.
+We'll be continuing our YOGA assignment from earlier in the semester.  This is a great chance to revisit learning goals and update them to your ifnal project or update use them to shape the project itself!
