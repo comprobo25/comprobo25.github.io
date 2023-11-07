@@ -18,4 +18,6 @@ Here is a link to the <a-no-proxy href="https://docs.google.com/presentation/d/1
 
 ## Final Project Ideation / Team Formation
 
-See this <a-no-proxy href="https://docs.google.com/presentation/d/1ZfY-0IQvRMDlvKaXZ06lIamujyVIaHCi3cGwJmPZcZg/edit?usp=sharing">Google Slides presentation</a-no-proxy>
+See this <a-no-proxy href="https://docs.google.com/presentation/d/1ZfY-0IQvRMDlvKaXZ06lIamujyVIaHCi3cGwJmPZcZg/edit?usp=sharing">Google Slides presentation</a-no-proxy>.
+
+Submit [this form](https://docs.google.com/forms/d/e/1FAIpQLSeQ7xf856ji6txGPgpkZtlZebE83CMoCs9d6MLgLoWTAtHPdw/viewform) no later than 9am on Thursday the 9th.
