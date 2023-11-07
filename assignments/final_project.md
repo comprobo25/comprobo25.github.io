@@ -62,7 +62,7 @@ Your deliverables should be turned findable through your Github repository (even
 * Website.  Includes project stories (or blog) and project documentation.  (10% for milestone entry 1, 10% for milestone entry 2, 10% for the final project documentation).
 * Ethics and Responsible Use Statement (10%)
 
-## Project Proposal (due 1pm am on Tuesday 11/8).
+## Project Proposal (due 1pm on Friday 11/10).
 
 * Who is on the team?
 * What is the main idea of the project?
@@ -73,7 +73,7 @@ Your deliverables should be turned findable through your Github repository (even
 * Conduct a [pre-mortem](performing_a_project_premortem.pdf) on your project.  Write at least 5 risks to the success of your project (where success could be in relation to your learning or the final project output)
 * [This section will be completed in class on 11/10] Given each of your YOGAs, in what ways is this project well-aligned with these goals, and in what ways is it misaligned?  If there are ways in which it is not well-aligned, please provide a potential strategy for bringing the project and your learning goals into better alignment.  There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
 
-## Teaser Slide / Demo (Due Wednesday 12/3)
+## Teaser Slide / Demo (Due Wednesday 12/13)
 
 On Wednesday, December 13th from 1-3pm, we will have our final event.  You should create a teaser slide that functions as an advertisement of the main points of your project (your goal should be to make it legible to folks who know a bit about robotics but are not from this class).   In addition, you may consider having a demo (either live or recorded).  You should be prepared to hang out by your teaser slide (either displayed on a laptop or printed as a poster) and talk about your work with other students and Olin community members.  In order to ensure that you can see other groups' posters, only half of your team needs to be by the poster at any point time (allowing the other member(s) to go view other teams posters / demos).  You will receive full credit for this activity if you create a comprehensive teaser slide and participate in the final event.
 
