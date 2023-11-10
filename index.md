@@ -147,6 +147,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 17: Project Work Time](in-class/day17)
 * [Day 18: Project Work Time](in-class/day18)
 * [Day 19: Computer Vision Showcase and Final Project Kickoff](in-class/day19)
+* [Day 20: Project Proposal Generation](in-class/day20)
 
 ## Conclusion and Learning More
 
