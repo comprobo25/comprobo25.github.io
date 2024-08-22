@@ -1,10 +1,11 @@
 ---
 layout: splash
-title: "A Computational Introduction to Robotics 2023"
+title: "A Computational Introduction to Robotics 2024"
 header:
   overlay_image: "website_graphics/robo_splash.jpg"
   overlay_color: "#000"
   overlay_filter: "0.4"
+
 feature_row_TODO:
   - image_path: https://img.youtube.com/vi/MFL4gd2IMm8/0.jpg
     alt: "A thumbnail image for a video.  The text QEA Olin College of Engineering appears on a textured blue background"
@@ -96,7 +97,7 @@ feature_row_final_project:
 
 ---
 
-The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are mobile robotics, computer vision, and machine learning. This year we are also piloting student led discussions on societal issues and robotics. 
+The Olin College course "A Computational Introduction to Robotics" (CompRobo) serves as a tour through some of the most important ideas at the heart of modern robotics.  The course utilizes a project-based learning pedagogy that allows students to build mastery of key concepts while also allowing for a great deal of student choice and autonomy.  The major focal points of the course are state estimation, localization, computer vision, decision-making, and societal implications of embodied systems. 
 
 <!-- {% include feature_row %}-->
 
@@ -104,7 +105,7 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 {% include feature_row id="feature_row_robot" type="left" %}
 
-## <a name="module-details"/> Warmup Project
+## <a name="module-details"/> Warmup Project: Software Development for Robots
 
 {% include feature_row id="feature_row_warmup_project" type="right" %}
 
@@ -128,28 +129,34 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 Note: see [Site-wide TOC for an easy to navigate outline of each day's activities](toc)
 
-* [Day 1: Welcome!!!](in-class/day01)
-* [Day 2: Coordinate Frames and Basic ROS Concepts](in-class/day02)
-* [Day 3: Writing sensory-motor loops in ROS](in-class/day03)
-* [Day 4: Debugging, Proportional Control, and ROS Parameters](in-class/day04)
-* [Day 5: Wall Bumping and Finite-State Control](in-class/day05)
-* [Day 6: Conceptual Introduction and Simple 1D Particle Filter](in-class/day06)
-* [Day 7: The Particle Filter for Robot Localiation](in-class/day07)
-* [Day 8: Robot State Estimation and Bayes](in-class/day08)
-* [Day 9: Discussions on Robotics and Labor and Computing Relative Motion](in-class/day09)
-* [Day 10: Gauss, Likelihood Fields, and the Particle Filter](in-class/day10)
-* [Day 11: Particle Filter Debugging Strategies, Extensions, and Studio Day](in-class/day11)
-* [Day 12: Studio Day and Introduction to Computer Vision Project](in-class/day12)
-* [Day 13: Robot Localizaiton Shareout and Computer Vision Project Ideation and Team Formation](in-class/day13)
-* [Day 14: Neato Soccer and Discuss Project Proposals](in-class/day14)
-* [Day 15: Keypoint Matching and Descriptors](in-class/day15)
-* [Day 16: Computer Vision Ethics Discussion and Project Work Time](in-class/day16)
-* [Day 17: Project Work Time](in-class/day17)
-* [Day 18: Project Work Time](in-class/day18)
-* [Day 19: Computer Vision Showcase and Final Project Kickoff](in-class/day19)
-* [Day 20: Project Proposal Generation](in-class/day20)
+* [Day 0: Welcome!!!](in-class/day01)
+* [Day 1: The Landscape of Modern Robotics // Coordinate Frames and Basic ROS Concepts](in-class/day02)
+* [Day 2: What are Broader Impacts? // Writing sensory-motor loops in ROS](in-class/day03)
+* [Day 3: Reaching a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters](in-class/day04)
+* [Day 4: Frameworks for Challenging Discussions // Wall Bumping and Finite-State Control](in-class/day05)
+* [Day 5: Conceptual Introduction and Simple 1D Particle Filter](in-class/day06)
+* [Day 6: The Particle Filter for Robot Localization](in-class/day07)
+* [Day 7: Robot State Estimation and Bayes](in-class/day08)
+* [Day 8: Computing Relative Motion](in-class/day09)
+* [Day 9: Gauss, Likelihood Fields, and the Particle Filter](in-class/day10)
+* [Day 10: Particle Filter Debugging Strategies, Extensions, and Studio Day](in-class/day11)
+* [Day 11: Studio Day and Introduction to Computer Vision Project](in-class/day12)
+* [Day 12: Robot Localizaiton Shareout and Computer Vision Project Ideation and Team Formation](in-class/day13)
+* [Day 13: Neato Soccer and Discuss Project Proposals](in-class/day14)
+* [Day 14: Broader Impacts Discussion Session 1 // Keypoint Matching and Descriptors](in-class/day15)
+* [Day 15: Broader Impacts Discussion Session 2 // Project Work Time](in-class/day16)
+* [Day 16: Broader Impacts Discussion Session 3 // Project Work Time](in-class/day17)
+* [Day 17: Project Work Time](in-class/day18)
+* [Day 18: Computer Vision Showcase and Final Project Kickoff](in-class/day19)
+* [Day 19: Project Proposal Generation](in-class/day20)
+* [Day 20: Planning Under Uncertainty // Project Work Time](in-class/day21)
+* [Day 21: Project Proposal Generation](in-class/day22)
+* [Day 22: Cognitive Robots // Project Work Time](in-class/day23)
+* [Day 23: Project Work Time](in-class/day24)
+* [Day 24: Project Work Time](in-class/day25)
+* [Day 25: Project Work Time](in-class/day26)
+* [Day 26: Final Project Showcase and Semester Reflection](in-class/day27)
+
 
 ## Conclusion and Learning More
-
-
 CompRobo serves as a fun, hands-on introduction to key ideas in robotics algorithms and toolsets.  Despite the fact that the course is successful at Olin, we realize that everyone's institutional context is different. To connect with folks at Olin College to learn more about this module or determine how you might build off of this at your own institution, e-mail <a href="mailto:Collaboratory@olin.edu">Collaboratory@olin.edu</a> to start the conversation.
