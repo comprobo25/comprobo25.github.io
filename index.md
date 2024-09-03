@@ -43,15 +43,15 @@ feature_row_robot:
     * [Raspberry Pi Setup](How to/setup_raspberry_pi)"
 
 feature_row_warmup_project:
-  - image_path: website_graphics/neato_gazebo.png
-    alt: "The Neato robot in an empty, simulated world"
+  - image_path: website_graphics/barrel_follow.gif
+    alt: "The Neato robot in a simulated world tracking a barrel"
     excerpt: "
    The Warmup Project provides a scaffolded assignment for students to get up to speed with important concepts in ROS through implementing compelling behaviors on a robot.  The project emphasizes the establishment of good practices such as debugging techniques and visualization.
 
     ### Supporting Documents
 
 * [Warmup Project Assignment Document](assignments/warmup_project)\n
-* [Class-generated Tips and Tricks](https://docs.google.com/document/d/1uutJnfUunXUQJS3sbSNWU7m9Iy027-wzZllBTEQf6rw/edit?usp=sharing)\n
+* [Class-generated Tips and Tricks](https://docs.google.com/document/d/15u9fvz5TsuPaSnvE1h_dyiVO2Rk7YTIyNweKpGGwuTE/edit?usp=drive_link)\n
 * [Troubleshooting](How to/troubleshoot)\n"
 
 feature_row_robot_localization_project:
@@ -129,7 +129,7 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 Note: see [Site-wide TOC for an easy to navigate outline of each day's activities](toc)
 
-* [Day 0: Welcome!!!](in-class/day01)
+* [Day 0: Welcome!](in-class/day01)
 * [Day 1: The Landscape of Modern Robotics // Coordinate Frames and Basic ROS Concepts](in-class/day02)
 * [Day 2: What are Broader Impacts? // Writing sensory-motor loops in ROS](in-class/day03)
 * [Day 3: Reaching a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters](in-class/day04)
