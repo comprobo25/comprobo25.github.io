@@ -1,11 +1,13 @@
 ---
-title: "Writing sensory-motor loops in ROS"
+title: "What are Broader Impacts // Writing sensory-motor loops in ROS"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day03/#today
   - title: For Next Time
     link: in-class/day03/#for-next-time
+  - title: What are Broader Impacts
+    link: in-class/day03/#what-are-broader-impacts
   - title: Uniqueness of Node Names
     link: in-class/day03/#follow-up-from-last-time
   - title: Coordinate Frames and Coordinate Transforms in Robotics
@@ -15,12 +17,31 @@ toc_data:
 ---
 
 ## Today
-
+* What are Broader Impacts?
 * Coordinate Frames and Transforms
 * Writing our first sensory-motor loops (in groups)
 
 ## For Next Time
-* Work on the <a-no-proxy href="../assignments/warmup_project">the Warmup Project</a-no-proxy>.  There is an intermediate checkpoint due on Tuesday (class meeting 4).
+* Work on the <a href="../assignments/warmup_project">the Warmup Project</a>.  There is an intermediate checkpoint due on Monday (class meeting 4).
+* Work on the [Broader Impacts assignment](../assignments/broader_impacts).
+
+## What are Broader Impacts?
+As we touched on during the first class meeting, and as you've started chewing on in the Broader Impacts assignment, robots -- by virtue of being embodied in the world -- uniquely engage with the world in a way that other forms of computing-based technology may not. "Robo-ethics" is a subfield within robotics that formally designs and ascribes methods of analyzing the impact of robotic systems. Some frameworks which you might find interesting include:
+* [TODO]
+* [TODO]
+* [TODO]
+
+While robo-ethicists make it their primary vocation to understand the nuances of robotics-use, every roboticist or robotics-adjacent engineer, manager, researcher, or entrepreneur deal with practical quandaries each day that require applying (implicitly or explicitly) a values framework -- from the design of a particular interface (for whom will this interface be for? how much information from the backend should be legible?), selection of components (what is the lifecycle of this part? who is supplying this part?), and creation of design specifications (what is the intended use of the robot? how will that intended use be protected?)
+
+"Broader Impacts" is a term that attempts to make apparent the values or ethics based systems that people apply to the technology they produce or work that they engage in. [The National Science Foundation (NSF) in the US requires a "broader impacts" component to research proposals](https://new.nsf.gov/funding/learn/broader-impacts), where the definition of a broader impact is expansive, and may cover:
+* Public engagement in the work to be completed
+* Developing partnerships across academic / industrial sectors, or across disciplines
+* Explicitly working on a project that contributes to societal well-being
+* Contributing to national security
+* Ensuring participants are representative of various backgrounds and their engagement is inclusive
+
+Let's have a look at a broader impacts statement from a NSF proposal on a robotic system....[TODO]
+
 
 ## Follow-up From Last Time
 

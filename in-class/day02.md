@@ -1,11 +1,13 @@
 ---
-title: "Coordinate Frames and Basic ROS Concepts"
+title: "The Landscape of Modern Robotics // Coordinate Frames and Basic ROS Concepts"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day02/#today
   - title: For Next Time
     link: in-class/day02/#for-next-time
+  - title: About Modern Robotics
+    link: in-class/day02/#about-modern-robotics
   - title: Thinking about learning goals
     link: in-class/day02/#thinking-about-learning-goals
   - title: Coding Exercises
@@ -13,21 +15,31 @@ toc_data:
 ---
 
 ## Today
-* [More Course Details](https://docs.google.com/presentation/d/1GNKZft9K8El-Fa7mfzyOZ7l036KAhCNJzNK4WZGQ_x4/edit?usp=sharing)
-* Questions / clarifications on basic ROS concepts
-* Writing our first ROS node
+* Questions / Clarifications on the Course
+* [About Modern Robotics](https://docs.google.com/presentation/d/1aNEeU3ItobY0l_ijuL2yFherPyzIpnMNhX3B_KoYxxQ/edit?usp=sharing)
+* [YOGA Phase 0 Assignment](../assignments/class_yoga) Brainstorm
+* Writing our First ROS Node
 
 ## For Next Time
-* Find a partner for the Warmup Project and get started (there is an intermediate deliverable that we would like you to aim for by class 4).
+* Submit your [YOGA Phase 0 assignment](../assignments/class_yoga)
+* Find a partner for the [Warmup Project](../assignments/warmup_project) and get started (there is an intermediate deliverable (a share-out) that we would like you to aim for by class 4).
+* Get started on the [Broader Impacts](../assignments/broader_impacts) assignment, which will be due in ~2 weeks.
 
+## About Modern Robotics
+"Robotics" as a field of study or industry encompasses a _huge_ range of topics, themes, and systems. To be a roboticist in practice is to be someone who can appreciate the complexity of sociotechnical systems, can collaborate with domain experts across various technical / applied fields, and who generally specializes in a particular facet of a robotic system.
+
+Here is a brief tour of terms used to describe various facets of the field of robotics and resources to learn more! [Slides](https://docs.google.com/presentation/d/1aNEeU3ItobY0l_ijuL2yFherPyzIpnMNhX3B_KoYxxQ/edit?usp=sharing)
 
 ## Thinking about learning goals
+The [YOGA Phase 0 assignment](../assignments/class_yoga) is designed for you to set an intention for the semester, and to help you, your colleagues, and the teaching team create materials and activities that will serve your goals. 
 
-I'll go over the YOGA assignment and give you all a chance to think through some of your learning goals for this course.  Once you've taken about 5 minutes to think on your own, get together with 3-4 people around you and share your initial thoughts about learning goals.
+Spend 5 minutes on your own to jot down some ideas for your learning goals.
 
-## Coding Exercises
+Gather from 3-4 folks around you to share your thoughts about learning goals for the semester. We'll spend about 15 minutes in these groups.
 
-Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo23/class_activities_and_resources).  If you'd like to organize your work under GitHub repo, we suggest you fork the repo ``class_activities_and_resources``.
+## Coding Exercises: Writing our first ROS Node
+
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo24/class_activities_and_resources).  If you'd like to organize your class work as a GitHub repo, we suggest you fork the repo ``class_activities_and_resources``.
 
 ### Creating a ROS package
 
@@ -116,7 +128,7 @@ $ ros2 run in_class_day02 send_message
 
 You will now have to use ``ctrl-c`` to stop execution of your node.  You should see the string ``Hi from in_class_day02`` print repeatedly onto the console.
 
-### Creating ROS Messages in a Python Program (walkthrough in MAC126)
+### Creating ROS Messages in a Python Program (walkthrough in MAC113)
 
 ROS messages are represented in Python as objects.  In order to create a ROS message you must call the ``__init__`` method for the ROS message class.  As an example, suppose we want to create a ROS message of type ``geometry_msgs/msg/PointStamped``.  The first thing we need to do is import the Python module that defines the ``PointStamped`` class.  The message type ``geometry_msgs/msg/PointStamped`` indicates that the ``PointStamped`` message type is part of the ``geometry_msgs`` package.  All of the definitions for messages stored in the ``geometry_msgs`` package will be in a sub-package called ``geometry_msgs.msg``.  In order to import the correct class definition into our Python code, we can create a new Python script at ``~/ros2_ws/src/class_activities_and_resources/in_class_day02/in_class_day02/send_message.py`` and add the following line to the top of our ``send_message.py`` script.
 
