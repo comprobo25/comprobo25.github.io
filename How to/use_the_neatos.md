@@ -3,29 +3,32 @@ title: "Using the Neatos"
 toc_sticky: true
 ---
 
-This document will help use the physical Neato as well as its simulated counterpart.  Before going through these instructions, make sure that you have already <a-no-proxy href="../How to/setup_your_environment" data-canvas="https://olin.instructure.com/courses/143/modules/items/1303">setup your computing environment</a-no-proxy>.
+This document will help use the physical Neato as well as its simulated counterpart.  Before going through these instructions, make sure that you have already <a href="../How to/setup_your_environment">setup your computing environment</a>.
 
 
 # Connecting to the Physical Neatos
 
-This semester marks the triumphant return of the physical Neatos to CompRobo!  The last time we used these was Fall 2018.  I've spent a lot of time getting these old trusty bots ready for the semester, but please be patient while we work out any remaining kinks.  We'll also be getting a [TurtleBot4 Lite](https://www.robotshop.com/en/clearpath-robotics-turtlebot-4-lite-mobile-robot.html) in the first couple of weeks of the semester if you'd like to play around with that.
+This semester marks another year of physical Neatos to CompRobo! These robots were used in 2018, then made a triumphant return in 2023. A [TurtleBot4 Lite](https://www.robotshop.com/en/clearpath-robotics-turtlebot-4-lite-mobile-robot.html) may also be occasionally available for this class as well.
 
 
 ## Normal Usage
 
 ### Step 1: Find a Neato!
 
-The Neatos will be stored in or just outside the classroom (MAC126).  This semester we are using the [Botvac series](https://neatorobotics.cn/wp-content/themes/neato-2015/assets/images/robot-vacuums/botvac-d75/botvac-d75_medium.jpg) Neatos.
+The Neatos will be stored in or just outside the classroom (MAC113).  This semester we are using the [Botvac series](https://neatorobotics.cn/wp-content/themes/neato-2015/assets/images/robot-vacuums/botvac-d75/botvac-d75_medium.jpg) Neatos.
 
 Checklist:
 
-1. Make sure the Neato's batteries are charged.  To test this, pull the Neato away from it's charging station and hit the big button next to the Neato's display.  The display should turn on and stay on revealing a battery capacity indicator (if the robot complains about the dirtbin being out, just press on the little button where the dirtbin would normally be).  Make sure the capacity is close to full.
+1. Make sure the Neato's batteries are charged.  To test this, pull the Neato away from it's charging station and hit the big button next to the Neato's display.  The display should turn on and stay on revealing a battery capacity indicator (if the robot complains about the dirtbin being out, just press on the little button where the dirtbin would normally be).  Make sure the battery capacity is close to full.
+
+
 ### Step 2: Get a Battery USB Battery Pack for the Raspberry Pi
 
 The batteries are all stored on the racks in the classroom.
 
 Checklist:
 1. The battery indicator light should be at least level 2 (preferably full)
+
 
 ### Step 3: Connect the USB battery pack to the Raspberry Pi's USB cable.
 
@@ -39,6 +42,7 @@ Checklist:
 
 1. If you are using one of the cables with a small flat connector, make sure it is inserted in the proper direction (yes, it is possible to put it in backwards)
 
+
 ### Step 4: Connecting to the Neato from Your Laptop
 
 Checklist before performing this step:
@@ -46,7 +50,7 @@ Checklist before performing this step:
 1. Raspberry pi display backlight is illuminated and not flashing on and off (see troubleshooting section for what to do if this is not the case)
 2. Raspberry pi display shows that the Neato is connected to the OLIN-ROBOTICS network and has an IP address asssigned to it
 3. Raspberry pi display shows that the signal strength of the Neato's connection is at least 45 (the max is 99 for the wifi adapters with attached antennas and 70 for the ones without).   If the signal strength is very low see troubleshooting section for information on what to do.
-4. Your laptop is connected to the OLIN-ROBOTICS (the password for the network is available at [this Canvas page](https://olin.instructure.com/courses/592/pages/olin-robotics-wifi-password)).  A good sanity check is to make sure you can ping the robot.  You can run ping from the Ubuntu terminal by typing ping IP_ADDRESS_OF_YOUR_ROBOT (if the connection is working you will see the time for each packet to round trip back to your computer).
+4. Your laptop is connected to the OLIN-ROBOTICS (the password for the network is available from our Canvas homepage [here](https://canvas.olin.edu/courses/822)).  A good sanity check is to make sure you can ping the robot.  You can run ping from the Ubuntu terminal by typing ping IP_ADDRESS_OF_YOUR_ROBOT (if the connection is working you will see the time for each packet to round trip back to your computer).
 
 In a new terminal, connect to the robot:
 
@@ -59,7 +63,7 @@ Where IP_ADDRESS_OF_YOUR_ROBOT is the IP address displayed on the raspberry Pi. 
 
 ### Moving the Neato around
 
-Open the teleop keyboard node.  Instructions on sending various velocity commands are given when by the on-screen terminal output.  The maximum speed of the neato is $$0.3 \frac{m}{s}$$.
+Open the teleop keyboard node.  Instructions on sending various velocity commands are given then by the on-screen terminal output.  The maximum speed of the neato is $$0.3 \frac{m}{s}$$.
 
 {% include codeHeader.html %}
 ```bash
@@ -68,7 +72,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ### Viewing Images from the camera
 
-> NOTE: early in the semester, I will not have the cameras installed on all of the robots.  For now, you can skip this.
+> NOTE: not all Neatos will have a camera installed.
 
 Startup ```rqt```.
 
@@ -191,7 +195,7 @@ To do this, use the buttons on the Raspberry Pi.  First, press down until you se
 
 ### Step 2: Wait for the Pi to completely power off, and then disconnect the battery.
 
-This is really important.  If you pull the power to the Pi to soon, the SD card can become corrupted.    As the Pi shutsdown you will see the green light flash as the red light stays on persistently.  At some point you will see the green light flash on and off at regular intervals (about once a second).  Once these flashes are over and you see no more activity for the green LED, the Pi is completely off.  At this point it is safe to pull the USB cable from the battery (do not remove the end of the cable attached to the Pi).
+This is really important.  If you pull the power to the Pi to soon, the SD card can become corrupted. As the Pi shutsdown you will see the green light flash as the red light stays on persistently.  At some point you will see the green light flash on and off at regular intervals (about once a second).  Once these flashes are over and you see no more activity for the green LED, the Pi is completely off.  At this point it is safe to pull the USB cable from the battery (do not remove the end of the cable attached to the Pi).
 
 ### Step 3: Put Away Your Toys
 
