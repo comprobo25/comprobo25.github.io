@@ -168,15 +168,6 @@ Point point
 	float64 x
 	float64 y
 	float64 z
-
-std_msgs/Header header
-  uint32 seq
-  time stamp
-  string frame_id
-geometry_msgs/Point point
-  float64 x
-  float64 y
-  float64 z
 ```
 
 If we look at the lines that are unindented (aligned all the way to the left), we will see the attributes that comprise a ``PointStamped`` object.  These attributes are header (which is of type ``std_msgs/msg/Header``) and point (which is of type ``geometry_msgs/msg/Point``).  The indented lines define the definition of the ``std_msgs/msg/Header`` and ``geometry_msgs/msg/Point`` messages.  To see this, try doing running ``$ ros2 interface show`` for both ``std_msgs/msg/Header`` and ``geometry_msgs/msg/Point``.
@@ -185,7 +176,7 @@ In order to create the PointStamped object, we will have to specify both a ``std
 
 ```python
 from std_msgs.msg import Header
-from geometry_msgs.msg import Point
+from geometry_msgs.msg import Point, PointStamped
 ```
 
 Now we can define the header and point that will eventually compose our ``PointStamped`` message.  Let's put this code in the ``run_loop`` function so we can publish the message each time ``run_loop`` is called.
