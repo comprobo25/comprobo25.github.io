@@ -1,5 +1,5 @@
 ---
-title: "The Landscape of Modern Robotics // Coordinate Frames and Basic ROS Concepts"
+title: "The Landscape of Modern Robotics // Basic ROS Concepts"
 toc_sticky: true
 toc_data:
   - title: Today
