@@ -8,8 +8,6 @@ toc_data:
     link: in-class/day02/#for-next-time
   - title: About Modern Robotics
     link: in-class/day02/#about-modern-robotics
-  - title: Thinking about learning goals
-    link: in-class/day02/#thinking-about-learning-goals
   - title: Coding Exercises
     link: in-class/day02/#coding-exercises
 ---
