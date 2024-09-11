@@ -11,6 +11,9 @@ toc_data:
   - title: A video of this lecture from 2020 (if needed)
     link: in-class/day08/#a-video-of-this-lecture-from-2020-if-needed
 ---
+
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 We'll be talking about the theory of the Bayesian filter and how it relates to the particle filter algorithm.

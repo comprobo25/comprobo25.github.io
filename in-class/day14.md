@@ -3,6 +3,8 @@ title: "Neato Soccer"
 toc_sticky: true
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Meet with an instructor regarding your project proposal (we'll be meeting with students throughout class)

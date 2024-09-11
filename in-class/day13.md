@@ -3,6 +3,8 @@ title: "Robot Localization Showcase and Computer Vision Ideation and Team Format
 toc_sticky: true
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Shareout your robot localization projects

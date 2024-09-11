@@ -3,6 +3,8 @@ title: "Keypoints and Descriptors"
 toc_sticky: true
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Keypoints, Descriptors, and Keypoint Matching 

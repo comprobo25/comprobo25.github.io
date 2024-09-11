@@ -14,6 +14,8 @@ toc_data:
     link: in-class/day04/#proportional-control
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 * Robot debugging strategies
 * ROS and threading

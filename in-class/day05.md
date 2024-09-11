@@ -12,6 +12,8 @@ toc_data:
     link: in-class/day05/#implementation-in-ros2
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Adjustments to warmup project due dates

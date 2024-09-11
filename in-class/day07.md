@@ -11,6 +11,9 @@ toc_data:
   - title: C++ Option
     link: in-class/day07/#c-option
 ---
+
+*** UNDER CONSTRUCTION ***
+
 ## Today 
 
 We'll be going over the main steps of how to implement a particle filter.  The goal will be to implement the particle filter at a whiteboard, and use this as the basis for your implementation.

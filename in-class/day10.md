@@ -14,6 +14,8 @@ toc_data:
     link: in-class/day10/#possible-extensions
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 We'll discuss the concept of Gaussian distributions and how they apply to particle filters.
  

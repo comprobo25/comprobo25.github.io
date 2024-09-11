@@ -3,6 +3,8 @@ title: "Computer Vision Ethics Discussion and Project Work Time"
 toc_sticky: true
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Computer Vision Ethics Discussion

@@ -3,6 +3,8 @@ title: "Studio Day and Computer Vision Project Teaser"
 toc_sticky: true
 ---
 
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Worktime to finish up robot localization project

@@ -9,6 +9,9 @@ toc_data:
   - title: Particle Filter and Computing Relative Motion
     link: in-class/day09/#particle-filter-and-computing-relative-motion
 ---
+
+*** UNDER CONSTRUCTION ***
+
 ## Today
 
 * Discussion on Robotics and Labor

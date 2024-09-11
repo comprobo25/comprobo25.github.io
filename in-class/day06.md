@@ -13,6 +13,9 @@ toc_data:
   - title: We’re all living in a 1D world!
     link: in-class/day06/#were-all-living-in-a-1d-world
 ---
+
+*** UNDER CONSTRUCTION ***
+
 ## Today
 * Warm-Up Project Debrief
 * Conceptual introduction to the particle filter
