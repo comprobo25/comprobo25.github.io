@@ -199,7 +199,7 @@ Today, we will be building on the basic ROS nodes we wrote last time to create a
 
 ### Creating our First Sensory Motor Loop
 
-> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo23/class_activities_and_resources) repository under ``in_class_day03_solutions``. (if you are looking for the C++ solutions, look in the directory ``in_class_day03_cpp_solutions``).
+> Sample solutions to this can be found in the [``class_activities_and_resources`` Github](https://github.com/comprobo24/class_activities_and_resources) repository under ``in_class_day03_solutions``. (if you are looking for the C++ solutions, look in the directory ``in_class_day03_cpp_solutions``).
 
 Find another person in the class to work with.  If you're paired up for the warmup project, consider working with that person.  In pairs, you will begin to explore the idea of a sensory-motor loop on the Neatos.
 
