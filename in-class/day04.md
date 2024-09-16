@@ -1,5 +1,5 @@
 ---
-title: "Debugging, Proportional Control, and ROS Parameters"
+title: "Reading a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters"
 toc_sticky: true
 toc_data:
   - title: Today

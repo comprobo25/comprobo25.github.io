@@ -1,5 +1,5 @@
 ---
-title: "Wall Bumping and Finite-State Control"
+title: "Frameworks for Challenging Discussions // Coordinate Frames"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -9,7 +9,7 @@ toc_data:
   - title: Warm-Up Project Check-In
     link: in-class/day05/#warmup-checkin
   - title: Coordinate Frames and Coordinate Transforms in Robotics
-    link: in-class/day03/#coordinate-frames-and-coordinate-transforms-in-robotics
+    link: in-class/day05/#coordinate-frames-and-coordinate-transforms-in-robotics
 ---
 
 ## Today

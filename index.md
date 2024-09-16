@@ -134,7 +134,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 2: The Landscape of Modern Robotics // Basic ROS Concepts](in-class/day02)
 * [Day 3: What are Broader Impacts? // Writing Sensory-Motor Loops in ROS2](in-class/day03)
 * [Day 4: Reading a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters](in-class/day04)
-* [Day 5: Frameworks for Challenging Discussions // Finite-State Control](in-class/day05)
+* [Day 5: Frameworks for Challenging Discussions // Coordinate Frames](in-class/day05)
 
 ### State Estimation and Localization (+ Search and Rescue Robots Discussions)
 * [Day 6: Intro to Search and Rescue // A 1D Particle Filter](in-class/day06)
