@@ -47,7 +47,12 @@ Here is a brief tour of terms used to describe various facets of the field of ro
 
 ## Coding Exercises: Writing our first ROS Node
 
-Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo24/class_activities_and_resources).  If you'd like to organize your class work as a GitHub repo, we suggest you fork the repo ``class_activities_and_resources``.
+Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo24/class_activities_and_resources).  If you'd like to organize your class work as a GitHub repo, we suggest you fork the repo ``class_activities_and_resources``. Once forked, add the upstream:
+```bash
+$ cd ~/ros2_ws/src/class_activities_and_resources
+$ git remote add upstream https://github.com/comprobo24/class_activities_and_resources
+$ git pull upstream main
+```
 
 ### Creating a ROS package
 
