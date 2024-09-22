@@ -58,7 +58,7 @@ feature_row_robot_localization_project:
   - image_path: website_graphics/rviz_mapping_frontpage.png
     alt: "The Neato robot in the simulated Guantlet world with a small number of laser scans collected to localize."
     excerpt: "
-   The Robot localization project is a scaffolded assignment for students to learn about the particle filter algorithm.  Along the way the will learn some basics of Bayesian inference and some new ROS tools and workflows.
+   The Robot localization project is a scaffolded assignment for students to learn about the particle filter algorithm. Along the way they will learn some basics of Bayesian inference and some new ROS tools and workflows.
 
     ### Supporting Documents
 
