@@ -28,7 +28,7 @@ We'll be going over the main steps of how to implement a particle filter.  The g
 
 A lot of folks expressed the value of working out conceptual issues at a whiteboard prior to coding.  In that spirit, I have modified the robot localization assignment a bit to focus on front-loading that conceptual understanding.  We're going to start down that path in class today, and you'll be finishing things up before next class.
 
-There is an assignment due for next class that asks you to submit, individually, your conceptual breakdown of the particle filter.  Before we get to that, I want to go over the basic steps of the particle filter ot make sure we are clear on what they are.  I will draw a few pictures on the whiteboard, but there will still be more for you to unpack on your own.
+There is an assignment due for next class that asks you to submit, individually, your conceptual breakdown of the particle filter.  Before we get to that, I want to go over the basic steps of the particle filter to make sure we are clear on what they are.  I will draw a few pictures on the whiteboard, but there will still be more for you to unpack on your own.
 
 Before getting into the basic steps, I want to go over the coordinate systems that we are going to be working with.  I'll discuss the ``map``, ``odom``, and ``base_footprint`` coordinate systems.
 

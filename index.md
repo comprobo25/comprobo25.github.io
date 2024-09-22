@@ -55,8 +55,8 @@ feature_row_warmup_project:
 * [Troubleshooting](How to/troubleshoot)\n"
 
 feature_row_robot_localization_project:
-  - image_path: website_graphics/neato_gazebo.png
-    alt: "The Neato robot in an empty, simulated world"
+  - image_path: website_graphics/rviz_mapping_frontpage.png
+    alt: "The Neato robot in the simulated Guantlet world with a small number of laser scans collected to localize."
     excerpt: "
    The Robot localization project is a scaffolded assignment for students to learn about the particle filter algorithm.  Along the way the will learn some basics of Bayesian inference and some new ROS tools and workflows.
 
@@ -137,7 +137,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 5: Frameworks for Challenging Discussions // Coordinate Frames](in-class/day05)
 
 ### State Estimation and Localization (+ Search and Rescue Robots Discussions)
-* [Day 6: Intro to Search and Rescue // A 1D Particle Filter](in-class/day06)
+* [Day 6: Intro to Search and Rescue // A 1D Particle Filter](in-class/day06) 
 * [Day 7: Searching for What? // The Particle Filter for Robot Localization](in-class/day07)
 * [Day 8: Search and Rescue Algorithms I // Robot State Estimation and Bayes](in-class/day08)
 * [Day 9: Intended Use // Computing Relative Motion](in-class/day09)

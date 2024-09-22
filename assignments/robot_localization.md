@@ -6,27 +6,26 @@ toc_h_max: 3
 
 ## Abstract
 
-So far, you have successfully programmed robot (simulators) using reactive control strategies. You have also combined these reactive control strategies together using finite state control. Next, you will build on these skills as you continue to explore the field of mobile robotics. In this project you will tackle a fundamental problem in mobile robotics: robot localization.
-
+So far, we've programmed Neatos using reactive control strategies and combined behaviors using finite state control. As we consider more complex tasks we may want a robot to do, having access to higher-level environment information and decision-making capabilities become critical. We will explore one of the most fundamental problems in robotics (through a lens of mobile robotics) during this project: robot localization.
 
 ## Learning Objectives
 
-* Build fluency with ROS
+* Build fluency with ROS2
 * Learn about one core problem (robot localization) and one important algorithm (particle filtering)
 * Learn strategies for developing and debugging algorithms for robotics
-* Get a feel for the algorithmic tradeoffs between accuracy and computational efficiency
+* Get a feel for the algorithmic trade-offs between accuracy and computational efficiency
 
 ## Teaming
 
-For this project, you should work with one other student.
+For this project, you should work with one other student (teams of three are tentatively allowed for this assignment). Once you have formed your team, please [list your group](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing).  
 
 ## Deliverables
 
-### Conceptual Overview (Due 9-22)
+### Conceptual Overview (Due Tuesday October 1)
 
 Using a combination of diagrams and text, describe the major steps of the particle filter at a level of detail sufficient for creating your particle filter implementation.
 
-As you write your conceptual overview, if there is a gap in your understanding that is fine, but be sure to note it so you can get help in class (or during office hours).
+As you write your conceptual overview, if there is a gap in your understanding that is fine, but be sure to note it, so you can get help in class (or during office hours).
 
 1. What topics will your particle filter subscribe to?  Which topics will it publish?  You can include the specific topic names and types or just indicate generally what the role of each topic will be in the functioning of your particle filter.
 
@@ -42,24 +41,28 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 7. Given a weighted set of particles, how will you sample a new set of particles?
 
-### In-class Presentation / Demo (Due 10-13)
+You can submit your assignment [on Canvas](https://canvas.olin.edu/courses/822/assignments/13550). Please have each member of the group submit this assignment.
 
-Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc.  In addition, you should show a demo of your system in action.
+### In-class Presentation / Demo (Due Thursday October 17)
 
-This deliverable be assessed in a binary fashion (did you do the above or not).  Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1Rg270ZZeTSYCZGqluGyyrMO_ETwXKgMK9BshvEyAqoM/edit?usp=sharing).
+Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc. In addition, you should show a demo of your system in action.
 
-
-### Your Code and Bag Files (Due 10-13)
-
-If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo23/robot_localization">this repo</a>.  If you are using C++), you should fork <a href="https://github.com/comprobo23/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
-
-You should include a couple of bag files of your code in action.  Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you take from the results, etc.).
-
-### Writeup (Due 10-13)
-
-In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
+This deliverable be assessed in a binary fashion (did you do the above or not). Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1XXOwbKphKXfRPb68auAqU19UuMyBW6DK3wda2-Kgg1Q/edit?usp=sharing).
 
 
+### Your Code and Bag Files (Due Friday October 18)
+
+If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo24/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo24/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in (and do provide us a direct link to your fork in the [Teaming Spreadsheet](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing)).
+
+You should include a couple of bag files of your code in action. Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you learn from the results, etc.).
+
+Please [indicate on Canvas]() when you have prepared your project for final submission (Note: this includes the write-up (details below) as it is part of your repository).
+
+### Writeup (Due Friday October 18)
+
+In your ROS package create a ``README.md`` file to hold your project writeup. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``), and so on.
+
+Your write-up should touch on the following topics. 
 * What was the goal of your project?
 * How did you solve the problem? (Note: this doesn't have to be super-detailed, you should try to explain what you did at a high-level so that others in the class could reasonably understand what you did).
 * Describe a design decision you had to make when working on your project and what you ultimately did (and why)? These design decisions could be particular choices for how you implemented some part of an algorithm or perhaps a decision regarding which of two external packages to use in your project.
@@ -74,11 +77,13 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 * <a href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a>
 * <a href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a>
 
+
+
 ## Robot Localization and the Particle Filter
 
 For this project you will be programming your robot to answer a question that many of us have pondered ourselves over the course of our lifetimes: "Where am I?". The answer to this question is of fundamental importance to a number of applications in mobile robotics such as mapping and path planning.
 
-For this project, we will assume access to a map of the robot's environment. This map could either be obtained using a mapping algorithm (such as SLAM), derived from building blueprints, or even hand-drawn. Given that we have a map of our environment, we can pose the question of "Where am I?" probabilistically. That is, at each instant in time, t, we will construct a probability distribution over the robot's pose within the map, denoted as $$x_t$$, given the robot's sensory inputs, denoted as $$z_t$$ (in this case Lidar measurements), and the motor commands sent to the robot at time t, $$u_t$$.
+For this project, we will assume access to a map of the robot's environment. This map could either be obtained using a mapping algorithm (such as SLAM), derived from building blueprints, or even hand-drawn. Given that we have a map of our environment, we can pose the question of "Where am I?" probabilistically. That is, at each instant in time, $$t$$, we will construct a probability distribution over the robot's pose within the map, denoted as $$x_t$$, given the robot's sensory inputs, denoted as $$z_t$$ (in this case Lidar measurements), and the motor commands sent to the robot at time $$t$$, $$u_t$$.
 
 The particle filter involves the following steps
 
@@ -92,7 +97,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo23/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build`` and source ``install.bash``.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo24/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build --symlink-install`` and source ``install/setup.bash``.
 
 ### Installing Supporting Packages
 
@@ -306,13 +311,22 @@ You can make your own bag files either with the physical robot or the simulator.
 ros2 bag record /accel /bump /odom /cmd_vel /scan /robot_description /stable_scan /projected_stable_scan /clock /tf /tf_static -o bag-file-name-here
 ```
 
+## Choosing Your Own Adventure
+You have complete latitude for choosing your approach to particle filtering. While we've provided some skeleton code and reference AMCL in this project, there are many other particle-filtering or state-estimation techniques that you can examine. We highly recommend searching Google Scholar, StackOverflow, or the ROS2 Forums for some inspiration; you might also consider:
+* How you might modify or expand upon one key step of the particle filter to enhance speed, memory, or robustness (e.g., hierarchical sampling, adaptive particle counts, partial-map references, etc.).
+* Experimenting with "ambiguous scenarios" or different initialization schemes.
+* Experimenting with different quality of laser data (adding noise to simulated inputs, using the vehicle, etc.) and analyzing uncertainty in your filter.
+* Implementing different filtering techniques, based on optimization schemes (e.g., Kalman Filtering, Extended Kalman Filtering, etc.).
+* Considering how different robot behaviors may impact localization quality.
+
 ## Project Advice
 
 ### Instructor Advice
 
 * Use the provided rosbags to debug your code (or, for practice, make your own ROS bags) 
 * Visualize as many intermediate computations as possible
-* Start with simple cases, e.g. start with just one particle, make sure you can visualize the particle in rviz 
+* Start with simple cases, e.g. start with just one particle, make sure you can visualize the particle in rviz
+	* Build test cases that can be used to assess that snippets/functions of your code are working as expected. You can use a bag-file you collect within a test case as well.
 * Implement a simple laser scan likelihood function. Test it using just a subset of the Lidar measurements. Make sure that the results conform to what you expect (the simulator or rosbag will be helpful here).
 * Improve your laser scan likelihood to maximize performance. Again, rosbag and visualization will be instrumental here.
 
@@ -321,13 +335,13 @@ ros2 bag record /accel /bump /odom /cmd_vel /scan /robot_description /stable_sca
 Here is some advice from the Fall 2018 class that they wrote up after they completed the robot localization project.
 
 * Pixels vs meters on map (know how these relate to each other)
-* Know how coordinate frames as they relate to rviz displays
-* Know the what the different rviz topics represent
+* Know how coordinate frames relate to one another on rviz displays
+* Know what the different rviz topics represent
 * Probabilistic justification for parameters (and then cube it for good measure)
 * High level understanding (videos) were helpful +1 +1
 * Visualization in rviz is crucial
 * First pass architecture (should be evaluated / given feedback) (note: this is more of a suggestion for the teaching team than you all).
-* Maybe should have done a “ugly, rugged thing” would have helped to get an MVP. Maybe a more iterative process rather than strict planning. All the object we created were hard to glue together.
+* Maybe should have done a “ugly, rugged thing” would have helped to get an MVP. Maybe a more iterative process rather than strict planning. All the objects we created were hard to glue together.
 * Take a “second pass” at the architecture after attempting to implement your first one. Take a step back and ask what you would do differently after having grappled with the low-level code for a week.
 * Test each step of the particle filter separately, with full rviz visualizations, with single particles. Create a testing plan!
 * Creativity in the weighting algorithm was nice since the x/y distance helper function just worked
