@@ -26,7 +26,7 @@ toc_data:
 * Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **Friday 27th at 1PM**.
 * Complete the [Particle Filter Conceptual Overview](../assignments/robot_localization#conceptual-overview-due-9-22) (submitted individually!), due on **Tuesday October 1st at 1PM**.
 * [Form a team](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing) and review [a view of the finish line](../assignments/robot_localization#a-view-of-the-finish-line-and-getting-set-with-rviz)
-* Consider where there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
+* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## Searching for What?
 Let's take a moment to look at some ["Search and Rescue" literature](https://docs.google.com/document/d/1Kh-o200z_Mka8x0qxfmXLT8NUsOPwWfDQTfnHtcw02g/edit?usp=sharing) and discuss:
@@ -68,7 +68,7 @@ The key steps:
 Steps 3 and 5 are typically considered the "tricky" ones to implement. Let's take some time to brainstorm possible methods that could be adopted (at a high level) to solve these challenges.
 
 ## We're All Living in a 1D World! Part 2: Code Dissection
-Group up with the folks around you, and have a look at the code for the ``simple_particle_filter`` demo we ran last class. Diagram out the code and topics...can you map different functions/classes of the code to the high-level steps we've outlined in class? What are you noticing about the implementation? What questions do you have about the technique?
+Group up with the folks around you, and have a look at the code for the ``simple_particle_filter`` demo we ran last class. Diagram out the code and topics...can you map different functions/classes of the code to the high-level steps we've outlined in class? What are you noticing about the implementation? What questions do you have about the techniques used?
 
 ## Project Kick-Off
 Starting today, the particle filter project is a-go! There is [skeleton code available for this project](https://github.com/comprobo24/robot_localization), which I recommend you have a look at now. The rest of this class will be studio time for Broader Impacts Part 1 or starting your conceptual diagramming.
