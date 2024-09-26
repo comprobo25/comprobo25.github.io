@@ -26,6 +26,7 @@ toc_data:
 * Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **Friday 27th at 1PM**.
 * Complete the [Particle Filter Conceptual Overview](../assignments/robot_localization#conceptual-overview-due-9-22) (submitted individually!), due on **Tuesday October 1st at 1PM**.
 * [Form a team](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing) and review [a view of the finish line](../assignments/robot_localization#a-view-of-the-finish-line-and-getting-set-with-rviz)
+* Consider where there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## Searching for What?
 Let's take a moment to look at some ["Search and Rescue" literature](https://docs.google.com/document/d/1Kh-o200z_Mka8x0qxfmXLT8NUsOPwWfDQTfnHtcw02g/edit?usp=sharing) and discuss:
