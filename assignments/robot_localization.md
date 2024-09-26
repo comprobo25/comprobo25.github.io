@@ -311,13 +311,14 @@ You can make your own bag files either with the physical robot or the simulator.
 ros2 bag record /accel /bump /odom /cmd_vel /scan /robot_description /stable_scan /projected_stable_scan /clock /tf /tf_static -o bag-file-name-here
 ```
 
-## Choosing Your Own Adventure
+## Choosing Your Own Adventure and Going Beyond
 You have complete latitude for choosing your approach to particle filtering. While we've provided some skeleton code and reference AMCL in this project, there are many other particle-filtering or state-estimation techniques that you can examine. We highly recommend searching Google Scholar, StackOverflow, or the ROS2 Forums for some inspiration; you might also consider:
 * How you might modify or expand upon one key step of the particle filter to enhance speed, memory, or robustness (e.g., hierarchical sampling, adaptive particle counts, partial-map references, etc.).
 * Experimenting with "ambiguous scenarios" or different initialization schemes.
 * Experimenting with different quality of laser data (adding noise to simulated inputs, using the vehicle, etc.) and analyzing uncertainty in your filter.
 * Implementing different filtering techniques, based on optimization schemes (e.g., Kalman Filtering, Extended Kalman Filtering, etc.).
 * Considering how different robot behaviors may impact localization quality.
+* Attempting to implement a bare-bones SLAM (simultaneous localization and mapping) pipeline (or running an open-source technique and comparing it to your localization-only technique).
 
 ## Project Advice
 
