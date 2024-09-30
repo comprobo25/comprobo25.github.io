@@ -66,7 +66,7 @@ For your projects, you're implementing a particle filter, which is a subclass of
 There is a bit of vocabulary to know before we get started:
 * Markov process: a chain of events in which the probability of each event depends only on the state of the previous event ("what happens next only requires me to think about what's happening now")
   * This is a useful _assumption_ about the way the world works, because now we don't have to consider the entire history of a robot, just what happened most recently.
-* Monte Carlo algorithms: repeated random sampling is used to estimate a solution to a complex (often nonlinear) problems
+* Monte Carlo algorithms: repeated random sampling is used to estimate a solution to a complex (often nonlinear) problem
 
 We're going to walk through the steps of the Bayesian filter:
 ```
@@ -84,7 +84,7 @@ During the prediction step, the current estimated pose of the robot is updated b
 To reduce (or attempt to reduce) our uncertainty, we can look around us with an _observation model_ (which will also capture noise in our measurements). Correction asks: given what I am measuring, what is my likely pose based on my estimate of where I may be?
 
 ### Mathematical Details
-We'll walk through the mathematical details of this for a simple world in which a robot can open and close a door, and can measure whether a door is open or closed.
+We'll walk through the mathematical details of this for a simple world in which a robot can open and close a door, and can measure whether a door is open or closed. This example is borrowed from [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf); a highly influential book in modern robotics.
 
 ### The Particle Filter
 A Bayesian filter, in its purest form, asks us to work with continuous probability distributions, and that is computationally challenging (nigh intractable) most of the time for practical robotics problems. The particle filter addresses these computational challenges by allowing us to _draw samples from our probability distributions_ and apply our prediction and correction steps to each of those samples in order to get an empirical estimate of a new probability distribution. In this way, the particle filter is a Monte Carlo algorithm, and leverages the law of large numbers to "converge" towards the optimal answer. (You can get a sense about why sampling works to find complex distributions by [playing with this applet](http://chi-feng.github.io/mcmc-demo/app.html?algorithm=GibbsSampling&target=banana)).
