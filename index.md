@@ -141,8 +141,8 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 7: Searching for What? // The Particle Filter for Robot Localization](in-class/day07)
 * [Day 8: Search and Rescue Algorithms I // Robot State Estimation and Bayes](in-class/day08)
 * [Day 9: Intended Use // Computing Relative Motion](in-class/day09)
-* [Day 10: Search and Rescue Algorithms II // Gauss, Likelihood Fields, and the Particle Filter](in-class/day10)
-* [Day 11: Technological Justice // Particle Filter Debugging Strategies, Extensions, and Studio Day](in-class/day11)
+* [Day 10: Search and Rescue Algorithms II // Computing Motion and Likelihoods](in-class/day10)
+* [Day 11: Technological Justice // Particle Filter Debugging Strategies and Extensions](in-class/day11)
 * [Day 12: Search and Rescue Debrief // Studio Day + Introduction to Computer Vision Project](in-class/day12)
 
 ### Machine Vision (+ Sustainability Robotics Discussions)
