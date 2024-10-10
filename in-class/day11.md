@@ -1,5 +1,5 @@
 ---
-title: "Particle Filter Debugging Strategies, Extensions, and Studio Day"
+title: "Applied SAR Robotics // Debugging Strategies, Extensions, and Studio"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -12,20 +12,46 @@ toc_data:
     link: in-class/day11/#extensions-to-the-particle-filter
 ---
 
-*** UNDER CONSTRUCTION ***
-
 ## Today
-
-* Particle Filter Debugging Strategies
-* Extensions to the particle filter
-* You will be working on your robot localization projects.
-* We will have a brief visit from Eric Miller of Skydio to talk about what some of the themes of CompRobo look like in industry. 
+* Applied Search and Rescue Robotics (Discussion)
+* Particle Filter Debugging Strategies (For Your Consideration)
+* Extensions to the Particle Filter (For Your Consideration)
+* Studio
 
 ## For Next Time
+* Work on the [Robot Localization project](../assignments/robot_localization)
+  * Demos due on **Thursday October 17th In-Class**
+  * Code + Writeups due on **Friday October 18th 7PM**
+* Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
+  * Note -- discussions will happen on October 28th, October 31st, and November 4th; stay tuned!
+* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
+* **Extra Credit** An assignment to [reinforce probability fundamentals](../assignments/probability_basics/assignmentprobability_basics.pdf) is available to complete for extra credit (to be applied to the state estimation and localization unit). Due on **Friday October 18th 7PM** for those interested; [check the Canvas page for submission instructions](https://canvas.olin.edu/courses/822/assignments/13050).
 
-* Soft launch of computer vision project (Robot localization project will be due on Friday the 13th).
+## Applied Search and Rescue Robotics
+We've been briefly discussing this unit about Search and Rescue as an umbrella application area for robotics. We've had a look at the landscape of the field, skimmed some technical papers, and highlighted some key related algorithms. Today, we're going to discuss practical design choices when looking towards deploying SAR robots, and what their implications might be.
 
-## Particle Filter Debugging Techinques
+> Before digging into this discussion today, I want to pause to acknowledge the ongoing hurricane-related emergencies in the US Southeast. Our discussion today will touch on FEMA, search and rescue scenarios, and how to best serve vulnerable populations; and it is impossible and irresponsible not to recognize the thematic connections with ongoing events. Students who may feel affected by the content are welcome to step out at any point.
+
+### Setting Standards
+In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
+
+* Human-System Interaction (23 requirements)
+* Logistics (10 requirements)
+* Operating Environment (5 requirements)
+* System (physical robot) (65 requirements; 32 of which are for sensing)
+
+One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
+
+* What would/should set standards for Human-System Interaction cover for the rescuee of a SAR robot? 
+  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
+* How would these standards interact with your robot's sensors? Algorithms?
+  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
+* Who should be involved in co-designing this set of standards for this group of stakeholders?
+  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
+* What tests would need to be designed to assess whether a robot met these standards?
+
+
+## Particle Filter Debugging Techniques
 
 ### Using Python Debugger ``pdb``
 
@@ -77,6 +103,16 @@ Now that the ``map_server`` is running, you can start the debugger through ``VSC
 
 Sometimes it's easier to get a quick and dirty visualization going using a familiar tool like matplotlib.  You could consider using this for things like plotting particle weights or motion updates.
 
+### Create Tests for Class Functions
+You can create test scripts that confirm the logic in certain key functions of your particle filter using exemplar inputs with outputs you can hand compute.
+
+### Use ROS2 Commandline Tools
+Tools like `tf2`, `topic list/echo`, `node list`, and `rqt` are all really useful for checking on the status of your network. 
+
+### Grab a Bagfile
+In the midst of debugging some tricky logic error, it can be nice to be able to see all the data at once (not just visually, but quantitatively) and parse it using graphing tools, text editors, or other process. You can record a bagfile of your system in action, then convert that to .csv files per topic, putting them in an easy to interact with form for plotting, parsing, etc. with your standard set of tools like `pandas` or `matplotlib`. 
+
+
 ## Extensions to the Particle Filter
 
 ### Make your particle filter more efficient computationally
@@ -102,4 +138,4 @@ Advice:
 ### Connection Between the Particle Filter and the Bayes Filter
 
 Advice:
-* The core idea is this concept of sequential importance sampling (SIS).  The writeup of this are pretty technical, but you may start with this resource from [Columbia by Frank Wood](http://www.stat.columbia.edu/~fwood/Tutorials/sequential_monte_carlo.pdf). You can also check out section 4.2 of the [Probabalistic Robotics book](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf). 
+* The core idea is this concept of sequential importance sampling (SIS).  The writeup of this are pretty technical, but you may start with this resource from [Columbia by Frank Wood](http://www.stat.columbia.edu/~fwood/Tutorials/sequential_monte_carlo.pdf). You can also check out section 4.2 of the [Probabilistic Robotics book](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf). 
