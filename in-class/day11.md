@@ -6,6 +6,8 @@ toc_data:
     link: in-class/day11/#today
   - title: For Next Time
     link: in-class/day11/#for-next-time
+  - title: Applied Search and Rescue Robotics
+    link: in-class/day11/#applied-sar
   - title: Particle Filter Debugging Techinques
     link: in-class/day11/#particle-filter-debugging-techinques
   - title: Extensions to the Particle Filter
@@ -42,7 +44,7 @@ In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, an
 
 One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
 
-* What would/should set standards for Human-System Interaction cover for the rescuee of a SAR robot? 
+* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
   * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
 * How would these standards interact with your robot's sensors? Algorithms?
   * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
