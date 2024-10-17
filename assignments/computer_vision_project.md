@@ -1,60 +1,60 @@
 ---
 
-title: "Computer Vision Project"
+title: "Machine Vision Project"
 toc_sticky: true
 toc_h_max: 3
 ---
 
 ## Abstract
 
-So far, you have successfully programmed robots using reactive control strategies and taken a deep dive into the robot localization problem. Next, you will be learning about computer vision and the role it plays in robotics.  In contrast to previous project, this time you will have a great deal of freedom to shape your project towards your interests and learning goals.
+So far, you have successfully programmed robots using reactive control strategies and taken a deep dive into the robot localization problem. Next, you will be learning about machine vision and the role it plays in robotics. In contrast to previous project, this time you will have a great deal of freedom to shape your project towards your interests and learning goals.
 
 ## Learning Objectives
-
 * Self-directed learning of a new robotics algorithm.
 * Implementing a robotics system with minimal scaffolding.
 
 ## Teaming
-
-For this project, you can work with one other student.  If you want to have a team of three, please talk to me beforehand.
+For this project, you can work with one other student.  If you want to have a team of three, please talk to the instructors beforehand.
 
 Please fill out <a href="https://docs.google.com/spreadsheets/d/1X5wElqAaHjzyouaRNKqrfrEibs92soRFYjgK3SHoywU/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
 
+
 ## Project Topic
+Your project should be about machine vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, or some combination.
 
-Your project should be about computer vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, or some combination.
+In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simulated Neatos (or another robot) to do something interesting).  You have substantial latitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms). That said, we expect that you will do some exploration of algorithms as part of this project (which could include implementation or perhaps substantial learning about an algorithm or class of algorithms).
 
-
-In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simualted Neatos (or another robot) to do something interesting).  You have substantial lattitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms).  That said, we expect that you will do some exploration of algorithms as part of this project (which could could include implementation or perhaps subsantial learning about an algorithm or class of algorithms).
-
-Potential Algorithm Topics
-
-* Object tracking
-* Image segmentation
-* Object detection
+### Potential Algorithm Topics
+* Object tracking or detection
+* Image de-noising or correction; in-painting
+* Image segmentation; semantic labeling
 * Text recognition
-* Fiducial tracking
-* Visual odometry
+* Gesture recognition
+* Fiducial tracking and navigation
+* Visual odometry or SLAM
 * Structure from motion
+* Neural rendering (radiance fields; Gaussian splats)
+* Vision-Lidar or Vision-Inertial sensor fusion
 
 (Note: there are some resources for these topics later in the document)
 
-## Robot Platform
+## Robot Platform and Data Pipelines
 
-* One option is to continue to work with the Neato.  In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
+* One option is to continue to work with the Neato. In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
 * You may want to use an external dataset for your project. Here are some possible starting points. 
-    * <a-no-proxy href="https://www.visualdata.io/discovery">Visual Data</a-no-proxy> has a nice collection of computer vision datasets and projects.
-    * If you want a huge (but very cool) dataset for self-driving vehicles, consider usign Waymo's <a-no-proxy href="https://waymo.com/open/">Open Dataset</a-no-proxy>
+    * <a-no-proxy href="https://www.visualdata.io/discovery">Visual Data</a-no-proxy> and [Papers with Code](https://paperswithcode.com/datasets?mod=images) has a nice collection of computer vision datasets and projects.
+    * If you want a huge (but very cool) dataset for self-driving vehicles, consider using Waymo's <a-no-proxy href="https://waymo.com/open/">Open Dataset</a-no-proxy>
     * If you're interested in machine learning for robot control, you might consider building off some of <a-no-proxy href="https://github.com/comprobo18/robot_learning/network/members">the datasets (and code) from the 2018 Robot Learning project</a-no-proxy> You also might want to check out <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">the Google Slides presentation summarizing their results</a-no-proxy>.
-    * A lof these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets.  That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
+    * Pick any open dataset of imagery in a domain of interest to you (e.g., for ocean biology [FathomNet](https://fathomnet.org/fathomnet/#/) is a nice option; for city landscapes [Cityscapes](https://paperswithcode.com/dataset/cityscapes) could be good; for food check out [Food-101](https://paperswithcode.com/dataset/food-101)...and so on!)
+    * A lot these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets. That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
 
 ## Deliverables
 
 There are four deliverables for this project.
 
-### Project Proposal (due 10/17)
+### Project Proposal (due 10/22)
 
-At a minimum, please include the answers to the following questions.  You should include enough detail for us to be able to give you useful feedback.
+At a minimum, please include the answers to the following questions. You should include enough detail for us to be able to give you useful feedback. [Submit your proposal on canvas](https://canvas.olin.edu/courses/822/assignments/13674).
 
 * Who is on your team?
 * What is the main idea of your project?
@@ -66,7 +66,7 @@ At a minimum, please include the answers to the following questions.  You should
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
 * What might you need from the teaching team for you to be successful on this project?
 
-### In-class Presentation / Demo (11/7)
+### In-class Presentation / Demo (11/11)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
@@ -75,11 +75,13 @@ We'd like each team to spend about 10 minutes presenting what they did for this 
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-### Code (Due 11/7)
+Please [submit your presentation on canvas](https://canvas.olin.edu/courses/822/assignments/13675).
 
-* You should turn in your code and writeup via Github.  Please fork your repo from this one.
+### Code (Due 11/12)
 
-### Writeup (Due 11/7)
+* You should turn in your code and writeup via Github. [Submit a link on canvas when you're all set](https://canvas.olin.edu/courses/822/assignments/13676)!
+
+### Writeup (Due 11/12)
 
 In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
@@ -95,19 +97,18 @@ In your ROS package create a ``README.md`` file to hold your project writeup.  Y
 
 ### Resources
 
-* Krishna's picks (good starting points for machine learning flavored computer vision projects)
+Some picks (good starting points for machine learning flavored computer vision projects):
   - [UZH FPV Drone Racing Dataset](https://fpv.ifi.uzh.ch/datasets/):  Get OpenVins or GTSAM running to do some pose estimation.  Try to implement or compute the optical flow between image frames.
   - [KITTI Autonomous Car Dataset](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark).  Implement or use YOLO or other CNN to do 2D object detection for AV environment (e.g., [this tutorial](https://github.com/windowsub0406/KITTI_Tutorial)). Some form of 360 video to BEV model similar to [this tutorial](https://jamycheung.github.io/360BEV.html).
   - Some Foundation Model (e.g., [Segment Anything](https://github.com/facebookresearch/segment-anything)).  Try to run and use the SAM model for some structured navigation task with the neatos (e.g., detect stop signs...)
   - Try to run [VINT](https://visualnav-transformer.github.io/) on the Neato
 
-It feels kinda hard to find good ML CV tutorial problems for robotics without assuming a ton of extra work. It feels more practical to maybe collect more cool visual foundation models or vision models to do some type of higher level task 
 
-* In-Class Activities from Past CompRobo Offerings
-  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoZnBSZ0FiSjZGRDA/view?usp=sharing">Object Tracking</a-no-proxy>
-  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoTTBHLWl1c3FqRnM/view?usp=sharing">3D Structure from Motion</a-no-proxy>
-  - <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyocndyTDI2U2I1M1k/view?usp=sharing">Image Filtering</a-no-proxy>
-  - <a-no-proxy href="https://sites.google.com/site/comprobofall14/home/labs/day-18?authuser=0">Object Recognition</a-no-proxy> (the instructions on running the code are out of date, but the ideas might help).
+In-Class Activities from Past CompRobo Offerings and Other Tutorials
+* <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoZnBSZ0FiSjZGRDA/view?usp=sharing">Object Tracking</a-no-proxy>
+* <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyoTTBHLWl1c3FqRnM/view?usp=sharing">3D Structure from Motion</a-no-proxy>
+* <a-no-proxy href="https://drive.google.com/file/d/0B0UHkPLHsgyocndyTDI2U2I1M1k/view?usp=sharing">Image Filtering</a-no-proxy>
+* <a-no-proxy href="https://sites.google.com/site/comprobofall14/home/labs/day-18?authuser=0">Object Recognition</a-no-proxy> (the instructions on running the code are out of date, but the ideas might help).
 * <a-no-proxy href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">Convert ROS image messages to OpenCV using CvBridge</a-no-proxy>
 * <a-no-proxy href="https://vision.in.tum.de/teaching/ss2013/visnav2013">Visual Navigation for Flying Robots</a-no-proxy> is a course on said topic.  The linked page includes lectures and even some bag files.
 * <a-no-proxy href="https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/">Connecting a webcam to ROS and OpenCV</a-no-proxy>
@@ -128,7 +129,7 @@ It feels kinda hard to find good ML CV tutorial problems for robotics without as
 
 ### Past projects to draw from
 
-* Computer Vision Projects from Fall 2022
+* Machine Vision Projects from Fall 2022
    * [Plant Vision](https://github.com/jonaskaz/plant-vision)
    * [Visual Odometry](https://github.com/jackiezeng01/comprobo-computervisionproject)
    * [Robot Soccer](https://github.com/hnvakil/soccer_computer_vision)
@@ -137,12 +138,13 @@ It feels kinda hard to find good ML CV tutorial problems for robotics without as
    * [Visual Odometry](https://github.com/jerWenger/Visual_Based_Odometry)
    * [Neato Fetch](https://github.com/ayushchakra/neato-fetch)
    * [Neato Following Another Neato](https://github.com/SeunguLyu/NeatoFollowingNeato)
-   * [Fiducial Tracking](https://github.com/kviiim/fiducial_tracking)
-   * [Fiducial Tracking](https://github.com/MetaKor/comprobo_fiducial)
+   * [Fiducial Tracking 1](https://github.com/kviiim/fiducial_tracking)
+   * [Fiducial Tracking 2](https://github.com/MetaKor/comprobo_fiducial)
    * [Stereo Vision](https://github.com/krish-suresh/comprobo_cv_project)
    * [Hand Gesture Recognition](https://github.com/AlexisWu-01/compRobo22_computer_vision)
  
 * <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">Robot Learning Report out 2018</a-no-proxy>
+
 * Computer Vision Project Writeups from 2017
    * <a-no-proxy href="https://github.com/arpanrau/self_driving_neato/blob/master/WriteUp.md">Self Driving Neato</a-no-proxy>
    * <a-no-proxy href="https://github.com/BrennaManning/computer_vision_2017/blob/master/writeup.pdf">Computer Vision Emotion Detection</a-no-proxy>
