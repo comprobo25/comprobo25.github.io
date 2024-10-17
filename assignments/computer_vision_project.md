@@ -16,7 +16,7 @@ So far, you have successfully programmed robots using reactive control strategie
 ## Teaming
 For this project, you can work with one other student.  If you want to have a team of three, please talk to the instructors beforehand.
 
-Please fill out <a href="https://docs.google.com/spreadsheets/d/1X5wElqAaHjzyouaRNKqrfrEibs92soRFYjgK3SHoywU/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
+Please fill out <a href="https://docs.google.com/spreadsheets/d/1VirFJv8flcuBjE8HbtSx7HuS2RMWvL_LzAVdEjaajYA/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
 
 
 ## Project Topic
