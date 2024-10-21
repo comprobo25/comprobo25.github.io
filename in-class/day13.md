@@ -1,6 +1,15 @@
 ---
 title: "Sustainability Vectors // Machine Vision Project Ideation"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day13/#today
+  - title: For Next Time
+    link: in-class/day13/#for-next-time
+  - title: Sustainability in Robotics
+    link: in-class/day13/#sust-robots
+  - title: Machine Vision Project Ideation
+    link: in-class/day13/#machine-vision-ideation
 ---
 
 ## Today
