@@ -27,6 +27,7 @@ toc_data:
 
 ## Waste Sorting with Robots
 Today we're going to have a look at a [several very different types of robot waste sorters by looking at some literature](https://docs.google.com/document/d/1IKP9IC89pzonNTLGESe2nlPENpLKPwmMqC8PwAT20PM/edit?usp=sharing). To attend to:
+
 1) What are the goals of these waste-sorters? Are they similar/different? Are their contexts similar/different?
 2) What are the forms of these waste-sorters? What systems are the composed of?
 3) How is machine vision used on these waste-sorters? What algorithms are being used and what tasks are being performed?
