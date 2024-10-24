@@ -147,11 +147,11 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 
 ### Machine Vision (+ Sustainability Robotics Discussions)
 * [Day 13: Sustainability Vectors // Machine Vision Project Ideation](in-class/day13)
-* [Day 14: Sustainable Robots and Computation // Neato Soccer + Discuss Project Proposals](in-class/day14)
+* [Day 14: Waste Sorting with Robots // Neato Soccer + Discuss Project Proposals](in-class/day14)
 * [Day 15: Broader Impacts Discussion Session 1 // Keypoint Matching and Descriptors](in-class/day15)
 * [Day 16: Broader Impacts Discussion Session 2 // Project Work Time](in-class/day16)
 * [Day 17: Broader Impacts Discussion Session 3 // Project Work Time](in-class/day17)
-* [Day 18: Using Robots for Sustainability // Project Work Time](in-class/day18)
+* [Day 18: Waste Sorting Challenge // Project Work Time](in-class/day18)
 * [Day 19: Robotics Supply Chains // Computer Vision Showcase + Final Project Kickoff](in-class/day19)
 
 ### Final Project (+ Labor and Collaborative Robotics Discussions)
