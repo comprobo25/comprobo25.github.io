@@ -1,17 +1,26 @@
 ---
 title: "Broader Impacts Discussion Session 1 // Keypoints and Descriptors"
 toc_sticky: true
+toc_data:
+  - title: Today
+    link: in-class/day15/#today
+  - title: For Next Time
+    link: in-class/day15/#for-next-time
+  - title: Broader Impacts Discussion Session 1
+    link: in-class/day15/#broader-impacts-sess1
+  - title: Keypoints and Descriptors
+    link: in-class/day15/#keypoints-and-descriptors
 ---
 
 ## Today
 
 * Session 1 of the Broader Impacts Discussions
-* Keypoints, Descriptors, and Keypoint Matching 
+* Keypoints, Descriptors, and Keypoint Matching (For Your Consideration)
 * Studio Time
 
 ## For Next Time
 * Work on the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
-  * Note -- discussions will happen on October 28th, October 31st, and November 4th; you have been [randomly assigned one of these days to lead a discussion](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing). You may swap slots with someone on a different day, but you have to let an instructor know. Thanks!
+  * Note -- discussions will happen on October 31st and November 4th; you have been [randomly assigned one of these days to lead a discussion](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing). You may swap slots with someone on a different day, but you have to let an instructor know. Thanks!
 * Work on your [Machine Vision Project](../assignments/computer_vision_project).
     * In-class demos will be on **Monday November 11th**, and code/write-ups are due on **Tuesday November 12th at 7PM**.
     * Note that prospective students will be joining us in class on the 11th!
@@ -29,13 +38,9 @@ We'll have a brief debrief following the activity and before starting in on Stud
 
 
 ## Keypoints, Descriptors, and Keypoint Matching
-Use this link access the [slides for today on keypoints and descriptors](https://docs.google.com/presentation/d/1s0RBcPkNVilFvJ-kNjx9kvbEtTkonfxrG7mqxaxuzok/edit?usp=sharing).
+These [slides on keypoints and descriptors](https://docs.google.com/presentation/d/1W5qOiU6j7BKMcFe0sz1O4hAH28Mn_Gop9aNaXafDN2g/edit?usp=sharing) provide a detailed look at this topic. As many projects in the class will likely build on the notion of keypoints/descriptors, we highly recommend using this as a resource to learn more!
 
-We have included three scripts to help you get a better sense of how these things work in practice.  Try running the following demos (make sure you have pulled from upstream first).
-
-### Getting the Code
-
-The code for today is located in the [``class_activities_and_resources`` repository](https://github.com/comprobo22/class_activities_and_resources).  You can find it in the subdirectory ``keypoints_and_descriptors``.  Since this directory is not a ROS package, you do *NOT* need to worry about running ``colcon build``.
+To get a brief impression of keypoints, descriptors, and matching, there is some demonstration code available in the [``class_activities_and_resources`` repository](https://github.com/comprobo24/class_activities_and_resources) under the subdirectory ``keypoints_and_descriptors``. Since this directory is not a ROS package, you do *NOT* need to worry about running ``colcon build``. Remember to pull from upstream!
 
 ### Keypoint-based Tracking
 
@@ -49,27 +54,37 @@ You should see an image from your computer's webcam appear on the screen.  Click
 
 At this point you should be able to move the object around and the program will attempt to track its position.
 
+> What do you notice about the keypoints that are selected? What changes when you adjust the "corner threshold" and why? What changes when you adjust the "ratio threshold" and why?
+
+> Look at the code for this example. What types of features are being used? What happens if you change them to one of the other common feature types (e.g., ORB -- check the slides and OpenCV documentation for others!)
+
 
 ### Matching Keypoints
-
 You can use keypoints to match corresponding points in two images.  Go to the ``keypoints_and_desciptors`` directory and run the following command.
 
 ```bash
 $ ./match_keypoints.py
 ```
+Note that as you move the sliders around, you'll need to click on the image to refresh it.
 
-First, make sure you understand what the visualization is showing.  Next, characterize how the matches change as you move the sliders around.  Note, that if you want to recompute matches after using the slider bars, you need to click on the main image window.
+> What do you notice about the keypoints that are selected? What changes when you adjust the "corner threshold" and why? What changes when you adjust the "ratio threshold" and why?
+
+> Look at the code for this example. What types of features are being used? What happens if you change them to one of the other common feature types (e.g., ORB -- check the slides and OpenCV documentation for others!)
+
 
 ### Visualizing SIFT Descriptors
-
-You can visualize the SIFT descript, which we used in the previous two demos.  Go to the ``keypoints_and_desciptors`` directory and run the following command.
+You can visualize the SIFT descriptors, which we used in the previous two demos. Go to the ``keypoints_and_desciptors`` directory and run the following command.
 
 ```
 $ ./visualize_sift.py
 ```
 
-This visualization is showing the SIFT descriptor that we just covered.  The only thing that it doesn't do is rotate the descriptor relative to the dominant orientation.  Draw in the left pane by clicking and dragging, make sure that you understand why the SIFT descriptor changes the way that it does.  Note, that In order to reset the sketch, you need to hit the spacebar.
+This visualization is showing the SIFT descriptors as described in the slides.  The only thing that it doesn't do is rotate the descriptor relative to the dominant orientation.  Draw in the left pane by clicking and dragging, make sure that you understand why the SIFT descriptor changes the way that it does.  Note, that in order to reset the sketch, you need to hit the spacebar.
+
+> What are the advantages of using SIFT descriptors? When might you not want to use a SIFT descriptor?
+
 
 ### Machine Learning-based Tracking
+You may want to try out Magic Leap's model for keypoint identification and tracking.  They [have a repository](https://github.com/magicleap/SuperGluePretrainedNetwork) that is pretty easy to get going with.
 
-You may want to try out Magic Leap's model for keypoint identifiation and tracking.  They [have a repository](https://github.com/magicleap/SuperGluePretrainedNetwork) that is pretty easy to get going with.
+> Why might using learned descriptors be attractive? What are challenges associated with using these descriptors?
