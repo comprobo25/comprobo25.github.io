@@ -66,24 +66,24 @@ feature_row_robot_localization_project:
 * [Dude, where's my robot? A Localization Challenge for Undergraduate Robotics](https://dl.acm.org/doi/abs/10.5555/3297863.3297895)\n"
 
 feature_row_robots_society:
-  - image_path: website_graphics/neato_gazebo.png
-    alt: "The Neato robot in an empty, simulated world"
+  - image_path: website_graphics/real_robots.png
+    alt: "A collage of robots including AUV Sentry, Asimo, Waymo car, a coffee maker, factory assembly arms, and a Boston Dynamics Spot."
     excerpt: "
-   The goal of this assignment is to examine the effects robots are having on our world and what we can do to make that effect positive. (TODO: Better image)
+   By virtue of being embodied, robots can literally change the world. Daily in-class activities and a 3-part assignment examine the impacts and implications of robotic systems and algorithmic choices made in their design.
 
     ### Supporting Documents
 
-* [Student Led Discussions](assignments/ethics_discussion_assignment)\n"
+* [3-Part Broader Impacts Project](assignments/broader_impacts)\n"
 
 feature_row_computer_vision_project:
-  - image_path: website_graphics/neato_gazebo.png
-    alt: "The Neato robot in an empty, simulated world"
+  - image_path: website_graphics/keypoint_matching.png
+    alt: "An example of a keypoint matching algorithm working on indoor images"
     excerpt: "
-The computer vision project is an open-ended project on using computer vision in the context of robotics.
+The machine vision project is an open-ended project on using computer vision in the context of robotics.
 
     ### Supporting Documents
 
-* [Computer Vision Project Document](assignments/computer_vision_project)\n"
+* [Machine Vision Project Document](assignments/computer_vision_project)\n"
 
 feature_row_final_project:
   - image_path: website_graphics/neato_gazebo.png
@@ -113,11 +113,11 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 {% include feature_row id="feature_row_robot_localization_project" type="left" %}
 
-## <a name="module-details"/> Robots in the World
+## <a name="module-details"/> The Broader Impacts of Robots
 
 {% include feature_row id="feature_row_robots_society" type="right" %}
 
-## <a name="module-details"/> Computer Vision Project
+## <a name="module-details"/> Machine Vision Project
 
 {% include feature_row id="feature_row_computer_vision_project" type="left" %}
 
@@ -166,4 +166,4 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 
 
 ## Conclusion and Learning More
-CompRobo serves as a fun, hands-on introduction to key ideas in robotics algorithms and toolsets.  Despite the fact that the course is successful at Olin, we realize that everyone's institutional context is different. To connect with folks at Olin College to learn more about this module or determine how you might build off of this at your own institution, e-mail <a href="mailto:Collaboratory@olin.edu">Collaboratory@olin.edu</a> to start the conversation.
+CompRobo serves as a fun, hands-on introduction to key ideas in robotics algorithms and toolsets.  Despite the fact that the course is successful at Olin, we realize that everyone's institutional context is different. To connect with folks at Olin College to learn more about this module or determine how you might build off of this at your own institution, e-mail <a href="mailto:oepp@olin.edu">Olin's External Programs and Partnerships</a> to start the conversation.
