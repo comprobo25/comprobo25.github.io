@@ -150,7 +150,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 14: Waste Sorting with Robots // Neato Soccer + Discuss Project Proposals](in-class/day14)
 * [Day 15: Broader Impacts Discussion Session 1 // Keypoint Matching and Descriptors](in-class/day15)
 * [Day 16: Broader Impacts Discussion Session 2 // Camera Calibration](in-class/day16)
-* [Day 17: Broader Impacts Discussion Session 3 // Structure-from-Motion](in-class/day17)
+* [Day 17: Broader Impacts Discussion Session 3 // Image Segmentation](in-class/day17)
 * [Day 18: Waste Sorting Challenge // Visual Odometry](in-class/day18)
 * [Day 19: Robotics Supply Chains // Computer Vision Showcase + Final Project Kickoff](in-class/day19)
 

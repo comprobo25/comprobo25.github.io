@@ -16,7 +16,7 @@ toc_data:
 
 ## Today
 * Waste Sorting Challenge
-* Visual Odometry and SLAM
+* CA Lecture: Visual Odometry and SLAM
 * Studio Time
 
 ## For Next Time
