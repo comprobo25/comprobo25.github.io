@@ -1,5 +1,5 @@
 ---
-title: "Broader Impacts Discussion Session 3 // Structure-From-Motion"
+title: "Broader Impacts Discussion Session 3 // Image Segmentation"
 toc_sticky: true
 toc_data:
   - title: Today
