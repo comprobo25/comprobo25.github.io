@@ -40,17 +40,16 @@ Take a look at the [final project assignment document](../assignments/final_proj
     * An implication on this requirement is that most projects will be written as ROS packages.
 
 Process:
-* [5 min] Read through the [final project assignment document](../assignments/final_project)
-* [3 min] Individually review your learning goals for the class and for this project
-* [5 min] Create a sticky-note for each topic/theme you'd like to explore in this project. Consider:
+* [5 min] Read through the [final project assignment document](../assignments/final_project) and individually review your learning goals for the class and for this project
+* [10 min] Create a sticky-note for each topic/theme you'd like to explore in this project. Consider:
    * Is there a particular robotic system you'd like to investigate?
    * Is there a particular class of algorithm you'd like to learn about?
    * Is there a particular algorithm you'd like to implement or dataset you'd like to use?
-* [5 min] Gather with 2 other folks and rapid-sort your sticky-notes into clusters on a white board -- label your clusters
+* [10 min] Gather with 2 other folks and sort your sticky-notes into clusters on a white board -- label your clusters with themes of interest
 * [5 min] Gallery walk the room and look at the affinity clusters that are being developed; what looks interesting to you?
 * [8 min] Choose a theme that interests you and go to it in the room; with the other folks in that area, discuss your learning goals and ideas you have related to that theme
    * You're not committing to anything yet! This is about exploring some areas and project ideas of interest
 * [8 min] Pick another theme and go to it; repeat your discussions
    * You're not committing to anything yet! This is about exploring some areas and project ideas of interest
-* [~8 min] Find some possible partners and begin to scope a project you'd like to complete. You can use the proposal guidelines to frame your discussion
+* [8 min] Find some possible partners and begin to scope a project you'd like to complete. You can use the proposal guidelines to frame your discussion
 * [Last 10 minutes] Rapid-fire project pitches -- volunteers will pitch a 30-second idea for a project to the group
