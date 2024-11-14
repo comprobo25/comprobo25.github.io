@@ -155,8 +155,8 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 19: Machine Vision Showcase + Final Project Kickoff](in-class/day19)
 
 ### Final Project (+ Labor and Collaborative Robotics Discussions)
-* [Day 20: Automated Labor Landscape // Project Proposal Generation](in-class/day20)
-* [Day 21: HRI: Perception, Prediction, and Planning // Project Work Time](in-class/day21)
+* [Day 20: Project Proposal Generation](in-class/day20)
+* [Day 21: Automated Labor Landscape // Project Work Time](in-class/day21)
 * [Day 22: Economics of Automation // Project Work Time](in-class/day22)
 * [Day 23: Autonomy vs Intelligence // Project Work Time](in-class/day23)
 * [Day 24: Sociotechnical Systems // Project Work Time](in-class/day24)

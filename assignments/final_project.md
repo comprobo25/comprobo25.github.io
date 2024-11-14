@@ -72,7 +72,7 @@ Your deliverables should be turned findable through your Github repository (even
 * What is your MVP?  What are your stretch goals?
 * Outline, in detail, what you intend to have accomplished by each of the milestones.
 * Conduct a [pre-mortem](performing_a_project_premortem.pdf) on your project.  Write at least 5 risks to the success of your project (where success could be in relation to your learning or the final project output)
-* Given each of your YOGAs, in what ways is this project well-aligned with these goals, and in what ways is it misaligned?  If there are ways in which it is not well-aligned, please provide a potential strategy for bringing the project and your learning goals into better alignment. There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
+* Given each of your YOGAs and the time you are hoping to allocate individually to this project, tell us about how the project will align with each of your goals. If there are ways in which the project is not well-aligned, please provide a potential strategy for bringing the project and your learning goals into better alignment. There should be an individual section for each person on the team addressing the fit between the YOGA and the project topic.
 * What support would you like from the teaching team?
 
 Submit your proposal to [Canvas](https://canvas.olin.edu/courses/822/assignments/13819).
@@ -92,8 +92,8 @@ We will be using the same rubric as for the other assignments for your code + re
 
 ## Ethics Statement and Responsible Use
 Please prepare a statement on the ethical and responsible use of your code. There are a few different ways to approach this, for instance:
-* Use the framing on "statement of potential negative societal impacts based on [this work from CVPR](https://cvpr2022.thecvf.com/ethics-guidelines). We expect that Section 3 won't apply to everyone, but if it does, please address that as well.
-* Create a version of a [model card](https://arxiv.org/pdf/1810.03993) for your robotic system. Some robotics-oriented headings to add may be related to hardware requirements, open-source or closed-source element reporting if you have a compositional pipeline, and so on.
+* Use the framing on "statement of potential negative societal impacts" based on [this work from CVPR](https://cvpr2022.thecvf.com/ethics-guidelines). We expect that Section 3 won't apply to everyone, but if it does, please address that as well.
+* Create a version of a [model card](https://arxiv.org/pdf/1810.03993) for your robotic system. Some robotics-oriented headings to add may be related to hardware requirements, use of open-source or closed-source elements within your implementation, and so on.
 * Review ethical guidelines from several industry companies (e.g., [Boston Dynamics](https://bostondynamics.com/ethics/) and [Anybotics](https://anybotics.com/anybotics-code-of-business-and-conduct.pdf)) and model your statement after their frameworks (or your own critiques of their frameworks).
 
 In general, your statement(s) should highlight your principles and philosophies on responsible use for the technique or system you create. Consider the licensing for your repository, and whether you have guidelines or restrictions you would place on the use of your work. Balance both the positive aspects of your techniques and the possible negative implications if intended use were violated. Please submit to [Canvas](https://canvas.olin.edu/courses/822/assignments/13824).
@@ -106,7 +106,7 @@ Twice during the project you will be writing up your progress on your project th
 
 Project Milestone 1 will be due by class on Thursday 11/21. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13820).
 
-Project Milestone 2 will be due by class on Monday 12/2. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13821).
+Project Milestone 2 will be due by class on Thursday 12/5. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13821).
 
 ## Project Documentation (Due after the Final Event on Thursday 12/19)
 
@@ -118,4 +118,4 @@ At the end of the project your website should include the following information:
 You will submit a website link in the Write-Up + Code assignment on Canvas.
 
 ## YOGA
-We'll be continuing our YOGA assignment from earlier in the semester.  This is a great chance to revisit learning goals and update them to your final project or update use them to shape the project itself!
+We'll be continuing our [YOGA assignment](./class_yoga.md) from earlier in the semester.  This is a great chance to revisit learning goals and update them to your final project or update use them to shape the project itself!
