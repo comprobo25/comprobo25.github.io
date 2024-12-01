@@ -1,5 +1,5 @@
 ---
-title: "Studio Day"
+title: "Safety and Verifiability // Studio Day"
 toc_sticky: true
 ---
 

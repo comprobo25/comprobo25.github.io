@@ -1,5 +1,5 @@
 ---
-title: "Studio Day"
+title: "Labor and Automation Debrief // Studio Day"
 toc_sticky: true
 ---
 

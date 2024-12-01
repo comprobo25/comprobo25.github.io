@@ -104,9 +104,9 @@ You should create a project website. The project website will serve two purposes
 ### Project Milestones
 Twice during the project you will be writing up your progress on your project thus far.  You should include these milestones as part of your project website, so try to keep the writing suitable for a general audience (e.g., someone who doesn't have much context about the class). You will be coming up with your best guess as to how far you will be by each of the project milestones as part of your project proposal.
 
-Project Milestone 1 will be due by class on Thursday 11/21. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13820).
+Project Milestone 1 will be due Sunday 11/24. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13820).
 
-Project Milestone 2 will be due by class on Thursday 12/5. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13821).
+Project Milestone 2 will be due Sunday 12/08. Submit on [Canvas](https://canvas.olin.edu/courses/822/assignments/13821).
 
 ## Project Documentation (Due after the Final Event on Thursday 12/19)
 
