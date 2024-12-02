@@ -160,8 +160,8 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 22: Economics of Automation // Project Work Time](in-class/day22)
 * [Day 23: Autonomy vs Intelligence // Project Work Time](in-class/day23)
 * [Day 24: Sociotechnical Systems // Project Work Time](in-class/day24)
-* [Day 25: Safety and Verifiability // Project Work Time](in-class/day25)
-* [Day 26: Labor Debrief // Project Work Time](in-class/day26)
+* [Day 25: Labor and Automation Debrief // Project Work Time](in-class/day25)
+* [Day 26: Project Work Time](in-class/day26)
 * [Day 27: Final Project Showcase and Semester Reflection](in-class/day27)
 
 

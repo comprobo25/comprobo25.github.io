@@ -38,8 +38,8 @@ After we debrief, where you've been keeping your personal notes, reflect on the 
 
 ### Additional Reading (for your consideration)
 Some of the following articles may be of interest to expand on our conversation today:
-    * [Why warehouse managers quit and how automation can help retain them](https://locusrobotics.com/blog/why-warehouse-managers-quit-and-how-automation-can-help-retain-them)
-    * [Automation or bust: the key to surviving in vertical farming](https://www.rootedrobotics.com/post/automation-or-bust-the-key-to-surviving-in-vertical-farming)
+   * [Why warehouse managers quit and how automation can help retain them](https://locusrobotics.com/blog/why-warehouse-managers-quit-and-how-automation-can-help-retain-them)
+   * [Automation or bust: the key to surviving in vertical farming](https://www.rootedrobotics.com/post/automation-or-bust-the-key-to-surviving-in-vertical-farming)
    * [How many jobs do robots really replace?](https://news.mit.edu/2020/how-many-jobs-robots-replace-0504)
    * [Robots help some firms, even while workers across industries struggle](https://news.mit.edu/2020/robots-help-firms-workers-struggle-0505)
    * [Robots, Growth, and Inequality](https://www.imf.org/external/pubs/ft/fandd/2016/09/berg.htm)
