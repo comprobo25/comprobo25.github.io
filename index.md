@@ -169,7 +169,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [On Kalman Filtering](https://github.com/comprobo24/recitation_examples/tree/main/kalman_filters)
 * [On Computing Tools for Machine Vision](https://docs.google.com/presentation/d/1grR6uVaMEtdOn7u8L0aYVQq3NUlKZGraBVoBiZiWSqc/edit?usp=sharing)
 * [On Simple Image Handling with OpenCV](https://github.com/comprobo24/recitation_examples/tree/main/image_processing)
-* [Resources for an Introduction to Factor Graphs](recitations/factor-graphs)
+* [Resources for an Introduction to Factor Graphs](recitations/factor_graphs.md)
 * [An A* and RRT* Crash Course](https://github.com/comprobo24/recitation_examples/tree/main/path_planning)
 
 ## Conclusion and Learning More
