@@ -171,6 +171,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [On Simple Image Handling with OpenCV](https://github.com/comprobo24/recitation_examples/tree/main/image_processing)
 * [Resources for an Introduction to Factor Graphs](recitations/factor_graphs.md)
 * [An A* and RRT* Crash Course](https://github.com/comprobo24/recitation_examples/tree/main/path_planning)
+* [Basics of Manipulation](recitations/manipulation.md)
 
 ## Conclusion and Learning More
 CompRobo serves as a fun, hands-on introduction to key ideas in robotics algorithms and toolsets.  Despite the fact that the course is successful at Olin, we realize that everyone's institutional context is different. To connect with folks at Olin College to learn more about this module or determine how you might build off of this at your own institution, e-mail <a href="mailto:oepp@olin.edu">Olin's External Programs and Partnerships</a> to start the conversation.
