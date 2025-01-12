@@ -86,14 +86,15 @@ The machine vision project is an open-ended project on using computer vision in 
 * [Machine Vision Project Document](assignments/computer_vision_project)\n"
 
 feature_row_final_project:
-  - image_path: website_graphics/neato_gazebo.png
-    alt: "The Neato robot in an empty, simulated world"
+  - image_path: website_graphics/final_projects_collage_2024.png
+    alt: "A series of 3 images, moving clockwise starting on the top left, two Neatos coordinating paths around one another, an RViz diagram for a Neato moving quickly through unknown space, and a 6DOF manipulator playing chess."
     excerpt: "
    The final project is an open-ended project that lets students explore a robotics topic and algorithms in depth.
 
     ### Supporting Documents
 
-* [Final Project Assignment Document](assignments/final_project)"
+* [Final Project Assignment Document](assignments/final_project)\n
+* [2024 Final Projects Showcase](final_project_showcase)"
 
 ---
 
