@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "A Computational Introduction to Robotics 2024"
+title: "A Computational Introduction to Robotics 2025"
 header:
   overlay_image: "website_graphics/robo_splash.jpg"
   overlay_color: "#000"
@@ -166,12 +166,12 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 27: Final Project Showcase and Semester Reflection](in-class/day27)
 
 ## Bonus Materials (e.g., Recitations)
-* [Recitation Example Code](https://github.com/comprobo24/recitation_examples)
-* [On Kalman Filtering](https://github.com/comprobo24/recitation_examples/tree/main/kalman_filters)
+* [Recitation Example Code](https://github.com/comprobo25/recitation_examples)
+* [On Kalman Filtering](https://github.com/comprobo25/recitation_examples/tree/main/kalman_filters)
 * [On Computing Tools for Machine Vision](https://docs.google.com/presentation/d/1grR6uVaMEtdOn7u8L0aYVQq3NUlKZGraBVoBiZiWSqc/edit?usp=sharing)
-* [On Simple Image Handling with OpenCV](https://github.com/comprobo24/recitation_examples/tree/main/image_processing)
+* [On Simple Image Handling with OpenCV](https://github.com/comprobo25/recitation_examples/tree/main/image_processing)
 * [Resources for an Introduction to Factor Graphs](recitations/factor_graphs.md)
-* [An A* and RRT* Crash Course](https://github.com/comprobo24/recitation_examples/tree/main/path_planning)
+* [An A* and RRT* Crash Course](https://github.com/comprobo25/recitation_examples/tree/main/path_planning)
 * [Basics of Manipulation](recitations/manipulation.md)
 
 ## Conclusion and Learning More
