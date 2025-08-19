@@ -4,7 +4,7 @@ toc_sticky: true
 toc_h_max: 3
 ---
 
-## Project Overview: Behaviors and Finite State Machines
+# Project Overview: Behaviors and Finite State Machines
 
 __Your goal in this project will be to program the Neato to execute a number of behaviors (teleop, driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
 
@@ -14,9 +14,9 @@ You should be spending about *fifteen hours* on this assignment, so if you find 
 
 **Project Due Date**: September 23rd, 7PM ([Canvas description](https://canvas.olin.edu/courses/942/assignments/16078))
 
-**In-Class Shareout**:" September 25th ([Canvas description](https://canvas.olin.edu/courses/942/assignments/16079))
+**In-Class Shareout**: September 25th ([Canvas description](https://canvas.olin.edu/courses/942/assignments/16079))
 
-### Learning Goals
+## Learning Goals
 
 * Gain familiarity with ROS2
 * Brush up on Python (or, if you are interested, [learn some C++](#working-in-c))
@@ -25,7 +25,7 @@ You should be spending about *fifteen hours* on this assignment, so if you find 
 * Learn to program robot behaviors using reactive control strategies
 * Learn about finite-state robot control
 
-### Expected Outcomes
+## Expected Outcomes
 For this project, we are asking that you develop your own **finite state machine** that combines at least **three unique behaviors**, 1 of which is self-designed outside what we will be completing in class together. For the purposes of this project, behaviors come in three flavors:
 * Fundamental: move forward, move backward, turn in place, turn in an arc, stop
 * Basic: drive in a [shape], collision avoidance
@@ -35,11 +35,11 @@ We will be spending time writing the following behaviors in class: teleop (funda
 
 We invite you to write at least one more _basic_ or _advanced_ behavior, then combine three of all the behaviors your write into a finite state machine of your own design. You will submit all of your code in a Github repository (see details below) which will include a detailed write-up of your implementation.
 
-### Information Sharing
+## Information Sharing
 
 We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity though [this Google Doc](https://docs.google.com/document/d/15u9fvz5TsuPaSnvE1h_dyiVO2Rk7YTIyNweKpGGwuTE/edit?usp=sharing) which we've already populated with some tips and tricks!
 
-### Logistics (and What You're Turning In)
+## Logistics (and What You're Turning In)
 You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078); while you're in the midst of development, please share your team and Github repo link on [this spreadsheet](https://docs.google.com/spreadsheets/d/1emh5tDNNhTiepzegO7q-Sy2jM3CaAhRC5oynsSDrPUY/edit?usp=sharing) for the teaching team. **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely!
 
 At the end of this project, we will have a share-out where you can show off something you did, or share a key piece of information you've learned along the way! Add it to <a href="https://docs.google.com/presentation/d/1Aa63PUPe-afBzpv647Qvuj_C0xe-lIBMh9_3bc42kvs/edit?usp=sharing">this shared Google Slides presentation</a> by the in-class sharing period.
@@ -47,7 +47,7 @@ At the end of this project, we will have a share-out where you can show off some
 You may find the [resources page](../useful_resources) useful for completing this assignment. We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.
 
 
-## Your ROS2 Package: Code Structure and Writeup
+# Your ROS2 Package: Code Structure and Writeup
 
 Your code should be placed in a ROS package called *ros_behaviors_fsm*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating a package](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html). If you are working purely in Python (the vast majority of the class), follow the instructions for ``Python``.  If you are working entirely in C++ or a combination of C++ and Python, follow the instructions for ``CMake``.  To mix C++ and Python, you will have to jump through a few hoops.  See this [guide on combining C++ and Python in one ROS2 Package](https://roboticsbackend.com/ros2-package-for-both-python-and-cpp-nodes/).  Alternatively, you can turn in two ROS packages (one for C++ nodes and one for Python nodes).
 
@@ -92,7 +92,7 @@ Your writeup should answer the following questions:
 
 ***Note: don't leave the writeup to the very end!  You will have a much better time if you document as you go.  The simple act of writing up your work will actually help generate new ideas and improve the organization for your robot programs.***
 
-### Sample Writeups
+## Sample Writeups
 
 Here are some writeups that are particularly solid.  We hope that these might get you excited about putting in the effort to document your work.
 * <a href="https://github.com/ksoltan/comprobo_warmup_project/blob/master/warmup_project/CompRobo_Warmup_Project_Writeup.pdf">Matthew Beaudouin-Lafon and Katya Soltan</a>
@@ -102,7 +102,7 @@ Here are some writeups that are particularly solid.  We hope that these might ge
 * <a href="https://github.com/c-mawn/warmup_project">Charlie Mawn and Chris Nie</a>
 * <a href="https://github.com/VivianMak/Computational-Robotics-Warmup-Project/blob/main/Warmup%20Project%20-%20Writeup.pdf">Vivian Mak and Eddy Pan</a>
 
-### Intermediate checkpoint
+## Intermediate checkpoint
 
 Halfway through the project you should have the following parts of the project done:
 * Simple visualizations using rviz
@@ -111,22 +111,22 @@ Halfway through the project you should have the following parts of the project d
 * Skeleton code of your self-developed behaviors
 * A preliminary writeup of your wall follower
 
-## Using Robots and Simulators
+# Using Robots and Simulators
 
 You can use a combination of the simulated Neato and real Neato during your development cycle, however, **before the end of the project you should ensure that your code works on the physical Neato**. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a>.
 
-## Getting Started: Robotics Development and Debugging Tools
+# Getting Started: Robotics Development and Debugging Tools
 Before jumping in to programming robot behaviors, this activity is designed to help you get your development workflow set-up and assist you with the data-recording steps + write-up documentation evidence you'll want to be using later. 
 
-### RViz
+## RViz
 
 Probably the most important tool for debugging in this class will be [rviz2](https://turtlebot.github.io/turtlebot4-user-manual/software/rviz.html).  You can think of rviz (we'll usually leave off the ``2`` and just call it ``rviz``) as a specially tuned debugger for robots.  Consider the case of debugging a typical program by instrumenting your program with print statements.  These print statements may give you useful information as to the state (e.g. values of variables) of your program and, ultimately, help you find errors in your code.  This approach becomes infeasible when you work on robots with high bandwidth sensors (like the Neato).  The Neato sensory data consists of hundreds of thousands of numbers generated each second.  Visualizing all these numbers using print statements is infeasible.
 
 
-#### Suggested RViz Tutorial
+### Suggested RViz Tutorial
 Rviz contains visualization tools for common sensory data.  Further, there are some general purpose visualization messages that you can customize for your purposes. Here is a brief tutorial specific for this class and project, that will get you familiar with using rviz with the Neato and how to write a simple program to visualize arbitrary geometric shapes. _You don't need to turn in anything for this tutorial_.
 
-##### Part 1
+#### Part 1
 
 For part 1 you will be using rviz to visualize the data from the simulated Neatos. Connect to the Neato. Read through the documentation for rviz and perform the following steps:
 
@@ -137,11 +137,11 @@ For part 1 you will be using rviz to visualize the data from the simulated Neato
 
 Save your rviz configuration so you can use it later (you can simply make it the default configuration by overwriting default.rviz or save it as a different file if you want to maintain the current default rviz behavior).
 
-##### Part 2
+#### Part 2
 
 Write a ROS node that, 10 times a second, publishes a message of type ``visualization_msgs/Marker``. The marker message you publish should specify to rviz to create a sphere at position x=1m and y=2m in the Neato's odometry coordinate system (odom). It is up to you how large and what color to make the sphere. Information on the ``visualization_msgs/msg/Marker`` message can be found on the [visualization_msgs Wiki](http://wiki.ros.org/visualization_msgs) (unfortunately the official documents haven't been updated for ROS2, so for our benefit we have [created an example in Python with ROS2](../Sample_code/marker_sample)). Try changing the coordinate frame for your sphere to **base_link**.  How does the behavior of the visualization change?  Try changing the coordinate frame for your sphere to a different coordinate system (e.g.,  **base_laser_link**). How does the behavior of the visualization change?
 
-### rosbag
+## rosbag
 
 Rosbag is a very useful tool for debugging robot programs.  The basic idea is to record all of the data from a particular run of the robot (laser scans, bump sensors, images, etc.), and then use this recording to help test and debug your code.  For instance, suppose you are writing code to estimate the positions of walls in an environment.  Given a recording of your robot moving around in an environment, you can iterate on your wall detection system until it works on this recorded test case without ever having to go back and interface with the physical (or simulated) robot! These recorded test cases are thus very useful for increasing the time efficiency and repeatability of your debugging process.
 
@@ -165,12 +165,12 @@ $ ros2 bag play path-to-bag-file
 
 _Please push your, hopefully not too large, bag files to your repo in a subdirectory called **bags** as you complete this project.  Each bag file is represented as a directory containing the actual messages as well as some metadata.  If the bag file directory is more than 50 megabytes or so, something is likely wrong (e.g., you captured the uncompressed images on mistake).  For our convenience please name the bag something that allows us to determine which part of the assignment it corresponds to._
 
-## Behavior Programming: Neatos Take On The World
+# Behavior Programming: Neatos Take On The World
 This section describes the various behaviors we will be implementing in class or suggest as a starting point for your own creativity.
 
-### Fundamental Behaviors
+## Fundamental Behaviors
 
-#### Robot Teleoperation (Teleop) (In-Class)
+### Robot Teleoperation (Teleop) (In-Class)
 
 While there is a default teleoperation program provided in ROS called ``teleop_twist_keyboard``, we suggest you try your hand at writing your own code to teleoperate the Neato. If you get really ambitious you can try using a gamepad or the mouse.
 
@@ -198,9 +198,9 @@ while key != '\x03':
 
 _Put your teleop code in the ``ros_behavior_fsm`` subdirectory of your ``ros_behavior_fsm`` package. For consistency, please put your code in a file named ``teleop.py``.  Make sure your node is referenced in your package's ``setup.py`` file._
 
-### Basic Behaviors
+## Basic Behaviors
 
-#### Driving in a Square or Other Shape (In-Class)
+### Driving in a Square or Other Shape (In-Class)
 
 Write a ROS Node to move the Neato through a 1m by 1m square path.  You can solve this using either timing (e.g., turn at a fixed speed for a period of time) or using the Neato's on-board odometry.  We'll leave it to you which one to try (using timing is significantly easier).
 
@@ -208,7 +208,7 @@ _Put your drive square code in the ``ros_behavior_fsm`` subdirectory of your ``r
 
 Using the rosbag instructions from earlier, record a demo of your square driving code in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-#### Collision Avoidance (For Your Consideration)
+### Collision Avoidance (For Your Consideration)
 
 As a basic safety measure, robots should have a programmable emergency stop ("E-stop") to avoid collisions. Write a ROS Node that will stop the Neato under various collision avoidance conditions, such as:
 * When the bump sensor is activated
@@ -216,9 +216,9 @@ As a basic safety measure, robots should have a programmable emergency stop ("E-
 * When an object appears in front of the robot
 * When the robot is on a side-swiping trajectory to an object
 
-### Advanced Behaviors
+## Advanced Behaviors
 
-#### Wall Following (In-Class)
+### Wall Following (In-Class)
 
 For this behavior your goal will be to pilot the Neato near a wall (e.g. using the teleoperation keyboard node... or just carry it!) and have the Neato move forward while aligning its direction of motion to be parallel to the nearest wall.
 
@@ -232,13 +232,13 @@ To get started let's draw a simple picture of the situation.
 
 Building upon this simple picture, fill out what you can measure from your robot's sensors. What is the "goal" of your controller?
 
-##### Hints
+#### Hints
 
 * Draw lots of pictures. Make sure you understand the geometry of the problem. 
 * A fairly straightforward way to attack the problem is by using [proportional control](http://en.wikipedia.org/wiki/Proportional_control). If you want to do something more sophisticated you may want to look into PID control (see going beyond section).
 * Sometimes various laser range measurements might not be present on every scan. In the diagram above we selected two specific laser measurements to make the problem easier, however, you should not limit yourself to just using these measurements. You will probably want to make your code robust by using multiple measurements (for redundancy).
 
-##### Going beyond (some suggestions, but feel free to be creative)
+#### Going beyond (some suggestions, but feel free to be creative)
 
 * Properly incorporate the offset between the laser scanner and the center of rotation of the robot by using the tf module (the [TF tutorials](http://wiki.ros.org/tf2/Tutorials) are a great place to start).
 * Incorporate the bump sensor in some way
@@ -247,15 +247,15 @@ Building upon this simple picture, fill out what you can measure from your robot
 * Look into using [OpenCV's Hough Transform](https://docs.opencv.org/4.2.0/d9/db0/tutorial_hough_lines.html) or the RANSAC algorithm to do wall detection.
 * Use [Ben Kuiper's writeup to make your wall controller critically damped](http://www.cs.utexas.edu/users/qr/robotics/internal/papers/tuning-controller.pdf).
 
-##### Visualization
+#### Visualization
 
 Whatever method you choose, you must visualize the detected wall using rviz.  To do this, publish a message of type visualization_messages/Marker (recall, that the documentation of this message type can be found [here](http://wiki.ros.org/rviz/DisplayTypes/Marker)). You can publish this message to any topic that you want, but make sure you add it to the visualizations in rviz so you can benefit from your hard work.
 
-##### Bag Recording
+#### Bag Recording
 
 Using the rosbag instructions from earlier, record a demo of your wall follower in action.  Make sure that when you record your bag file you are also recording the wall visualization from the previous step.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-#### Person Following (For Your Consideration)
+### Person Following (For Your Consideration)
 
 Pretend your Neato is your robot pet and get it to follow you around! The intended behavior is that you can walk in front of the Neato and it will follow your movements while maintaining a specified following distance.
 
@@ -263,7 +263,7 @@ Pretend your Neato is your robot pet and get it to follow you around! The intend
 
 ![A test run of a person follower in Gazebo](../website_graphics/barrel_follow.gif)
 
-##### Hints
+#### Hints
 
 * One way to think about this problem is that the Neato is attempting to keep the closest large object in front of it at a specified distance and immediately in front of the robot. 
 * As in wall following, you may find proportional control to be a useful strategy. 
@@ -272,20 +272,20 @@ Pretend your Neato is your robot pet and get it to follow you around! The intend
 <img alt="A schematic Neato following a person." src="../website_graphics/persontracking.png"/>
 </p>
 
-##### Going Beyond
+#### Going Beyond
 
 * The center of mass approach fails in a number of cases. One of those is when a large non-person object is within the person tracking region. Can you modify your code to handle this case? One strategy for handling this case is to follow moving objects within the person tracking region.
 * Detect the characteristic pattern of two legs following the centroid defined by only these points.
 
-##### Visualization
+#### Visualization
 
 Whatever method you choose, you must visualize the detected person using rviz.  To do this, publish a message of type visualization_messages/Marker (recall, that the documentation of this message type can be found [here](http://wiki.ros.org/rviz/DisplayTypes/Marker)).  You can publish this message to any topic that you want, but make sure you add it to the visualizations in rviz so you can benefit from your hard work.
 
-##### Bag Recording
+#### Bag Recording
 
 Using the rosbag instructions from earlier, record a demo of your person follower in action.  Make sure that when you record your bag file you are also recording the visualization of the tracked location of the person from the previous step.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-#### Obstacle Avoidance (For Your Consideration)
+### Obstacle Avoidance (For Your Consideration)
 
 For this part you should program the Neato to move forward while reactively avoiding obstacles that block its path. This is different than simple collision avoidance because the robot should *keep going* after it encounters an obstacle, and simply modify its path.
 
@@ -299,11 +299,11 @@ A more advanced approach to the problem is to use the concept of potential field
 
 By summing the forces you can obtain a direction of motion for the robot (note: that the sum of forces is not shown in the diagram above). You can then use a proportional controller to steer towards this desired angle while still maintaining forward velocity.
 
-##### Going beyond
+#### Going beyond
 
 * Instead of always trying to move forward, allow a goal to be specified in the robot's odometry coordinate frame (called odom). In order to best handle this, you will either want to listen to the ``/odom`` topic directly or else make use of coordinate transformations via the TF module (again, the [TF tutorials](http://wiki.ros.org/tf2/Tutorials) are a great place to start).
 
-##### Visualization
+#### Visualization
 
 While not required, we recommend that you choose a visualization strategy that helps you as much as possible.  Suggestions are to visualize the goal location using a circle, and to visualize the repulsive and attractive potentials using arrows (where the length of the arrow indicates the magnitude of the influence).
 
@@ -311,12 +311,12 @@ While not required, we recommend that you choose a visualization strategy that h
 
 Using the rosbag instructions from earlier, record a demo of your obstacle avoider in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-## Combining Multiple Behaviors Using Finite-State Control
+# Combining Multiple Behaviors Using Finite-State Control
 
 For this part of the assignment you have two choices:
 
-1. Combine three or more of your behaviors from earlier to create a finite-state controller.
-2. Implement a new behavior using finite state control
+1. Combine three or more of your behaviors from earlier to create a finite-state controller (including 1 behavior you self-designed)
+2. Implement a brand new (likely advanced) behavior using finite state control
 
 _Put your multiple behaviors code in the ``ros_behavior_fsm`` subdirectory of your ``ros_behavior_fsm`` package. For consistency, please put your code in a file named ``finite_state_controller.py``.  Make sure your node is referenced in your packages ``setup.py`` file._
 
@@ -326,27 +326,27 @@ You may find that drawing a state transition diagram is helpful. Each state shou
 <img alt="A finite state diagram of a two behavior system." src="../website_graphics/fsc.png"/>
 </p>
 
-### Visualization
+## Visualization
 
 While not required, we recommend that you choose a visualization strategy that helps you as much as possible.
 
-### Bag Recording
+## Bag Recording
 
 Using the rosbag instructions from earlier, record a demo of your finite-state controller in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
 
-## Other Ideas for Going Beyond
+# Other Ideas for Going Beyond
 
-### Working in C++
+## Working in C++
 
 If you are interested in learning C++ through this course, you can do so in this assignment.  If you choose to work in this fashion, please come talk to me beforehand so we can discuss how we might change the assignment requirements to accommodate your learning of this new material.  Please be aware that the C++ pathway is very much a work in progress, and you will be blazing the trail (with my help and with help from other classmates working in this way).  To get started, I have started [a page to serve as a place where we can put useful resources for learning C++ in general and using it for ROS2 in particular](../How to/learn_cpp).
 
-### Use the ROS Actions Framework
+## Use the ROS Actions Framework
 
 The ROS actions framework is a great tool for managing behaviors like the ones you implemented in this project.  Consider reading [the actions documentation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html), and incorporating it into your code.
 
 
-## Tips, Tricks, and Words of (Pseudo?) Wisdom
+# Tips, Tricks, and Words of (Pseudo?) Wisdom
 
 * Dealing with Quaternions.  Quaternions are a way to parameterize a 3-d orientation.  ROS uses them to supply things like the relationship between the axes of two coordinate frames (e.g., in the ``tf2`` module).  I have put together [an example of converting form quaternions to Euler angles](https://github.com/comprobo24/class_activities_and_resources/blob/main/sample_node_architectures/sample_node_architectures/get_odom_rpy.py).  For the Neato we are chiefly concerned with the yaw angle (as the Neato is confined to the ground).
 * There is now a general [troubleshooting page](../How to/troubleshoot).
