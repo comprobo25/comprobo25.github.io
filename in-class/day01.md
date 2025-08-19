@@ -19,13 +19,17 @@ toc_data:
 
 ## For Next Time
 
-* Fill out <a href="https://forms.gle/1SPkoxWMQSQn3Ci16">the course entrance survey</a>
-* <a href="../How to/setup_your_environment">Get your environment setup</a>
-* Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html))
-* Start thinking about <a href="../assignments/class_yoga">your course goals</a>
-* Start thinking about <a href="../assignments/broader_impacts">what robot you might want to contemplate for the semester</a>
-* <a href="../How to/use_the_neatos">Connect a Neato and run the Neato simulator</a>.  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
-* (probably won't have time for this before next class) Start working on <a href="../assignments/warmup_project">the Warmup Project</a>
+* Mandatory Tasks:
+* *  Fill out <a href="https://forms.gle/Di9V4Kbj8Tuv3rJh6">the course entrance survey</a>
+* * <a href="../How to/setup_your_environment">Get your environment setup</a>
+* * Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html))
+
+* Suggested Tasks:
+* * Check out and consider joining the class [Discord]()
+* * Start thinking about <a href="../assignments/class_yoga">your course goals</a> (Due Sept 9th at 1PM)
+* * Start thinking about <a href="../assignments/broader_impacts">what robot you might want to contemplate for the semester</a> (Due XX at XXPM)
+* * <a href="../How to/use_the_neatos">Connect a Neato and run the Neato simulator</a>.  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
+* * Start working on <a href="../assignments/warmup_project">the Warmup Project</a> (Due Sept 23rd at 7PM)
 
 ## Broader Impacts of Robots in the World
 

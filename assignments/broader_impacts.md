@@ -10,7 +10,7 @@ Robots are embodied systems, meaning that they physically interact and change th
 ```How does [this robot] affect you? the environment? society?```
 
 ### Part 1: Introspection
-**Due Sept 24, 2024**
+**Due Sept 25, 2025**
 
 In this assignment, I'm asking you to select a robot that you'll be thinking about over the course of the semester. The definition of "robot" here can be expansive -- any technological system that can sense and physically respond to stimuli can be considered a robot for this assignment (so, an automated HVAC system is just as fair game as a Boston Dynamics Atlas as an industrial car manufacturing arm). When selecting your robot, consider the following:
 
@@ -18,10 +18,10 @@ In this assignment, I'm asking you to select a robot that you'll be thinking abo
 * Is this robot one that you would be interested in talking about with your peers in this class?
 * Does this robot exist in an industry or environment that you also want to learn more about; or is it manufactured / maintained by a company / person you'd like to know more about?
 * When you think about this robot, do any strong feelings (positive or negative) come up for you?
-Since this is a computation-oriented class; does this robot feature "intelligent" behaviors?
+* Since this is a computation-oriented class; does this robot feature "intelligent" behaviors?
 
 
-Once you have selected your robot, create an artifact that examines the following:
+Once you have selected your robot, create an artifact to share with the class and instructor team that examines the following:
 
 * **Introduce the robot** -- e.g., what is it called, what does it look like, who makes it?
 * **Explain the robot** -- e.g., what does it do? where does it do it? what goal does the entity that makes it have?
@@ -32,10 +32,32 @@ An artifact is any physical (e.g., sticky-note canvas; sketch model), virtual (e
 
 You are strongly encouraged to pull in academic literature, popular media, imagery, videos, and text-based resources as you create your artifact. **Remember to cite your sources and provide media credits when appropriate.**
 
-[To submit this assignment, upload a document containing your artifact or provide a link to your artifact (if you make a physical object, please submit image(s) or video(s) of your artifact) to Canvas](https://canvas.olin.edu/courses/822/assignments/13045). You will be assessed on completeness (1 point) and presence of each of the 4 prompts (introduction, explanation, reaction, and assessment; 1 point each) for a total of 5 points. It is expected that this assignment should take ~6-10 hrs to complete.
+[To submit this assignment, upload a document containing your artifact or provide a link to your artifact (if you make a physical object, please submit image(s) or video(s) of your artifact) to Canvas](https://canvas.olin.edu/courses/822/assignments/13045). You will be assessed on completeness (2 points) and presence of each of the 4 prompts (introduction, explanation, reaction, and assessment; 2 points each) for a total of 10 points. It is expected that this assignment should take ~6-10 hrs to complete. 
+
+We will then present artifacts in class; [your presentation and participation in small group discussions]() will account for another 10 points.
+
+#### Tips for Selecting Your Robot
+We will be talking about these robots _a lot_ this semester; we can't stress enough that you'll want to pick a robot that is interesting to you, you think might be interesting to your peers, and one that is well-documented (so you have resources to draw on throughout the semester). Some examples of robots that at least meet the latter criteria include:
+* A class of industrial robot with many different instantiations, for instance: "warehouse robots" (e.g., Kiva systems, Amazon warehouses, Berkshire Gray Flexbots, Vecna robots, Locus robots), "self-driving robots" (e.g., Cruise, Waymo, Aurora) 
+* A particular historical or long-lived robot, for instance: autonomous underwater vehicle ABE or Sentry, Boston Dynamics' Atlas, Mars rover Curiousity
+* Everday robots, for instance: modern HVAC systems, industrial manufacturing plants
+
+You will likely enjoy this project more, if your robot or class of robot also has these features:
+* "Intelligence" or decision-making authority (not just a purely rote autonomous system)
+    * Alternatively, if the _lack_ of decision-making authority, in the context the robot is used, is precisely why it is interesting, then that's great too!
+* A context that you find interesting/want to learn more about (for instance, if you're excited about construction, you might choose to study the Reframe Systems robot; or if you'd like to learn about medical robots, perhaps the Davinci robot would be interesting to you)
+* A human-robot interaction angle (whether that means that humans and robots co-exist in context, or there is potential for a deeper societal implication)
+
+Examples of robots selected during CompRobo 2024 included:
+* [Xenobots](https://wyss.harvard.edu/news/team-builds-first-living-robots-that-can-reproduce/) (student project artifact can be seen [here](https://sites.google.com/view/xenobotz/home))
+* [LUCAS cardic arrest assistant](https://www.stryker.com/us/en/emergency-care/products/lucas-3.html)
+* [NASA's Juno](https://science.nasa.gov/mission/juno/)
+* [Organifarm's BERRY](https://www.organifarms.de/product)
+* [Hirebotics' Cobot Welder](https://www.hirebotics.com/cobot-welder)
 
 
-### Part 2: Discussion
+
+<!-- ### Part 2: Discussion
 **Due Nov 5, 2024**
 
 Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. In this assignment, you will present your robot to a small group in class and lead a brief discussion centered on your robot. The aim of this assignment is to (1) practice presenting technical systems to an audience of peers, (2) practice leading an open-ended discussion, and (3) challenge your own or others' perspectives about your chosen robot.
@@ -90,5 +112,5 @@ This part of the assignment provides an opportunity to consider how you, as an e
 * **Assess yourself** -- e.g., how has your thinking changed (or not) about your robot / robots generally over the course of the semester? what questions do you still have about your robot / robots? would you work on your robot or one like this? under what conditions? why or why not?
 * **Resolve** -- e.g., what will you takeaway from CompRobo, and from this assignment?
 
-Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points. Please cite any sources you may choose to include. The assignment is graded on completion and clarity, and is worth 5 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete.
+Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points. Please cite any sources you may choose to include. The assignment is graded on completion and clarity, and is worth 5 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete. -->
 
