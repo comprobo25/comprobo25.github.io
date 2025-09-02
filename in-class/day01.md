@@ -14,7 +14,7 @@ toc_data:
 
 ## Today
 
-* Intro to CompRobo (<a href="https://docs.google.com/presentation/d/1-qOCOExDAVlqRgy0Fm-b7nW4Sd7Q-g8Kxg9Ti-4wK8o/edit?usp=sharing">slides</a>)
+* Intro to CompRobo (<a href="https://docs.google.com/presentation/d/1T-gY0nTB7Gx2i21T01CFSnopaKo8oz7pxvk4z9us4Jk/edit?usp=sharing">slides</a>)
 * Broader Impacts of Robots in the World
 
 ## For Next Time
@@ -25,17 +25,18 @@ toc_data:
 * * Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html))
 
 * Suggested Tasks:
-* * Check out and consider joining the class [Discord]()
+* * Check out and consider joining the class [Discord](https://discord.gg/jZVnNMEk)
 * * Start thinking about <a href="../assignments/class_yoga">your course goals</a> (Due Sept 9th at 1PM)
-* * Start thinking about <a href="../assignments/broader_impacts">what robot you might want to contemplate for the semester</a> (Due XX at XXPM)
 * * <a href="../How to/use_the_neatos">Connect a Neato and run the Neato simulator</a>.  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
-* * Start working on <a href="../assignments/warmup_project">the Warmup Project</a> (Due Sept 23rd at 7PM)
+* * Start working on <a href="../assignments/warmup_project">the RoboBehaviors and FSMs Project</a> (Due Sept 23rd at 7PM)
+* * Start thinking about <a href="../assignments/broader_impacts">what robot you might want to contemplate for the semester</a> (Due Sept 30th at 7PM)
+
 
 ## Broader Impacts of Robots in the World
 
 Robots have already transformed our society, and their impact seems likely to only increase over time.  One thing we will do this semester is discuss the effects of robots on our world and our responsibilities as roboticists to understand their implications.
 
-To kick-off these discussions, and to jumpstart your thinking on the first phase of the Broader Impacts project, please get into a group of 3 and work through the following exercises. We'll have a share-out as a class at the end where your group can present a response to one of the exercises.
+To kick-off these discussions, and to jumpstart your thinking on the first phase of the Broader Impacts project, please get into a group of 3-4 and work through the following exercises. We'll have a share-out as a class at the end where your group can present a response to one of the exercises.
 
 1. _Suppose you are working as an engineer on one of the robotics projects highlighted in the slides (it will probably help for you to have a specific one in mind)_. What are the key benefits of your robot? What potential issues might you consider? What engineering processes would you follow to ensure your design works as you intend it to? What is one burning question you currently feel unequipped to resolve (this might be an opportunity for us to learn together as a group).
 
@@ -48,7 +49,7 @@ To kick-off these discussions, and to jumpstart your thinking on the first phase
 
 ## Sensory-Motor Loops (legacy material if you are interested)
 
-In our view, at their very core robots are about sensory-motor loops.  We can visualize this relationship in the following way.
+In our view, at their very core, robots are about sensory-motor loops.  We can visualize this relationship in the following way.
 
 <p align="center">
 <img alt="A diagram showing a robot sensory motor mapping interacting with an environment" src="day01images/sensorymotorloops.jpg"/>

@@ -8,8 +8,7 @@ This document will help use the physical Neato as well as its simulated counterp
 
 # Connecting to the Physical Neatos
 
-This semester marks another year of physical Neatos to CompRobo! These robots were used in 2018, then made a triumphant return in 2023. A [TurtleBot4 Lite](https://www.robotshop.com/en/clearpath-robotics-turtlebot-4-lite-mobile-robot.html) may also be occasionally available for this class as well.
-
+This semester marks another year of physical Neatos to CompRobo! These robots were used in 2018, then made a triumphant return in 2023. These robots are long-lived because they have been cared for by the CompRobo students of yore. Please continue the tradition of Neato stewardship by treating these robots gently and letting an instructor know immediately if something is not functioning as expected.
 
 ## Normal Usage
 

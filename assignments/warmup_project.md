@@ -1,12 +1,12 @@
 ---
-title: "Warmup Project"
+title: "RoboBehaviors and Finite State Machines Project"
 toc_sticky: true
 toc_h_max: 3
 ---
 
-# Project Overview: Behaviors and Finite State Machines
+# Project Overview
 
-__Your goal in this project will be to program the Neato to execute a number of behaviors (teleop, driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
+__Your goal in this project will be to program the Neato to execute a number of behaviors (e.g., teleop, driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
 
 In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment; this page will list several specific behaviors -- you are welcome to implement some, all, or none of these behaviors for your particular finite state machine.
 
@@ -37,7 +37,7 @@ We invite you to write at least one more _basic_ or _advanced_ behavior, then co
 
 ## Information Sharing
 
-We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity though [this Google Doc](https://docs.google.com/document/d/15u9fvz5TsuPaSnvE1h_dyiVO2Rk7YTIyNweKpGGwuTE/edit?usp=sharing) which we've already populated with some tips and tricks!
+We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity though [this Google Doc](https://docs.google.com/document/d/1x3NjmOhbd8oq020Vt0etsZLnNtvLpK2AasJFirAi96Q/edit?usp=sharing) which we've already populated with some tips and tricks!
 
 ## Logistics (and What You're Turning In)
 You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078); while you're in the midst of development, please share your team and Github repo link on [this spreadsheet](https://docs.google.com/spreadsheets/d/1emh5tDNNhTiepzegO7q-Sy2jM3CaAhRC5oynsSDrPUY/edit?usp=sharing) for the teaching team. **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely!
@@ -108,8 +108,8 @@ Halfway through the project you should have the following parts of the project d
 * Simple visualizations using rviz
 * Test drive bag file
 * All in-class developed behaviors (e.g., teleop, drive square, wall following)
-* Skeleton code of your self-developed behaviors
-* A preliminary writeup of your wall follower
+* Skeleton code of your self-developed behavior(s)
+* A started draft of your write-up
 
 # Using Robots and Simulators
 
@@ -325,6 +325,9 @@ You may find that drawing a state transition diagram is helpful. Each state shou
 <p align="center">
 <img alt="A finite state diagram of a two behavior system." src="../website_graphics/fsc.png"/>
 </p>
+
+## WriteUp
+Like for your individual behaviors, please include a description of what your finite state machine accomplishes. Additionally, please include a diagram (or other description) of the states and transition criteria you use in your finite state machine logic, and remark on the capabilities and limitations of your finite state machine. Please also include your strategy for coding your finite state machine (did you use any specialized libraries, did you re-implement all your behaviors into a new node, did you chain parallel nodes together....). 
 
 ## Visualization
 

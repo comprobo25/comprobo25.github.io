@@ -7,7 +7,7 @@ The teaching team will be using ROS2 Humble with Ubuntu 22.04, and we recommend 
 
 > While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS1), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
 
-> Additionally, while the latest Ubuntu is 24.04 and latest stable version of ROS2 as of this offering of CompRobo is Jazzy, the latter's release was fewer than 4 months before the start of the F24 semester. This means that there are significantly fewer debugging resources available for this distro; this is particularly problematic because Jazzy is coupled with a significant API change for several key tools we use in this class (like Gazebo). As Humble will be supported through 2027, we strongly recommend using Humble for the easiest interaction with existing tools, ample online community resources, and a more time-tested distro. Humble is paired with 22.04 Ubuntu, making this the reasonable choice for linux distro for the time being.
+> Additionally, while the latest Ubuntu is 24.04 and latest stable version of ROS2 as of this offering of CompRobo is Jazzy, this release makes significant API changes for several key tools we use in this class (like Gazebo) and for which there are limited debugging resources. As Humble will be supported through 2027, we strongly recommend using Humble for the easiest interaction with existing tools, ample online community resources, and a more time-tested distro. Humble is paired with 22.04 Ubuntu, making this the reasonable choice for Linux distro for the time being.
 
 
 ## Setting up a Dual Boot
@@ -113,14 +113,14 @@ sudo apt-get update && sudo apt-get install -y ros-humble-gazebo-ros-pkgs \
 
 Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html).  
 
-> Note: if you are trying to run this in a VM with an Apple Silicon Mac, you can try (again, not supported officially) the steps below but replace the line where you checkout the ``neato_packages`` with ``git clone -b no_gazebo https://github.com/comprobo24/neato_packages``.
+> Note: if you are trying to run this in a VM with an Apple Silicon Mac, you can try (again, not supported officially) the steps below but replace the line where you checkout the ``neato_packages`` with ``git clone -b no_gazebo https://github.com/comprobo25/neato_packages``.
 
 {% include codeHeader.html %}
 ```bash
 source /opt/ros/humble/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone git@github.com:comprobo24/neato_packages.git
+git clone git@github.com:comprobo25/neato_packages.git
 cd ~/ros2_ws
 colcon build --symlink-install
 source ~/ros2_ws/install/setup.bash
@@ -146,7 +146,7 @@ echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 
 ### Set your ROS_DOMAIN_ID
 
-ROS2 uses the environment variable ``ROS_DOMAIN_ID`` as a way to isolate various ROS2 environments.  Each student will have their own ROS_DOMAIN_ID assigned to them so that there is no cross talk between computers.  [Check on Canvas for your domain ID](https://olin.instructure.com/courses/592/pages/ros2-domain-ids) and add it to your ``.bashrc`` file using the following command.
+ROS2 uses the environment variable ``ROS_DOMAIN_ID`` as a way to isolate various ROS2 environments.  Each student will have their own ROS_DOMAIN_ID assigned to them so that there is no cross talk between computers.  [Check on Canvas for your domain ID](https://docs.google.com/spreadsheets/d/1tzBwtk-N656Nm2mKmXWm4s1KuFMlK-m89RWJxi2O068/edit?usp=sharing) and add it to your ``.bashrc`` file using the following command.
 
 {% include codeHeader.html %}
 ```bash

@@ -4,13 +4,13 @@ toc_sticky: true
 toc_h_max: 3
 ---
 
-## Broader Impacts: Robots and Roboticists
+# Broader Impacts: Robots and Roboticists
 Robots are embodied systems, meaning that they physically interact and change the world. This assignment spanning the semester asks you to introspect, discuss, and reflect on a robot of your choice, the engineers behind that robot, and the people or environment that robot acts on. In particular, this assignment asks you:
 
 ```How does [this robot] affect you? the environment? society?```
 
-### Part 1: Introspection
-**Due Sept 25, 2025**
+## Part 1: Introspection
+**Due Sept 30, 2025**
 
 In this assignment, I'm asking you to select a robot that you'll be thinking about over the course of the semester. The definition of "robot" here can be expansive -- any technological system that can sense and physically respond to stimuli can be considered a robot for this assignment (so, an automated HVAC system is just as fair game as a Boston Dynamics Atlas as an industrial car manufacturing arm). When selecting your robot, consider the following:
 
@@ -34,9 +34,9 @@ You are strongly encouraged to pull in academic literature, popular media, image
 
 [To submit this assignment, upload a document containing your artifact or provide a link to your artifact (if you make a physical object, please submit image(s) or video(s) of your artifact) to Canvas](https://canvas.olin.edu/courses/822/assignments/13045). You will be assessed on completeness (2 points) and presence of each of the 4 prompts (introduction, explanation, reaction, and assessment; 2 points each) for a total of 10 points. It is expected that this assignment should take ~6-10 hrs to complete. 
 
-We will then present artifacts in class; [your presentation and participation in small group discussions]() will account for another 10 points.
+We will then present artifacts in class; [your presentation and participation in small group discussions](https://canvas.olin.edu/courses/942/assignments/16262) will account for another 10 points.
 
-#### Tips for Selecting Your Robot
+### Tips for Selecting Your Robot
 We will be talking about these robots _a lot_ this semester; we can't stress enough that you'll want to pick a robot that is interesting to you, you think might be interesting to your peers, and one that is well-documented (so you have resources to draw on throughout the semester). Some examples of robots that at least meet the latter criteria include:
 * A class of industrial robot with many different instantiations, for instance: "warehouse robots" (e.g., Kiva systems, Amazon warehouses, Berkshire Gray Flexbots, Vecna robots, Locus robots), "self-driving robots" (e.g., Cruise, Waymo, Aurora) 
 * A particular historical or long-lived robot, for instance: autonomous underwater vehicle ABE or Sentry, Boston Dynamics' Atlas, Mars rover Curiousity
@@ -57,32 +57,39 @@ Examples of robots selected during CompRobo 2024 included:
 
 
 
-<!-- ### Part 2: Discussion
-**Due Nov 5, 2024**
+## Part 2: Discussion
+**Due Nov 4, 2025**
 
-Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. In this assignment, you will present your robot to a small group in class and lead a brief discussion centered on your robot. The aim of this assignment is to (1) practice presenting technical systems to an audience of peers, (2) practice leading an open-ended discussion, and (3) challenge your own or others' perspectives about your chosen robot.
+Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. Over the next several weeks, we will be engaging in small in-class discussions on topics spanning the technicalities to applications of robotics. This assignment asks you to do the following:
 
-#### Logistics
+* Ground your discussions with concrete connections with your chosen robot
+* Reflect on your discussions with your chosen robot in mind
+* Enhance your investigation of your robot based on discussion topics and themes
+* And at the end of this part of the project, lead an advanced (socio)technical discussion about your robot (or some aspect of your robot) with peers
 
-You will be randomly assigned a day in class on one of 10/28, 10/31, or 11/04 for your discussion slot (you may trade your day with someone else in class; just let the teaching team know in advance). Your peers not presenting on that day will be randomly assigned to your group for your discussion.
+The aim of this assignment is to (1) practice presenting technical systems to an audience of peers, (2) practice leading an open-ended discussion, and (3) challenge your own or others' perspectives about your chosen robot.
 
-#### Preparation / Materials
+### Logistics
 
-Please prepare an ~8 minute slide-based presentation about your robot and 3 discussion prompts. Your presentations will be in a relatively informal setting (sitting around a project table together with your audience); with that in mind, your slide-deck should be complete and informational, but your presentation style can be conversational.
+From the end of the last phase (9/30) to the end of this phase, we will have a schedule of in-class discussions to participate in and guide your additional research on your robot. You will then be randomly assigned a day in class on one of 10/27, 10/30, or 11/03 for your discussion slot (you may trade your day with someone else in class; just let the teaching team know in advance). Your peers not presenting on that day will be randomly assigned to your group for your discussion.
 
-#### Discussion
+### Preparation / Materials
+
+Please prepare an ~8 minute slide-based presentation about your robot, focusing on technical and sociotechnical details about your system and 3 discussion prompts. Your presentations will be in a relatively informal setting (sitting around a project table together with your audience); with that in mind, your slide-deck should be complete and informational, but your presentation style can be conversational. You can re-visit topics covered in class, or build new materials based on your additional research about your robot. 
+
+### Discussion
 
 Begin your discussion with your presentation, and leave ~2 minutes afterward for brief, clarifying Q&A. All remaining time during your discussion slot will then be for open-ended discussion seeded by your prompts. You may structure the discussion in whatever way you wish (see suggestions below).
 
-#### Post-Discussion
+### Post-Discussion
 
 Following the discussion, you and everyone in your group will have ~5 minutes to fill in a "reaction" survey provided by the teaching team that will capture for each person: (1) what is currently on their mind, if the discussion were to continue, (2) moments of surprise that arose during the presentation or discussion, and (3) the next question they would ask in a discussion. These surveys will be provided to each of the discussion leaders for that day. Any artifacts created during a discussion (e.g., white board writing, sticky notes, etc.) will be photographed / captured in some way as well.
 
-#### Grading
+### Grading
 
-Please submit your slide-deck, discussion prompts, and any discussion artifacts (if applicable). The teaching team will already have a copy of the reaction surveys. This assignment will be graded on completeness, worth 10 points -- 5 points for a complete and appropriately scoped slide deck, and 2 points for the prompts generated for discussion, and 3 points for leading a discussion in class. It is expected that it will take you ~6-10hrs to create your presentation and prompts.
+Please submit your slide-deck, discussion prompts, and any discussion artifacts (if applicable). The teaching team will already have a copy of the reaction surveys. This assignment will be graded on depth and completeness, worth 20 points -- 5 points for a complete and appropriately scoped slide deck, 2 points for the prompts generated for discussion, 3 points for leading a discussion in class, and 10 points for (socio)technical depth added to your Phase 1 discussion. It is expected that it will take you ~6-10hrs to create your presentation and prompts.
 
-#### For Your Consideration
+### For Your Consideration
 
 During this discussion, you will be the "technical expert" about your chosen robot; thus the content for a discussion should be around the implications of your robot system -- how does this robot impact individuals, its environment, society at large? A productive discussion will investigate new perspectives about a robot, highlight areas where more research / thinking may need to be done, and tease out some of the complicated nuance that always surrounds the adoption of complex technological systems. To that end, when preparing your presentation and discussion prompts, consider the following:
 
@@ -101,8 +108,10 @@ Leading a discussion is an art and science, and there is no one "right" way to l
 * Generative dialog: collaborate on an artifact to spur conversation or capture thoughts; e.g., have each person brain dump ideas spurred by a prompt onto sticky notes, share them, and sort them together into themes
 
 
+
+
 ## Part 3: Reflection
-**Due Dec 6, 2024**
+**Due Dec 11, 2025**
 
 This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. You are asked to prepare a minimum 1-page written reflection (12pt font, single spacing, Times New Roman, 1" margins) that examines the following questions (these should look somewhat familiar...but we're now considering you, rather than just the robot you've been contemplating):
 
@@ -112,5 +121,5 @@ This part of the assignment provides an opportunity to consider how you, as an e
 * **Assess yourself** -- e.g., how has your thinking changed (or not) about your robot / robots generally over the course of the semester? what questions do you still have about your robot / robots? would you work on your robot or one like this? under what conditions? why or why not?
 * **Resolve** -- e.g., what will you takeaway from CompRobo, and from this assignment?
 
-Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points. Please cite any sources you may choose to include. The assignment is graded on completion and clarity, and is worth 5 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete. -->
+Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points, draw on course materials, mention or cite other robots you learned about from peers, and use other external resources that you find inspiring or illuminating. Please cite any sources you may choose to include. The assignment is graded on completion, clarity, and depth and is worth 20 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete.
 

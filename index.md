@@ -46,12 +46,12 @@ feature_row_warmup_project:
   - image_path: website_graphics/barrel_follow.gif
     alt: "The Neato robot in a simulated world tracking a barrel"
     excerpt: "
-   The Warmup Project provides a scaffolded assignment for students to get up to speed with important concepts in ROS through implementing compelling behaviors on a robot.  The project emphasizes the establishment of good practices such as debugging techniques and visualization.
+   The first project, RoboBehaviors and FSMs (finite state machines) provides a scaffolded assignment for students to get up to speed with important concepts in ROS through implementing compelling behaviors on a robot.  The project emphasizes the establishment of good practices such as debugging techniques and visualization.
 
     ### Supporting Documents
 
-* [Warmup Project Assignment Document](assignments/warmup_project)\n
-* [Class-generated Tips and Tricks](https://docs.google.com/document/d/15u9fvz5TsuPaSnvE1h_dyiVO2Rk7YTIyNweKpGGwuTE/edit?usp=drive_link)\n
+* [RoboBehaviors and FSMs Assignment Document](assignments/warmup_project)\n
+* [Class-generated Tips and Tricks](https://docs.google.com/document/d/1x3NjmOhbd8oq020Vt0etsZLnNtvLpK2AasJFirAi96Q/edit?usp=sharing)\n
 * [Troubleshooting](How to/troubleshoot)\n"
 
 feature_row_robot_localization_project:
@@ -106,7 +106,7 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 
 {% include feature_row id="feature_row_robot" type="left" %}
 
-## <a name="module-details"/> Warmup Project: Software Development for Robots
+## <a name="module-details"/> RoboBehaviors and Finite State Machines Project
 
 {% include feature_row id="feature_row_warmup_project" type="right" %}
 
@@ -129,15 +129,16 @@ The Olin College course "A Computational Introduction to Robotics" (CompRobo) se
 ## In-class Activities
 
 Note: see [Site-wide TOC for an easy to navigate outline of each day's activities](toc)
+Note: Subject to change as the semester unfolds!
 
-### Warm-up Phase
+### RoboBehaviors and Finite State Machines (+ Broader Impacts of Robots Discussions)
 * [Day 1: Welcome!](in-class/day01)
-* [Day 2: The Landscape of Modern Robotics // Basic ROS Concepts](in-class/day02)
+* [Day 2: The Landscape of Modern Robotics // Basic ROS Concepts + Teleoperation](in-class/day02)
 * [Day 3: What are Broader Impacts? // Writing Sensory-Motor Loops in ROS2](in-class/day03)
-* [Day 4: Reading a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters](in-class/day04)
-* [Day 5: Frameworks for Challenging Discussions // Coordinate Frames](in-class/day05)
+* [Day 4: Coordinate Frames, Debugging, Proportional Control, and ROS Parameters + Wall-Following](in-class/day04)
+* [Day 5: Finite State Machines // Studio Day](in-class/day05)
 
-### State Estimation and Localization (+ Search and Rescue Robots Discussions)
+### State Estimation and Localization (+ Robot Application Contexts Discussions)
 * [Day 6: Intro to Search and Rescue // A 1D Particle Filter](in-class/day06) 
 * [Day 7: Searching for What? // The Particle Filter for Robot Localization](in-class/day07)
 * [Day 8: Search and Rescue Algorithms I // Robot State Estimation and Bayes](in-class/day08)
@@ -146,7 +147,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 11: Applied SAR Robotics // Debugging Strategies, Extensions, and Studio](in-class/day11)
 * [Day 12: Search and Rescue Debrief // Studio Day + Introduction to Machine Vision Project](in-class/day12)
 
-### Machine Vision (+ Sustainability Robotics Discussions)
+### Machine Vision (+ Influences on Robotics Development Discussions)
 * [Day 13: Sustainability Vectors // Machine Vision Project Ideation](in-class/day13)
 * [Day 14: Waste Sorting with Robots // Neato Soccer + Discuss Project Proposals](in-class/day14)
 * [Day 15: Broader Impacts Discussion Session 1 // Keypoint Matching and Descriptors](in-class/day15)
@@ -155,7 +156,7 @@ Note: see [Site-wide TOC for an easy to navigate outline of each day's activitie
 * [Day 18: CA Lecture: Visual Odometry and SLAM // Studio Time](in-class/day18)
 * [Day 19: Machine Vision Showcase + Final Project Kickoff](in-class/day19)
 
-### Final Project (+ Labor and Collaborative Robotics Discussions)
+### Final Project (+ Implications of Robots Discussions)
 * [Day 20: Project Proposal Generation](in-class/day20)
 * [Day 21: Automated Labor Landscape // Project Work Time](in-class/day21)
 * [Day 22: Economics of Automation // Project Work Time](in-class/day22)
