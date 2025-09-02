@@ -57,7 +57,7 @@ Examples of robots selected during CompRobo 2024 included:
 
 
 
-## Part 2: Discussion
+<!-- ## Part 2: Discussion
 **Due Nov 4, 2025**
 
 Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. Over the next several weeks, we will be engaging in small in-class discussions on topics spanning the technicalities to applications of robotics. This assignment asks you to do the following:
@@ -121,5 +121,5 @@ This part of the assignment provides an opportunity to consider how you, as an e
 * **Assess yourself** -- e.g., how has your thinking changed (or not) about your robot / robots generally over the course of the semester? what questions do you still have about your robot / robots? would you work on your robot or one like this? under what conditions? why or why not?
 * **Resolve** -- e.g., what will you takeaway from CompRobo, and from this assignment?
 
-Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points, draw on course materials, mention or cite other robots you learned about from peers, and use other external resources that you find inspiring or illuminating. Please cite any sources you may choose to include. The assignment is graded on completion, clarity, and depth and is worth 20 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete.
+Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points, draw on course materials, mention or cite other robots you learned about from peers, and use other external resources that you find inspiring or illuminating. Please cite any sources you may choose to include. The assignment is graded on completion, clarity, and depth and is worth 20 points as a whole. It is anticipated that this assignment may take ~6-10hrs to complete. -->
 
