@@ -14,17 +14,16 @@ toc_data:
 
 ## Today
 * First Day Debrief
-* [About Modern Robotics: A Glossary](https://docs.google.com/presentation/d/1aNEeU3ItobY0l_ijuL2yFherPyzIpnMNhX3B_KoYxxQ/edit?usp=sharing)
-* Writing our First ROS Node
+* [About Modern Robotics: A Glossary](https://docs.google.com/presentation/d/1pXEyKQvti7Vg1wR6l2MFnddXxUgTpYjwVJnR7uMjqlo/edit?usp=sharing)
+* Fundamental ROS Concepts + Teleoperation
 
 ## For Next Time
-* Submit your [YOGA Phase 0 assignment](../assignments/class_yoga)
-* Find a partner for the [Warmup Project](../assignments/warmup_project) and get started (there is an intermediate deliverable (a share-out) that we would like you to aim for by class 4).
-* Get started on the [Broader Impacts](../assignments/broader_impacts) assignment, which will be due in ~2 weeks.
-* Check out and consider joining the class [Discord](https://discord.gg/rD7nREsv).
+* Submit your [YOGA Phase 0 assignment](../assignments/class_yoga) (Due Sept 9th at 7PM)
+* Find a partner for the [RoboBehaviors and FSMs](../assignments/warmup_project) and get started. Please fill in the spreadsheet linked in the assignment document and form your teams in Canvas.
+* Get started on the [Broader Impacts](../assignments/broader_impacts) assignment (In-class presentations Sept 25th and due Sept 26th).
 
 ## First Day Debrief
-Thanks everyone for filling in the <a href="https://forms.gle/1SPkoxWMQSQn3Ci16">course entrance survey</a>; we really appreciate your feedback so far and will announce consistent office hours early this week based on the results. Some key things that came up during the survey to share with you all:
+Thanks everyone for filling in the course entrance survey; we really appreciate your feedback so far and will be aligning our office hours and resources to the responses. Some key things that came up during the survey to share with you all:
 * **What's Exciting** -- open-ended project structures, learning topics that are broadly applicable to different robotic systems, software development, leveraging the class to learn more about E:Robo majoring or longer-term career aspirations
 * **What's Concerning** -- developing appropriate project scopes, translating concepts to projects in a meaningful way, previous experience with software development translating to this class
   * The teaching team is here to help with project formulation, as much as helping execute on projects. There is flexibility built into the Machine Vision and Final Projects to also re-adjust goals partway through projects if scoping needs to change for whatever reason.
@@ -42,7 +41,7 @@ Thanks everyone for filling in the <a href="https://forms.gle/1SPkoxWMQSQn3Ci16"
 ## About Modern Robotics: A Glossary
 "Robotics" as a field of study or industry encompasses a _huge_ range of topics, themes, and systems. To be a roboticist in practice is to be someone who can appreciate the complexity of sociotechnical systems, can collaborate with domain experts across various technical / applied fields, and who generally specializes in a particular facet of a robotic system.
 
-Here is a brief tour of terms used to describe various facets of the field of robotics and resources to learn more! [Slides](https://docs.google.com/presentation/d/1aNEeU3ItobY0l_ijuL2yFherPyzIpnMNhX3B_KoYxxQ/edit?usp=sharing)
+Here is a brief tour of terms used to describe various facets of the field of robotics and resources to learn more! [Slides](https://docs.google.com/presentation/d/1pXEyKQvti7Vg1wR6l2MFnddXxUgTpYjwVJnR7uMjqlo/edit?usp=sharing)
 
 
 ## Coding Exercises: Writing our first ROS Node
@@ -317,3 +316,28 @@ $ rviz2
 ```
 
 Next, click ``add``, ``by topic``, and select your marker message.  Make sure to set the ``fixed frame`` appropriately.
+
+## Going Further: Basic Behaviors
+First, some quick vocabulary:
+* Trajectory: in robotics, this refers to a set of ordered coordinates in a context space that a robot can travel over. Example: for a mobile ground robot, a trajectory can refer to an ordered list of latitude-longitude coordinates on a map.
+* Behavior: in robotics, this refers to a semantic action that a robot can take in a context space; this is more general than a trajectory. Example: move forward, drive in a square, follow a person.
+* Controller: in robotics, this refers to an algorithm that, given a trajectory and a model of a robots form and function, can generate a set of actuator commands to execute the desired trajectory.
+
+In our first project, we're going to be developing _behaviors_ for a robot to execute (and then chaining those behaviors together logically to create even more sophisticated behavior). For the purposes of our class, a robot can have different levels of sophisticated single behaviors:
+* Fundamental: go forward, go backward, turn in place, turn in an arc
+* Basic: drive in a shape, collision avoidance / safety stop
+* Advanced: wall following, people following, obstacle avoidance
+
+We're going to start with a fundamental capability for a robotic system: teleoperation. This is the act of taking third-party input signals, and translating them into direct actuation commands on a robot (basically, remote control). This is fundamental because often it is very useful to test that a robot is acting as expected when you can directly control the robot (so you can abstract away algorithm errors, for instance). It can also be an important safety feature to be able to override a robot autonomously operating with remote commands. So we're going to start here.
+
+Look at the [assignment description of teleoperation](../assignments/warmup_project) and work on the following with folks at your table:
+1) Sketch an outline of a ROS Node that could act as a teleoperation node. Do this on a whiteboard, not on a computer. Pay attention to:
+  * * What are the inputs/outputs to the node; what does this mean about callbacks, subscribers, and publishers?
+  * * What message types might you be expecting?
+  * * What aspects of the robot can you control?
+2) After you have an outline, draw up the skeleton code for a Node on a computer (do this in a package you create for your project code, and remember to update the `setup.py`!), adding comments that capture your pseudocode. Make sure your skeleton code can compile and run as designed, before you start implementing all your logic.
+3) Start implementing the elements of your pseduocode. Consider how you can test that your code is working along the way. For instance:
+  * * Are there places you can add strategic `print` statements?
+  * * Would logging a message through ROS be useful?
+  * * Do you want to make a publisher to transmit certain information that can be visualized in RViz?
+
