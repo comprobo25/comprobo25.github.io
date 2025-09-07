@@ -333,16 +333,16 @@ We're going to start with a fundamental capability for a robotic system: teleope
 Look at the [assignment description of teleoperation](../assignments/warmup_project) and work on the following with folks at your table:
 
 1) Sketch an outline of a ROS Node that could act as a teleoperation node. Do this on a whiteboard, not on a computer. Pay attention to:
-  * * What are the inputs/outputs to the node; what does this mean about callbacks, subscribers, and publishers?
-  * * What message types might you be expecting?
-  * * What aspects of the robot can you control?
+  * What are the inputs/outputs to the node; what does this mean about callbacks, subscribers, and publishers?
+  * What message types might you be expecting?
+  * What aspects of the robot can you control?
 
 
-2) After you have an outline, draw up the skeleton code for a Node on a computer (do this in a package you create for your project code, and remember to update the `setup.py`!), adding comments that capture your pseudocode. Make sure your skeleton code can compile and run as designed, before you start implementing all your logic.
+2) After you have an outline, draw up the skeleton code for a Node on a computer (you can do this in the `in_class_02` package for now; don't forget to update your `setup.py`!), adding comments that capture your pseudocode. Make sure your skeleton code can compile and run as designed, before you start implementing all your logic.
 
 
 3) Start implementing the elements of your pseduocode. Consider how you can test that your code is working along the way. For instance:
-  * * Are there places you can add strategic `print` statements?
-  * * Would logging a message through ROS be useful?
-  * * Do you want to make a publisher to transmit certain information that can be visualized in RViz?
+  * Are there places you can add strategic `print` statements?
+  * Would logging a message through ROS be useful?
+  * Do you want to make a publisher to transmit certain information that can be visualized in RViz?
 
