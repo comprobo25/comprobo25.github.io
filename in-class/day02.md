@@ -331,11 +331,16 @@ In our first project, we're going to be developing _behaviors_ for a robot to ex
 We're going to start with a fundamental capability for a robotic system: teleoperation. This is the act of taking third-party input signals, and translating them into direct actuation commands on a robot (basically, remote control). This is fundamental because often it is very useful to test that a robot is acting as expected when you can directly control the robot (so you can abstract away algorithm errors, for instance). It can also be an important safety feature to be able to override a robot autonomously operating with remote commands. So we're going to start here.
 
 Look at the [assignment description of teleoperation](../assignments/warmup_project) and work on the following with folks at your table:
+
 1) Sketch an outline of a ROS Node that could act as a teleoperation node. Do this on a whiteboard, not on a computer. Pay attention to:
   * * What are the inputs/outputs to the node; what does this mean about callbacks, subscribers, and publishers?
   * * What message types might you be expecting?
   * * What aspects of the robot can you control?
+
+
 2) After you have an outline, draw up the skeleton code for a Node on a computer (do this in a package you create for your project code, and remember to update the `setup.py`!), adding comments that capture your pseudocode. Make sure your skeleton code can compile and run as designed, before you start implementing all your logic.
+
+
 3) Start implementing the elements of your pseduocode. Consider how you can test that your code is working along the way. For instance:
   * * Are there places you can add strategic `print` statements?
   * * Would logging a message through ROS be useful?
