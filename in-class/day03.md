@@ -6,73 +6,34 @@ toc_data:
     link: in-class/day03/#today
   - title: For Next Time
     link: in-class/day03/#for-next-time
-  - title: What are Broader Impacts?
-    link: in-class/day03/#what-are-broader-impacts
-  - title: Follow-up from Last Time (For Your Reference)
-    link: in-class/day03/#follow-up-from-last-time
+  - title: Connecting to a Neato
+    link: in-class/day03/#connecting-to-neato
   - title: Sensory Motor Loops
     link: in-class/day03/#sensory-motor-loops
+  - title: Going Further - Basic Behaviors
+    link: in-class/day03/#going-further
 ---
 
 ## Today
-* What are Broader Impacts? (Discussion Activity)
-* Follow-Up on Nodes (For Your Reference)
-* Writing our first sensory-motor loops (Group Exercise)
+* Follow-Up on Nodes and Connecting to a Neato
+* Writing Sensory-Motor Loops for a Neato
+* Project Work Time
 
 ## For Next Time
-* Work on the <a href="../assignments/warmup_project">the Warmup Project</a>.  There is an intermediate checkpoint due on Tuesday 17th at 1PM ([assignment page on Canvas here](https://canvas.olin.edu/courses/822/assignments/13048)).
-  * If you haven't already, please list your team and a link to your Github on the [Teaming Sheet](https://docs.google.com/spreadsheets/d/1ZIrGQ0a1rUCSRbk-eYSmbnXTedQA_49HQXRUSJu2z4Y/edit?gid=0#gid=0).
-  * The final warm-up project deliverables will be due Monday 23rd at 7PM! Next week we will have open studio time during class (you can plan for at least ~40 minutes in each class).
-  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/822/assignments/13049).
-* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on Tuesday 24th at 1PM.
+* Work on the <a href="../assignments/warmup_project">the RoboBehaviors Project</a>, due Sept 23rd at 7PM!
+  * If you haven't already, please list your team and add a link to your project Github on the [Teaming Sheet](https://docs.google.com/spreadsheets/d/1emh5tDNNhTiepzegO7q-Sy2jM3CaAhRC5oynsSDrPUY/edit?gid=0#gid=0), and update the [Canvas Teaming Page](https://canvas.olin.edu/courses/942/groups#).
+  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).
+  * We will have a shareout for the project on Sept. 22nd in class (with a [short deliverable](https://canvas.olin.edu/courses/942/assignments/16079)).
+* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on September 26th at 1PM.
+  * We will have a class discussion on Thursday 25th in-class!
 
-## What are Broader Impacts?
-As we touched on during the first class meeting, and as you've started chewing on in the Broader Impacts assignment, robots -- by virtue of being embodied in the world -- uniquely engage with the world in a way that other forms of computing-based technology may not. "Robo-ethics" is a subfield within robotics that formally designs and ascribes methods of analyzing the impact of robotic systems. Some resources you might find interesting as a launch point to learning more about the robo-ethics field are below:
-* Standford Encyclopedia of Philosophy entry on [Ethics of Artificial Intelligence and Robotics](https://plato.stanford.edu/entries/ethics-ai/)
-* [Building and Evaluating Ethical Robotics Systems workshop](https://www.ers-workshop.com/) at IROS (one of the two largest and most well-known robotics conferences in the world)
-* [An Economics Perspective on "Robotics at Work"](https://watermark.silverchair.com/rest_a_00754.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA7YwggOyBgkqhkiG9w0BBwagggOjMIIDnwIBADCCA5gGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMZLkTwB9HgtoaRAFMAgEQgIIDadCNISVVMpDrlENyL-Jky9bDY4JksfzRpkUohr3IiokebXqXNcQ5to_uhPN9mlXocCy7kXBIrmww_m7bxSg58f1uSiP0mNsXD4gr0A1gHsS-lfScqhxgzsmRa80sCiGGM_mUBJ_U7dZ9JusK8Vg78oVNd5CdsplbQBrX4aiQPps61Mb5ZP7SRBDatg0clLlj7t6MgdcZ1KX1Pv9Ln_ZBuRNPIaNpMNAJMzSqADaFYfkrSVWbdcqRTy20E56gJ-rtEEIK10Q6PUQbnY7x052YFrIFYCbiMBBaubvfrWmkLeHStxCSUKpr3FaThIQQ0LnvRQtM1ewsFdRqEidrtldPnYAQofVqfVfPXY93pTTdGGDj2nhmjYPqTOjGevXktJg9H9jO8ilHe4k07zjGtLxCWH4Px_5jfSFw0QhdvhPDTw1Y_ofl_xacRisFejQIuaCvxnFny0RMMtXexdUB_NbTp2eP070sYXOYfqhzHCFjfyBN9xDhefECQxptToCI5wXxZV2LpblRousIFu5cUpomLMO1EITaVroluTau0tMLqY_8q-0B2Ab2TugxhMmC6HNKShzeIF7kQf3LEBkOiiOA1LLWsAZH5YZiC9mHqWYSd6NHrttRCcj9c-mL6kxI4gz0S6dPQqqDXnG1z9bJor0JNnKlIO_CpSE1WE8MiXLDZNNxdF-1rYa91fs4boLHN9SRr88tOQYj08oi8cMk2pycMxyeCrfPMyj_rTeoL27wICb-39MEp6eT8Uxp7AbPFd_B_0dlulpORaK1fpDxEdUnv2wngwbeY8cgzRQE-yEd_hWGyDhlh67gkIQ5X6MIVA1b0GlMWAMgoKGpJpn5q9jDmTwuV4X4ln3RgsD384ozZBf3hkXu-RVQKUcPFiSCrQLE6j97KE5yahSVJnPd_bAor5t4XgASyeQ3chDKatR5oBPyUrft3X9ksQK1GJz0Hr9Q3hZbnjzKXQCwlgxCZz0CRmWAx4HbdXG-IkKqQLObUNi55_0F-La1zsIMoxp69dCeimP33UkwSdfLi0R7KnX6XSHUAtwEEXRfJMg6_P_aoFxYRb_CDyLyLrrOSKYLRPolzE3PRgAz2f5xKu3eHo1YBbGhIKRHirJkMoVe8qHJPpCYKFl6D4HKQWvDg3wZJAEubGQ6eG24URt-TA) which analyzes the impact of robots on labor and implications
-* [An Academic Discussion of Fairness and Abstraction in Sociotechnical Systems](https://dl.acm.org/doi/pdf/10.1145/3287560.3287598) which highlights the "traps" that fair practices can encounter when actually deploying systems at-scale
 
-While robo-ethicists make it their primary vocation to understand the nuances of robotics use, every roboticist or robotics-adjacent engineer, manager, researcher, or entrepreneur deals with practical quandaries each day that require applying (implicitly or explicitly) a values-based framework -- from the design of a particular interface (for whom will this interface be for? how much information from the backend should be legible?), selection of components (what is the lifecycle of this part? who is supplying this part?), and creation of design specifications (what is the intended use of the robot? how will that intended use be protected?).
+## Day 2 Recap and Connecting to Neatos
+As part of this recap, let's actually engage with some Neatos first. Get in your project groups and grab a Neato and battery pack from the cart. Then follow the [How To Guide on Using the Neatos](../How%20to/use_the_neatos.md) to get running. One of the key commands is:
 
-### Open-Ended Discussion - Broader Impacts and Robotics Funding
-
-"Broader Impacts" is a term that attempts to make apparent the values or ethics based systems that people apply to the technology they produce or work that they engage in. [The National Science Foundation (NSF) in the US requires a "broader impacts" component to research proposals](https://new.nsf.gov/funding/learn/broader-impacts), where the definition of a broader impact is expansive, and may cover:
-* Public engagement in the work to be completed
-* Developing partnerships across academic / industrial sectors, or across disciplines
-* Explicitly working on a project that contributes to societal well-being
-* Contributing to national security
-* Ensuring participants are representative of various backgrounds and their engagement is inclusive
-
-Let's have a look at a broader impacts statement from a NSF proposal submitted to the NSF National Robotics Initiative solicitation, entitled ["Never-ending Multimodal Collaborative Learning"](http://www.cs.cmu.edu/~cga/proposals/nsf-nri-19.pdf), which proposes to develop algorithms for robot-learning and task-generalization through natural language and visual/kinesthetic demonstrations performed by a human teacher:
-
-> The National Robotics Initiative was a three part solicitation over a decade that aimed to support fundamental research in the US. This flavor of the NRI was aimed at "Ubiquitous Collaborative Robots" and research to advance the development and use of co-robots (robots that work with/near people). Ubiquity was defined as "seamless integration of co-robots to assist humans in every aspect of life." You can read the full solicitation [here](https://nsf-gov-resources.nsf.gov/solicitations/pubs/2019/nsf19536/nsf19536.pdf?VersionId=CHKRGmHnTh_vEx4KZmJkbN.mz30N7kPV). This program was sunset in 2022.
-
+```bash
+ros2 launch neato_node2 bringup.py host:=IP_OF_ROBOT
 ```
-The proposed research will reduce the cost of programming robots and other technology, such as personal
-assistants. Non-experts will be able to program and personalize robots similarly to how we program
-fellow humans and especially children: by communicating in natural language (e.g., "stop fidgeting") and
-demonstrating visually the desired way to do things (e.g., "open it like this"), as opposed to being
-programmed by writing code or through millions of positive and negative examples. Robots will be able
-to acquire new concepts and skills adapting to individual users' needs through interaction with end-users,
-as opposed to maintaining a fixed set of functionalities predetermined at the factory.
-The simplicity and directness of grounded natural language interfaces will help robots better serve older
-adults and people with disabilities. This is just one example of the proposed technology's potential for
-social good. This research is tightly coupled to the educational program of the PIs, which currently
-includes a course on language grounding on vision and control, and another on architectures for never-
-ending learning, with the goal of teaching students that there is more to AI than learning from a large
-number of positive and negative examples.
-```
-
-Get together with some folks around you, and consider the following questions (~10 minutes):
-1. Using the definitions from the NSF broader impacts page, what key themes do you see emerge in this paragraph? 
-2. What evaluation metrics would you use to assess whether the broader impacts goals were met over the course of this project? 
-3. Are there other broader impacts that the authors don't mention, but might be relevant to their project? Are there any unintended impacts of the work that could be considered by the project?
-
-We'll do a brief report out (~5 minutes) with the whole class.
-
-
-## Follow-up From Last Time (For Your Reference)
 
 ### Uniqueness of Node Names
 
@@ -154,7 +115,7 @@ If you execute the ``ros2 pkg create`` command given above, there should already
 
 #### Proximity Emergency Stop: Using the Laser Range Finder
 
-The next sensory-motor loop that you create should be called ``distance_emergency_stop.py``.  In order to add this node, you will have to modify the ``setup.py`` file in your ``in_class_day03`` package (like we did on day 2 with our recieve_message node).
+The next sensory-motor loop that you create should be called ``distance_emergency_stop.py``.  In order to add this node, you will have to modify the ``setup.py`` file in your ``in_class_day03`` package (like we did on day 2 with our receive_message node).
 
 The ``distance_emergency_stop.py`` node should be _identical_ to ``emergency_stop.py`` except it should use the laser range finder to detect when an obstacle is within a specified distance and stop if this is the case. It is up to you how you implement this.  You can either use just the measurements in front of the robot, or perhaps use all of the measurements.  You may want to use an all-or-nothing control strategy (also called bang-bang) where you are either going ahead at some fixed speed or you stop completely.  Alternatively, you may use something akin to proportional control where your speed slows proportionally with how close you are to the target distance.  Again, for more detail on using the Neato sensors (including the laser range finder), see the <a-no-proxy href="../How to/use_the_neatos">Using the Neatos Page</a-no-proxy> page.
 
@@ -162,3 +123,9 @@ Once you implement this, you may consider using the command line tool ``rqt`` to
 <p align="center">
 <img alt="A plot that shows /scan/ranges[0] converging to the value of 0.5" src="../website_graphics/rqt_laser_range.png" width="60%"/>
 </p>
+
+
+## Going Further: Basic Behaviors
+With the time you have remaining in the class, and with your project partner(s), please have a look at [Day 2 Going Further](../in-class/day02/#going-further) and complete the exercise (if you haven't already). Make sure to develop any code in the package you specifically create for the RoboBehaviors and FSM project.
+
+Following the same process as above, consider a new behavior: driving in a square. Create a new script that captures this type of behavior, following the instructions in the [Project Description](../assignments/warmup_project).

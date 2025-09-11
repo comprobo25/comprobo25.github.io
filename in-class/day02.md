@@ -10,6 +10,9 @@ toc_data:
     link: in-class/day02/#about-modern-robotics
   - title: Coding Exercises
     link: in-class/day02/#coding-exercises
+  - title: Going Further - Basic Behaviors
+    link: in-class/day02/#going-further
+
 ---
 
 ## Today
