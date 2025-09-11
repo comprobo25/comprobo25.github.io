@@ -129,3 +129,5 @@ Once you implement this, you may consider using the command line tool ``rqt`` to
 With the time you have remaining in the class, and with your project partner(s), please have a look at [Day 2 Going Further](../in-class/day02) and complete the exercise (if you haven't already). Make sure to develop any code in the package you specifically create for the RoboBehaviors and FSM project.
 
 Following the same process as above, consider a new behavior: driving in a square. Create a new script that captures this type of behavior, following the instructions in the [Project Description](../assignments/warmup_project).
+
+Hint: Feeling stuck? Have a look at [some sample code...](../Sample_code/sample_code)
