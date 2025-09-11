@@ -29,7 +29,7 @@ toc_data:
 
 
 ## Day 2 Recap and Connecting to Neatos
-As part of this recap, let's actually engage with some Neatos first. Get in your project groups and grab a Neato and battery pack from the cart. Then follow the [How To Guide on Using the Neatos](../How%20to/use_the_neatos.md) to get running. One of the key commands is:
+As part of this recap, let's actually engage with some Neatos first. Get in your project groups and grab a Neato and battery pack from the cart. Then follow the <a-no-proxy href="../How to/use_the_neatos">Using the Neatos Page</a-no-proxy> to get running. One of the key commands is:
 
 ```bash
 ros2 launch neato_node2 bringup.py host:=IP_OF_ROBOT
@@ -126,6 +126,6 @@ Once you implement this, you may consider using the command line tool ``rqt`` to
 
 
 ## Going Further: Basic Behaviors
-With the time you have remaining in the class, and with your project partner(s), please have a look at [Day 2 Going Further](../in-class/day02/#going-further) and complete the exercise (if you haven't already). Make sure to develop any code in the package you specifically create for the RoboBehaviors and FSM project.
+With the time you have remaining in the class, and with your project partner(s), please have a look at [Day 2 Going Further](../in-class/day02) and complete the exercise (if you haven't already). Make sure to develop any code in the package you specifically create for the RoboBehaviors and FSM project.
 
 Following the same process as above, consider a new behavior: driving in a square. Create a new script that captures this type of behavior, following the instructions in the [Project Description](../assignments/warmup_project).
