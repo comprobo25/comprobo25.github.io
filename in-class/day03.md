@@ -1,5 +1,5 @@
 ---
-title: "What are Broader Impacts // Writing sensory-motor loops in ROS"
+title: "Writing Sensory-Motor Loops in ROS"
 toc_sticky: true
 toc_data:
   - title: Today
