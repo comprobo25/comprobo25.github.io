@@ -6,36 +6,37 @@ toc_data:
     link: in-class/day05/#today
   - title: For Next Time
     link: in-class/day05/#for-next-time
-  - title: Warm-Up Project Check-In
-    link: in-class/day05/#warmup-checkin
+  - title: Robot Debugging Strategies
+    link: in-class/day05/#debugging-strategies
   - title: Coordinate Frames and Coordinate Transforms in Robotics
     link: in-class/day05/#coordinate-frames-and-coordinate-transforms-in-robotics
+  - title: Finite State Machines
+    link: in-class/day05/#finite-state-machines
 ---
 
 ## Today
-* Warm-Up Project Check-In
-* Frameworks for Challenging Discussions (For Your Consideration)
-* Coordinate Frames and Coordinate Transforms in Robotics (Guided Group Exercise)
-* Studio Time
+* Brainstorming Robot Debugging Strategies
+* Coordinate Frames and Coordinate Transforms in Robotics
+* Finite State Machines and Studio Time
 
 ## For Next Time
 * Work on the <a href="../assignments/warmup_project">the Warmup Project</a>.
-  * The final warm-up project deliverables will be due **Monday 23rd at 7PM**!
-  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/822/assignments/13049).
-* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **Friday 27th at 1PM**.
+  * The final warm-up project deliverables will be due **Tuesday 23rd at 7PM**!
+  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).
+  * We will have a shareout for the project on **Monday Sept. 22nd** in class (with a [short deliverable](https://canvas.olin.edu/courses/942/assignments/16079)).
+* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
+  * We will have a class discussion on **Thursday Oct. 1st**.
 
-## Warm-Up Project Check-In
-You all have assembled some great slides sharing what you've learned so far. Let's have a look: [Slides](https://docs.google.com/presentation/d/1IHTUBZ_jFnrjzV8K1kR34gl9X0XaGKAZjoRqxMrcg9U/edit?usp=sharing)
+## Brainstorming Robot Debugging Strategies
+Debugging is the act of incrementally testing code for accurate behavior and tracing errors back through the system to resolve them. You may have encountered some [debugging strategies in SoftDes](https://softdes.olin.edu/docs/readings/unit-testing-basics/). Some generic strategies for debugging software carry over to robotics programming, while novel methods may need to be included given the interaction software has with hardware. 
 
-## Frameworks for Challenging Discussions (For Your Consideration)
-In the next phase of your Broader Impacts project, you'll be asked to host an in-class discussion on your selected robot to gather different perspectives on the robotic system and its context. Discussions about perspective, context, values, and ethics can sometimes be tricky -- perhaps there is conflict among participants, or it is challenging for everyone to engage fully with a topic. To assist you in hosting your discussions, the following may be of interest:
-* **Combine different discussion techniques** -- consider the use of individual quiet brainstorming, round-robin sharing, and open dialog; during what parts of a discussion might these be useful to your group? When could switching techniques change the energy of the discussion?
-* **Focus on collaborative generation** -- one way to invite multiple voices is to create a mechanism that feels collaborative; if the aim of the discussion is to generate multiple perspectives on an idea, then you are inviting everyone participating in the discussion to share or experiment with different ideas and be open to hearing other ideas. This would be the opposite of focusing a discussion on a single perspective or trying to determine the "optimal" way to think about something together. 
-* **Ask expansive questions** -- inviting intellectual curiosity in a discussion can assist with navigating conflict (conflict isn't bad, it just needs to be managed!). Asking expansive questions (e.g., what possibilities exist? what's the state space look like?) as opposed to questions that attempt to "narrow in" on a particular perspective/answer/topic can assist the group in becoming more creative and open to ideas.
-* **Set discussion norms** -- for long discussions, it can be nice from the start to set norms for a discussion. If this can be done collaboratively, all the better! Having a framework that explicitly talks about the goals of a discussion, appropriate engagement with a discussion, and actions participants can take to address violations to the framework, can be a really useful technique in professional settings for talking about challenging topics productively.
-* **Don't be afraid to pivot** -- if a discussion is getting off the rails, or you're reading the room and think that a conversation may turn unproductive, consider switching to a different discussion tactic, tabling a topic for later and moving to another question, or naming the conflict that you are seeing and allowing for meta-conversation about that conflict. 
-* **Critique over criticism** -- it will be natural for folks to come with different perspectives on a topic. If conflict were to arise between perspectives, encourage critique of the ideas rather than criticism of those that hold those perspectives. Critique requires asking questions, trying to learn more, and building/improving upon an idea, whereas criticism is meant to highlight negatives and tear a perspective down.
-* **Focus on evidence-based claims** -- discussions are most intellectually full when ideas that are shared are coupled with evidence that can be collaboratively inspected. Inviting opinions and feelings into a conversation is welcome, but ask participants to enrich those ideas with grounded personal anecdotes as their form of evidence.
+### Group Discussion
+Take 10 minutes to come up with some debugging strategies for writing robotics code with the folks around you, then we'll share out to the class. As a motivating example, let's consider the part of <a href="../assignments/warmup_project">the RoboBehaviors</a> where you have to create a wall follower.
+
+Here are some areas to consider in the debugging / development lifecycle:
+1.  How do you ensure your code is correct (implements the strategy you expected)?
+2.  How do you test your approach to see if it performs the task effectively (e.g., follows a person)?
+3.  How might you tune the parameters of your approach to make it perform as best possible?
 
 
 ## Coordinate Frames and Coordinate Transforms in Robotics
@@ -44,7 +45,7 @@ In the next phase of your Broader Impacts project, you'll be asked to host an in
 
 ### `tf2` and You
 
-Last time, we encountered a funny logistical matter when using Rviz2 to visualize our /my_point topic -- we needed to change our "Fixed Frame" from /map to /odom. What's going on? These are two different _coordinate frames_ ROS2 uses to track a robot in a world. There are actually loads of coordinate frames we might want to be thinking about in robotics. (And you [can read more about how ROS has thought about coordinate transforms here](https://www.ros.org/reps/rep-0105.html)).
+We've encountered a funny logistical matter when using Rviz2 to visualize our /my_point topic -- we needed to change our "Fixed Frame" from /map to /odom. What's going on? These are two different _coordinate frames_ ROS2 uses to track a robot in a world. There are actually loads of coordinate frames we might want to be thinking about in robotics. (And you [can read more about how ROS has thought about coordinate transforms here](https://www.ros.org/reps/rep-0105.html)).
 
 Let's get a sense for how we might encounter more coordinate transforms in ROS2 by walking through [this tutorial](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html). ROS2 uses a utility called `tf2` in order to track the relationships between various entities in a world. When we walk through this tutorial, we'll be seeing how to inspect all the different transforms that are going on.
 
@@ -103,3 +104,31 @@ The relationship between some coordinate systems are dynamic (meaning they chang
 
 **Exercise:**  Assume that our Neato robot can move about in the ``world`` by using its wheels.  Is the relationship between ``world`` and ``base_link`` static or dynamic?  Given the coordinate systems you came up with earlier, list some examples of coordinate system relationships that are static and some that are dynamic.
 
+
+## Finite State Machines
+We have been working on developing singular robot behaviors over the last few classes. But what if we want to chain behaviors together into more complex interactions with an environment? 
+
+While there are many possible frameworks to utilize, finite state machines represent a fundamental way to switch between different actions depending on environmental (or internal) measurements.
+
+Consider the following example from the project assignment:
+<p align="center">
+<img alt="A finite state diagram of a two behavior system." src="../website_graphics/fsc.png"/>
+</p>
+
+Here, the circles represent "states" that our robot can be in; in this case, a behavior that it can be executing. The arrows represent "transitions" between states, with the "transition criteria" labelling the arrow. 
+
+Finite state machines, by their name, imply the following:
+* There are a finite, countable number of states that a robot can be in
+* Each state is deterministic (that is, we know with certainty what state we are in)
+* Given the current state of the robot, a transition to another state is deterministic based on a unique transition criteria
+
+Here, while there are two states and two transition criteria, and there is a cycle, you can have finite state machines such that there are multiple transition criteria that can lead to different states, you can have "terminal states" where once the robot arrives in that state it stays in that state forever, and you can have internal cycles within a larger network. While they may be finite and deterministic, finite state machines can capture incredibly complex behavior -- their limitation is realistically your own imagination (since everything must be explicitly defined). 
+
+**Exercise 1** With your project partner, consider what behaviors you would like to include in a finite state machine, and brainstorm a list of transition criteria between these states.
+
+**Exercise 2** With your project partner, consider your implementation architecture in ROS. There are two general frameworks you could decide between (Note: there are more! But this is a common dichotomy to consider):
+
+1. Many nodes, one manager: You are running behaviors in N separate nodes, and you have one "manager node" running your FSM to coordinate between which nodes are "active" over the ROS network.
+2. One node, many callbacks: You run a single FSM node with the behaviors directly embedded as functionality in the FSM, accessed by a system of internal callbacks for managing what functions are accessed based on internal record keeping of states and transitions.
+
+You can decide on any architecture, just before to clearly describe your choices in your project write-up!

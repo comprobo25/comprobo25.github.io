@@ -24,6 +24,23 @@ toc_data:
     * Project Proposal is due on **Tuesday October 22nd at 7PM**. We'll have some in-class time today to work on this.
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
+<!-- ## Reading a Technical Research Paper (For Your Consideration)
+As you progress through this class, you may want to consider reading technical papers to gather ideas for algorithms to test, open-source code to integrate into your solutions, or academic perspectives for your Broader Impacts assignment. Technical writing is its own art form, as is reading a piece of technical writing. Here is how I read a technical paper when I'm trying to learn more about a certain technique or field:
+* **Start with the Abstract and Intro, then read the Conclusion.** To get a real sense for what a research paper is really about (what its core contribution is, the motivation of the work, and how it is related to other work in the field broadly) you should consider reading it out of order. The Abstract, Introduction, and Conclusion sections will hit the key points of the paper, and help you understand what details you might want to learn more about as you read the rest.
+* **Read Every Figure Caption.** In the best papers, figures serve as a pictorial representation of the methods and the results. 
+* **Read the Results.** Get a sense for how an algorithm or method performs. Do you trust in the performance metrics? Are the results statistically significant? Do the results align with the motivation of the work? If the results don't pass a "sniff check" then you might consider moving on to another paper.
+* **Read the Methods.** This is often the most technical parts of a technical paper, and may include pseudocode, mathematical derivations and proofs, or system diagrams. If you've gotten to this step, it's worth skimming this section first, then reading it a second time in considerably more detail. Marking up a print copy or PDF version is recommended -- taking notes helps to process the material and generate questions that you can follow-up on with other reading or experimentation of your own.
+* **Read the Related Works.** This is where you see all the fundamental work that the algorithm you're reading about was built on (helpful if you want to learn more about some methods in the paper) and contemporary work that the algorithm may compare itself too (helpful if you want to look at different strategies to solve the same / similar problems).
+* **Skim the Whole Paper End-to-End.** Finish reading a paper by giving it a final skim in order, paying attention to the headings, key contribution statements, and how each section feeds into the next. This gives you a nice sense of the complete body of the work, helps you reassess the Results and Conclusion sections with more information from the Methods section, and can help you summarize the paper in your notes.
+
+ Here are a few technical papers on state estimation and localization (our next unit!!) that may be interesting launch-points to learning more about these topics:
+ * [ORB-SLAM: A Versatile and Accurate Monocular SLAM System](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7219438&casa_token=WVatKv5yIlgAAAAA:hJr0vy9MMdOkC6xrXPaYf-Yn91nXjGZRsqraEj-6UrRg656-j564yYNUooPZ2EOqKGghpSVj66E) by Mur-Artal et al., 2015
+ * [Real-Time Loop Closure in 2D LIDAR SLAM](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7487258&casa_token=G_B93iYLcQYAAAAA:dCwVkq4rnNN28ojorfB5krmbOr3oETCstdLSrSoSleAORaElFFhyrZ3j1xKx8gRifKlFBhbMiNo) by Hess et al., 2016
+ * [Back to the Feature: Learning Robust Camera Localization from Pixels to Pose](https://openaccess.thecvf.com/content/CVPR2021/papers/Sarlin_Back_to_the_Feature_Learning_Robust_Camera_Localization_From_Pixels_CVPR_2021_paper.pdf) by Sarlin et al., 2021
+ * [Autonomous Navigation System of Greenhouse Mobile Robot Based on 3D Lidar and 2D Lidar SLAM](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.815218/full) by Jiang et al., 2022
+
+ Technical papers can be searched for in Library databases, [Google Scholar](https://scholar.google.com/), professional organization archives of journals and/or conferences (e.g., [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)), or in open archives (e.g., [arXiv](https://arxiv.org/) -- Note that open archives are open...so not all work here may be peer-reviewed!).  -->
+
 ## Sustainability in Robotics
 As we kickoff a new module, we'll be examining a new contextual theme: sustianability. Sustainability is commonly applied to three key "vectors" -- 
 * **People / Social** -- creating well-being of people and communities 

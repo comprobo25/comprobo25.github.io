@@ -15,7 +15,7 @@ toc_data:
 ---
 
 ## Today
-* An Intro to Search and Rescue
+* Having Challenging Conversations
 * Conceptual Introduction to the Particle Filter
 * We're all living in a 1D world! (a simple particle filter example)
 * Studio Time
@@ -28,10 +28,20 @@ toc_data:
 * Read over the description of the [Robot Localization project](../assignments/robot_localization).
 * For more reinforcement of the concepts behind the particle filter, watch this <a href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a>.
 
-## An Intro to Search and Rescue
+## Frameworks for Challenging Discussions (For Your Consideration)
+In the next phase of your Broader Impacts project, you'll be asked to host an in-class discussion on your selected robot to gather different perspectives on the robotic system and its context. Discussions about perspective, context, values, and ethics can sometimes be tricky -- perhaps there is conflict among participants, or it is challenging for everyone to engage fully with a topic. To assist you in hosting your discussions, the following may be of interest:
+* **Combine different discussion techniques** -- consider the use of individual quiet brainstorming, round-robin sharing, and open dialog; during what parts of a discussion might these be useful to your group? When could switching techniques change the energy of the discussion?
+* **Focus on collaborative generation** -- one way to invite multiple voices is to create a mechanism that feels collaborative; if the aim of the discussion is to generate multiple perspectives on an idea, then you are inviting everyone participating in the discussion to share or experiment with different ideas and be open to hearing other ideas. This would be the opposite of focusing a discussion on a single perspective or trying to determine the "optimal" way to think about something together. 
+* **Ask expansive questions** -- inviting intellectual curiosity in a discussion can assist with navigating conflict (conflict isn't bad, it just needs to be managed!). Asking expansive questions (e.g., what possibilities exist? what's the state space look like?) as opposed to questions that attempt to "narrow in" on a particular perspective/answer/topic can assist the group in becoming more creative and open to ideas.
+* **Set discussion norms** -- for long discussions, it can be nice from the start to set norms for a discussion. If this can be done collaboratively, all the better! Having a framework that explicitly talks about the goals of a discussion, appropriate engagement with a discussion, and actions participants can take to address violations to the framework, can be a really useful technique in professional settings for talking about challenging topics productively.
+* **Don't be afraid to pivot** -- if a discussion is getting off the rails, or you're reading the room and think that a conversation may turn unproductive, consider switching to a different discussion tactic, tabling a topic for later and moving to another question, or naming the conflict that you are seeing and allowing for meta-conversation about that conflict. 
+* **Critique over criticism** -- it will be natural for folks to come with different perspectives on a topic. If conflict were to arise between perspectives, encourage critique of the ideas rather than criticism of those that hold those perspectives. Critique requires asking questions, trying to learn more, and building/improving upon an idea, whereas criticism is meant to highlight negatives and tear a perspective down.
+* **Focus on evidence-based claims** -- discussions are most intellectually full when ideas that are shared are coupled with evidence that can be collaboratively inspected. Inviting opinions and feelings into a conversation is welcome, but ask participants to enrich those ideas with grounded personal anecdotes as their form of evidence.
+
+<!-- ## An Intro to Search and Rescue
 State estimation and localization are absolutely fundamental to robotics -- in order to do useful work, we need to know where a robot is in relation to a world map or objects within an environment. Perhaps one of the most widely used application motivations for sophisticated state estimation and localization is "search and rescue" -- the act of mapping a space to seek a target object, that may also be retrieved (or marked for retrieval by specialized systems/people). 
 
-[These slides](https://docs.google.com/presentation/d/1XXOwbKphKXfRPb68auAqU19UuMyBW6DK3wda2-Kgg1Q/edit?usp=sharing) give a sense of the "search and rescue" landscape in modern robotics as it relates to state estimation and localization.
+[These slides](https://docs.google.com/presentation/d/1XXOwbKphKXfRPb68auAqU19UuMyBW6DK3wda2-Kgg1Q/edit?usp=sharing) give a sense of the "search and rescue" landscape in modern robotics as it relates to state estimation and localization. -->
 
 
 ## A Conceptual Introduction to the Particle Filter
