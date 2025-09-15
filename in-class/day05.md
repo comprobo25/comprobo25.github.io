@@ -1,5 +1,5 @@
 ---
-title: "Frameworks for Challenging Discussions // Coordinate Frames"
+title: "Debugging, Coordinate Frames, and Finite State Machines"
 toc_sticky: true
 toc_data:
   - title: Today

@@ -1,5 +1,5 @@
 ---
-title: "Reading a Technical Research Paper // Debugging, Proportional Control, and ROS Parameters"
+title: "What are Broader Impacts? // Threading, Params, Propostional Control, and Wall-Following"
 toc_sticky: true
 toc_data:
   - title: Today

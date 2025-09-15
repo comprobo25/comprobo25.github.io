@@ -135,8 +135,8 @@ Note: Subject to change as the semester unfolds!
 * [Day 1: Welcome!](in-class/day01)
 * [Day 2: The Landscape of Modern Robotics // Basic ROS Concepts + Teleoperation](in-class/day02)
 * [Day 3: Writing Sensory-Motor Loops in ROS2](in-class/day03)
-* [Day 4: What are Broader Impacts? // Coordinate Frames, Debugging, Proportional Control, and ROS Parameters + Wall-Following](in-class/day04)
-* [Day 5: Finite State Machines // Studio Day](in-class/day05)
+* [Day 4: What are Broader Impacts? // Threading, Params, Propostional Control, and Wall-Following](in-class/day04)
+* [Day 5: Debugging, Coordinate Frames, and Finite State Machines](in-class/day05)
 
 ### State Estimation and Localization (+ Robot Application Contexts Discussions)
 * [Day 6: RoboBehaviors Debrief // A 1D Particle Filter](in-class/day06) 
