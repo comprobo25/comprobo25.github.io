@@ -1,5 +1,5 @@
 ---
-title: "What are Broader Impacts? // Threading, Params, Propostional Control, and Wall-Following"
+title: "What are Broader Impacts? // Threading, Params, Proportional Control, and Wall-Following"
 toc_sticky: true
 toc_data:
   - title: Today

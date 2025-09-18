@@ -20,8 +20,8 @@ toc_data:
 * Finite State Machines and Studio Time
 
 ## For Next Time
-* Work on the <a href="../assignments/warmup_project">the Warmup Project</a>.
-  * The final warm-up project deliverables will be due **Tuesday 23rd at 7PM**!
+* Work on the <a href="../assignments/warmup_project">the RoboBehaviors Project</a>.
+  * The final project deliverables will be due **Tuesday 23rd at 7PM**!
   * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).
   * We will have a shareout for the project on **Monday Sept. 22nd** in class (with a [short deliverable](https://canvas.olin.edu/courses/942/assignments/16079)).
 * Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
