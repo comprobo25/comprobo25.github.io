@@ -15,6 +15,7 @@ toc_data:
 ---
 
 ## Today
+* Broader Impacts Part 1 Discussions
 * Intended Use (For Your Consideration)
 * Bayes Filter (Continued)
 * Particle Filter and Computing Relative Motion

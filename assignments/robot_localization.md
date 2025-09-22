@@ -17,11 +17,11 @@ So far, we've programmed Neatos using reactive control strategies and combined b
 
 ## Teaming
 
-For this project, you should work with one other student (teams of three are tentatively allowed for this assignment). Once you have formed your team, please [list your group](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing).  
+For this project, you should work with one other student (teams of three are tentatively allowed for this assignment). Once you have formed your team, please [list your group](https://docs.google.com/spreadsheets/d/1-YlG0zlFozc0oo_GY-xu_2HTyY3RUPz8JD785Cf7zkw/edit?usp=sharing) and [add yourself to Canvas](https://canvas.olin.edu/courses/942/groups#tab-994).  
 
 ## Deliverables
 
-### Conceptual Overview (Due Tuesday October 1)
+### Conceptual Overview (Due Friday October 3 by 7PM)
 
 Using a combination of diagrams and text, describe the major steps of the particle filter at a level of detail sufficient for creating your particle filter implementation.
 
@@ -41,24 +41,24 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 7. Given a weighted set of particles, how will you sample a new set of particles?
 
-You can submit your assignment [on Canvas](https://canvas.olin.edu/courses/822/assignments/13550). Please have each member of the group submit this assignment.
+You can submit your assignment [on Canvas](https://canvas.olin.edu/courses/942/assignments/16068). Each team can submit one document.
 
-### In-class Presentation / Demo (Due Thursday October 17)
+### In-class Presentation / Demo (Due Thursday October 16 by Class)
 
 Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc. In addition, you should show a demo of your system in action.
 
-This deliverable be assessed in a binary fashion (did you do the above or not). Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1U1gHBxwc8ghFjZHDhROF24qZ6cSJkepm7cPE1UAP1Yw/edit?usp=sharing).
+This deliverable be assessed in a binary fashion (did you do the above or not). Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1VbeayIDylHz-cvh0v6q-daXl8Rz9PxM3whtINls-i6w/edit?usp=sharing).
 
 
-### Your Code and Bag Files (Due Friday October 18)
+### Your Code and Bag Files (Due Friday October 17 by 7PM)
 
-If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo24/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo24/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in (and do provide us a direct link to your fork in the [Teaming Spreadsheet](https://docs.google.com/spreadsheets/d/1rE78CwfC8EZzauaegFujHMeQZMqxPuFwX2tCbE_3v44/edit?usp=sharing)).
+If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo25/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo25/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You should include a couple of bag files of your code in action. Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you learn from the results, etc.).
 
-Please [indicate on Canvas]() when you have prepared your project for final submission (Note: this includes the write-up (details below) as it is part of your repository).
+Please [indicate on Canvas](https://canvas.olin.edu/courses/942/assignments/16067) when you have prepared your project for final submission (Note: this includes the write-up (details below) as it is part of your repository).
 
-### Writeup (Due Friday October 18)
+### Writeup (Due Friday October 17 by 7PM)
 
 In your ROS package create a ``README.md`` file to hold your project writeup. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``), and so on.
 
@@ -76,6 +76,7 @@ Your write-up should touch on the following topics.
 * <a href="https://github.com/shootingd/robot_localization">Katya Soltan and Charlie Weiss</a>
 * <a href="https://github.com/mary-keenan/robot_localization">Mary Keenan</a>
 * <a href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a>
+* <a href="https://github.com/AriB2003/robot_localization/tree/main">Ari Bobesh and Will Young</a>
 
 
 
@@ -97,7 +98,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo24/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build --symlink-install`` and source ``install/setup.bash``.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo25/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build --symlink-install`` and source ``install/setup.bash``.
 
 ### Installing Supporting Packages
 

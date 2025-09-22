@@ -14,7 +14,7 @@ toc_data:
 
 ## Today
 
-* Search and Rescue Algorithms I: An Intro to SLAM
+* Applications Discussion I (Model for Broader Impacts Presentations)
 * Bayesian Filtering (and the Particle Filter)
 
 ## For Next Time

@@ -25,7 +25,7 @@ toc_data:
   * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).
   * We will have a shareout for the project on **Monday Sept. 22nd** in class (with a [short deliverable](https://canvas.olin.edu/courses/942/assignments/16079)).
 * Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
-  * We will have a class discussion on **Thursday Oct. 1st**.
+  * We will have a class discussion on **Thursday Oct. 2nd**.
 
 ## Brainstorming Robot Debugging Strategies
 Debugging is the act of incrementally testing code for accurate behavior and tracing errors back through the system to resolve them. You may have encountered some [debugging strategies in SoftDes](https://softdes.olin.edu/docs/readings/unit-testing-basics/). Some generic strategies for debugging software carry over to robotics programming, while novel methods may need to be included given the interaction software has with hardware. 
