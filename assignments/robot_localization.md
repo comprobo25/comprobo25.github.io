@@ -52,7 +52,7 @@ This deliverable be assessed in a binary fashion (did you do the above or not). 
 
 ### Your Code and Bag Files (Due Friday October 17 by 7PM)
 
-If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo25/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo25/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
+If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo25/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo23/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You should include a couple of bag files of your code in action. Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you learn from the results, etc.).
 
