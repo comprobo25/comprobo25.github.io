@@ -33,6 +33,86 @@ toc_data:
 * **Extra Credit** An assignment to [reinforce probability fundamentals](../assignments/probability_basics/assignmentprobability_basics.pdf) is available to complete for extra credit (to be applied to the state estimation and localization unit). Due on **Friday October 18th 7PM** for those interested; [check the Canvas page for submission instructions](https://canvas.olin.edu/courses/822/assignments/13050).
 
 
+
+## Bayesian Filtering and the Particle Filter
+
+> Legacy notes about Bayes Filters and the Particle Filter from Paul Ruvolo are available: [as a video lecture](https://www.youtube.com/embed/l7CrjOTlioU) and as [physical notes](updated_bayes_filter.pdf). 
+
+For your projects, you're implementing a particle filter, which is a subclass of algorithm under the more general category of _Bayesian filters_. A Bayesian filter is a recursive, or sequential, algorithm -- for localization, this means that the robot's state estimate is refined iteratively as observations or actions are taken.
+
+There is a bit of vocabulary to know before we get started:
+* Markov process: a chain of events in which the probability of each event depends only on the state of the previous event ("what happens next only requires me to think about what's happening now")
+  * This is a useful _assumption_ about the way the world works, because now we don't have to consider the entire history of a robot, just what happened most recently.
+* Monte Carlo algorithms: repeated random sampling is used to estimate a solution to a complex (often nonlinear) problem
+
+We're going to walk through the steps of the Bayesian filter:
+```
+Steps of a Bayesian Filter:
+1) Initialize with an estimate of the first pose
+2) Take an action, and predict the new pose based on the motion model
+3) Correct the pose estimate, given an observation
+4) Repeat steps 2 and 3, ad nauseum (or until your robot mission is over)
+```
+
+### Prediction
+During the prediction step, the current estimated pose of the robot is updated based on a _motion model_. The motion model captures how a control input may be mapped to the real world (what noise may be applied, for instance). Prediction will always increase the uncertainty we have about where the robot is in the world (unless we have perfect motion knowledge). Prediction asks: given where I think I am, where will I end up after I take this action?
+
+### Correction
+To reduce (or attempt to reduce) our uncertainty, we can look around us with an _observation model_ (which will also capture noise in our measurements). Correction asks: given what I am measuring, what is my likely pose based on my estimate of where I may be?
+
+### Mathematical Details
+We'll walk through the mathematical details of this for a simple world in which a robot can open and close a door, and can measure whether a door is open or closed. This example is borrowed from [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf); a highly influential book in modern robotics.
+
+### The Particle Filter
+A Bayesian filter, in its purest form, asks us to work with continuous probability distributions, and that is computationally challenging (nigh intractable) most of the time for practical robotics problems. The particle filter addresses these computational challenges by allowing us to _draw samples from our probability distributions_ and apply our prediction and correction steps to each of those samples in order to get an empirical estimate of a new probability distribution. In this way, the particle filter is a Monte Carlo algorithm, and leverages the law of large numbers to "converge" towards the optimal answer. (You can get a sense about why sampling works to find complex distributions by [playing with this applet](http://chi-feng.github.io/mcmc-demo/app.html?algorithm=GibbsSampling&target=banana)).
+
+
+## Bayes Filter (Continued) and Particle Filter Applications
+Last time, we were looking at Bayes filters -- a class of algorithms (of which our particle filter is one!) that allows us to propagate our uncertainty about the world in time, and constrain it by using our observations. We're going to finish our discussion, and specifically think about how we actually deploy Bayesian Filter of any flavor on a real robot, and what it's implications are.
+
+> Slides walking through our in-class derivation [here](https://docs.google.com/presentation/d/1ekeHfD7YOJLc6mHo8z4BHfnu2JCXtsvNfszsGDPM4Js/edit#slide=id.p), and a previous recording of the walkthrough by Paul Ruvolo can be watched [here](https://www.youtube.com/embed/l7CrjOTlioU).
+
+Questions for consideration:
+* What are the computational limitations of a Bayes Filter? How does particle filtering overcome those limitations?
+* What are possible limitations of a particle filter? How might you overcome those limitations?
+* How are you going to represent your motion model for the project?
+* How are you going to represent your sensor model for the project?
+
+
+
+
+
+
+
+## Search and Rescue Algorithms 1: SLAM
+_Simultaneous Localization and Mapping_ or SLAM, is perhaps one of THE most quintessential algorithms in modern robotics today. The premise is simply that we would like the robot to know where it is _even if there is not a reference map_. In search and rescue applications, this is a powerful skill -- since even in urban environments there is potential for the landscape to have changed sufficiently that a known map is worthless. 
+
+But how does a robot know where it is...without knowing where it is?
+
+[Cyrill Stachniss](https://scholar.google.com/citations?user=8vib2lAAAAAJ&hl=en) has a quick 5-minute overview of SLAM worth a watch (FWIW he is also involved in some of the most widely used SLAM algorithms and computational representations in robotics used today): [Explainer](https://youtu.be/BuRCJ2fegcc).
+
+As outlined in the video, there are two implemented pieces to a SLAM algorithm -- a front-end (takes the data and turns it into some useful representation), and a back-end (which tries to compute the location of the robot within a map).
+
+The three different backend approaches mentioned -- EKF, Particle, and Graph-based SLAM -- are not only different implementations/techniques, but also represent both _online_ and _offline_ techniques. Online techniques are computed in practical time while a robot is underway. Offline techniques are generally much slower to compute; maybe even computed after a robot has run a mission. All of these methods can be used online (in some fashion), but it's worth noting that Graph-Based approaches are also often run _offline_.
+
+Let's take a look at the conceptual difference between:
+* an [EKF-based online approach](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=4fcf1d9c8c0f86ba318738c6531bbdcfb094f85b) (take a look at page 10)
+  * watch a simple demo [here](https://www.youtube.com/watch?v=vGXQ537gHCg)
+* a [graph-based offline approach](http://ais.informatik.uni-freiburg.de/teaching/ss13/robotics/slides/16-graph-slam.pdf) (slides 1-10 give a reasonable gist)
+  * watch a simple demo [here](https://www.youtube.com/watch?v=E6IvbjZA7Ao) (note when the map "squiggles")
+
+> For way more math, have a look at this [Graph-Based SLAM tutorial paper](http://www2.informatik.uni-freiburg.de/~stachnis/pdf/grisetti10titsmag.pdf).
+
+
+Some questions to consider:
+* What may be some limitations to each of these SLAM algorithms?
+  * When might an offline algorithm be appropriate? When not? 
+  * When might an online algorithm be appropriate? When not?
+* In what scenarios or environments do you think any SLAM algorithm will have a hard time navigating in?
+* Which steps in the pseudocode do you want to learn more about?
+* What might a SAR designer want to consider when selecting a SLAM algorithm to use? 
+
+
 ## Search And Rescue Algorithms II: EKF SLAM (For your consideration)
 Last time we briefly talked about two flavors of SLAM algorithms, Kalman Filtering (or EKF) based, and Graph Based. Today, here is a bit more detail about EKF-based SLAM algorithms, for your consideration. Resources you may find useful include [this presentation by Cyrill Stachniss](http://ais.informatik.uni-freiburg.de/teaching/ws12/mapping/pdf/slam04-ekf-slam.pdf), and Chapter 10 of [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf).
 
@@ -68,77 +148,4 @@ Here is a [CoLab Notebook](https://colab.research.google.com/drive/1Sbm81zccVfqP
 * What risks may be associated with applying EKF SLAM to a search and rescue scenario? How might those risks be mitigated?
 * What are key advantages to EKF SLAM?
 
-## Breakout Sessions
 
-### Particle Filter and Computing Relative Motion 
-One part of your particle filter will involve [estimating the relative motion of your robot between two points in time as given by the robot's odometry](https://github.com/comprobo24/robot_localization/blob/main/robot_localization/pf.py). 
-
-Suppose you are given the robot's pose at time $$t_1$$, and then again a measure at $$t_2$$. What are some ways that you might compute the robot's change in pose between these times? What coordinate system(s) do you want to work in? Work with the folks around you to discuss your ideas; discussing your conceptual overviews might be particularly helpful here!
-
-> Note: Our [coordinate transforms activity](https://comprobo24.github.io/in-class/day05#coordinate-frames-and-coordinate-transforms-in-robotics) from a few classes ago might be inspirational for finding an approach here.
-
-> Note: while probably not needed for dealing with 2D rotation and translation, the ``PyKDL`` library can be useful for converting between various representations of orientation and transformations (e.g., see [this section of the starter code](https://github.com/comprobo24/robot_localization/blob/main/robot_localization/helper_functions.py#L95)). This is also a helpful reminder -- there is skeleton and helper code you may want to be getting familiar with for your project...
-
-#### One Approach: Homogenous Transformation Matrices
-One way to think about the relationship between poses $$t_1$$ and $$t_2$$ is through simple translation and rotation. Here is a [walkthrough of that technique](https://docs.google.com/presentation/d/1VMTZQf_sgIdbWxB_owbgZ7GP6-WaUCh7tuRjvRU42tM/edit?usp=sharing) as well as a video version from Paul:
-
-> Note: a mistake is made in this video when writing the origin offset (at 8:37 into the video). This doesn't change the substance, but watcher beware!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/x7mRC0Gowe8?si=movGSLBJvod5ad06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-### Particle Filter and Likelihood Functions
-
-One of the key steps of your particle filter is to compute the weight of each particle _based on how likely the sensor reading from the particle is, given the map_. There are tons of possible ways to compute this weight, but we recommend using a **likelihood field function**. Computing a likelihood field relies on the following steps:
-
-1. Cast the sensor measurement into the world coordinate frame _relative to each particle's frame of reference_. 
-2. Determine the closest obstacle in the map based on your sensor measurement location.
-3. Compute the distance between your sensor reading and the closest obstacle.
-4. Assign the likelihood of your sensor reading as the probability of your distance measurement + small stochastic noise.
-
-The secret sauce here is in your closest obstacle identification, distance measurement probability, and your stochastic noise...let's consider the following:
-
-### ``update_particles_with_laser``
-The first step is to determine how the endpoints of the laser scan would fall within the map *if the robot were at the point specified by a particular particle*.  You can do this by drawing some pictures and pulling out your trigonometry skills!
-
-Next, you will take this point and compare it to the map using the provided ``get_closest_obstacle`` function (hint: you may want to be getting familiar with [this code](https://github.com/comprobo24/robot_localization/blob/main/robot_localization/occupancy_field.py)). Once you have this value, you will need to compute some sort of number that indicates the confidence associated with it.  Finally, you will have to combine multiple confidence values into a single particle weight.
-
-### Distance Confidence and Gaussian Distributions
-A Gaussian (or normal) distribution is an incredibly useful probabilistic representation used widely in robotics; the reasons are:
-* It has a closed-form solution for sampling
-* It has a closed-form solution for assigning probability to a sample
-
- We're interested in using a Gaussian to allow us to represent our confidence in the _distance measurement_ we compute in the previous step. We'll draw out a picture to see how this manifests in our Neato world.
-
- Setting the _variance_ term in our Gaussian distribution sets the effective confidence bounds we have on distance. This is a parameter you can set experimentally or through an optimization based methodology (if you had a lot of data to work with!)
-
-### Stochastic Noise
-We know that our sensor readings are likely not perfect, and realistically, neither is the map. To account for some amount of error in those systems, we can add noise drawn from a Uniform distribution to our probability estimate.
-
-### Consult Probabilistic Robotics for more Detail
-Consider consulting [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for more details on using range-finders and likelihood functions (Specifically chapter 6.4).
-
-#### Limitations
-This method ignores the information embedded in ranges that "max out" the sensor reading (the vehicle is in empty space). This method also requires tuning a few parameters for your noise and confidence probability functions.
-
-#### Combining Multiple Measurements
-We typically have more than one range measurement at any time (that's the power of a lidar!), so we need to consider ways to combine the likelihood of each of our scans to get to one particle weight. Some options may be:
-* Average the PDF values across the measurements
-* Multiply the PDF values across the measurements
-* Something in between?
-
-It turns out these different approaches are all used in various forms in within the particle filters in ROS.  For example, there is a really weird way of combining multiple measurements in the [ROS1 AMCL package](https://github.com/ros-planning/navigation/blob/a9bc9c4c35a55390963db1357926ec461fcff24c/amcl/src/amcl/sensors/amcl_laser.cpp#L293). See this [pull request](https://github.com/ros-planning/navigation/pull/462) for some interesting discussion of this method.
-
-In ROS2, it seems they still have the [old method](https://github.com/ros-planning/navigation2/blob/7be609e67c5b8f7e54b3bc2bcd53d41e652c494e/nav2_amcl/src/sensors/laser/likelihood_field_model.cpp#L124) but there is [another method](https://github.com/ros-planning/navigation2/blob/main/nav2_amcl/src/sensors/laser/likelihood_field_model_prob.cpp) that seems more principled (but may perform worse?).
-
-## Possible Extensions (For Your Consideration)
-Here are some possible extensions on the particle filter if you'd like to pursue them.  In the open work time we can provide more detail on how these might work.
-
-* I want to solve the robot kidnapping problem (unknown starting location)
-* I want to reimplement the parts of the filter that were written for me (interactions with ROS)
-* I want to experiment with laser scan likelihood functions
-* I want to try to implement ray tracing instead of the likelihood field
-* I want to understand in greater detail the connection between Bayes' filter and the particle filter
-* I want to make my particle filter more computationally efficient
-* I want to experiment with landmark-based likelihood functions
-* I want to move my robot based on my pose uncertainty
