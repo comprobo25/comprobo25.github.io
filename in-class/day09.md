@@ -28,6 +28,15 @@ toc_data:
 ## Broader Impacts Part 1 Discussions
 In small groups of 5, we will go around and everyone will present their robot. Each person will have about 7 minutes to present and answer questions about the robot; everyone will then take [~2 minutes to fill in a survey form](https://docs.google.com/forms/d/e/1FAIpQLSfo_AkQCM9BB3_Td17Dkm3tkmaHjKWJuM1XjKl0zXIXSIFYVg/viewform) for feedback and self-reflection.
 
+As a reminder, norms and expectations for these conversations we set as a group were:
+* Aim to understand a novel or different perspective from one's own; disagreement is natural
+* Practice open-mindedness
+* Allow for provoking questions to deepen a conversation
+* Consider the "gray areas" of many topics when discussing
+* Respect differences of opinion, but challenge statements of fact
+* Let people finish their thoughts, and let people speak
+* Focus on discussion, rather than persuasion/debate
+
 ## The Particle Filter Conceptual Overview
 With the rest of class we will continue with studio time working on the particle filter conceptual overview. Please refer back to the Day 8 materials on computing motion models and likelihood functions to continue your discussion from last time.
 

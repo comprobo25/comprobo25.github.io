@@ -63,8 +63,8 @@ Let's consider then the difference between Acting Humanly and Acting Rationally.
 
 After you've taken a pass at sorting these robots, pick one of the following two reflection questions and discuss with your table group:
 
-1) What heuristics were you using to sort the robots? Did task, context, or something else matter the most in your sorting? Why or why not?
-2) For your "Acting Humanly" robots, what are the key technical challenges that would need to be overcome in implementing these robots? And for the other category? What is shared and what is unique?
+1. What heuristics were you using to sort the robots? Did task, context, or something else matter the most in your sorting? Why or why not?
+2. For your "Acting Humanly" robots, what are the key technical challenges that would need to be overcome in implementing these robots? And for the other category? What is shared and what is unique?
 
 ### Implementing Embodied AI: Dealing with Novelty
 Those of us familiar with the generative AI explosion of the last 2 or so years know that apps like Chat-GPT, Claude, CoPilot, NotebookLM, and many more systems are trained on massive datasets of text, imagery, video, and audio in order to produce impressive pattern-predicted output for given prompts. For the casual conversation with an AI chatbot, the output can be uncannily human-like. 
@@ -86,9 +86,9 @@ The 1-5% of self-driving that has yet to be "solved" can largely be chalked up e
 
 Pick one of the robots from the last part of the exercise, choose a "task" that would be appropriate for this robot to do, and discuss with your group the following:
 
-1) What aspects of this task could lend themselves to generative AI or other large-data AI models? 
-2) What aspects of this task would require dealing with novelty in typical use?
-3) What are some of the ways you might suggest handling novelty when this system encounters it? (you could think about whether there are rules that could be encoded, prior knowledge that can be embedded in the system, safety features that would be installed, a different AI or ML toolkit that could be used outside of large-data training systems, etc.)
+1. What aspects of this task could lend themselves to generative AI or other large-data AI models? 
+2. What aspects of this task would require dealing with novelty in typical use?
+3. What are some of the ways you might suggest handling novelty when this system encounters it? (you could think about whether there are rules that could be encoded, prior knowledge that can be embedded in the system, safety features that would be installed, a different AI or ML toolkit that could be used outside of large-data training systems, etc.)
 
 
 
@@ -97,10 +97,10 @@ For your projects, you're implementing a particle filter, which is a subclass of
 
 At a high-level, the steps of a Bayesian Filter are:
 
-1) Initialize with an estimate of the first pose
-2) Take an action, and predict the new pose based on the motion model
-3) Correct the pose estimate, given an observation
-4) Repeat steps 2 and 3, ad nauseum (or until your robot mission is over)
+1. Initialize with an estimate of the first pose
+2. Take an action, and predict the new pose based on the motion model
+3. Correct the pose estimate, given an observation
+4. Repeat steps 2 and 3, ad nauseum (or until your robot mission is over)
 
 We can compare that to the outline of a particle filter we reviewed last class:
 
