@@ -143,9 +143,9 @@ Note: Subject to change as the semester unfolds!
 * [Day 7: Broader Impacts Discussions // The Particle Filter for Robot Localization](in-class/day07)
 * [Day 8: Applications I // Conceptual Particle Filter](in-class/day08)
 * [Day 9: Broader Impacts Part 1 // Conceptual Particle Filter](in-class/day09)
-* [Day 10: Applications II // Debugging Strategies, Extensions, and Bayesian Estimation](in-class/day10)
-* [Day 11: Applications III // Beyond Particle Filtering](in-class/day11)
-* [Day 12: Applications IV // Studio Day + Introduction to Machine Vision Project](in-class/day12)
+* [Day 10: Applications II // Bayesian Estimation](in-class/day10)
+* [Day 11: Applications III // Debugging Strategies and Extensions](in-class/day11)
+* [Day 12: Beyond Particle Filtering and Introduction to Machine Vision Project](in-class/day12)
 
 ### Machine Vision (+ Influences on Robotics Development Discussions)
 * [Day 13: Sustainability Vectors // Machine Vision Project Ideation](in-class/day13)

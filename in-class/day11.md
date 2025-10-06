@@ -1,13 +1,13 @@
 ---
-title: "Applied SAR Robotics // Debugging Strategies, Extensions, and Studio"
+title: "Applications III // Debugging Strategies and Extensions"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day11/#today
   - title: For Next Time
     link: in-class/day11/#for-next-time
-  - title: Applied Search and Rescue Robotics
-    link: in-class/day11/#applied-sar
+  - title: Applications III Discussion
+    link: in-class/day11/#applications-iii
   - title: Particle Filter Debugging Techinques
     link: in-class/day11/#particle-filter-debugging-techinques
   - title: Extensions to the Particle Filter
@@ -15,43 +15,19 @@ toc_data:
 ---
 
 ## Today
-* Applied Search and Rescue Robotics (Discussion)
-* Particle Filter Debugging Strategies (For Your Consideration)
-* Extensions to the Particle Filter (For Your Consideration)
-* Studio
+* Broader Impacts Applications III Discussions
+* Debugging Your Particle Filter + Extensions
+* Studio Time
 
 ## For Next Time
 * Work on the [Robot Localization project](../assignments/robot_localization)
-  * Demos due on **Thursday October 17th In-Class**
-  * Code + Writeups due on **Friday October 18th 7PM**
-* Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
-  * Note -- discussions will happen on October 28th, October 31st, and November 4th; stay tuned!
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
-* **Extra Credit** An assignment to [reinforce probability fundamentals](../assignments/probability_basics/assignmentprobability_basics.pdf) is available to complete for extra credit (to be applied to the state estimation and localization unit). Due on **Friday October 18th 7PM** for those interested; [check the Canvas page for submission instructions](https://canvas.olin.edu/courses/822/assignments/13050).
+  * Demos due on **Thursday October 16 by Class**
+  * Code + Writeups due on **Friday October 17th 7PM**
+* Review your Broader Impacts Phase 1 feedback (emailed)
+* Review the project description for [Broader Impacts Phase 2](../assignments/broader_impacts)
+* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/kPjvgWb4ETDKMHRD7)
 
-## Applied Search and Rescue Robotics
-We've been briefly discussing this unit about Search and Rescue as an umbrella application area for robotics. We've had a look at the landscape of the field, skimmed some technical papers, and highlighted some key related algorithms. Today, we're going to discuss practical design choices when looking towards deploying SAR robots, and what their implications might be.
-
-> Before digging into this discussion today, I want to pause to acknowledge the ongoing hurricane-related emergencies in the US Southeast. Our discussion today will touch on FEMA, search and rescue scenarios, and how to best serve vulnerable populations; and it is impossible and irresponsible not to recognize the thematic connections with ongoing events. Students who may feel affected by the content are welcome to step out at any point.
-
-### Setting Standards
-In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
-
-* Human-System Interaction (23 requirements)
-* Logistics (10 requirements)
-* Operating Environment (5 requirements)
-* System (physical robot) (65 requirements; 32 of which are for sensing)
-
-One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
-
-* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
-  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
-* How would these standards interact with your robot's sensors? Algorithms?
-  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
-* Who should be involved in co-designing this set of standards for this group of stakeholders?
-  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
-* What tests would need to be designed to assess whether a robot met these standards?
-
+## Applications III: TBD
 
 ## Particle Filter Debugging Techniques
 
@@ -130,7 +106,7 @@ Advice:
 Advice:
 * Look in the Probabilistic Robotics book to see read about ``z_hit``, ``z_random``, etc.
 
-### Robot Kidnapping Problem
+### Robot Kidnapping Problem (no initial pose guess)
 
 Advice:
 * Make your code faster first (it will let you use more particles)
