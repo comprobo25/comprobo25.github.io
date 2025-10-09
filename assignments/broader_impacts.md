@@ -57,29 +57,28 @@ Examples of robots selected during CompRobo 2024 included:
 
 
 
-<!-- ## Part 2: Discussion
+## Part 2: Discussion
 **Due Nov 4, 2025**
 
-Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. Over the next several weeks, we will be engaging in small in-class discussions on topics spanning the technicalities to applications of robotics. This assignment asks you to do the following:
+Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. In Phase 1, we had the opportunity pick a robot and present it to a small group + hear about other robot systems. This assignment asks you to go deeper in these discussions, and do the following:
 
-* Ground your discussions with concrete connections with your chosen robot
-* Reflect on your discussions with your chosen robot in mind
-* Enhance your investigation of your robot based on discussion topics and themes
-* And at the end of this part of the project, lead an advanced (socio)technical discussion about your robot (or some aspect of your robot) with peers
+* Perform deeper research on your robot, iterating from Phase 1 questions and feedback, and your own reflections from those discussions
+* Define an aspect of your robot that has "gray" implications (whether this is about a specific design decision and how it impacts intended use, the typical market for the robot, weighing opportunities with potential costs, public perception, etc.)
+* Lead an advanced (socio)technical discussion about your robot and its "gray" facet with peers
 
 The aim of this assignment is to (1) practice presenting technical systems to an audience of peers, (2) practice leading an open-ended discussion, and (3) challenge your own or others' perspectives about your chosen robot.
 
 ### Logistics
 
-From the end of the last phase (9/30) to the end of this phase, we will have a schedule of in-class discussions to participate in and guide your additional research on your robot. You will then be randomly assigned a day in class on one of 10/27, 10/30, or 11/03 for your discussion slot (you may trade your day with someone else in class; just let the teaching team know in advance). Your peers not presenting on that day will be randomly assigned to your group for your discussion.
+We will reserve an in-class day to get into small groups of ~3 people for the discussion period. Everyone will present on this day. An attempt will be made to provide teams with external monitors for presenting in their clusters, but it is recommended that teams potentially bring their own external monitors, or individual be prepared to display visual material on their laptop screens.
 
 ### Preparation / Materials
 
-Please prepare an ~8 minute slide-based presentation about your robot, focusing on technical and sociotechnical details about your system and 3 discussion prompts. Your presentations will be in a relatively informal setting (sitting around a project table together with your audience); with that in mind, your slide-deck should be complete and informational, but your presentation style can be conversational. You can re-visit topics covered in class, or build new materials based on your additional research about your robot. 
+Please prepare an ~5-8 minute slide-based presentation about your robot, focusing on technical and sociotechnical details about your system (with the "gray" area clearly specified) and at least 3 discussion prompts. Your presentations will be in a relatively informal setting (sitting around a project table together with your audience); with that in mind, your slide-deck should be complete and informational, but your presentation style can be conversational. You can re-visit topics covered in class, or build new materials based on your additional research about your robot. 
 
 ### Discussion
 
-Begin your discussion with your presentation, and leave ~2 minutes afterward for brief, clarifying Q&A. All remaining time during your discussion slot will then be for open-ended discussion seeded by your prompts. You may structure the discussion in whatever way you wish (see suggestions below).
+Every individual will have 15 minutes total per session, so an ~7-10 minute open-ended discussion, seeded by the prompts, will follow from the prepared slides. You may structure the discussion in whatever way you wish (see suggestions below).
 
 ### Post-Discussion
 
@@ -110,7 +109,7 @@ Leading a discussion is an art and science, and there is no one "right" way to l
 
 
 
-## Part 3: Reflection
+<!-- ## Part 3: Reflection
 **Due Dec 11, 2025**
 
 This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. You are asked to prepare a minimum 1-page written reflection (12pt font, single spacing, Times New Roman, 1" margins) that examines the following questions (these should look somewhat familiar...but we're now considering you, rather than just the robot you've been contemplating):

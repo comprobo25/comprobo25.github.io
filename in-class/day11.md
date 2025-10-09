@@ -1,13 +1,11 @@
 ---
-title: "Applications III // Debugging Strategies and Extensions"
+title: "Debugging Strategies and Extensions // Studio Time"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day11/#today
   - title: For Next Time
     link: in-class/day11/#for-next-time
-  - title: Applications III Discussion
-    link: in-class/day11/#applications-iii
   - title: Particle Filter Debugging Techinques
     link: in-class/day11/#particle-filter-debugging-techinques
   - title: Extensions to the Particle Filter
@@ -15,7 +13,6 @@ toc_data:
 ---
 
 ## Today
-* Broader Impacts Applications III Discussions
 * Debugging Your Particle Filter + Extensions
 * Studio Time
 
@@ -25,9 +22,9 @@ toc_data:
   * Code + Writeups due on **Friday October 17th 7PM**
 * Review your Broader Impacts Phase 1 feedback (emailed)
 * Review the project description for [Broader Impacts Phase 2](../assignments/broader_impacts)
+  * In class discussions on **Monday November 3rd**
+  * Materials due **Tuesday November 4th**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/kPjvgWb4ETDKMHRD7)
-
-## Applications III: TBD
 
 ## Particle Filter Debugging Techniques
 
