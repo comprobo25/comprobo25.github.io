@@ -88,7 +88,7 @@ For advancing our state covariance, we can use:
 
 $$\hat{\mathbf{P}_t} = \mathbf{F}\mathbf{P}_{t-1}\mathbf{F}^T + \mathbf{Q}$$
 
-where $\mathbf{Q}$ is simply some process noise (we typically assume this to be zero-centered white noise).
+where $$\mathbf{Q}$$ is simply some process noise (we typically assume this to be zero-centered white noise).
 
 ### The Correction Step
 If we only had the prediction step, we'd basically be doing _dead-reckoning_ or open-loop estimation. But we can do better!
@@ -99,13 +99,13 @@ $$ \mathbf{y} = \mathbf{z} - \mathbf{H}\mathbf{x}$$
 
 $$\mathbf{H} = [1, 0]^T$$
 
-where $\mathbf{H}$ is our sensor model.
+where $$\mathbf{H}$$ is our sensor model.
 
 Now, we want to update our pose estimate given our observation; to do this, we're going to compute the _Kalman gain_ -- we can think of this as a weight that uses our uncertainty to place our final pose estimate somewhere between our predicted pose and our residual (measured) location. The Kalman gain has the following structure:
 
 $$K_t = \hat{\mathbf{P}_t}\mathbf{H}^T(\mathbf{H}\hat{\mathbf{P}_t}\mathbf{H}^T + \mathbf{R})^{-1}$$
 
-where $\mathbf{R}$ is the observation noise on $z$.
+where $$\mathbf{R}$$ is the observation noise on $$z$$.
 
 Finally then, we can update our pose estimate and covariance as:
 
@@ -113,7 +113,7 @@ $$\mathbf{x}_t = \hat{\mathbf{x}_{t}} + K_t(z_t - \mathbf{H}\hat{\mathbf{x}_{t}}
 
 $$\mathbf{P}_t = (\mathbf{I} - K_t\mathbf{H})\hat{\mathbf{P}_{t}}$$
 
-where $\mathbf{I}$ is the identity matrix.
+where $$\mathbf{I}$$ is the identity matrix.
 
 ### Affordances and Notes
 One of the advantages of the Kalman filter is that it allows us to keep track of a closed form of uncertainty, which allows us to do interesting work at every step of the filter (of course, at the expense of assuming the world is Gaussian). 
