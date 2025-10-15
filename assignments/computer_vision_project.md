@@ -16,11 +16,11 @@ So far, you have successfully programmed robots using reactive control strategie
 ## Teaming
 For this project, you can work with one other student.  If you want to have a team of three, please talk to the instructors beforehand.
 
-Please fill out <a href="https://docs.google.com/spreadsheets/d/1VirFJv8flcuBjE8HbtSx7HuS2RMWvL_LzAVdEjaajYA/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo.
+Please fill out <a href="https://docs.google.com/spreadsheets/d/1O2spOQ5pVBngERezDvuG5-YXpvC3O52nYzG-_t0pqLY/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo, and add yourself to a Canvas Group!
 
 
 ## Project Topic
-Your project should be about machine vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, or some combination.
+Your project should be about machine vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, an external camera system, or some combination.
 
 In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simulated Neatos (or another robot) to do something interesting).  You have substantial latitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms). That said, we expect that you will do some exploration of algorithms as part of this project (which could include implementation or perhaps substantial learning about an algorithm or class of algorithms).
 
@@ -40,21 +40,24 @@ In your project proposal you will be coming up with an implementation plan.  Tha
 
 ## Robot Platform and Data Pipelines
 
-* One option is to continue to work with the Neato. In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
-* You may want to use an external dataset for your project. Here are some possible starting points. 
-    * <a-no-proxy href="https://www.visualdata.io/discovery">Visual Data</a-no-proxy> and [Papers with Code](https://paperswithcode.com/datasets?mod=images) has a nice collection of computer vision datasets and projects.
-    * If you want a huge (but very cool) dataset for self-driving vehicles, consider using Waymo's <a-no-proxy href="https://waymo.com/open/">Open Dataset</a-no-proxy>
-    * If you're interested in machine learning for robot control, you might consider building off some of <a-no-proxy href="https://github.com/comprobo18/robot_learning/network/members">the datasets (and code) from the 2018 Robot Learning project</a-no-proxy> You also might want to check out <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">the Google Slides presentation summarizing their results</a-no-proxy>.
-    * Pick any open dataset of imagery in a domain of interest to you (e.g., for ocean biology [FathomNet](https://fathomnet.org/fathomnet/#/) is a nice option; for city landscapes [Cityscapes](https://paperswithcode.com/dataset/cityscapes) could be good; for food check out [Food-101](https://paperswithcode.com/dataset/food-101)...and so on!)
-    * A lot these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets. That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
+One option is to continue to work with the Neato. In class, you'll see the Neato camera setup and go through a simple demo of how to use the images to control a robot.
+
+You may want to use an external dataset for your project. Here are some possible starting points. 
+   * <a-no-proxy href="https://www.visualdata.io/discovery">Visual Data</a-no-proxy> and [Papers with Code](https://paperswithcode.com/datasets?mod=images) has a nice collection of computer vision datasets and projects.
+   * If you want a huge (but very cool) dataset for self-driving vehicles, consider using Waymo's <a-no-proxy href="https://waymo.com/open/">Open Dataset</a-no-proxy>
+   * If you're interested in machine learning for robot control, you might consider building off some of <a-no-proxy href="https://github.com/comprobo18/robot_learning/network/members">the datasets (and code) from the 2018 Robot Learning project</a-no-proxy> You also might want to check out <a-no-proxy href="https://docs.google.com/presentation/d/1ZZBZotRITt42OIpwC-jiFYWu-h27rZ1PzhctPyRYgng/edit">the Google Slides presentation summarizing their results</a-no-proxy>.
+   * Pick any open dataset of imagery in a domain of interest to you (e.g., for ocean biology [FathomNet](https://fathomnet.org/fathomnet/#/) is a nice option; for city landscapes [Cityscapes](https://paperswithcode.com/dataset/cityscapes) could be good; for food check out [Food-101](https://paperswithcode.com/dataset/food-101)...and so on!)
+   * A lot these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets. That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
+
+Finally, you could go all-in on sensor/perception only (abstracting away a robot) if you'd like to get deep in the weeds on a particular vision-based processing algorithm or fundamental piece of theory (note: the connection to robotics MUST be clear, however). For this, we have two ZED 2i stereo cameras available, and you can use your computer webcam, your phone camera/lidar, or any other visual sensor you may have access to.
 
 ## Deliverables
 
 There are four deliverables for this project.
 
-### Project Proposal (due 10/22)
+### Project Proposal (due 10/22 7PM)
 
-At a minimum, please include the answers to the following questions. You should include enough detail for us to be able to give you useful feedback. [Submit your proposal on canvas](https://canvas.olin.edu/courses/822/assignments/13674).
+At a minimum, please include the answers to the following questions. You should include enough detail for us to be able to give you useful feedback. [Submit your proposal on canvas](https://canvas.olin.edu/courses/942/assignments/16077).
 
 * Who is on your team?
 * What is the main idea of your project?
@@ -66,7 +69,7 @@ At a minimum, please include the answers to the following questions. You should 
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
 * What might you need from the teaching team for you to be successful on this project?
 
-### In-class Presentation / Demo (11/11)
+### In-class Presentation / Demo (11/10 in class)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
@@ -75,15 +78,15 @@ We'd like each team to spend about 10 minutes presenting what they did for this 
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-Please [submit your presentation on canvas](https://canvas.olin.edu/courses/822/assignments/13675).
+Please [submit your presentation on canvas](https://canvas.olin.edu/courses/942/assignments/16071).
 
-### Code (Due 11/12)
+### Code (Due 11/11 at 7PM)
 
-* You should turn in your code and writeup via Github. [Submit a link on canvas when you're all set](https://canvas.olin.edu/courses/822/assignments/13676)!
+* You should turn in your code and writeup via Github. [Submit a link on canvas when you're all set](https://canvas.olin.edu/courses/942/assignments/16066)!
 
-### Writeup (Due 11/12)
+### Writeup (Due 11/11 at 7PM)
 
-In your ROS package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
+In your code package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
 
 * What was the goal of your project?  Since everyone is doing a different project, you will have to spend some time setting this context.
 * How did you solve the problem (i.e., what methods / algorithms did you use and how do they work)?  As above, since not everyone will be familiar with the algorithms you have chosen, you will need to spend some time explaining what you did and how everything works.
@@ -128,6 +131,14 @@ In-Class Activities from Past CompRobo Offerings and Other Tutorials
 * <a-no-proxy href="https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html">Numpy Examples List</a-no-proxy>
 
 ### Past projects to draw from
+
+* Machine Vision Projects from Fall 2024
+   * [3D Gaussian Splatting Deep Dive](https://github.com/eddydpan/3D-gaussian-splatting)
+   * [Real-Time Obstacle Identification](https://github.com/itannermahncke/machine_vision)
+   * [Stereoscopic Vision from Scratch](https://github.com/AriB2003/stereo_vision)
+   * [Image to Illustration](https://github.com/chrdn/machine_vision_project)
+   * [Visual Jigsaw Puzzle](https://github.com/cmccurley22/puzzle-solver)
+   * [Gesture Neato Control](https://github.com/DanPark13/neato-dog/tree/main)
 
 * Machine Vision Projects from Fall 2022
    * [Plant Vision](https://github.com/jonaskaz/plant-vision)
