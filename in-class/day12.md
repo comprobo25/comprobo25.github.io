@@ -78,6 +78,7 @@ $$\hat{x_t} = v\Delta t + x_{t-1}$$
 Vectorized per our defintion of state variable:
 
 $$\hat{\mathbf{x}_t} = \mathbf{F}\mathbf{x}_{t-1}$$
+
 $$ \left[\begin{matrix} \hat{x_t} \\ \hat{\dot{x_t}} \end{matrix}\right] = \left[
 \begin{matrix}
 1 & \Delta t\\
@@ -95,6 +96,7 @@ If we only had the prediction step, we'd basically be doing _dead-reckoning_ or 
 First, we need to define a measurement model. In our world, we can get noisy measurements of our position, but not of our velocity. Thus, we can define a residual function (the difference between our observation and our hypothesized observation per our update step) as:
 
 $$ \mathbf{y} = \mathbf{z} - \mathbf{H}\mathbf{x}$$
+
 $$\mathbf{H} = [1, 0]^T$$
 
 where $\mathbf{H}$ is our sensor model.
@@ -108,6 +110,7 @@ where $\mathbf{R}$ is the observation noise on $z$.
 Finally then, we can update our pose estimate and covariance as:
 
 $$\mathbf{x}_t = \hat{\mathbf{x}_{t}} + K_t(z_t - \mathbf{H}\hat{\mathbf{x}_{t}})$$
+
 $$\mathbf{P}_t = (\mathbf{I} - K_t\mathbf{H})\hat{\mathbf{P}_{t}}$$
 
 where $\mathbf{I}$ is the identity matrix.
