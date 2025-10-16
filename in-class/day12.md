@@ -22,7 +22,9 @@ toc_data:
 
 ## For Next Time
 * Turn in the [Robot Localization project](../assignments/robot_localization)
-  * Code + Writeups due on **Friday October 17th 7PM**
+  * Code + Writeups due on **Tuesday October 21st 7PM**
+* Localization Project Share-Out and Demos
+  * Demos due on **Monday October 20th by Class**
 * Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
   * In class discussions on **Monday November 3rd**
 * Read over the [Machine Vision Project Document](../assignments/computer_vision_project).
