@@ -1,47 +1,86 @@
 ---
-title: "Waste Sorting with Robots // Neato Soccer"
+title: "Applications IV // Neato Soccer"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day14/#today
   - title: For Next Time
     link: in-class/day14/#for-next-time
-  - title: Waste Sorting with Robots
-    link: in-class/day14/#waste-sorters
+  - title: Applications III Discussion
+    link: in-class/day14/#broader-impacts-iii
   - title: Neato Soccer
     link: in-class/day14/#neato-soccer
 ---
 
 ## Today
-* Waste Sorting with Robots
+* Application III Discussion: Human-Robot Collaboration: Search and Rescue
 * Neato Soccer + Project Proposal Check-Ins + Studio
 
 ## For Next Time
-* Work on the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
-  * Note -- discussions will happen on October 28th, October 31st, and November 4th; you have been [randomly assigned one of these days to lead a discussion](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing). You may swap slots with someone on a different day, but you have to let an instructor know. Thanks!
-* Work on your [Machine Vision Project](../assignments/computer_vision_project).
-    * In-class demos will be on **Monday November 11th**, and code/write-ups are due on **Tuesday November 12th at 7PM**.
-    * Note that prospective students will be joining us in class on the 11th!
+* Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
+  * In class discussions on **Monday November 3rd**
+* Read over the [Machine Vision Project Document](../assignments/computer_vision_project).
+    * Project Proposal is due on **Wednesday October 22nd at 9PM**
+    * Project Shareouts will be **Monday November 10th in class**
+    * Project Materials are due on **Tuesday November 11th at 7PM**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 
-## Waste Sorting with Robots
-Today we're going to have a look at a [several very different types of robot waste sorters by looking at some literature](https://docs.google.com/document/d/1IKP9IC89pzonNTLGESe2nlPENpLKPwmMqC8PwAT20PM/edit?usp=sharing). To attend to:
+## Applications III: Human-Robot Collaboration: Search and Rescue
+We're going to be discussing a new topic related to the broader applications of robotics: human-robot collaboration. This is a _vast_ space, which covers anything from humans using robots as extensions of themselves (as tools), to humans and robots interacting as equals on collaborative or cooperative teams. 
 
-1) What are the goals of these waste-sorters? Are they similar/different? Are their contexts similar/different?
+Today, we're going to start thinking about human-robot collaboration in the context of one of the most cited "uses" of semi-intelligent robotics in modern academic literature: search and rescue. As your discussion unfolds, please fill in [this survey](https://forms.gle/SUFBctEQJAx2t4VN8).
 
-2) What are the forms of these waste-sorters? What systems are the composed of?
 
-3) How is machine vision used on these waste-sorters? What algorithms are being used and what tasks are being performed?
+### A Scan of the Literature
+In your table groups, open the following link to some open-source ["Search and Rescue" academic literature](https://docs.google.com/document/d/1Kh-o200z_Mka8x0qxfmXLT8NUsOPwWfDQTfnHtcw02g/edit?usp=sharing). Each person should choose a different paper to _skim_ (please don't read the papers in complete detail!). 
 
-4) If there is information about it, how well do these systems perform their tasks? What are areas of strength? Weakness?
+As each person skims, take note of the following:
+* Is what is being sought named in the paper?
+* Is the robot discussed "real" (as in, exists in the world)?
+* Is the robot deployed in a "real" environment (as in, is it fully simulated, in a laboratory, or field tested)?
+* When referring to "search and rescue" what other applications may be listed? Or what specific organizations or scenarios are mentioned, if any?
+* Who funded the work?
+* Is the robot or robot system mostly a "searcher" or a "rescuer"?
+* Do the papers make mention of how human operations specialists will interact with the robot?
 
-> To get the gist of a paper quickly, focus on the Abstract, the Methods, and the Results sections; then look at each of the figures + captions. Consider writing down the name of each robot somewhere, and jotting down the goal, the context, the key algorithms, and your impressions underneath the names. 
+After you've each had an opportunity to skim, share out your results. Pay special attention to where there are similarities or differences between your robots. You might want to identify a few axes and map your different robots to these axes (please use the board for this!).
 
-When you've had a look at these robots (choose at least 2!), in your groups, reflect on:
-* Do the proposed methods align with the goals of these waste-sorters? Do they appear well-matched for the context that these waste-sorters will be used in?
-* Is machine vision necessary for these waste-sorters to perform their functions? Why or why not?
-* Who do you think would benefit from using these waste-sorters? What concerns do you have about these waste-sorters?
+
+### Intended Use
+As you might notice in the first activity, the landscape of Search and Rescue robots can be quite broad -- from clearly bespoke solutions to specific scenarios/teams, to general purpose robots. The latter cases are particularly interesting -- what makes a search and rescue robot...a search and rescue robot, if not its form/functionality?
+
+There are multiple ways in which a technology is operationalized for a particular use case:
+* By fundamental design (e.g., the form or functionality is entirely niche)
+* By licensing or IP controls (e.g., commercial, non-commercial, open-source, closed-source)
+* By market controls (e.g., only selling to certain buyers, lease/renting/buying models)
+* By partnership (e.g., robots are provided only to trusted partners, potentially with a point-of-contact or dedicated engineer to monitor use)
+* Maybe others! (if you can think of some, let us know and we can add them here)
+
+For these search and rescue robots you just discussed, consider the following in your groups:
+* Can algorithms be designed to restrict their utility to these search and rescue applications; why or why not?
+* In what way is an engineer responsible for considering _unintended use_ of their system? What actions should they take (or not)?
+* Assuming that an algorithm is free to use, what evidence should be provided that it works as expected? How should limitations of the algorithm be communicated?
+
+
+### Setting Standards for SAR
+In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
+
+* Human-System Interaction (23 requirements)
+* Logistics (10 requirements)
+* Operating Environment (5 requirements)
+* System (physical robot) (65 requirements; 32 of which are for sensing)
+
+One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
+
+* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
+  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
+* How would these standards interact with your robot's sensors? Algorithms?
+  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
+* Who should be involved in co-designing this set of standards for this group of stakeholders?
+  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
+* What tests would need to be designed to assess whether a robot met these standards?
+
 
 
 ## Neato Soccer
@@ -49,7 +88,7 @@ This activity is designed to get you up-and-running with OpenCV and ROS with our
 
 
 ### Connect to a Neato
-Grab a Neato with a partner or two -- make sure you pick one of the Neatos with a camera attachment on it.
+Grab a Neato with your table group -- make sure you pick one of the Neatos with a camera attachment on it.
 
 ```bash
 $ ros2 launch neato_node2 bringup.py host:=ip-of-your-neato

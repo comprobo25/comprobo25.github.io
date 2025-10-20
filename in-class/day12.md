@@ -15,29 +15,19 @@ toc_data:
 ---
 
 ## Today
-* Localization Project Share-Out and Demos
-* Machine Vision Kick-Off 
 * Beyond Particle Filtering Mini-Lecture (optional)
 * Studio Time
 
 ## For Next Time
 * Turn in the [Robot Localization project](../assignments/robot_localization)
   * Code + Writeups due on **Tuesday October 21st 7PM**
-* Localization Project Share-Out and Demos
-  * Demos due on **Monday October 20th by Class**
+  * Localization Project Share-Out and Demos, due **Monday October 20th by Class**
 * Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
   * In class discussions on **Monday November 3rd**
 * Read over the [Machine Vision Project Document](../assignments/computer_vision_project).
-    * Project Proposal is due on **Tuesday October 21st at 7PM**. We'll have some in-class time next week to create these proposals.
+    * Project Proposal is due on **Wednesday October 22nd at 9PM**. We'll have some in-class time next week to create these proposals.
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/kPjvgWb4ETDKMHRD7)
 
-
-## Localization Project Share-Out and Demos
-You all have been working _hard_ on implementing and expanding upon a particle filter. Let's celebrate what's been learned, successes and failures, advice, funny stories, and more. A [shareout deck is available here](https://docs.google.com/presentation/d/1VbeayIDylHz-cvh0v6q-daXl8Rz9PxM3whtINls-i6w/edit?usp=sharing).
-
-
-## Machine Vision Kick-Off
-Today we will be kicking off our next unit: machine vision. Our kick-off discussion can be found in [this Google Slide Deck](https://docs.google.com/presentation/d/1NP8EAXVMJJ0qnbiVAxIoHuYvtrIBAM_dWkKW6YhM9Oc/edit?usp=sharing).
 
 ## Beyond Particle Filtering (Optional Mini-Lecture)
 In this optional mini-lecture and activity, we'll discuss a different class of Bayesian filter for state estimation and localization: the Kalman filter. The coding activity for this mini-lecture can be pulled from [this repository](https://github.com/comprobo25/recitation_examples/tree/main/kalman_filters) -- note that this only requires Python to run; this is not a ROS2 based example. For those interested in going even further, you can play with this [CoLab Notebook from 2024](https://colab.research.google.com/drive/1Sbm81zccVfqPNaV6w9rdGH56F1uCTUIF?usp=sharing) which provides Extended Kalman Filter code.
