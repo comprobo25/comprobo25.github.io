@@ -1,47 +1,42 @@
 ---
-title: "Broader Impacts Discussion Session 2 // Camera Calibration"
+title: "CA Lecture: Light Fields // Camera Calibration // Studio Time"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day16/#today
   - title: For Next Time
     link: in-class/day16/#for-next-time
-  - title: Broader Impacts Discussion Session 2
-    link: in-class/day16/#broader-impacts-sess2
+  - title: CA Lecture - Light Fields
+    link: in-class/day16/#ca-lecture-light-fields
   - title: Camera Calibration
     link: in-class/day16/#camera-calib
 ---
 
 ## Today
-* Session 2 of the Broader Impacts Discussions
+* CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
 * Camera Calibration (For Your Consideration)
 * Studio Time
 
 ## For Next Time
-* Work on the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
-  * Note -- the last discussion will happen on November 4th; you have been [randomly assigned one of these days to lead a discussion](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing). You may swap slots with someone on a different day, but you have to let an instructor know. Thanks!
-* Work on your [Machine Vision Project](../assignments/computer_vision_project).
-    * In-class demos will be on **Monday November 11th**, and code/write-ups are due on **Tuesday November 12th at 7PM**.
-    * Note that prospective students will be joining us in class on the 11th!
+* Work on the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
+  * In class discussions on **Monday November 3rd**
+* Work on the [Machine Vision Project Document](../assignments/computer_vision_project).
+    * Project Shareouts will be **Monday November 10th in class**
+    * Project Materials are due on **Tuesday November 11th at 7PM**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
-## Broader Impacts Discussions
-Today, some folks will be leading discussions on their broader impacts robots ([discussion leaders noted here](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing)). 
 
-> Discussants: Please choose a table / area of the room (or outside of the room!) for your discussion, and let the instructors know if there are any materials you'd like to have available for your discussion. A discussion slot will be ~25 minutes in length total; you will be signalled after 10 minutes (when you should be transitioning from presentation to discussion), and at the 5 minute warning.
+## CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
+Today we're going to hear from Vivian on current research work she is conducting on using a unique camera configuration to generate high quality 3D reconstructions of dynamic objects, applied to ecological studies of coral reefs. This is an example of how some of the concepts you're exploring in your machine vision projects can be adapted to frontier research questions. You can follow along [with slides here](https://docs.google.com/presentation/d/1UxAYL3YCDhmglfxgEfTMvhmOqyRLfkY2P92FtGlfPwc/edit?slide=id.g38e10bf72ea_0_13#slide=id.g38e10bf72ea_0_13).
 
-> Participants: At the end of the discussion slot, please fill in [this reaction survey](https://forms.gle/JVBFzVozqZkGaTgf8). Your responses will be available to the teaching team and to discussants afterwards.
-
-We'll have a brief debrief following the activity and before starting in on Studio time.
-
-## Camera Calibration
+## Camera Calibration (For Your Consideration)
 One of the _essential_ practical aspects of machine vision is camera calibration: knowing the intrinsic and extrinsic parameters of your imaging system. 
 
 * _Intrinsic Calibration_ refers to the sensor and lens characteristics of your imaging system; calibrating here allows you to correct for image distortions. This is a "projective transformation" between your camera coordinates and your image pixel coordinates.
 * _Extrinsic Calibration_ refers to the way in which your imaging system is set up. For instance, if you have two cameras, this would include their relative poses to one another. This is a "rigid transformation" between your world coordinates and your camera coordinates.
 
 ### Pinhole Camera Model 
-The "pinhole camera model" is among the most commonly used for performing basic camera calibration. These [slides for today](https://docs.google.com/presentation/d/1TA73TpNwUlf8uIJ36ABQTFcNlmwsK0gcNMrf7tZFPwI/edit?usp=sharing) go through the key details. Please use this as a resource!
+The "pinhole camera model" is among the most commonly used for performing basic camera calibration. These [slides for today](https://docs.google.com/presentation/d/1jbJkz_u_BJDghaP0nMZa_itgEjCnrFBh6eht8NBBD38/edit?usp=sharing) go through the key details. Please use this as a resource!
 
 ### Camera Calibration Resources
 Here are several different tutorials on how to do (intrinsic) camera calibration in ROS2:
@@ -52,7 +47,7 @@ Here are several different tutorials on how to do (intrinsic) camera calibration
 
 You can also checkout the [brief OpenCV demo](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html) if you'd like to just test this out on your webcam.
 
-Note that you'll need checkerboards for this! Some are available in the classroom. If you'd like to print your own, [calib.io pattern generator](https://calib.io/pages/camera-calibration-pattern-generator) is an excellent resource!
+Note that you'll need checkerboards for this! You can (and should!) print your own; this [calib.io pattern generator](https://calib.io/pages/camera-calibration-pattern-generator) is an excellent resource!
 
 ### Additional Resources
 * An article on <a-no-proxy href="https://www.ri.cmu.edu/pub_files/pub2/willson_reg_1993_1/willson_reg_1993_1.pdf"> What is the Center of an Image? </a-no-proxy> 
