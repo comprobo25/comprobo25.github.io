@@ -1,39 +1,49 @@
 ---
-title: "Broader Impacts Discussion Session 3 // Image Segmentation"
+title: "Broader Impacts Phase 2 Discussions // Image Segmentation"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day17/#today
   - title: For Next Time
     link: in-class/day17/#for-next-time
-  - title: Broader Impacts Discussion Session 3
-    link: in-class/day17/#broader-impacts-sess3
+  - title: Broader Impacts Phase 2 Discussions
+    link: in-class/day17/#broader-impacts-phase2
   - title: Image Segmentation Basics
     link: in-class/day17/#sfm-basics
 ---
 ## Today
 
-* Session 3 of the Broader Impacts Discussions
+* Broader Impacts Phase 2 Discussions
 * Image Segmentation Basics (For Your Consideration)
 * Studio Time
 
 ## For Next Time
-* Turn in your materials from the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 5th at 7PM** 
-* Work on your [Machine Vision Project](../assignments/computer_vision_project).
-    * In-class demos will be on **Monday November 11th**, and code/write-ups are due on **Tuesday November 12th at 7PM**.
-    * Note that prospective students will be joining us in class on the 11th!
+* Turn in your materials from the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
+* Work on the [Machine Vision Project Document](../assignments/computer_vision_project).
+    * Project Shareouts will be **Monday November 10th in class**
+    * Project Materials are due on **Tuesday November 11th at 7PM**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## Broader Impacts Discussions
-Today, some folks will be leading discussions on their broader impacts robots ([discussion leaders noted here](https://docs.google.com/spreadsheets/d/1t2wJVq1ryEH47zOyPqVHE0VHtDHGa2fm6ehskNi13aA/edit?usp=sharing)). 
+Today, we will be in small (~3 person) [discussion groups](https://docs.google.com/spreadsheets/d/1NA9mfE49KUpMjtrE3YvgMl1GpraCkPCOcifv5kFPIfE/edit?usp=sharing) for our Phase 2 assignment. A [reaction survey](https://forms.gle/3wD9fUtcbWWgd6F19) is provided to capture notes and reflections following each guided discussion.
 
-> Discussants: Please choose a table / area of the room (or outside of the room!) for your discussion, and let the instructors know if there are any materials you'd like to have available for your discussion. A discussion slot will be ~25 minutes in length total; you will be signalled after 10 minutes (when you should be transitioning from presentation to discussion), and at the 5 minute warning.
+> Discussants: Please choose a table / area of the room or the room next door for your discussion. A discussion slot will be ~15 minutes in length total, with 5-8 minutes for your prepared presentation and 7-10 minutes for discussion. It will be your responsibility to pace your discussion. Following your discussion, participants will have ~5 minutes to fill in a response survey; you are welcome to fill in one of these for yourself (please indicate in the form) if there are reflections you also want to capture.
 
-> Participants: At the end of the discussion slot, please fill in [this reaction survey](https://forms.gle/8iwFzQXmtbPA8cCWA). Your responses will be available to the teaching team and to discussants afterwards.
+> Participants: At the end of each discussion slot, please fill in [this reaction survey](https://forms.gle/3wD9fUtcbWWgd6F19). Your responses will be available to the teaching team and to discussants afterwards.
+
+For all participants, do remember our shared norms for discussion:
+
+* Aim to understand a novel or different perspective from one's own; disagreement is natural
+* Practice open-mindedness
+* Allow for provoking questions to deepen a conversation
+* Consider the "gray areas" of many topics when discussing
+* Respect differences of opinion, but challenge statements of fact
+* Let people finish their thoughts, and let people speak
+* Focus on discussion, rather than persuasion/debate
 
 We'll have a brief debrief following the activity and before starting in on Studio time.
 
-## Image Segmentation Basics
+## Image Segmentation Basics (For Your Consideration)
 During this unit we've been discussing classical methods for parsing images and extracting keypoints, creating descriptors, and performing the correspondence task. For your consideration today, here is a brief set of materials which cover the concept of _image segmentation_, which encompasses a variety of techniques with the goal of subdividing an image into regions.
 
 Image segmentation techniques are commonly separated into three groups:

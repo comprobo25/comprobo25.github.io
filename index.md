@@ -153,7 +153,7 @@ Note: Subject to change as the semester unfolds!
 * [Day 15: Keypoints // Studio Time](in-class/day15)
 * [Day 16: CA Lecture: Light Fields // Camera Calibration // Studio Time](in-class/day16)
 * [Day 17: Broader Impacts Discussions II // Image Segmentation](in-class/day17)
-* [Day 18: Applications IV // Studio Time](in-class/day18)
+* [Day 18: Studio Time](in-class/day18)
 * [Day 19: Machine Vision Showcase + Final Project Kickoff](in-class/day19)
 
 ### Final Project (+ Implications of Robots Discussions)
