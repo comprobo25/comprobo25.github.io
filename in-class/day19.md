@@ -29,7 +29,7 @@ toc_data:
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## Machine Vision Showcase
-The day has arrived -- the conclusion of our Machine Vision unit! We will be dividing between rooms to 
+The day has arrived -- the conclusion of our Machine Vision unit! We will be dividing between rooms to cover everyone's work. You can view the final slides for [Room 1](https://docs.google.com/presentation/d/1YB20qDbxIvVzq0ttPjrzEGUSjPaen8BdEjAg7F6gzgw/edit?slide=id.p#slide=id.p) and [Room 2](https://docs.google.com/presentation/d/1mJf4JNQZ-4bPjaDTbUL_kSd7pEFAuUOn7ltrJPrXVmA/edit?slide=id.p#slide=id.p) at the hyperlinks.
 
 ## Final Project Kick-Off
 Tday we'll be [kicking off the Final Project!](https://docs.google.com/presentation/d/1QPYDfhVAlV_F_4UzP3PQWWmxoOf2UCoEnM_eRSOkqnM/edit?slide=id.g30bfd6202ab_1_114#slide=id.g30bfd6202ab_1_114) Some changes from the machine vision unit: 
