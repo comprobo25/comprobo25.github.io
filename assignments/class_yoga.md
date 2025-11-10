@@ -51,7 +51,8 @@ Take a moment to [review your learning goals](https://canvas.olin.edu/courses/94
 
 * **Are there experiences, beyond the final project, that would help you meet your goals?** Are you looking for certain class content, additional resources, 1-on-1 meetings with the teaching team, etc.? What is your plan for scoping and asking for these resources?
 
-For this phase, please submit a tracked-changes edit of your initial learning goals for the semester (link TBA), with special attention to adding/changing/modifying goals, refining assessment plans, and including any notes to the teaching team directly about how we can support you.
+For this phase, please [submit a tracked-changes edit of your initial learning goals for the semester](https://canvas.olin.edu/courses/942/assignments/16082), with special attention to adding/changing/modifying goals, refining assessment plans, and including any notes to the teaching team directly about how we can support you.
+
 
 
 ### Phase 2 --- Assess Learning Goals
