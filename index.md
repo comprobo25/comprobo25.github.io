@@ -158,11 +158,11 @@ Note: Subject to change as the semester unfolds!
 
 ### Final Project (+ Implications of Robots Discussions)
 * [Day 20: Project Proposal Generation](in-class/day20)
-* [Day 21: CA Lecture // Project Work Time](in-class/day21)
-* [Day 22: Project Work Time](in-class/day22)
+* [Day 21: Applications IV // Project Work Time](in-class/day21)
+* [Day 22: CA Lecture: Launch Files // Project Work Time](in-class/day22)
 * [Day 23: Applications V // Project Work Time](in-class/day23)
-* [Day 24: Project Work Time](in-class/day24)
-* [Day 25: Broader Impacts Discussion III // Project Work Time](in-class/day25)
+* [Day 24: Mini-Lectures // Project Work Time](in-class/day24)
+* [Day 25: Applications VI // Project Work Time](in-class/day25)
 * [Day 26: Project Work Time](in-class/day26)
 * [Day 27: Final Project Showcase and Semester Reflection](in-class/day27)
 

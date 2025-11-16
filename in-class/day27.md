@@ -23,7 +23,7 @@ toc_data:
    * I'd also appreciate if you filled out the official course survey from the Registrar's Office -- the results will be available to me and to anyone teaching CompRobo in the future, and it will help me be more effective in other classes as well. Thank you!
 
 ## Final Project Showcase
-You all have poured time and energy into your final projects over the last weeks. Let's celebrate your learning! [Slides for today are found here.](https://docs.google.com/presentation/d/1_YoLo1mzldFdT5M5Z56U12uOsLaCteA9yoaoNDyWK2Q/edit?usp=sharing)
+You all have poured time and energy into your final projects over the last weeks. Let's celebrate your learning! [Slides for today are found here.](https://docs.google.com/presentation/d/1S0ZKcDndNQV7iDE2da3oR8ymWjpbbRwu-Lg-T_Hwamg/edit?usp=sharing)
 
 ## Semester Debrief
 We've now come to the end of CompRobo. We'll take a little time for filling in feedback forms and submitting coursework, then have a chat to wrap up the semester.

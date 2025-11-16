@@ -1,51 +1,48 @@
 ---
-title: "Autonomy vs Intelligence // Studio Day"
+title: "Labor and Automation // Studio Day"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day23/#today
   - title: For Next Time
     link: in-class/day23/#for-next-time
-  - title: Autonomy vs Intelligence
-    link: in-class/day23/#autonomy-v-intelligence
+  - title: Labor and Automation
+    link: in-class/day23/#labor-and-automation
   - title: Final Project Studio 
     link: in-class/day23/#final-project-studio
 ---
 ## Today
-* Autonomy vs Intelligence
+* Labor and Automation Discussion
 * Final Project Studio
 
 ## For Next Time
-* Work on the [Final Project](../assignments/final_project.md), due **December Thursday 19th at 3PM**.
-    * Be sure to update [this spreadsheet](https://docs.google.com/spreadsheets/d/1jNmGA6Lxs90oOHcQR8DOHVDKfWE9OdGI3tmLi_gVgD4/edit?usp=sharing) with your team information.
-    * Milestone 2 is **due Sunday!** 
-* The [Broader Impacts Part 3 Assignment](https://canvas.olin.edu/courses/822/assignments/13047) is due this Friday, **December 6th at 7PM**.
+* Work on your [Final Project](../assignments/final_project.md)
+  * Milestone 2 is due **Monday December 8th at 7PM**
+  * The Final Project will be due **Tuesday December 16th at 7PM**
+* Work on your [Broader Impacts Phase 3](../assignments/broader_impacts.md), due on **Friday December 12th at 7PM**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
-## Autonomy vs Intelligence
-In our discussion about labor and automation, we've identified several industries and robotic technologies within them that have morphed the labor landscape. Today we'll zoom in a bit on the technology itself and examine the computational component to automation.
+## The Automated Labor Landscape
+_Automated labor_ refers to the process of replacing manually completed actions with technology. While it has colloquially often referred to using machinery to replace physical labor, it is increasingly used to refer to the automation of less physically-intensive tasks across sectors like marketing, customer support, and data analytics. 
 
-Recall our definition of a robot as a sensory-motor loop -- environmental or contextual data is used to inform actions that the robotic system takes. The mapping between sensor information and actions can be incredibly complicated based on the sensors and actions available, and task specified for a system to complete. 
+We're going to be focused on the slice of the automated labor landscape that specifically involves robots or robotic systems for this class. We'll be looking at both robotic technologies used in various sectors, and economic and cultural interpretation and commentary on a transition in some markets towards robotic technology.
 
-But the complexity of a task does not necessarily mean that the robot is "intelligent" just for completing it. Intelligence refers to the intersection of complexity _and_ ability to self-assign actions or action-sequences. Let's consider a few different types of systems and map them on complexity and intelligence axes (please feel free to come up with your own additional examples!) -- 
+To get started, we'll briefly interrogate our pre-conceptions about automated labor. [These slides](https://docs.google.com/presentation/d/1lANvh_NLw3dsLrO5WAkV7Qb1l0pCvXVRyRscYfkUHxc/edit?usp=sharing) will guide our initial discussion.
 
-* Waste Sorting
-* Manufacturing Arms (for assembly, welding, painting, etc.)
-* Palletizing Robots
-* Warehouse Pick-and-Place Robots
-* Self-Driving Cars
-* Autonomous Trams
-* Combine Harvesting
-* Fruit Harvesting
-* Weeding and Field Maintenance
-* Building/Infrastructure Inspection
+### The Economics of Automation
+With our pre-conceived notions identified, we're going to do a brief investigation on the economics of robotic automation, having a critical look at how consulting firms (e.g., McKinsey and Company) analyze and frame markets with respect to automation. With the folks around you, please pick one of the following articles to review (and feel free to look up others!):
 
-After we share out our maps, let's discuss the impact on markets and labor:
+* Agriculture: [Trends driving automation on the farm](https://www.mckinsey.com/industries/agriculture/our-insights/trends-driving-automation-on-the-farm)
+* Manufacturing: [Automation and the talent challenge in American manufacturing](https://www.mckinsey.com/capabilities/operations/our-insights/automation-and-the-talent-challenge-in-american-manufacturing)
+* An Industry Overview in Broad Strokes: [Unlocking the industrial potential of robotics and automation](https://www.mckinsey.com/industries/industrials-and-electronics/our-insights/unlocking-the-industrial-potential-of-robotics-and-automation)
+* Logistics: [Getting warehouse automation right](https://www.mckinsey.com/capabilities/operations/our-insights/getting-warehouse-automation-right)
+* Transportation: [Autonomous driving's future: Convenient and connected](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected)
 
-* What are the trade-offs between complexity and intelligence with respect to:
-   * Scalability to a market?
-   * Relationships with labor?
-   * Resources necessary to create, deploy, and maintain?
-* What market sectors could benefit from intelligent robots? Why?
+With your group, develop a ~5 minute summary and interpretation of your article to share. Attend to the following:
+1. What is the labor being automated, and how does the automation work?
+2. What motivates the use of automation in this industry?
+3. What trends have occurred in the labor force and economics of this industry?
+4. What critiques do you have on the reporting?
+5. What are your follow-up questions?
 
-At the end of this activity, in the place you've been keeping your personal notes, reflect on the following question: _How does intelligence differ from autonomy, and when is intelligence justified for development?_
+We will report-out to one another, then gather back as a group to reflect on: _when is automating a market justified?_ 
