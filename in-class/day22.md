@@ -24,4 +24,4 @@ toc_data:
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## CA Lecture: Namespaces, Launch Files, and Project Development Advice
-Today, we'll hear from Charlie on structuring your projects for easier development, debugging, and utility. To follow along, you can read the notes here (link TBA).
+Today, we'll hear from Charlie on structuring your projects for easier development, debugging, and utility. To follow along, you can read the notes [here](https://github.com/comprobo25/robo_tools_ca_lecture)
